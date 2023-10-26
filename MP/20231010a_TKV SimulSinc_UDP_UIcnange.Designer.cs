@@ -196,44 +196,164 @@ namespace MP
             this.label35 = new System.Windows.Forms.Label();
             this.btnSim = new System.Windows.Forms.CheckBox();
             this.pn_Monitoring = new System.Windows.Forms.Panel();
-            this.J7Up = new System.Windows.Forms.Button();
-            this.J7Down = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.JT14 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
+            this.J7Up = new System.Windows.Forms.Button();
             this.velLevel_List = new System.Windows.Forms.ComboBox();
+            this.J7Down = new System.Windows.Forms.Button();
+            this.JT26 = new System.Windows.Forms.TextBox();
+            this.JT8 = new System.Windows.Forms.TextBox();
+            this.label106 = new System.Windows.Forms.Label();
+            this.label133 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
             this.J1Up = new System.Windows.Forms.Button();
+            this.JT13 = new System.Windows.Forms.TextBox();
             this.J2Up = new System.Windows.Forms.Button();
             this.J1Down = new System.Windows.Forms.Button();
-            this.J2Down = new System.Windows.Forms.Button();
-            this.J4Up = new System.Windows.Forms.Button();
-            this.J4Down = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.JT25 = new System.Windows.Forms.TextBox();
             this.JT7 = new System.Windows.Forms.TextBox();
+            this.J2Down = new System.Windows.Forms.Button();
+            this.label105 = new System.Windows.Forms.Label();
+            this.label132 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.J4Up = new System.Windows.Forms.Button();
+            this.label104 = new System.Windows.Forms.Label();
+            this.label131 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
             this.checkBoxSimulMod = new System.Windows.Forms.CheckBox();
+            this.J4Down = new System.Windows.Forms.Button();
+            this.J14 = new System.Windows.Forms.TextBox();
+            this.J26 = new System.Windows.Forms.TextBox();
+            this.J8 = new System.Windows.Forms.TextBox();
+            this.label103 = new System.Windows.Forms.Label();
+            this.label130 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
+            this.JC14 = new System.Windows.Forms.TextBox();
+            this.JC26 = new System.Windows.Forms.TextBox();
+            this.JC8 = new System.Windows.Forms.TextBox();
+            this.J13 = new System.Windows.Forms.TextBox();
+            this.J25 = new System.Windows.Forms.TextBox();
             this.J7 = new System.Windows.Forms.TextBox();
+            this.JC13 = new System.Windows.Forms.TextBox();
+            this.JC25 = new System.Windows.Forms.TextBox();
             this.JC7 = new System.Windows.Forms.TextBox();
             this.label53 = new System.Windows.Forms.Label();
+            this.label129 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
             this.cmd_send2 = new System.Windows.Forms.Button();
+            this.JT18 = new System.Windows.Forms.TextBox();
+            this.JT30 = new System.Windows.Forms.TextBox();
+            this.JT12 = new System.Windows.Forms.TextBox();
+            this.JT17 = new System.Windows.Forms.TextBox();
+            this.JT29 = new System.Windows.Forms.TextBox();
+            this.JT11 = new System.Windows.Forms.TextBox();
+            this.JT24 = new System.Windows.Forms.TextBox();
+            this.JC15 = new System.Windows.Forms.TextBox();
+            this.JC27 = new System.Windows.Forms.TextBox();
+            this.JC9 = new System.Windows.Forms.TextBox();
+            this.JC22 = new System.Windows.Forms.TextBox();
             this.JC4 = new System.Windows.Forms.TextBox();
+            this.label102 = new System.Windows.Forms.Label();
+            this.label128 = new System.Windows.Forms.Label();
+            this.label92 = new System.Windows.Forms.Label();
+            this.label127 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
+            this.label126 = new System.Windows.Forms.Label();
+            this.label94 = new System.Windows.Forms.Label();
+            this.label100 = new System.Windows.Forms.Label();
+            this.label125 = new System.Windows.Forms.Label();
+            this.label91 = new System.Windows.Forms.Label();
+            this.label124 = new System.Windows.Forms.Label();
+            this.label99 = new System.Windows.Forms.Label();
+            this.label123 = new System.Windows.Forms.Label();
+            this.label90 = new System.Windows.Forms.Label();
+            this.label122 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.JT15 = new System.Windows.Forms.TextBox();
+            this.JT27 = new System.Windows.Forms.TextBox();
+            this.JT9 = new System.Windows.Forms.TextBox();
+            this.JT22 = new System.Windows.Forms.TextBox();
             this.JT4 = new System.Windows.Forms.TextBox();
+            this.J15 = new System.Windows.Forms.TextBox();
+            this.J27 = new System.Windows.Forms.TextBox();
+            this.J9 = new System.Windows.Forms.TextBox();
+            this.J22 = new System.Windows.Forms.TextBox();
             this.J4 = new System.Windows.Forms.TextBox();
+            this.label98 = new System.Windows.Forms.Label();
+            this.label121 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
+            this.label97 = new System.Windows.Forms.Label();
+            this.label120 = new System.Windows.Forms.Label();
+            this.label89 = new System.Windows.Forms.Label();
+            this.label119 = new System.Windows.Forms.Label();
+            this.J18 = new System.Windows.Forms.TextBox();
+            this.J30 = new System.Windows.Forms.TextBox();
+            this.J12 = new System.Windows.Forms.TextBox();
+            this.J17 = new System.Windows.Forms.TextBox();
+            this.J29 = new System.Windows.Forms.TextBox();
+            this.J11 = new System.Windows.Forms.TextBox();
+            this.J24 = new System.Windows.Forms.TextBox();
+            this.JC18 = new System.Windows.Forms.TextBox();
+            this.JC30 = new System.Windows.Forms.TextBox();
+            this.JC12 = new System.Windows.Forms.TextBox();
+            this.JC17 = new System.Windows.Forms.TextBox();
+            this.JC29 = new System.Windows.Forms.TextBox();
+            this.JC11 = new System.Windows.Forms.TextBox();
+            this.JC24 = new System.Windows.Forms.TextBox();
+            this.JC20 = new System.Windows.Forms.TextBox();
+            this.JC19 = new System.Windows.Forms.TextBox();
             this.JC2 = new System.Windows.Forms.TextBox();
+            this.textBox39 = new System.Windows.Forms.TextBox();
             this.JC1 = new System.Windows.Forms.TextBox();
+            this.J19 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label118 = new System.Windows.Forms.Label();
             this.J1 = new System.Windows.Forms.TextBox();
+            this.J20 = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
+            this.label117 = new System.Windows.Forms.Label();
             this.J2 = new System.Windows.Forms.TextBox();
+            this.JT20 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.JT19 = new System.Windows.Forms.TextBox();
             this.JT2 = new System.Windows.Forms.TextBox();
+            this.label116 = new System.Windows.Forms.Label();
             this.JT1 = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
+            this.textBox34 = new System.Windows.Forms.TextBox();
+            this.J16 = new System.Windows.Forms.TextBox();
+            this.J28 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.J10 = new System.Windows.Forms.TextBox();
+            this.label115 = new System.Windows.Forms.Label();
+            this.JC16 = new System.Windows.Forms.TextBox();
+            this.JC28 = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
+            this.JC10 = new System.Windows.Forms.TextBox();
+            this.J23 = new System.Windows.Forms.TextBox();
+            this.label96 = new System.Windows.Forms.Label();
+            this.label114 = new System.Windows.Forms.Label();
+            this.JC23 = new System.Windows.Forms.TextBox();
+            this.label88 = new System.Windows.Forms.Label();
+            this.label113 = new System.Windows.Forms.Label();
+            this.label112 = new System.Windows.Forms.Label();
+            this.JC21 = new System.Windows.Forms.TextBox();
+            this.JT16 = new System.Windows.Forms.TextBox();
+            this.JT28 = new System.Windows.Forms.TextBox();
+            this.J21 = new System.Windows.Forms.TextBox();
+            this.JT10 = new System.Windows.Forms.TextBox();
+            this.JT23 = new System.Windows.Forms.TextBox();
+            this.JT21 = new System.Windows.Forms.TextBox();
+            this.label111 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label110 = new System.Windows.Forms.Label();
+            this.label95 = new System.Windows.Forms.Label();
+            this.label109 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.label108 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label107 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.FT = new System.Windows.Forms.NumericUpDown();
             this.forceTx = new System.Windows.Forms.Button();
@@ -317,126 +437,8 @@ namespace MP
             this.Main = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.maintenance = new System.Windows.Forms.TabPage();
-            this.JC8 = new System.Windows.Forms.TextBox();
-            this.J8 = new System.Windows.Forms.TextBox();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.JT8 = new System.Windows.Forms.TextBox();
-            this.label67 = new System.Windows.Forms.Label();
-            this.JT10 = new System.Windows.Forms.TextBox();
-            this.label88 = new System.Windows.Forms.Label();
-            this.JC10 = new System.Windows.Forms.TextBox();
-            this.J10 = new System.Windows.Forms.TextBox();
-            this.JC11 = new System.Windows.Forms.TextBox();
-            this.J11 = new System.Windows.Forms.TextBox();
-            this.label89 = new System.Windows.Forms.Label();
-            this.J9 = new System.Windows.Forms.TextBox();
-            this.JT9 = new System.Windows.Forms.TextBox();
-            this.label90 = new System.Windows.Forms.Label();
-            this.label91 = new System.Windows.Forms.Label();
-            this.label92 = new System.Windows.Forms.Label();
-            this.JC9 = new System.Windows.Forms.TextBox();
-            this.JT11 = new System.Windows.Forms.TextBox();
-            this.JC12 = new System.Windows.Forms.TextBox();
-            this.J12 = new System.Windows.Forms.TextBox();
-            this.label93 = new System.Windows.Forms.Label();
-            this.label94 = new System.Windows.Forms.Label();
-            this.JT12 = new System.Windows.Forms.TextBox();
-            this.label95 = new System.Windows.Forms.Label();
-            this.JT16 = new System.Windows.Forms.TextBox();
-            this.label96 = new System.Windows.Forms.Label();
-            this.JC16 = new System.Windows.Forms.TextBox();
-            this.J16 = new System.Windows.Forms.TextBox();
-            this.JC17 = new System.Windows.Forms.TextBox();
-            this.JC18 = new System.Windows.Forms.TextBox();
-            this.J17 = new System.Windows.Forms.TextBox();
-            this.J18 = new System.Windows.Forms.TextBox();
-            this.label97 = new System.Windows.Forms.Label();
-            this.label98 = new System.Windows.Forms.Label();
-            this.J15 = new System.Windows.Forms.TextBox();
-            this.JT15 = new System.Windows.Forms.TextBox();
-            this.label99 = new System.Windows.Forms.Label();
-            this.label100 = new System.Windows.Forms.Label();
-            this.label101 = new System.Windows.Forms.Label();
-            this.label102 = new System.Windows.Forms.Label();
-            this.JC15 = new System.Windows.Forms.TextBox();
-            this.JT17 = new System.Windows.Forms.TextBox();
-            this.JT18 = new System.Windows.Forms.TextBox();
-            this.JC13 = new System.Windows.Forms.TextBox();
-            this.J13 = new System.Windows.Forms.TextBox();
-            this.JC14 = new System.Windows.Forms.TextBox();
-            this.label103 = new System.Windows.Forms.Label();
-            this.J14 = new System.Windows.Forms.TextBox();
-            this.label104 = new System.Windows.Forms.Label();
-            this.label105 = new System.Windows.Forms.Label();
-            this.JT13 = new System.Windows.Forms.TextBox();
-            this.label106 = new System.Windows.Forms.Label();
-            this.JT14 = new System.Windows.Forms.TextBox();
-            this.label107 = new System.Windows.Forms.Label();
-            this.label108 = new System.Windows.Forms.Label();
-            this.label109 = new System.Windows.Forms.Label();
-            this.label110 = new System.Windows.Forms.Label();
-            this.label111 = new System.Windows.Forms.Label();
-            this.JT21 = new System.Windows.Forms.TextBox();
-            this.JT23 = new System.Windows.Forms.TextBox();
-            this.J21 = new System.Windows.Forms.TextBox();
-            this.JT28 = new System.Windows.Forms.TextBox();
-            this.JC21 = new System.Windows.Forms.TextBox();
-            this.label112 = new System.Windows.Forms.Label();
-            this.label113 = new System.Windows.Forms.Label();
-            this.JC23 = new System.Windows.Forms.TextBox();
-            this.label114 = new System.Windows.Forms.Label();
-            this.J23 = new System.Windows.Forms.TextBox();
-            this.JC28 = new System.Windows.Forms.TextBox();
-            this.label115 = new System.Windows.Forms.Label();
-            this.J28 = new System.Windows.Forms.TextBox();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.label116 = new System.Windows.Forms.Label();
-            this.JT19 = new System.Windows.Forms.TextBox();
-            this.JT20 = new System.Windows.Forms.TextBox();
-            this.label117 = new System.Windows.Forms.Label();
-            this.J20 = new System.Windows.Forms.TextBox();
-            this.label118 = new System.Windows.Forms.Label();
-            this.J19 = new System.Windows.Forms.TextBox();
-            this.textBox39 = new System.Windows.Forms.TextBox();
-            this.JC19 = new System.Windows.Forms.TextBox();
-            this.JC20 = new System.Windows.Forms.TextBox();
-            this.JC24 = new System.Windows.Forms.TextBox();
-            this.JC29 = new System.Windows.Forms.TextBox();
-            this.JC30 = new System.Windows.Forms.TextBox();
-            this.J24 = new System.Windows.Forms.TextBox();
-            this.J29 = new System.Windows.Forms.TextBox();
-            this.J30 = new System.Windows.Forms.TextBox();
-            this.label119 = new System.Windows.Forms.Label();
-            this.label120 = new System.Windows.Forms.Label();
-            this.label121 = new System.Windows.Forms.Label();
-            this.J22 = new System.Windows.Forms.TextBox();
-            this.J27 = new System.Windows.Forms.TextBox();
-            this.JT22 = new System.Windows.Forms.TextBox();
-            this.JT27 = new System.Windows.Forms.TextBox();
-            this.label122 = new System.Windows.Forms.Label();
-            this.label123 = new System.Windows.Forms.Label();
-            this.label124 = new System.Windows.Forms.Label();
-            this.label125 = new System.Windows.Forms.Label();
-            this.label126 = new System.Windows.Forms.Label();
-            this.label127 = new System.Windows.Forms.Label();
-            this.label128 = new System.Windows.Forms.Label();
-            this.JC22 = new System.Windows.Forms.TextBox();
-            this.JC27 = new System.Windows.Forms.TextBox();
-            this.JT24 = new System.Windows.Forms.TextBox();
-            this.JT29 = new System.Windows.Forms.TextBox();
-            this.JT30 = new System.Windows.Forms.TextBox();
-            this.label129 = new System.Windows.Forms.Label();
-            this.JC25 = new System.Windows.Forms.TextBox();
-            this.J25 = new System.Windows.Forms.TextBox();
-            this.JC26 = new System.Windows.Forms.TextBox();
-            this.label130 = new System.Windows.Forms.Label();
-            this.J26 = new System.Windows.Forms.TextBox();
-            this.label131 = new System.Windows.Forms.Label();
-            this.label132 = new System.Windows.Forms.Label();
-            this.JT25 = new System.Windows.Forms.TextBox();
-            this.label133 = new System.Windows.Forms.Label();
-            this.JT26 = new System.Windows.Forms.TextBox();
+            this.J6Down = new System.Windows.Forms.Button();
+            this.J6Up = new System.Windows.Forms.Button();
             this.gr_CAN.SuspendLayout();
             this.pn_Debug.SuspendLayout();
             this.PN_NotUse.SuspendLayout();
@@ -2576,155 +2578,14 @@ namespace MP
             this.pn_Monitoring.Size = new System.Drawing.Size(995, 576);
             this.pn_Monitoring.TabIndex = 179;
             // 
-            // J7Up
-            // 
-            this.J7Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J7Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J7Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J7Up.Location = new System.Drawing.Point(357, 236);
-            this.J7Up.Name = "J7Up";
-            this.J7Up.Size = new System.Drawing.Size(29, 23);
-            this.J7Up.TabIndex = 262;
-            this.J7Up.Text = "▲";
-            this.J7Up.Click += new System.EventHandler(this.J7Up_Click_1);
-            // 
-            // J7Down
-            // 
-            this.J7Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J7Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J7Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J7Down.Location = new System.Drawing.Point(322, 236);
-            this.J7Down.Name = "J7Down";
-            this.J7Down.Size = new System.Drawing.Size(29, 23);
-            this.J7Down.TabIndex = 261;
-            this.J7Down.Text = "▼";
-            this.J7Down.Click += new System.EventHandler(this.J7Down_Click_1);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label24.Location = new System.Drawing.Point(458, 9);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(102, 19);
-            this.label24.TabIndex = 259;
-            this.label24.Text = "Velocity Level";
-            // 
-            // velLevel_List
-            // 
-            this.velLevel_List.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.velLevel_List.Cursor = System.Windows.Forms.Cursors.Default;
-            this.velLevel_List.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.velLevel_List.DropDownWidth = 80;
-            this.velLevel_List.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.velLevel_List.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.velLevel_List.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.velLevel_List.FormattingEnabled = true;
-            this.velLevel_List.IntegralHeight = false;
-            this.velLevel_List.ItemHeight = 21;
-            this.velLevel_List.Items.AddRange(new object[] {
-            "Level 1",
-            "Level 2",
-            "Level 3",
-            "Level 4",
-            "Level 5"});
-            this.velLevel_List.Location = new System.Drawing.Point(566, 3);
-            this.velLevel_List.Name = "velLevel_List";
-            this.velLevel_List.Size = new System.Drawing.Size(112, 29);
-            this.velLevel_List.TabIndex = 260;
-            this.velLevel_List.SelectedIndexChanged += new System.EventHandler(this.velLevel_List_SelectedIndexChanged);
-            // 
-            // J1Up
-            // 
-            this.J1Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J1Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J1Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J1Up.Location = new System.Drawing.Point(357, 69);
-            this.J1Up.Name = "J1Up";
-            this.J1Up.Size = new System.Drawing.Size(29, 23);
-            this.J1Up.TabIndex = 40;
-            this.J1Up.Text = "▲";
-            this.J1Up.Click += new System.EventHandler(this.J1Up_Click);
-            this.J1Up.MouseDown += new System.Windows.Forms.MouseEventHandler(this.J1Up_MouseDown);
-            this.J1Up.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Velocity_MouseUp);
-            // 
-            // J2Up
-            // 
-            this.J2Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J2Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J2Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J2Up.Location = new System.Drawing.Point(357, 96);
-            this.J2Up.Name = "J2Up";
-            this.J2Up.Size = new System.Drawing.Size(29, 23);
-            this.J2Up.TabIndex = 42;
-            this.J2Up.Text = "▲";
-            this.J2Up.Click += new System.EventHandler(this.J2Up_Click);
-            this.J2Up.MouseDown += new System.Windows.Forms.MouseEventHandler(this.J2Up_MouseDown);
-            this.J2Up.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Velocity_MouseUp);
-            // 
-            // J1Down
-            // 
-            this.J1Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J1Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J1Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J1Down.Location = new System.Drawing.Point(322, 69);
-            this.J1Down.Name = "J1Down";
-            this.J1Down.Size = new System.Drawing.Size(29, 23);
-            this.J1Down.TabIndex = 41;
-            this.J1Down.Text = "▼";
-            this.J1Down.Click += new System.EventHandler(this.J1Down_Click);
-            this.J1Down.MouseDown += new System.Windows.Forms.MouseEventHandler(this.J1Down_MouseDown);
-            this.J1Down.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Velocity_MouseUp);
-            // 
-            // J2Down
-            // 
-            this.J2Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J2Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J2Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J2Down.Location = new System.Drawing.Point(322, 95);
-            this.J2Down.Name = "J2Down";
-            this.J2Down.Size = new System.Drawing.Size(29, 24);
-            this.J2Down.TabIndex = 43;
-            this.J2Down.Text = "▼";
-            this.J2Down.Click += new System.EventHandler(this.J2Down_Click);
-            this.J2Down.MouseDown += new System.Windows.Forms.MouseEventHandler(this.J2Down_MouseDown);
-            this.J2Down.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Velocity_MouseUp);
-            // 
-            // J4Up
-            // 
-            this.J4Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J4Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J4Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J4Up.Location = new System.Drawing.Point(357, 148);
-            this.J4Up.Name = "J4Up";
-            this.J4Up.Size = new System.Drawing.Size(29, 23);
-            this.J4Up.TabIndex = 46;
-            this.J4Up.Text = "▲";
-            this.J4Up.Click += new System.EventHandler(this.J4Up_Click);
-            this.J4Up.MouseDown += new System.Windows.Forms.MouseEventHandler(this.J4Up_MouseDown);
-            this.J4Up.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Velocity_MouseUp);
-            // 
-            // J4Down
-            // 
-            this.J4Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J4Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J4Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J4Down.Location = new System.Drawing.Point(322, 148);
-            this.J4Down.Name = "J4Down";
-            this.J4Down.Size = new System.Drawing.Size(29, 23);
-            this.J4Down.TabIndex = 47;
-            this.J4Down.Text = "▼";
-            this.J4Down.Click += new System.EventHandler(this.J4Down_Click);
-            this.J4Down.MouseDown += new System.Windows.Forms.MouseEventHandler(this.J4Down_MouseDown);
-            this.J4Down.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Velocity_MouseUp);
-            // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.JT14);
             this.panel3.Controls.Add(this.label24);
+            this.panel3.Controls.Add(this.J6Up);
             this.panel3.Controls.Add(this.J7Up);
+            this.panel3.Controls.Add(this.J6Down);
             this.panel3.Controls.Add(this.velLevel_List);
             this.panel3.Controls.Add(this.J7Down);
             this.panel3.Controls.Add(this.JT26);
@@ -2904,6 +2765,205 @@ namespace MP
             this.panel3.Size = new System.Drawing.Size(979, 572);
             this.panel3.TabIndex = 223;
             // 
+            // JT14
+            // 
+            this.JT14.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT14.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT14.Location = new System.Drawing.Point(109, 428);
+            this.JT14.Name = "JT14";
+            this.JT14.Size = new System.Drawing.Size(60, 23);
+            this.JT14.TabIndex = 315;
+            this.JT14.Text = "0.00";
+            this.JT14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label24.Location = new System.Drawing.Point(458, 9);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(102, 19);
+            this.label24.TabIndex = 259;
+            this.label24.Text = "Velocity Level";
+            // 
+            // J7Up
+            // 
+            this.J7Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.J7Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J7Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J7Up.Location = new System.Drawing.Point(357, 236);
+            this.J7Up.Name = "J7Up";
+            this.J7Up.Size = new System.Drawing.Size(29, 23);
+            this.J7Up.TabIndex = 262;
+            this.J7Up.Text = "▲";
+            this.J7Up.Click += new System.EventHandler(this.J7Up_Click_1);
+            // 
+            // velLevel_List
+            // 
+            this.velLevel_List.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.velLevel_List.Cursor = System.Windows.Forms.Cursors.Default;
+            this.velLevel_List.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.velLevel_List.DropDownWidth = 80;
+            this.velLevel_List.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.velLevel_List.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.velLevel_List.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.velLevel_List.FormattingEnabled = true;
+            this.velLevel_List.IntegralHeight = false;
+            this.velLevel_List.ItemHeight = 21;
+            this.velLevel_List.Items.AddRange(new object[] {
+            "Level 1",
+            "Level 2",
+            "Level 3",
+            "Level 4",
+            "Level 5"});
+            this.velLevel_List.Location = new System.Drawing.Point(566, 3);
+            this.velLevel_List.Name = "velLevel_List";
+            this.velLevel_List.Size = new System.Drawing.Size(112, 29);
+            this.velLevel_List.TabIndex = 260;
+            this.velLevel_List.SelectedIndexChanged += new System.EventHandler(this.velLevel_List_SelectedIndexChanged);
+            // 
+            // J7Down
+            // 
+            this.J7Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.J7Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J7Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J7Down.Location = new System.Drawing.Point(322, 236);
+            this.J7Down.Name = "J7Down";
+            this.J7Down.Size = new System.Drawing.Size(29, 23);
+            this.J7Down.TabIndex = 261;
+            this.J7Down.Text = "▼";
+            this.J7Down.Click += new System.EventHandler(this.J7Down_Click_1);
+            // 
+            // JT26
+            // 
+            this.JT26.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT26.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT26.Location = new System.Drawing.Point(504, 276);
+            this.JT26.Name = "JT26";
+            this.JT26.Size = new System.Drawing.Size(60, 23);
+            this.JT26.TabIndex = 315;
+            this.JT26.Text = "0.00";
+            this.JT26.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JT8
+            // 
+            this.JT8.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT8.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT8.Location = new System.Drawing.Point(110, 261);
+            this.JT8.Name = "JT8";
+            this.JT8.Size = new System.Drawing.Size(60, 23);
+            this.JT8.TabIndex = 315;
+            this.JT8.Text = "0.00";
+            this.JT8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label106.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label106.Location = new System.Drawing.Point(299, 436);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(27, 15);
+            this.label106.TabIndex = 314;
+            this.label106.Text = "deg";
+            // 
+            // label133
+            // 
+            this.label133.AutoSize = true;
+            this.label133.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label133.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label133.Location = new System.Drawing.Point(694, 284);
+            this.label133.Name = "label133";
+            this.label133.Size = new System.Drawing.Size(27, 15);
+            this.label133.TabIndex = 314;
+            this.label133.Text = "deg";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label60.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label60.Location = new System.Drawing.Point(300, 269);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(27, 15);
+            this.label60.TabIndex = 314;
+            this.label60.Text = "deg";
+            // 
+            // J1Up
+            // 
+            this.J1Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.J1Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J1Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J1Up.Location = new System.Drawing.Point(357, 69);
+            this.J1Up.Name = "J1Up";
+            this.J1Up.Size = new System.Drawing.Size(29, 23);
+            this.J1Up.TabIndex = 40;
+            this.J1Up.Text = "▲";
+            this.J1Up.Click += new System.EventHandler(this.J1Up_Click);
+            this.J1Up.MouseDown += new System.Windows.Forms.MouseEventHandler(this.J1Up_MouseDown);
+            this.J1Up.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Velocity_MouseUp);
+            // 
+            // JT13
+            // 
+            this.JT13.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT13.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT13.Location = new System.Drawing.Point(109, 403);
+            this.JT13.Name = "JT13";
+            this.JT13.Size = new System.Drawing.Size(60, 23);
+            this.JT13.TabIndex = 315;
+            this.JT13.Text = "0.00";
+            this.JT13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // J2Up
+            // 
+            this.J2Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.J2Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J2Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J2Up.Location = new System.Drawing.Point(357, 96);
+            this.J2Up.Name = "J2Up";
+            this.J2Up.Size = new System.Drawing.Size(29, 23);
+            this.J2Up.TabIndex = 42;
+            this.J2Up.Text = "▲";
+            this.J2Up.Click += new System.EventHandler(this.J2Up_Click);
+            this.J2Up.MouseDown += new System.Windows.Forms.MouseEventHandler(this.J2Up_MouseDown);
+            this.J2Up.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Velocity_MouseUp);
+            // 
+            // J1Down
+            // 
+            this.J1Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.J1Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J1Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J1Down.Location = new System.Drawing.Point(322, 69);
+            this.J1Down.Name = "J1Down";
+            this.J1Down.Size = new System.Drawing.Size(29, 23);
+            this.J1Down.TabIndex = 41;
+            this.J1Down.Text = "▼";
+            this.J1Down.Click += new System.EventHandler(this.J1Down_Click);
+            this.J1Down.MouseDown += new System.Windows.Forms.MouseEventHandler(this.J1Down_MouseDown);
+            this.J1Down.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Velocity_MouseUp);
+            // 
+            // JT25
+            // 
+            this.JT25.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT25.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT25.Location = new System.Drawing.Point(504, 251);
+            this.JT25.Name = "JT25";
+            this.JT25.Size = new System.Drawing.Size(60, 23);
+            this.JT25.TabIndex = 315;
+            this.JT25.Text = "0.00";
+            this.JT25.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // JT7
             // 
             this.JT7.BackColor = System.Drawing.Color.AntiqueWhite;
@@ -2917,6 +2977,42 @@ namespace MP
             this.JT7.Text = "0.00";
             this.JT7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // J2Down
+            // 
+            this.J2Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.J2Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J2Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J2Down.Location = new System.Drawing.Point(322, 95);
+            this.J2Down.Name = "J2Down";
+            this.J2Down.Size = new System.Drawing.Size(29, 24);
+            this.J2Down.TabIndex = 43;
+            this.J2Down.Text = "▼";
+            this.J2Down.Click += new System.EventHandler(this.J2Down_Click);
+            this.J2Down.MouseDown += new System.Windows.Forms.MouseEventHandler(this.J2Down_MouseDown);
+            this.J2Down.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Velocity_MouseUp);
+            // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label105.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label105.Location = new System.Drawing.Point(299, 411);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(27, 15);
+            this.label105.TabIndex = 314;
+            this.label105.Text = "deg";
+            // 
+            // label132
+            // 
+            this.label132.AutoSize = true;
+            this.label132.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label132.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label132.Location = new System.Drawing.Point(694, 259);
+            this.label132.Name = "label132";
+            this.label132.Size = new System.Drawing.Size(27, 15);
+            this.label132.TabIndex = 314;
+            this.label132.Text = "deg";
+            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -2927,6 +3023,56 @@ namespace MP
             this.label23.Size = new System.Drawing.Size(27, 15);
             this.label23.TabIndex = 314;
             this.label23.Text = "deg";
+            // 
+            // J4Up
+            // 
+            this.J4Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.J4Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J4Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J4Up.Location = new System.Drawing.Point(357, 148);
+            this.J4Up.Name = "J4Up";
+            this.J4Up.Size = new System.Drawing.Size(29, 23);
+            this.J4Up.TabIndex = 46;
+            this.J4Up.Text = "▲";
+            this.J4Up.Click += new System.EventHandler(this.J4Up_Click);
+            this.J4Up.MouseDown += new System.Windows.Forms.MouseEventHandler(this.J4Up_MouseDown);
+            this.J4Up.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Velocity_MouseUp);
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label104.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label104.Location = new System.Drawing.Point(7, 436);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(90, 15);
+            this.label104.TabIndex = 312;
+            this.label104.Text = "14.R_Sh_ProRet";
+            this.label104.Click += new System.EventHandler(this.label39_Click);
+            // 
+            // label131
+            // 
+            this.label131.AutoSize = true;
+            this.label131.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label131.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label131.Location = new System.Drawing.Point(402, 278);
+            this.label131.Name = "label131";
+            this.label131.Size = new System.Drawing.Size(98, 15);
+            this.label131.TabIndex = 312;
+            this.label131.Text = "26.R_Knee_FleExt";
+            this.label131.Click += new System.EventHandler(this.label39_Click);
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label54.Location = new System.Drawing.Point(8, 263);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(89, 15);
+            this.label54.TabIndex = 312;
+            this.label54.Text = "8. L_Sho_FleExt";
+            this.label54.Click += new System.EventHandler(this.label39_Click);
             // 
             // checkBoxSimulMod
             // 
@@ -2939,6 +3085,86 @@ namespace MP
             this.checkBoxSimulMod.UseVisualStyleBackColor = true;
             this.checkBoxSimulMod.CheckedChanged += new System.EventHandler(this.checkBoxSimulMod_CheckedChanged);
             // 
+            // J4Down
+            // 
+            this.J4Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.J4Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J4Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J4Down.Location = new System.Drawing.Point(322, 148);
+            this.J4Down.Name = "J4Down";
+            this.J4Down.Size = new System.Drawing.Size(29, 23);
+            this.J4Down.TabIndex = 47;
+            this.J4Down.Text = "▼";
+            this.J4Down.Click += new System.EventHandler(this.J4Down_Click);
+            this.J4Down.MouseDown += new System.Windows.Forms.MouseEventHandler(this.J4Down_MouseDown);
+            this.J4Down.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Velocity_MouseUp);
+            // 
+            // J14
+            // 
+            this.J14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J14.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J14.Location = new System.Drawing.Point(172, 428);
+            this.J14.Name = "J14";
+            this.J14.ReadOnly = true;
+            this.J14.Size = new System.Drawing.Size(60, 23);
+            this.J14.TabIndex = 311;
+            this.J14.Text = "0.00";
+            this.J14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // J26
+            // 
+            this.J26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J26.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J26.Location = new System.Drawing.Point(567, 276);
+            this.J26.Name = "J26";
+            this.J26.ReadOnly = true;
+            this.J26.Size = new System.Drawing.Size(60, 23);
+            this.J26.TabIndex = 311;
+            this.J26.Text = "0.00";
+            this.J26.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // J8
+            // 
+            this.J8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J8.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J8.Location = new System.Drawing.Point(173, 261);
+            this.J8.Name = "J8";
+            this.J8.ReadOnly = true;
+            this.J8.Size = new System.Drawing.Size(60, 23);
+            this.J8.TabIndex = 311;
+            this.J8.Text = "0.00";
+            this.J8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label103.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label103.Location = new System.Drawing.Point(7, 410);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(98, 15);
+            this.label103.TabIndex = 312;
+            this.label103.Text = "13.L_Wrist_FleExt";
+            this.label103.Click += new System.EventHandler(this.label39_Click);
+            // 
+            // label130
+            // 
+            this.label130.AutoSize = true;
+            this.label130.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label130.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label130.Location = new System.Drawing.Point(402, 253);
+            this.label130.Name = "label130";
+            this.label130.Size = new System.Drawing.Size(78, 15);
+            this.label130.TabIndex = 312;
+            this.label130.Text = "25.R_Hip_Rot";
+            this.label130.Click += new System.EventHandler(this.label39_Click);
+            // 
             // label39
             // 
             this.label39.AutoSize = true;
@@ -2950,6 +3176,76 @@ namespace MP
             this.label39.TabIndex = 312;
             this.label39.Text = "7. L_Sho_ProRet";
             this.label39.Click += new System.EventHandler(this.label39_Click);
+            // 
+            // JC14
+            // 
+            this.JC14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC14.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC14.Location = new System.Drawing.Point(239, 428);
+            this.JC14.Name = "JC14";
+            this.JC14.ReadOnly = true;
+            this.JC14.Size = new System.Drawing.Size(60, 23);
+            this.JC14.TabIndex = 313;
+            this.JC14.Text = "0.00";
+            this.JC14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JC26
+            // 
+            this.JC26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC26.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC26.Location = new System.Drawing.Point(634, 276);
+            this.JC26.Name = "JC26";
+            this.JC26.ReadOnly = true;
+            this.JC26.Size = new System.Drawing.Size(60, 23);
+            this.JC26.TabIndex = 313;
+            this.JC26.Text = "0.00";
+            this.JC26.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JC8
+            // 
+            this.JC8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC8.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC8.Location = new System.Drawing.Point(240, 261);
+            this.JC8.Name = "JC8";
+            this.JC8.ReadOnly = true;
+            this.JC8.Size = new System.Drawing.Size(60, 23);
+            this.JC8.TabIndex = 313;
+            this.JC8.Text = "0.00";
+            this.JC8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // J13
+            // 
+            this.J13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J13.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J13.Location = new System.Drawing.Point(172, 403);
+            this.J13.Name = "J13";
+            this.J13.ReadOnly = true;
+            this.J13.Size = new System.Drawing.Size(60, 23);
+            this.J13.TabIndex = 311;
+            this.J13.Text = "0.00";
+            this.J13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // J25
+            // 
+            this.J25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J25.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J25.Location = new System.Drawing.Point(567, 251);
+            this.J25.Name = "J25";
+            this.J25.ReadOnly = true;
+            this.J25.Size = new System.Drawing.Size(60, 23);
+            this.J25.TabIndex = 311;
+            this.J25.Text = "0.00";
+            this.J25.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // J7
             // 
@@ -2964,6 +3260,34 @@ namespace MP
             this.J7.TabIndex = 311;
             this.J7.Text = "0.00";
             this.J7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JC13
+            // 
+            this.JC13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC13.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC13.Location = new System.Drawing.Point(239, 403);
+            this.JC13.Name = "JC13";
+            this.JC13.ReadOnly = true;
+            this.JC13.Size = new System.Drawing.Size(60, 23);
+            this.JC13.TabIndex = 313;
+            this.JC13.Text = "0.00";
+            this.JC13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JC25
+            // 
+            this.JC25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC25.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC25.Location = new System.Drawing.Point(634, 251);
+            this.JC25.Name = "JC25";
+            this.JC25.ReadOnly = true;
+            this.JC25.Size = new System.Drawing.Size(60, 23);
+            this.JC25.TabIndex = 313;
+            this.JC25.Text = "0.00";
+            this.JC25.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // JC7
             // 
@@ -2990,6 +3314,17 @@ namespace MP
             this.label53.TabIndex = 291;
             this.label53.Text = "[MONITORING DATA]";
             // 
+            // label129
+            // 
+            this.label129.AutoSize = true;
+            this.label129.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label129.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label129.Location = new System.Drawing.Point(632, 71);
+            this.label129.Name = "label129";
+            this.label129.Size = new System.Drawing.Size(18, 13);
+            this.label129.TabIndex = 310;
+            this.label129.Text = "UI";
+            // 
             // label70
             // 
             this.label70.AutoSize = true;
@@ -3014,6 +3349,153 @@ namespace MP
             this.cmd_send2.UseVisualStyleBackColor = true;
             this.cmd_send2.Click += new System.EventHandler(this.cmd_send_Click);
             // 
+            // JT18
+            // 
+            this.JT18.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT18.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT18.Location = new System.Drawing.Point(108, 535);
+            this.JT18.Name = "JT18";
+            this.JT18.Size = new System.Drawing.Size(60, 23);
+            this.JT18.TabIndex = 266;
+            this.JT18.Text = "0.00";
+            this.JT18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JT30
+            // 
+            this.JT30.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT30.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT30.Location = new System.Drawing.Point(503, 383);
+            this.JT30.Name = "JT30";
+            this.JT30.Size = new System.Drawing.Size(60, 23);
+            this.JT30.TabIndex = 266;
+            this.JT30.Text = "0.00";
+            this.JT30.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JT12
+            // 
+            this.JT12.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT12.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT12.Location = new System.Drawing.Point(109, 368);
+            this.JT12.Name = "JT12";
+            this.JT12.Size = new System.Drawing.Size(60, 23);
+            this.JT12.TabIndex = 266;
+            this.JT12.Text = "0.00";
+            this.JT12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JT17
+            // 
+            this.JT17.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT17.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT17.Location = new System.Drawing.Point(109, 507);
+            this.JT17.Name = "JT17";
+            this.JT17.Size = new System.Drawing.Size(60, 23);
+            this.JT17.TabIndex = 266;
+            this.JT17.Text = "0.00";
+            this.JT17.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JT29
+            // 
+            this.JT29.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT29.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT29.Location = new System.Drawing.Point(504, 355);
+            this.JT29.Name = "JT29";
+            this.JT29.Size = new System.Drawing.Size(60, 23);
+            this.JT29.TabIndex = 266;
+            this.JT29.Text = "0.00";
+            this.JT29.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JT11
+            // 
+            this.JT11.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT11.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT11.Location = new System.Drawing.Point(110, 340);
+            this.JT11.Name = "JT11";
+            this.JT11.Size = new System.Drawing.Size(60, 23);
+            this.JT11.TabIndex = 266;
+            this.JT11.Text = "0.00";
+            this.JT11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JT24
+            // 
+            this.JT24.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT24.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT24.Location = new System.Drawing.Point(503, 216);
+            this.JT24.Name = "JT24";
+            this.JT24.Size = new System.Drawing.Size(60, 23);
+            this.JT24.TabIndex = 266;
+            this.JT24.Text = "0.00";
+            this.JT24.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JC15
+            // 
+            this.JC15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC15.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC15.Location = new System.Drawing.Point(239, 454);
+            this.JC15.Name = "JC15";
+            this.JC15.ReadOnly = true;
+            this.JC15.Size = new System.Drawing.Size(60, 23);
+            this.JC15.TabIndex = 236;
+            this.JC15.Text = "0.00";
+            this.JC15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JC27
+            // 
+            this.JC27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC27.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC27.Location = new System.Drawing.Point(634, 302);
+            this.JC27.Name = "JC27";
+            this.JC27.ReadOnly = true;
+            this.JC27.Size = new System.Drawing.Size(60, 23);
+            this.JC27.TabIndex = 236;
+            this.JC27.Text = "0.00";
+            this.JC27.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JC9
+            // 
+            this.JC9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC9.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC9.Location = new System.Drawing.Point(240, 287);
+            this.JC9.Name = "JC9";
+            this.JC9.ReadOnly = true;
+            this.JC9.Size = new System.Drawing.Size(60, 23);
+            this.JC9.TabIndex = 236;
+            this.JC9.Text = "0.00";
+            this.JC9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JC22
+            // 
+            this.JC22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC22.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC22.Location = new System.Drawing.Point(633, 163);
+            this.JC22.Name = "JC22";
+            this.JC22.ReadOnly = true;
+            this.JC22.Size = new System.Drawing.Size(60, 23);
+            this.JC22.TabIndex = 236;
+            this.JC22.Text = "0.00";
+            this.JC22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // JC4
             // 
             this.JC4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
@@ -3028,6 +3510,171 @@ namespace MP
             this.JC4.Text = "0.00";
             this.JC4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label102.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label102.Location = new System.Drawing.Point(298, 462);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(27, 15);
+            this.label102.TabIndex = 247;
+            this.label102.Text = "deg";
+            // 
+            // label128
+            // 
+            this.label128.AutoSize = true;
+            this.label128.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label128.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label128.Location = new System.Drawing.Point(693, 310);
+            this.label128.Name = "label128";
+            this.label128.Size = new System.Drawing.Size(27, 15);
+            this.label128.TabIndex = 247;
+            this.label128.Text = "deg";
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label92.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label92.Location = new System.Drawing.Point(299, 295);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(27, 15);
+            this.label92.TabIndex = 247;
+            this.label92.Text = "deg";
+            // 
+            // label127
+            // 
+            this.label127.AutoSize = true;
+            this.label127.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label127.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label127.Location = new System.Drawing.Point(692, 171);
+            this.label127.Name = "label127";
+            this.label127.Size = new System.Drawing.Size(27, 15);
+            this.label127.TabIndex = 247;
+            this.label127.Text = "deg";
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label101.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label101.Location = new System.Drawing.Point(298, 543);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(27, 15);
+            this.label101.TabIndex = 250;
+            this.label101.Text = "deg";
+            // 
+            // label126
+            // 
+            this.label126.AutoSize = true;
+            this.label126.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label126.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label126.Location = new System.Drawing.Point(693, 391);
+            this.label126.Name = "label126";
+            this.label126.Size = new System.Drawing.Size(27, 15);
+            this.label126.TabIndex = 250;
+            this.label126.Text = "deg";
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label94.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label94.Location = new System.Drawing.Point(299, 376);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(27, 15);
+            this.label94.TabIndex = 250;
+            this.label94.Text = "deg";
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label100.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label100.Location = new System.Drawing.Point(299, 515);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(27, 15);
+            this.label100.TabIndex = 250;
+            this.label100.Text = "deg";
+            // 
+            // label125
+            // 
+            this.label125.AutoSize = true;
+            this.label125.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label125.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label125.Location = new System.Drawing.Point(694, 363);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(27, 15);
+            this.label125.TabIndex = 250;
+            this.label125.Text = "deg";
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label91.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label91.Location = new System.Drawing.Point(300, 348);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(27, 15);
+            this.label91.TabIndex = 250;
+            this.label91.Text = "deg";
+            // 
+            // label124
+            // 
+            this.label124.AutoSize = true;
+            this.label124.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label124.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label124.Location = new System.Drawing.Point(693, 224);
+            this.label124.Name = "label124";
+            this.label124.Size = new System.Drawing.Size(27, 15);
+            this.label124.TabIndex = 250;
+            this.label124.Text = "deg";
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label99.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label99.Location = new System.Drawing.Point(7, 462);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(93, 15);
+            this.label99.TabIndex = 229;
+            this.label99.Text = "15.R_Sho_FleExt";
+            // 
+            // label123
+            // 
+            this.label123.AutoSize = true;
+            this.label123.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label123.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label123.Location = new System.Drawing.Point(402, 304);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(101, 15);
+            this.label123.TabIndex = 229;
+            this.label123.Text = "27.R_Foot_DorPla";
+            // 
+            // label90
+            // 
+            this.label90.AutoSize = true;
+            this.label90.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label90.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label90.Location = new System.Drawing.Point(8, 289);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(88, 15);
+            this.label90.TabIndex = 229;
+            this.label90.Text = "9. L_Sho_AbAd";
+            // 
+            // label122
+            // 
+            this.label122.AutoSize = true;
+            this.label122.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label122.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label122.Location = new System.Drawing.Point(401, 165);
+            this.label122.Name = "label122";
+            this.label122.Size = new System.Drawing.Size(89, 15);
+            this.label122.TabIndex = 229;
+            this.label122.Text = "22.L_Hip_AbAd";
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -3038,6 +3685,58 @@ namespace MP
             this.label17.Size = new System.Drawing.Size(74, 15);
             this.label17.TabIndex = 229;
             this.label17.Text = "4. Spine_Rot";
+            // 
+            // JT15
+            // 
+            this.JT15.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT15.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT15.Location = new System.Drawing.Point(109, 454);
+            this.JT15.Name = "JT15";
+            this.JT15.Size = new System.Drawing.Size(60, 23);
+            this.JT15.TabIndex = 264;
+            this.JT15.Text = "0.00";
+            this.JT15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JT27
+            // 
+            this.JT27.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT27.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT27.Location = new System.Drawing.Point(504, 302);
+            this.JT27.Name = "JT27";
+            this.JT27.Size = new System.Drawing.Size(60, 23);
+            this.JT27.TabIndex = 264;
+            this.JT27.Text = "0.00";
+            this.JT27.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JT9
+            // 
+            this.JT9.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT9.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT9.Location = new System.Drawing.Point(110, 287);
+            this.JT9.Name = "JT9";
+            this.JT9.Size = new System.Drawing.Size(60, 23);
+            this.JT9.TabIndex = 264;
+            this.JT9.Text = "0.00";
+            this.JT9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JT22
+            // 
+            this.JT22.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT22.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT22.Location = new System.Drawing.Point(503, 163);
+            this.JT22.Name = "JT22";
+            this.JT22.Size = new System.Drawing.Size(60, 23);
+            this.JT22.TabIndex = 264;
+            this.JT22.Text = "0.00";
+            this.JT22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // JT4
             // 
@@ -3051,6 +3750,62 @@ namespace MP
             this.JT4.TabIndex = 264;
             this.JT4.Text = "0.00";
             this.JT4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // J15
+            // 
+            this.J15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J15.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J15.Location = new System.Drawing.Point(172, 454);
+            this.J15.Name = "J15";
+            this.J15.ReadOnly = true;
+            this.J15.Size = new System.Drawing.Size(60, 23);
+            this.J15.TabIndex = 223;
+            this.J15.Text = "0.00";
+            this.J15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // J27
+            // 
+            this.J27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J27.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J27.Location = new System.Drawing.Point(567, 302);
+            this.J27.Name = "J27";
+            this.J27.ReadOnly = true;
+            this.J27.Size = new System.Drawing.Size(60, 23);
+            this.J27.TabIndex = 223;
+            this.J27.Text = "0.00";
+            this.J27.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // J9
+            // 
+            this.J9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J9.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J9.Location = new System.Drawing.Point(173, 287);
+            this.J9.Name = "J9";
+            this.J9.ReadOnly = true;
+            this.J9.Size = new System.Drawing.Size(60, 23);
+            this.J9.TabIndex = 223;
+            this.J9.Text = "0.00";
+            this.J9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // J22
+            // 
+            this.J22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J22.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J22.Location = new System.Drawing.Point(566, 163);
+            this.J22.Name = "J22";
+            this.J22.ReadOnly = true;
+            this.J22.Size = new System.Drawing.Size(60, 23);
+            this.J22.TabIndex = 223;
+            this.J22.Text = "0.00";
+            this.J22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // J4
             // 
@@ -3066,6 +3821,308 @@ namespace MP
             this.J4.Text = "0.00";
             this.J4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label98.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label98.Location = new System.Drawing.Point(8, 539);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(95, 15);
+            this.label98.TabIndex = 227;
+            this.label98.Text = "18.R_Arm_FleExt";
+            // 
+            // label121
+            // 
+            this.label121.AutoSize = true;
+            this.label121.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label121.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label121.Location = new System.Drawing.Point(401, 385);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(24, 15);
+            this.label121.TabIndex = 227;
+            this.label121.Text = "30.";
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label93.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label93.Location = new System.Drawing.Point(7, 370);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(106, 15);
+            this.label93.TabIndex = 227;
+            this.label93.Text = "12. L_Arm_ProSup";
+            // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label97.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label97.Location = new System.Drawing.Point(7, 512);
+            this.label97.Name = "label97";
+            this.label97.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label97.Size = new System.Drawing.Size(107, 15);
+            this.label97.TabIndex = 227;
+            this.label97.Text = "17.R_Sho_InEx_Rot";
+            // 
+            // label120
+            // 
+            this.label120.AutoSize = true;
+            this.label120.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label120.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label120.Location = new System.Drawing.Point(402, 363);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(24, 15);
+            this.label120.TabIndex = 227;
+            this.label120.Text = "29.";
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label89.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label89.Location = new System.Drawing.Point(8, 348);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(98, 15);
+            this.label89.TabIndex = 227;
+            this.label89.Text = "11. L_Arm_FleExt";
+            // 
+            // label119
+            // 
+            this.label119.AutoSize = true;
+            this.label119.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label119.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label119.Location = new System.Drawing.Point(401, 218);
+            this.label119.Name = "label119";
+            this.label119.Size = new System.Drawing.Size(91, 15);
+            this.label119.TabIndex = 227;
+            this.label119.Text = "24.R_Hip_FleExt";
+            // 
+            // J18
+            // 
+            this.J18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J18.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J18.Location = new System.Drawing.Point(171, 535);
+            this.J18.Name = "J18";
+            this.J18.ReadOnly = true;
+            this.J18.Size = new System.Drawing.Size(60, 23);
+            this.J18.TabIndex = 225;
+            this.J18.Text = "0.00";
+            this.J18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // J30
+            // 
+            this.J30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J30.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J30.Location = new System.Drawing.Point(566, 383);
+            this.J30.Name = "J30";
+            this.J30.ReadOnly = true;
+            this.J30.Size = new System.Drawing.Size(60, 23);
+            this.J30.TabIndex = 225;
+            this.J30.Text = "0.00";
+            this.J30.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // J12
+            // 
+            this.J12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J12.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J12.Location = new System.Drawing.Point(172, 368);
+            this.J12.Name = "J12";
+            this.J12.ReadOnly = true;
+            this.J12.Size = new System.Drawing.Size(60, 23);
+            this.J12.TabIndex = 225;
+            this.J12.Text = "0.00";
+            this.J12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // J17
+            // 
+            this.J17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J17.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J17.Location = new System.Drawing.Point(172, 507);
+            this.J17.Name = "J17";
+            this.J17.ReadOnly = true;
+            this.J17.Size = new System.Drawing.Size(60, 23);
+            this.J17.TabIndex = 225;
+            this.J17.Text = "0.00";
+            this.J17.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // J29
+            // 
+            this.J29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J29.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J29.Location = new System.Drawing.Point(567, 355);
+            this.J29.Name = "J29";
+            this.J29.ReadOnly = true;
+            this.J29.Size = new System.Drawing.Size(60, 23);
+            this.J29.TabIndex = 225;
+            this.J29.Text = "0.00";
+            this.J29.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // J11
+            // 
+            this.J11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J11.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J11.Location = new System.Drawing.Point(173, 340);
+            this.J11.Name = "J11";
+            this.J11.ReadOnly = true;
+            this.J11.Size = new System.Drawing.Size(60, 23);
+            this.J11.TabIndex = 225;
+            this.J11.Text = "0.00";
+            this.J11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // J24
+            // 
+            this.J24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J24.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J24.Location = new System.Drawing.Point(566, 216);
+            this.J24.Name = "J24";
+            this.J24.ReadOnly = true;
+            this.J24.Size = new System.Drawing.Size(60, 23);
+            this.J24.TabIndex = 225;
+            this.J24.Text = "0.00";
+            this.J24.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JC18
+            // 
+            this.JC18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC18.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC18.Location = new System.Drawing.Point(238, 535);
+            this.JC18.Name = "JC18";
+            this.JC18.ReadOnly = true;
+            this.JC18.Size = new System.Drawing.Size(60, 23);
+            this.JC18.TabIndex = 238;
+            this.JC18.Text = "0.00";
+            this.JC18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JC30
+            // 
+            this.JC30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC30.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC30.Location = new System.Drawing.Point(633, 383);
+            this.JC30.Name = "JC30";
+            this.JC30.ReadOnly = true;
+            this.JC30.Size = new System.Drawing.Size(60, 23);
+            this.JC30.TabIndex = 238;
+            this.JC30.Text = "0.00";
+            this.JC30.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JC12
+            // 
+            this.JC12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC12.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC12.Location = new System.Drawing.Point(239, 368);
+            this.JC12.Name = "JC12";
+            this.JC12.ReadOnly = true;
+            this.JC12.Size = new System.Drawing.Size(60, 23);
+            this.JC12.TabIndex = 238;
+            this.JC12.Text = "0.00";
+            this.JC12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JC17
+            // 
+            this.JC17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC17.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC17.Location = new System.Drawing.Point(239, 507);
+            this.JC17.Name = "JC17";
+            this.JC17.ReadOnly = true;
+            this.JC17.Size = new System.Drawing.Size(60, 23);
+            this.JC17.TabIndex = 238;
+            this.JC17.Text = "0.00";
+            this.JC17.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JC29
+            // 
+            this.JC29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC29.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC29.Location = new System.Drawing.Point(634, 355);
+            this.JC29.Name = "JC29";
+            this.JC29.ReadOnly = true;
+            this.JC29.Size = new System.Drawing.Size(60, 23);
+            this.JC29.TabIndex = 238;
+            this.JC29.Text = "0.00";
+            this.JC29.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JC11
+            // 
+            this.JC11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC11.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC11.Location = new System.Drawing.Point(240, 340);
+            this.JC11.Name = "JC11";
+            this.JC11.ReadOnly = true;
+            this.JC11.Size = new System.Drawing.Size(60, 23);
+            this.JC11.TabIndex = 238;
+            this.JC11.Text = "0.00";
+            this.JC11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JC24
+            // 
+            this.JC24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC24.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC24.Location = new System.Drawing.Point(633, 216);
+            this.JC24.Name = "JC24";
+            this.JC24.ReadOnly = true;
+            this.JC24.Size = new System.Drawing.Size(60, 23);
+            this.JC24.TabIndex = 238;
+            this.JC24.Text = "0.00";
+            this.JC24.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JC20
+            // 
+            this.JC20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC20.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC20.Location = new System.Drawing.Point(633, 111);
+            this.JC20.Name = "JC20";
+            this.JC20.ReadOnly = true;
+            this.JC20.Size = new System.Drawing.Size(60, 23);
+            this.JC20.TabIndex = 234;
+            this.JC20.Text = "0.00";
+            this.JC20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JC19
+            // 
+            this.JC19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC19.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC19.Location = new System.Drawing.Point(633, 84);
+            this.JC19.Name = "JC19";
+            this.JC19.ReadOnly = true;
+            this.JC19.Size = new System.Drawing.Size(60, 23);
+            this.JC19.TabIndex = 233;
+            this.JC19.Text = "0.00";
+            this.JC19.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // JC2
             // 
             this.JC2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
@@ -3079,6 +4136,19 @@ namespace MP
             this.JC2.TabIndex = 234;
             this.JC2.Text = "0.00";
             this.JC2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox39
+            // 
+            this.textBox39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
+            this.textBox39.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox39.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.textBox39.Location = new System.Drawing.Point(629, 50);
+            this.textBox39.Name = "textBox39";
+            this.textBox39.Size = new System.Drawing.Size(60, 18);
+            this.textBox39.TabIndex = 73;
+            this.textBox39.Text = "Current";
+            this.textBox39.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // JC1
             // 
@@ -3094,6 +4164,20 @@ namespace MP
             this.JC1.Text = "0.00";
             this.JC1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // J19
+            // 
+            this.J19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J19.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J19.Location = new System.Drawing.Point(566, 84);
+            this.J19.Name = "J19";
+            this.J19.ReadOnly = true;
+            this.J19.Size = new System.Drawing.Size(60, 23);
+            this.J19.TabIndex = 220;
+            this.J19.Text = "0.00";
+            this.J19.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // textBox14
             // 
             this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
@@ -3106,6 +4190,17 @@ namespace MP
             this.textBox14.TabIndex = 73;
             this.textBox14.Text = "Current";
             this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label118
+            // 
+            this.label118.AutoSize = true;
+            this.label118.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label118.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label118.Location = new System.Drawing.Point(401, 86);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(103, 15);
+            this.label118.TabIndex = 226;
+            this.label118.Text = "19.R_Arm_ProSup";
             // 
             // J1
             // 
@@ -3121,6 +4216,20 @@ namespace MP
             this.J1.Text = "0.00";
             this.J1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // J20
+            // 
+            this.J20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J20.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J20.Location = new System.Drawing.Point(566, 111);
+            this.J20.Name = "J20";
+            this.J20.ReadOnly = true;
+            this.J20.Size = new System.Drawing.Size(60, 23);
+            this.J20.TabIndex = 221;
+            this.J20.Text = "0.00";
+            this.J20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // label34
             // 
             this.label34.AutoSize = true;
@@ -3131,6 +4240,17 @@ namespace MP
             this.label34.Size = new System.Drawing.Size(73, 15);
             this.label34.TabIndex = 226;
             this.label34.Text = "1. HEAD_rot";
+            // 
+            // label117
+            // 
+            this.label117.AutoSize = true;
+            this.label117.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label117.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label117.Location = new System.Drawing.Point(401, 113);
+            this.label117.Name = "label117";
+            this.label117.Size = new System.Drawing.Size(99, 15);
+            this.label117.TabIndex = 231;
+            this.label117.Text = "20.R_Wrist_FleExt";
             // 
             // J2
             // 
@@ -3146,6 +4266,19 @@ namespace MP
             this.J2.Text = "0.00";
             this.J2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // JT20
+            // 
+            this.JT20.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT20.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT20.Location = new System.Drawing.Point(503, 111);
+            this.JT20.Name = "JT20";
+            this.JT20.Size = new System.Drawing.Size(60, 23);
+            this.JT20.TabIndex = 262;
+            this.JT20.Text = "0.00";
+            this.JT20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -3156,6 +4289,19 @@ namespace MP
             this.label15.Size = new System.Drawing.Size(89, 15);
             this.label15.TabIndex = 231;
             this.label15.Text = "2. HEAD_FleExt";
+            // 
+            // JT19
+            // 
+            this.JT19.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT19.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT19.Location = new System.Drawing.Point(503, 84);
+            this.JT19.Name = "JT19";
+            this.JT19.Size = new System.Drawing.Size(60, 23);
+            this.JT19.TabIndex = 261;
+            this.JT19.Text = "0.00";
+            this.JT19.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // JT2
             // 
@@ -3169,6 +4315,17 @@ namespace MP
             this.JT2.TabIndex = 262;
             this.JT2.Text = "0.00";
             this.JT2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label116
+            // 
+            this.label116.AutoSize = true;
+            this.label116.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label116.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label116.Location = new System.Drawing.Point(564, 71);
+            this.label116.Name = "label116";
+            this.label116.Size = new System.Drawing.Size(50, 13);
+            this.label116.TabIndex = 260;
+            this.label116.Text = "LCU pro";
             // 
             // JT1
             // 
@@ -3194,6 +4351,47 @@ namespace MP
             this.label41.TabIndex = 260;
             this.label41.Text = "LCU pro";
             // 
+            // textBox34
+            // 
+            this.textBox34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
+            this.textBox34.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox34.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.textBox34.Location = new System.Drawing.Point(534, 50);
+            this.textBox34.Name = "textBox34";
+            this.textBox34.Size = new System.Drawing.Size(60, 18);
+            this.textBox34.TabIndex = 13;
+            this.textBox34.Text = "Target";
+            this.textBox34.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // J16
+            // 
+            this.J16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J16.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J16.Location = new System.Drawing.Point(172, 481);
+            this.J16.Name = "J16";
+            this.J16.ReadOnly = true;
+            this.J16.Size = new System.Drawing.Size(60, 23);
+            this.J16.TabIndex = 224;
+            this.J16.Text = "0.00";
+            this.J16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // J28
+            // 
+            this.J28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J28.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J28.Location = new System.Drawing.Point(567, 329);
+            this.J28.Name = "J28";
+            this.J28.ReadOnly = true;
+            this.J28.Size = new System.Drawing.Size(60, 23);
+            this.J28.TabIndex = 224;
+            this.J28.Text = "0.00";
+            this.J28.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
@@ -3207,6 +4405,59 @@ namespace MP
             this.textBox1.Text = "Target";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // J10
+            // 
+            this.J10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J10.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J10.Location = new System.Drawing.Point(173, 314);
+            this.J10.Name = "J10";
+            this.J10.ReadOnly = true;
+            this.J10.Size = new System.Drawing.Size(60, 23);
+            this.J10.TabIndex = 224;
+            this.J10.Text = "0.00";
+            this.J10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label115
+            // 
+            this.label115.AutoSize = true;
+            this.label115.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label115.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label115.Location = new System.Drawing.Point(500, 71);
+            this.label115.Name = "label115";
+            this.label115.Size = new System.Drawing.Size(46, 13);
+            this.label115.TabIndex = 259;
+            this.label115.Text = "UI Cmd";
+            // 
+            // JC16
+            // 
+            this.JC16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC16.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC16.Location = new System.Drawing.Point(239, 481);
+            this.JC16.Name = "JC16";
+            this.JC16.ReadOnly = true;
+            this.JC16.Size = new System.Drawing.Size(60, 23);
+            this.JC16.TabIndex = 237;
+            this.JC16.Text = "0.00";
+            this.JC16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JC28
+            // 
+            this.JC28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC28.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC28.Location = new System.Drawing.Point(634, 329);
+            this.JC28.Name = "JC28";
+            this.JC28.ReadOnly = true;
+            this.JC28.Size = new System.Drawing.Size(60, 23);
+            this.JC28.TabIndex = 237;
+            this.JC28.Text = "0.00";
+            this.JC28.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // label40
             // 
             this.label40.AutoSize = true;
@@ -3217,6 +4468,207 @@ namespace MP
             this.label40.Size = new System.Drawing.Size(46, 13);
             this.label40.TabIndex = 259;
             this.label40.Text = "UI Cmd";
+            // 
+            // JC10
+            // 
+            this.JC10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC10.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC10.Location = new System.Drawing.Point(240, 314);
+            this.JC10.Name = "JC10";
+            this.JC10.ReadOnly = true;
+            this.JC10.Size = new System.Drawing.Size(60, 23);
+            this.JC10.TabIndex = 237;
+            this.JC10.Text = "0.00";
+            this.JC10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // J23
+            // 
+            this.J23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J23.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J23.Location = new System.Drawing.Point(566, 190);
+            this.J23.Name = "J23";
+            this.J23.ReadOnly = true;
+            this.J23.Size = new System.Drawing.Size(60, 23);
+            this.J23.TabIndex = 224;
+            this.J23.Text = "0.00";
+            this.J23.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label96.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label96.Location = new System.Drawing.Point(8, 485);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(92, 15);
+            this.label96.TabIndex = 228;
+            this.label96.Text = "16.R_Sho_AbAd";
+            // 
+            // label114
+            // 
+            this.label114.AutoSize = true;
+            this.label114.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label114.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label114.Location = new System.Drawing.Point(402, 331);
+            this.label114.Name = "label114";
+            this.label114.Size = new System.Drawing.Size(24, 15);
+            this.label114.TabIndex = 228;
+            this.label114.Text = "28.";
+            // 
+            // JC23
+            // 
+            this.JC23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC23.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC23.Location = new System.Drawing.Point(633, 190);
+            this.JC23.Name = "JC23";
+            this.JC23.ReadOnly = true;
+            this.JC23.Size = new System.Drawing.Size(60, 23);
+            this.JC23.TabIndex = 237;
+            this.JC23.Text = "0.00";
+            this.JC23.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label88.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label88.Location = new System.Drawing.Point(8, 316);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(87, 30);
+            this.label88.TabIndex = 228;
+            this.label88.Text = "10. L_Sho_InEx\r\n_Rot";
+            // 
+            // label113
+            // 
+            this.label113.AutoSize = true;
+            this.label113.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label113.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label113.Location = new System.Drawing.Point(401, 192);
+            this.label113.Name = "label113";
+            this.label113.Size = new System.Drawing.Size(90, 15);
+            this.label113.TabIndex = 228;
+            this.label113.Text = "23.R_Hip_AbAd";
+            // 
+            // label112
+            // 
+            this.label112.AutoSize = true;
+            this.label112.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label112.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label112.Location = new System.Drawing.Point(401, 138);
+            this.label112.Name = "label112";
+            this.label112.Size = new System.Drawing.Size(77, 15);
+            this.label112.TabIndex = 230;
+            this.label112.Text = "21.L_Hip_Rot";
+            // 
+            // JC21
+            // 
+            this.JC21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.JC21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JC21.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.JC21.Location = new System.Drawing.Point(633, 136);
+            this.JC21.Name = "JC21";
+            this.JC21.ReadOnly = true;
+            this.JC21.Size = new System.Drawing.Size(60, 23);
+            this.JC21.TabIndex = 235;
+            this.JC21.Text = "0.00";
+            this.JC21.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JT16
+            // 
+            this.JT16.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT16.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT16.Location = new System.Drawing.Point(109, 481);
+            this.JT16.Name = "JT16";
+            this.JT16.Size = new System.Drawing.Size(60, 23);
+            this.JT16.TabIndex = 265;
+            this.JT16.Text = "0.00";
+            this.JT16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JT28
+            // 
+            this.JT28.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT28.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT28.Location = new System.Drawing.Point(504, 329);
+            this.JT28.Name = "JT28";
+            this.JT28.Size = new System.Drawing.Size(60, 23);
+            this.JT28.TabIndex = 265;
+            this.JT28.Text = "0.00";
+            this.JT28.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // J21
+            // 
+            this.J21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.J21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.J21.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J21.Location = new System.Drawing.Point(566, 136);
+            this.J21.Name = "J21";
+            this.J21.ReadOnly = true;
+            this.J21.Size = new System.Drawing.Size(60, 23);
+            this.J21.TabIndex = 222;
+            this.J21.Text = "0.00";
+            this.J21.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JT10
+            // 
+            this.JT10.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT10.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT10.Location = new System.Drawing.Point(110, 314);
+            this.JT10.Name = "JT10";
+            this.JT10.Size = new System.Drawing.Size(60, 23);
+            this.JT10.TabIndex = 265;
+            this.JT10.Text = "0.00";
+            this.JT10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JT23
+            // 
+            this.JT23.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT23.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT23.Location = new System.Drawing.Point(503, 190);
+            this.JT23.Name = "JT23";
+            this.JT23.Size = new System.Drawing.Size(60, 23);
+            this.JT23.TabIndex = 265;
+            this.JT23.Text = "0.00";
+            this.JT23.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // JT21
+            // 
+            this.JT21.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.JT21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.JT21.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JT21.Location = new System.Drawing.Point(503, 136);
+            this.JT21.Name = "JT21";
+            this.JT21.Size = new System.Drawing.Size(60, 23);
+            this.JT21.TabIndex = 263;
+            this.JT21.Text = "0.00";
+            this.JT21.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label111
+            // 
+            this.label111.AutoSize = true;
+            this.label111.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label111.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label111.Location = new System.Drawing.Point(692, 144);
+            this.label111.Name = "label111";
+            this.label111.Size = new System.Drawing.Size(27, 15);
+            this.label111.TabIndex = 248;
+            this.label111.Text = "deg";
             // 
             // label12
             // 
@@ -3229,6 +4681,39 @@ namespace MP
             this.label12.TabIndex = 248;
             this.label12.Text = "deg";
             // 
+            // label110
+            // 
+            this.label110.AutoSize = true;
+            this.label110.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label110.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label110.Location = new System.Drawing.Point(692, 92);
+            this.label110.Name = "label110";
+            this.label110.Size = new System.Drawing.Size(27, 15);
+            this.label110.TabIndex = 245;
+            this.label110.Text = "deg";
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label95.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label95.Location = new System.Drawing.Point(298, 489);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(27, 15);
+            this.label95.TabIndex = 249;
+            this.label95.Text = "deg";
+            // 
+            // label109
+            // 
+            this.label109.AutoSize = true;
+            this.label109.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label109.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label109.Location = new System.Drawing.Point(693, 337);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(27, 15);
+            this.label109.TabIndex = 249;
+            this.label109.Text = "deg";
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -3239,6 +4724,39 @@ namespace MP
             this.label19.Size = new System.Drawing.Size(27, 15);
             this.label19.TabIndex = 245;
             this.label19.Text = "deg";
+            // 
+            // label108
+            // 
+            this.label108.AutoSize = true;
+            this.label108.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label108.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label108.Location = new System.Drawing.Point(692, 119);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(27, 15);
+            this.label108.TabIndex = 246;
+            this.label108.Text = "deg";
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label67.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label67.Location = new System.Drawing.Point(299, 322);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(27, 15);
+            this.label67.TabIndex = 249;
+            this.label67.Text = "deg";
+            // 
+            // label107
+            // 
+            this.label107.AutoSize = true;
+            this.label107.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label107.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label107.Location = new System.Drawing.Point(692, 198);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(27, 15);
+            this.label107.TabIndex = 249;
+            this.label107.Text = "deg";
             // 
             // label18
             // 
@@ -4414,1519 +5932,29 @@ namespace MP
             this.maintenance.TabIndex = 2;
             this.maintenance.Text = "Maintenance";
             // 
-            // JC8
-            // 
-            this.JC8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC8.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC8.Location = new System.Drawing.Point(240, 261);
-            this.JC8.Name = "JC8";
-            this.JC8.ReadOnly = true;
-            this.JC8.Size = new System.Drawing.Size(60, 23);
-            this.JC8.TabIndex = 313;
-            this.JC8.Text = "0.00";
-            this.JC8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // J8
-            // 
-            this.J8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J8.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J8.Location = new System.Drawing.Point(173, 261);
-            this.J8.Name = "J8";
-            this.J8.ReadOnly = true;
-            this.J8.Size = new System.Drawing.Size(60, 23);
-            this.J8.TabIndex = 311;
-            this.J8.Text = "0.00";
-            this.J8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label54.Location = new System.Drawing.Point(8, 263);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(89, 15);
-            this.label54.TabIndex = 312;
-            this.label54.Text = "8. L_Sho_FleExt";
-            this.label54.Click += new System.EventHandler(this.label39_Click);
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label60.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label60.Location = new System.Drawing.Point(300, 269);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(27, 15);
-            this.label60.TabIndex = 314;
-            this.label60.Text = "deg";
-            // 
-            // JT8
-            // 
-            this.JT8.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT8.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT8.Location = new System.Drawing.Point(110, 261);
-            this.JT8.Name = "JT8";
-            this.JT8.Size = new System.Drawing.Size(60, 23);
-            this.JT8.TabIndex = 315;
-            this.JT8.Text = "0.00";
-            this.JT8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label67.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label67.Location = new System.Drawing.Point(299, 322);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(27, 15);
-            this.label67.TabIndex = 249;
-            this.label67.Text = "deg";
-            // 
-            // JT10
-            // 
-            this.JT10.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT10.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT10.Location = new System.Drawing.Point(110, 314);
-            this.JT10.Name = "JT10";
-            this.JT10.Size = new System.Drawing.Size(60, 23);
-            this.JT10.TabIndex = 265;
-            this.JT10.Text = "0.00";
-            this.JT10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label88
-            // 
-            this.label88.AutoSize = true;
-            this.label88.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label88.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label88.Location = new System.Drawing.Point(8, 316);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(87, 30);
-            this.label88.TabIndex = 228;
-            this.label88.Text = "10. L_Sho_InEx\r\n_Rot";
-            // 
-            // JC10
-            // 
-            this.JC10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC10.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC10.Location = new System.Drawing.Point(240, 314);
-            this.JC10.Name = "JC10";
-            this.JC10.ReadOnly = true;
-            this.JC10.Size = new System.Drawing.Size(60, 23);
-            this.JC10.TabIndex = 237;
-            this.JC10.Text = "0.00";
-            this.JC10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // J10
-            // 
-            this.J10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J10.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J10.Location = new System.Drawing.Point(173, 314);
-            this.J10.Name = "J10";
-            this.J10.ReadOnly = true;
-            this.J10.Size = new System.Drawing.Size(60, 23);
-            this.J10.TabIndex = 224;
-            this.J10.Text = "0.00";
-            this.J10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JC11
-            // 
-            this.JC11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC11.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC11.Location = new System.Drawing.Point(240, 340);
-            this.JC11.Name = "JC11";
-            this.JC11.ReadOnly = true;
-            this.JC11.Size = new System.Drawing.Size(60, 23);
-            this.JC11.TabIndex = 238;
-            this.JC11.Text = "0.00";
-            this.JC11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // J11
-            // 
-            this.J11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J11.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J11.Location = new System.Drawing.Point(173, 340);
-            this.J11.Name = "J11";
-            this.J11.ReadOnly = true;
-            this.J11.Size = new System.Drawing.Size(60, 23);
-            this.J11.TabIndex = 225;
-            this.J11.Text = "0.00";
-            this.J11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label89
-            // 
-            this.label89.AutoSize = true;
-            this.label89.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label89.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label89.Location = new System.Drawing.Point(8, 348);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(98, 15);
-            this.label89.TabIndex = 227;
-            this.label89.Text = "11. L_Arm_FleExt";
-            // 
-            // J9
-            // 
-            this.J9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J9.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J9.Location = new System.Drawing.Point(173, 287);
-            this.J9.Name = "J9";
-            this.J9.ReadOnly = true;
-            this.J9.Size = new System.Drawing.Size(60, 23);
-            this.J9.TabIndex = 223;
-            this.J9.Text = "0.00";
-            this.J9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JT9
-            // 
-            this.JT9.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT9.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT9.Location = new System.Drawing.Point(110, 287);
-            this.JT9.Name = "JT9";
-            this.JT9.Size = new System.Drawing.Size(60, 23);
-            this.JT9.TabIndex = 264;
-            this.JT9.Text = "0.00";
-            this.JT9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label90
-            // 
-            this.label90.AutoSize = true;
-            this.label90.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label90.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label90.Location = new System.Drawing.Point(8, 289);
-            this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(88, 15);
-            this.label90.TabIndex = 229;
-            this.label90.Text = "9. L_Sho_AbAd";
-            // 
-            // label91
-            // 
-            this.label91.AutoSize = true;
-            this.label91.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label91.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label91.Location = new System.Drawing.Point(300, 348);
-            this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(27, 15);
-            this.label91.TabIndex = 250;
-            this.label91.Text = "deg";
-            // 
-            // label92
-            // 
-            this.label92.AutoSize = true;
-            this.label92.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label92.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label92.Location = new System.Drawing.Point(299, 295);
-            this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(27, 15);
-            this.label92.TabIndex = 247;
-            this.label92.Text = "deg";
-            // 
-            // JC9
-            // 
-            this.JC9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC9.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC9.Location = new System.Drawing.Point(240, 287);
-            this.JC9.Name = "JC9";
-            this.JC9.ReadOnly = true;
-            this.JC9.Size = new System.Drawing.Size(60, 23);
-            this.JC9.TabIndex = 236;
-            this.JC9.Text = "0.00";
-            this.JC9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JT11
-            // 
-            this.JT11.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT11.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT11.Location = new System.Drawing.Point(110, 340);
-            this.JT11.Name = "JT11";
-            this.JT11.Size = new System.Drawing.Size(60, 23);
-            this.JT11.TabIndex = 266;
-            this.JT11.Text = "0.00";
-            this.JT11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JC12
-            // 
-            this.JC12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC12.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC12.Location = new System.Drawing.Point(239, 368);
-            this.JC12.Name = "JC12";
-            this.JC12.ReadOnly = true;
-            this.JC12.Size = new System.Drawing.Size(60, 23);
-            this.JC12.TabIndex = 238;
-            this.JC12.Text = "0.00";
-            this.JC12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // J12
-            // 
-            this.J12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J12.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J12.Location = new System.Drawing.Point(172, 368);
-            this.J12.Name = "J12";
-            this.J12.ReadOnly = true;
-            this.J12.Size = new System.Drawing.Size(60, 23);
-            this.J12.TabIndex = 225;
-            this.J12.Text = "0.00";
-            this.J12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label93
-            // 
-            this.label93.AutoSize = true;
-            this.label93.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label93.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label93.Location = new System.Drawing.Point(7, 370);
-            this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(106, 15);
-            this.label93.TabIndex = 227;
-            this.label93.Text = "12. L_Arm_ProSup";
-            // 
-            // label94
-            // 
-            this.label94.AutoSize = true;
-            this.label94.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label94.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label94.Location = new System.Drawing.Point(299, 376);
-            this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(27, 15);
-            this.label94.TabIndex = 250;
-            this.label94.Text = "deg";
-            // 
-            // JT12
-            // 
-            this.JT12.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT12.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT12.Location = new System.Drawing.Point(109, 368);
-            this.JT12.Name = "JT12";
-            this.JT12.Size = new System.Drawing.Size(60, 23);
-            this.JT12.TabIndex = 266;
-            this.JT12.Text = "0.00";
-            this.JT12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label95
-            // 
-            this.label95.AutoSize = true;
-            this.label95.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label95.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label95.Location = new System.Drawing.Point(298, 489);
-            this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(27, 15);
-            this.label95.TabIndex = 249;
-            this.label95.Text = "deg";
-            // 
-            // JT16
-            // 
-            this.JT16.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT16.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT16.Location = new System.Drawing.Point(109, 481);
-            this.JT16.Name = "JT16";
-            this.JT16.Size = new System.Drawing.Size(60, 23);
-            this.JT16.TabIndex = 265;
-            this.JT16.Text = "0.00";
-            this.JT16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label96
-            // 
-            this.label96.AutoSize = true;
-            this.label96.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label96.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label96.Location = new System.Drawing.Point(8, 485);
-            this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(92, 15);
-            this.label96.TabIndex = 228;
-            this.label96.Text = "16.R_Sho_AbAd";
-            // 
-            // JC16
-            // 
-            this.JC16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC16.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC16.Location = new System.Drawing.Point(239, 481);
-            this.JC16.Name = "JC16";
-            this.JC16.ReadOnly = true;
-            this.JC16.Size = new System.Drawing.Size(60, 23);
-            this.JC16.TabIndex = 237;
-            this.JC16.Text = "0.00";
-            this.JC16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // J16
-            // 
-            this.J16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J16.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J16.Location = new System.Drawing.Point(172, 481);
-            this.J16.Name = "J16";
-            this.J16.ReadOnly = true;
-            this.J16.Size = new System.Drawing.Size(60, 23);
-            this.J16.TabIndex = 224;
-            this.J16.Text = "0.00";
-            this.J16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JC17
-            // 
-            this.JC17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC17.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC17.Location = new System.Drawing.Point(239, 507);
-            this.JC17.Name = "JC17";
-            this.JC17.ReadOnly = true;
-            this.JC17.Size = new System.Drawing.Size(60, 23);
-            this.JC17.TabIndex = 238;
-            this.JC17.Text = "0.00";
-            this.JC17.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JC18
-            // 
-            this.JC18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC18.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC18.Location = new System.Drawing.Point(238, 535);
-            this.JC18.Name = "JC18";
-            this.JC18.ReadOnly = true;
-            this.JC18.Size = new System.Drawing.Size(60, 23);
-            this.JC18.TabIndex = 238;
-            this.JC18.Text = "0.00";
-            this.JC18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // J17
-            // 
-            this.J17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J17.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J17.Location = new System.Drawing.Point(172, 507);
-            this.J17.Name = "J17";
-            this.J17.ReadOnly = true;
-            this.J17.Size = new System.Drawing.Size(60, 23);
-            this.J17.TabIndex = 225;
-            this.J17.Text = "0.00";
-            this.J17.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // J18
-            // 
-            this.J18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J18.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J18.Location = new System.Drawing.Point(171, 535);
-            this.J18.Name = "J18";
-            this.J18.ReadOnly = true;
-            this.J18.Size = new System.Drawing.Size(60, 23);
-            this.J18.TabIndex = 225;
-            this.J18.Text = "0.00";
-            this.J18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label97
-            // 
-            this.label97.AutoSize = true;
-            this.label97.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label97.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label97.Location = new System.Drawing.Point(7, 512);
-            this.label97.Name = "label97";
-            this.label97.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label97.Size = new System.Drawing.Size(107, 15);
-            this.label97.TabIndex = 227;
-            this.label97.Text = "17.R_Sho_InEx_Rot";
-            // 
-            // label98
-            // 
-            this.label98.AutoSize = true;
-            this.label98.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label98.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label98.Location = new System.Drawing.Point(8, 539);
-            this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(95, 15);
-            this.label98.TabIndex = 227;
-            this.label98.Text = "18.R_Arm_FleExt";
-            // 
-            // J15
-            // 
-            this.J15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J15.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J15.Location = new System.Drawing.Point(172, 454);
-            this.J15.Name = "J15";
-            this.J15.ReadOnly = true;
-            this.J15.Size = new System.Drawing.Size(60, 23);
-            this.J15.TabIndex = 223;
-            this.J15.Text = "0.00";
-            this.J15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JT15
-            // 
-            this.JT15.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT15.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT15.Location = new System.Drawing.Point(109, 454);
-            this.JT15.Name = "JT15";
-            this.JT15.Size = new System.Drawing.Size(60, 23);
-            this.JT15.TabIndex = 264;
-            this.JT15.Text = "0.00";
-            this.JT15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label99
-            // 
-            this.label99.AutoSize = true;
-            this.label99.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label99.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label99.Location = new System.Drawing.Point(7, 462);
-            this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(93, 15);
-            this.label99.TabIndex = 229;
-            this.label99.Text = "15.R_Sho_FleExt";
-            // 
-            // label100
-            // 
-            this.label100.AutoSize = true;
-            this.label100.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label100.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label100.Location = new System.Drawing.Point(299, 515);
-            this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(27, 15);
-            this.label100.TabIndex = 250;
-            this.label100.Text = "deg";
-            // 
-            // label101
-            // 
-            this.label101.AutoSize = true;
-            this.label101.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label101.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label101.Location = new System.Drawing.Point(298, 543);
-            this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(27, 15);
-            this.label101.TabIndex = 250;
-            this.label101.Text = "deg";
-            // 
-            // label102
-            // 
-            this.label102.AutoSize = true;
-            this.label102.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label102.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label102.Location = new System.Drawing.Point(298, 462);
-            this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(27, 15);
-            this.label102.TabIndex = 247;
-            this.label102.Text = "deg";
-            // 
-            // JC15
-            // 
-            this.JC15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC15.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC15.Location = new System.Drawing.Point(239, 454);
-            this.JC15.Name = "JC15";
-            this.JC15.ReadOnly = true;
-            this.JC15.Size = new System.Drawing.Size(60, 23);
-            this.JC15.TabIndex = 236;
-            this.JC15.Text = "0.00";
-            this.JC15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JT17
-            // 
-            this.JT17.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT17.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT17.Location = new System.Drawing.Point(109, 507);
-            this.JT17.Name = "JT17";
-            this.JT17.Size = new System.Drawing.Size(60, 23);
-            this.JT17.TabIndex = 266;
-            this.JT17.Text = "0.00";
-            this.JT17.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JT18
-            // 
-            this.JT18.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT18.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT18.Location = new System.Drawing.Point(108, 535);
-            this.JT18.Name = "JT18";
-            this.JT18.Size = new System.Drawing.Size(60, 23);
-            this.JT18.TabIndex = 266;
-            this.JT18.Text = "0.00";
-            this.JT18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JC13
-            // 
-            this.JC13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC13.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC13.Location = new System.Drawing.Point(239, 403);
-            this.JC13.Name = "JC13";
-            this.JC13.ReadOnly = true;
-            this.JC13.Size = new System.Drawing.Size(60, 23);
-            this.JC13.TabIndex = 313;
-            this.JC13.Text = "0.00";
-            this.JC13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // J13
-            // 
-            this.J13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J13.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J13.Location = new System.Drawing.Point(172, 403);
-            this.J13.Name = "J13";
-            this.J13.ReadOnly = true;
-            this.J13.Size = new System.Drawing.Size(60, 23);
-            this.J13.TabIndex = 311;
-            this.J13.Text = "0.00";
-            this.J13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JC14
-            // 
-            this.JC14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC14.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC14.Location = new System.Drawing.Point(239, 428);
-            this.JC14.Name = "JC14";
-            this.JC14.ReadOnly = true;
-            this.JC14.Size = new System.Drawing.Size(60, 23);
-            this.JC14.TabIndex = 313;
-            this.JC14.Text = "0.00";
-            this.JC14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label103
-            // 
-            this.label103.AutoSize = true;
-            this.label103.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label103.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label103.Location = new System.Drawing.Point(7, 410);
-            this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(98, 15);
-            this.label103.TabIndex = 312;
-            this.label103.Text = "13.L_Wrist_FleExt";
-            this.label103.Click += new System.EventHandler(this.label39_Click);
-            // 
-            // J14
-            // 
-            this.J14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J14.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J14.Location = new System.Drawing.Point(172, 428);
-            this.J14.Name = "J14";
-            this.J14.ReadOnly = true;
-            this.J14.Size = new System.Drawing.Size(60, 23);
-            this.J14.TabIndex = 311;
-            this.J14.Text = "0.00";
-            this.J14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label104
-            // 
-            this.label104.AutoSize = true;
-            this.label104.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label104.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label104.Location = new System.Drawing.Point(7, 436);
-            this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(90, 15);
-            this.label104.TabIndex = 312;
-            this.label104.Text = "14.R_Sh_ProRet";
-            this.label104.Click += new System.EventHandler(this.label39_Click);
-            // 
-            // label105
-            // 
-            this.label105.AutoSize = true;
-            this.label105.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label105.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label105.Location = new System.Drawing.Point(299, 411);
-            this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(27, 15);
-            this.label105.TabIndex = 314;
-            this.label105.Text = "deg";
-            // 
-            // JT13
-            // 
-            this.JT13.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT13.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT13.Location = new System.Drawing.Point(109, 403);
-            this.JT13.Name = "JT13";
-            this.JT13.Size = new System.Drawing.Size(60, 23);
-            this.JT13.TabIndex = 315;
-            this.JT13.Text = "0.00";
-            this.JT13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label106
-            // 
-            this.label106.AutoSize = true;
-            this.label106.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label106.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label106.Location = new System.Drawing.Point(299, 436);
-            this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(27, 15);
-            this.label106.TabIndex = 314;
-            this.label106.Text = "deg";
-            // 
-            // JT14
-            // 
-            this.JT14.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT14.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT14.Location = new System.Drawing.Point(109, 428);
-            this.JT14.Name = "JT14";
-            this.JT14.Size = new System.Drawing.Size(60, 23);
-            this.JT14.TabIndex = 315;
-            this.JT14.Text = "0.00";
-            this.JT14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label107
-            // 
-            this.label107.AutoSize = true;
-            this.label107.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label107.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label107.Location = new System.Drawing.Point(692, 198);
-            this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(27, 15);
-            this.label107.TabIndex = 249;
-            this.label107.Text = "deg";
-            // 
-            // label108
-            // 
-            this.label108.AutoSize = true;
-            this.label108.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label108.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label108.Location = new System.Drawing.Point(692, 119);
-            this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(27, 15);
-            this.label108.TabIndex = 246;
-            this.label108.Text = "deg";
-            // 
-            // label109
-            // 
-            this.label109.AutoSize = true;
-            this.label109.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label109.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label109.Location = new System.Drawing.Point(693, 337);
-            this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(27, 15);
-            this.label109.TabIndex = 249;
-            this.label109.Text = "deg";
-            // 
-            // label110
-            // 
-            this.label110.AutoSize = true;
-            this.label110.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label110.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label110.Location = new System.Drawing.Point(692, 92);
-            this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(27, 15);
-            this.label110.TabIndex = 245;
-            this.label110.Text = "deg";
-            // 
-            // label111
-            // 
-            this.label111.AutoSize = true;
-            this.label111.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label111.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label111.Location = new System.Drawing.Point(692, 144);
-            this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(27, 15);
-            this.label111.TabIndex = 248;
-            this.label111.Text = "deg";
-            // 
-            // JT21
-            // 
-            this.JT21.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT21.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT21.Location = new System.Drawing.Point(503, 136);
-            this.JT21.Name = "JT21";
-            this.JT21.Size = new System.Drawing.Size(60, 23);
-            this.JT21.TabIndex = 263;
-            this.JT21.Text = "0.00";
-            this.JT21.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JT23
-            // 
-            this.JT23.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT23.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT23.Location = new System.Drawing.Point(503, 190);
-            this.JT23.Name = "JT23";
-            this.JT23.Size = new System.Drawing.Size(60, 23);
-            this.JT23.TabIndex = 265;
-            this.JT23.Text = "0.00";
-            this.JT23.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // J21
-            // 
-            this.J21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J21.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J21.Location = new System.Drawing.Point(566, 136);
-            this.J21.Name = "J21";
-            this.J21.ReadOnly = true;
-            this.J21.Size = new System.Drawing.Size(60, 23);
-            this.J21.TabIndex = 222;
-            this.J21.Text = "0.00";
-            this.J21.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JT28
-            // 
-            this.JT28.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT28.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT28.Location = new System.Drawing.Point(504, 329);
-            this.JT28.Name = "JT28";
-            this.JT28.Size = new System.Drawing.Size(60, 23);
-            this.JT28.TabIndex = 265;
-            this.JT28.Text = "0.00";
-            this.JT28.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JC21
-            // 
-            this.JC21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC21.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC21.Location = new System.Drawing.Point(633, 136);
-            this.JC21.Name = "JC21";
-            this.JC21.ReadOnly = true;
-            this.JC21.Size = new System.Drawing.Size(60, 23);
-            this.JC21.TabIndex = 235;
-            this.JC21.Text = "0.00";
-            this.JC21.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label112
-            // 
-            this.label112.AutoSize = true;
-            this.label112.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label112.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label112.Location = new System.Drawing.Point(401, 138);
-            this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(77, 15);
-            this.label112.TabIndex = 230;
-            this.label112.Text = "21.L_Hip_Rot";
-            // 
-            // label113
-            // 
-            this.label113.AutoSize = true;
-            this.label113.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label113.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label113.Location = new System.Drawing.Point(401, 192);
-            this.label113.Name = "label113";
-            this.label113.Size = new System.Drawing.Size(90, 15);
-            this.label113.TabIndex = 228;
-            this.label113.Text = "23.R_Hip_AbAd";
-            // 
-            // JC23
-            // 
-            this.JC23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC23.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC23.Location = new System.Drawing.Point(633, 190);
-            this.JC23.Name = "JC23";
-            this.JC23.ReadOnly = true;
-            this.JC23.Size = new System.Drawing.Size(60, 23);
-            this.JC23.TabIndex = 237;
-            this.JC23.Text = "0.00";
-            this.JC23.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label114
-            // 
-            this.label114.AutoSize = true;
-            this.label114.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label114.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label114.Location = new System.Drawing.Point(402, 331);
-            this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(24, 15);
-            this.label114.TabIndex = 228;
-            this.label114.Text = "28.";
-            // 
-            // J23
-            // 
-            this.J23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J23.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J23.Location = new System.Drawing.Point(566, 190);
-            this.J23.Name = "J23";
-            this.J23.ReadOnly = true;
-            this.J23.Size = new System.Drawing.Size(60, 23);
-            this.J23.TabIndex = 224;
-            this.J23.Text = "0.00";
-            this.J23.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JC28
-            // 
-            this.JC28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC28.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC28.Location = new System.Drawing.Point(634, 329);
-            this.JC28.Name = "JC28";
-            this.JC28.ReadOnly = true;
-            this.JC28.Size = new System.Drawing.Size(60, 23);
-            this.JC28.TabIndex = 237;
-            this.JC28.Text = "0.00";
-            this.JC28.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label115
-            // 
-            this.label115.AutoSize = true;
-            this.label115.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label115.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label115.Location = new System.Drawing.Point(500, 71);
-            this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(46, 13);
-            this.label115.TabIndex = 259;
-            this.label115.Text = "UI Cmd";
-            // 
-            // J28
-            // 
-            this.J28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J28.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J28.Location = new System.Drawing.Point(567, 329);
-            this.J28.Name = "J28";
-            this.J28.ReadOnly = true;
-            this.J28.Size = new System.Drawing.Size(60, 23);
-            this.J28.TabIndex = 224;
-            this.J28.Text = "0.00";
-            this.J28.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox34
-            // 
-            this.textBox34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
-            this.textBox34.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox34.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.textBox34.Location = new System.Drawing.Point(534, 50);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(60, 18);
-            this.textBox34.TabIndex = 13;
-            this.textBox34.Text = "Target";
-            this.textBox34.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label116
-            // 
-            this.label116.AutoSize = true;
-            this.label116.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label116.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label116.Location = new System.Drawing.Point(564, 71);
-            this.label116.Name = "label116";
-            this.label116.Size = new System.Drawing.Size(50, 13);
-            this.label116.TabIndex = 260;
-            this.label116.Text = "LCU pro";
-            // 
-            // JT19
-            // 
-            this.JT19.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT19.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT19.Location = new System.Drawing.Point(503, 84);
-            this.JT19.Name = "JT19";
-            this.JT19.Size = new System.Drawing.Size(60, 23);
-            this.JT19.TabIndex = 261;
-            this.JT19.Text = "0.00";
-            this.JT19.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JT20
-            // 
-            this.JT20.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT20.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT20.Location = new System.Drawing.Point(503, 111);
-            this.JT20.Name = "JT20";
-            this.JT20.Size = new System.Drawing.Size(60, 23);
-            this.JT20.TabIndex = 262;
-            this.JT20.Text = "0.00";
-            this.JT20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label117
-            // 
-            this.label117.AutoSize = true;
-            this.label117.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label117.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label117.Location = new System.Drawing.Point(401, 113);
-            this.label117.Name = "label117";
-            this.label117.Size = new System.Drawing.Size(99, 15);
-            this.label117.TabIndex = 231;
-            this.label117.Text = "20.R_Wrist_FleExt";
-            // 
-            // J20
-            // 
-            this.J20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J20.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J20.Location = new System.Drawing.Point(566, 111);
-            this.J20.Name = "J20";
-            this.J20.ReadOnly = true;
-            this.J20.Size = new System.Drawing.Size(60, 23);
-            this.J20.TabIndex = 221;
-            this.J20.Text = "0.00";
-            this.J20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label118
-            // 
-            this.label118.AutoSize = true;
-            this.label118.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label118.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label118.Location = new System.Drawing.Point(401, 86);
-            this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(103, 15);
-            this.label118.TabIndex = 226;
-            this.label118.Text = "19.R_Arm_ProSup";
-            // 
-            // J19
-            // 
-            this.J19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J19.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J19.Location = new System.Drawing.Point(566, 84);
-            this.J19.Name = "J19";
-            this.J19.ReadOnly = true;
-            this.J19.Size = new System.Drawing.Size(60, 23);
-            this.J19.TabIndex = 220;
-            this.J19.Text = "0.00";
-            this.J19.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox39
-            // 
-            this.textBox39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
-            this.textBox39.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox39.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.textBox39.Location = new System.Drawing.Point(629, 50);
-            this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(60, 18);
-            this.textBox39.TabIndex = 73;
-            this.textBox39.Text = "Current";
-            this.textBox39.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // JC19
-            // 
-            this.JC19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC19.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC19.Location = new System.Drawing.Point(633, 84);
-            this.JC19.Name = "JC19";
-            this.JC19.ReadOnly = true;
-            this.JC19.Size = new System.Drawing.Size(60, 23);
-            this.JC19.TabIndex = 233;
-            this.JC19.Text = "0.00";
-            this.JC19.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JC20
-            // 
-            this.JC20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC20.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC20.Location = new System.Drawing.Point(633, 111);
-            this.JC20.Name = "JC20";
-            this.JC20.ReadOnly = true;
-            this.JC20.Size = new System.Drawing.Size(60, 23);
-            this.JC20.TabIndex = 234;
-            this.JC20.Text = "0.00";
-            this.JC20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JC24
-            // 
-            this.JC24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC24.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC24.Location = new System.Drawing.Point(633, 216);
-            this.JC24.Name = "JC24";
-            this.JC24.ReadOnly = true;
-            this.JC24.Size = new System.Drawing.Size(60, 23);
-            this.JC24.TabIndex = 238;
-            this.JC24.Text = "0.00";
-            this.JC24.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JC29
-            // 
-            this.JC29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC29.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC29.Location = new System.Drawing.Point(634, 355);
-            this.JC29.Name = "JC29";
-            this.JC29.ReadOnly = true;
-            this.JC29.Size = new System.Drawing.Size(60, 23);
-            this.JC29.TabIndex = 238;
-            this.JC29.Text = "0.00";
-            this.JC29.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JC30
-            // 
-            this.JC30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC30.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC30.Location = new System.Drawing.Point(633, 383);
-            this.JC30.Name = "JC30";
-            this.JC30.ReadOnly = true;
-            this.JC30.Size = new System.Drawing.Size(60, 23);
-            this.JC30.TabIndex = 238;
-            this.JC30.Text = "0.00";
-            this.JC30.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // J24
-            // 
-            this.J24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J24.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J24.Location = new System.Drawing.Point(566, 216);
-            this.J24.Name = "J24";
-            this.J24.ReadOnly = true;
-            this.J24.Size = new System.Drawing.Size(60, 23);
-            this.J24.TabIndex = 225;
-            this.J24.Text = "0.00";
-            this.J24.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // J29
-            // 
-            this.J29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J29.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J29.Location = new System.Drawing.Point(567, 355);
-            this.J29.Name = "J29";
-            this.J29.ReadOnly = true;
-            this.J29.Size = new System.Drawing.Size(60, 23);
-            this.J29.TabIndex = 225;
-            this.J29.Text = "0.00";
-            this.J29.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // J30
-            // 
-            this.J30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J30.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J30.Location = new System.Drawing.Point(566, 383);
-            this.J30.Name = "J30";
-            this.J30.ReadOnly = true;
-            this.J30.Size = new System.Drawing.Size(60, 23);
-            this.J30.TabIndex = 225;
-            this.J30.Text = "0.00";
-            this.J30.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label119
-            // 
-            this.label119.AutoSize = true;
-            this.label119.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label119.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label119.Location = new System.Drawing.Point(401, 218);
-            this.label119.Name = "label119";
-            this.label119.Size = new System.Drawing.Size(91, 15);
-            this.label119.TabIndex = 227;
-            this.label119.Text = "24.R_Hip_FleExt";
-            // 
-            // label120
-            // 
-            this.label120.AutoSize = true;
-            this.label120.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label120.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label120.Location = new System.Drawing.Point(402, 363);
-            this.label120.Name = "label120";
-            this.label120.Size = new System.Drawing.Size(24, 15);
-            this.label120.TabIndex = 227;
-            this.label120.Text = "29.";
-            // 
-            // label121
-            // 
-            this.label121.AutoSize = true;
-            this.label121.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label121.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label121.Location = new System.Drawing.Point(401, 385);
-            this.label121.Name = "label121";
-            this.label121.Size = new System.Drawing.Size(24, 15);
-            this.label121.TabIndex = 227;
-            this.label121.Text = "30.";
-            // 
-            // J22
-            // 
-            this.J22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J22.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J22.Location = new System.Drawing.Point(566, 163);
-            this.J22.Name = "J22";
-            this.J22.ReadOnly = true;
-            this.J22.Size = new System.Drawing.Size(60, 23);
-            this.J22.TabIndex = 223;
-            this.J22.Text = "0.00";
-            this.J22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // J27
-            // 
-            this.J27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J27.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J27.Location = new System.Drawing.Point(567, 302);
-            this.J27.Name = "J27";
-            this.J27.ReadOnly = true;
-            this.J27.Size = new System.Drawing.Size(60, 23);
-            this.J27.TabIndex = 223;
-            this.J27.Text = "0.00";
-            this.J27.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JT22
-            // 
-            this.JT22.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT22.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT22.Location = new System.Drawing.Point(503, 163);
-            this.JT22.Name = "JT22";
-            this.JT22.Size = new System.Drawing.Size(60, 23);
-            this.JT22.TabIndex = 264;
-            this.JT22.Text = "0.00";
-            this.JT22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JT27
-            // 
-            this.JT27.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT27.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT27.Location = new System.Drawing.Point(504, 302);
-            this.JT27.Name = "JT27";
-            this.JT27.Size = new System.Drawing.Size(60, 23);
-            this.JT27.TabIndex = 264;
-            this.JT27.Text = "0.00";
-            this.JT27.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label122
-            // 
-            this.label122.AutoSize = true;
-            this.label122.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label122.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label122.Location = new System.Drawing.Point(401, 165);
-            this.label122.Name = "label122";
-            this.label122.Size = new System.Drawing.Size(89, 15);
-            this.label122.TabIndex = 229;
-            this.label122.Text = "22.L_Hip_AbAd";
-            // 
-            // label123
-            // 
-            this.label123.AutoSize = true;
-            this.label123.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label123.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label123.Location = new System.Drawing.Point(402, 304);
-            this.label123.Name = "label123";
-            this.label123.Size = new System.Drawing.Size(101, 15);
-            this.label123.TabIndex = 229;
-            this.label123.Text = "27.R_Foot_DorPla";
-            // 
-            // label124
-            // 
-            this.label124.AutoSize = true;
-            this.label124.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label124.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label124.Location = new System.Drawing.Point(693, 224);
-            this.label124.Name = "label124";
-            this.label124.Size = new System.Drawing.Size(27, 15);
-            this.label124.TabIndex = 250;
-            this.label124.Text = "deg";
-            // 
-            // label125
-            // 
-            this.label125.AutoSize = true;
-            this.label125.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label125.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label125.Location = new System.Drawing.Point(694, 363);
-            this.label125.Name = "label125";
-            this.label125.Size = new System.Drawing.Size(27, 15);
-            this.label125.TabIndex = 250;
-            this.label125.Text = "deg";
-            // 
-            // label126
-            // 
-            this.label126.AutoSize = true;
-            this.label126.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label126.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label126.Location = new System.Drawing.Point(693, 391);
-            this.label126.Name = "label126";
-            this.label126.Size = new System.Drawing.Size(27, 15);
-            this.label126.TabIndex = 250;
-            this.label126.Text = "deg";
-            // 
-            // label127
-            // 
-            this.label127.AutoSize = true;
-            this.label127.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label127.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label127.Location = new System.Drawing.Point(692, 171);
-            this.label127.Name = "label127";
-            this.label127.Size = new System.Drawing.Size(27, 15);
-            this.label127.TabIndex = 247;
-            this.label127.Text = "deg";
-            // 
-            // label128
-            // 
-            this.label128.AutoSize = true;
-            this.label128.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label128.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label128.Location = new System.Drawing.Point(693, 310);
-            this.label128.Name = "label128";
-            this.label128.Size = new System.Drawing.Size(27, 15);
-            this.label128.TabIndex = 247;
-            this.label128.Text = "deg";
-            // 
-            // JC22
-            // 
-            this.JC22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC22.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC22.Location = new System.Drawing.Point(633, 163);
-            this.JC22.Name = "JC22";
-            this.JC22.ReadOnly = true;
-            this.JC22.Size = new System.Drawing.Size(60, 23);
-            this.JC22.TabIndex = 236;
-            this.JC22.Text = "0.00";
-            this.JC22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JC27
-            // 
-            this.JC27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC27.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC27.Location = new System.Drawing.Point(634, 302);
-            this.JC27.Name = "JC27";
-            this.JC27.ReadOnly = true;
-            this.JC27.Size = new System.Drawing.Size(60, 23);
-            this.JC27.TabIndex = 236;
-            this.JC27.Text = "0.00";
-            this.JC27.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JT24
-            // 
-            this.JT24.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT24.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT24.Location = new System.Drawing.Point(503, 216);
-            this.JT24.Name = "JT24";
-            this.JT24.Size = new System.Drawing.Size(60, 23);
-            this.JT24.TabIndex = 266;
-            this.JT24.Text = "0.00";
-            this.JT24.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JT29
-            // 
-            this.JT29.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT29.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT29.Location = new System.Drawing.Point(504, 355);
-            this.JT29.Name = "JT29";
-            this.JT29.Size = new System.Drawing.Size(60, 23);
-            this.JT29.TabIndex = 266;
-            this.JT29.Text = "0.00";
-            this.JT29.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JT30
-            // 
-            this.JT30.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT30.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT30.Location = new System.Drawing.Point(503, 383);
-            this.JT30.Name = "JT30";
-            this.JT30.Size = new System.Drawing.Size(60, 23);
-            this.JT30.TabIndex = 266;
-            this.JT30.Text = "0.00";
-            this.JT30.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label129
-            // 
-            this.label129.AutoSize = true;
-            this.label129.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label129.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label129.Location = new System.Drawing.Point(632, 71);
-            this.label129.Name = "label129";
-            this.label129.Size = new System.Drawing.Size(18, 13);
-            this.label129.TabIndex = 310;
-            this.label129.Text = "UI";
-            // 
-            // JC25
-            // 
-            this.JC25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC25.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC25.Location = new System.Drawing.Point(634, 251);
-            this.JC25.Name = "JC25";
-            this.JC25.ReadOnly = true;
-            this.JC25.Size = new System.Drawing.Size(60, 23);
-            this.JC25.TabIndex = 313;
-            this.JC25.Text = "0.00";
-            this.JC25.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // J25
-            // 
-            this.J25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J25.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J25.Location = new System.Drawing.Point(567, 251);
-            this.J25.Name = "J25";
-            this.J25.ReadOnly = true;
-            this.J25.Size = new System.Drawing.Size(60, 23);
-            this.J25.TabIndex = 311;
-            this.J25.Text = "0.00";
-            this.J25.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JC26
-            // 
-            this.JC26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.JC26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC26.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JC26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.JC26.Location = new System.Drawing.Point(634, 276);
-            this.JC26.Name = "JC26";
-            this.JC26.ReadOnly = true;
-            this.JC26.Size = new System.Drawing.Size(60, 23);
-            this.JC26.TabIndex = 313;
-            this.JC26.Text = "0.00";
-            this.JC26.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label130
-            // 
-            this.label130.AutoSize = true;
-            this.label130.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label130.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label130.Location = new System.Drawing.Point(402, 253);
-            this.label130.Name = "label130";
-            this.label130.Size = new System.Drawing.Size(78, 15);
-            this.label130.TabIndex = 312;
-            this.label130.Text = "25.R_Hip_Rot";
-            this.label130.Click += new System.EventHandler(this.label39_Click);
-            // 
-            // J26
-            // 
-            this.J26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.J26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J26.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.J26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.J26.Location = new System.Drawing.Point(567, 276);
-            this.J26.Name = "J26";
-            this.J26.ReadOnly = true;
-            this.J26.Size = new System.Drawing.Size(60, 23);
-            this.J26.TabIndex = 311;
-            this.J26.Text = "0.00";
-            this.J26.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label131
-            // 
-            this.label131.AutoSize = true;
-            this.label131.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label131.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label131.Location = new System.Drawing.Point(402, 278);
-            this.label131.Name = "label131";
-            this.label131.Size = new System.Drawing.Size(98, 15);
-            this.label131.TabIndex = 312;
-            this.label131.Text = "26.R_Knee_FleExt";
-            this.label131.Click += new System.EventHandler(this.label39_Click);
-            // 
-            // label132
-            // 
-            this.label132.AutoSize = true;
-            this.label132.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label132.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label132.Location = new System.Drawing.Point(694, 259);
-            this.label132.Name = "label132";
-            this.label132.Size = new System.Drawing.Size(27, 15);
-            this.label132.TabIndex = 314;
-            this.label132.Text = "deg";
-            // 
-            // JT25
-            // 
-            this.JT25.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT25.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT25.Location = new System.Drawing.Point(504, 251);
-            this.JT25.Name = "JT25";
-            this.JT25.Size = new System.Drawing.Size(60, 23);
-            this.JT25.TabIndex = 315;
-            this.JT25.Text = "0.00";
-            this.JT25.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label133
-            // 
-            this.label133.AutoSize = true;
-            this.label133.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label133.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label133.Location = new System.Drawing.Point(694, 284);
-            this.label133.Name = "label133";
-            this.label133.Size = new System.Drawing.Size(27, 15);
-            this.label133.TabIndex = 314;
-            this.label133.Text = "deg";
-            // 
-            // JT26
-            // 
-            this.JT26.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.JT26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT26.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JT26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JT26.Location = new System.Drawing.Point(504, 276);
-            this.JT26.Name = "JT26";
-            this.JT26.Size = new System.Drawing.Size(60, 23);
-            this.JT26.TabIndex = 315;
-            this.JT26.Text = "0.00";
-            this.JT26.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // J6Down
+            // 
+            this.J6Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.J6Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J6Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J6Down.Location = new System.Drawing.Point(322, 201);
+            this.J6Down.Name = "J6Down";
+            this.J6Down.Size = new System.Drawing.Size(29, 23);
+            this.J6Down.TabIndex = 261;
+            this.J6Down.Text = "▼";
+            this.J6Down.Click += new System.EventHandler(this.J7Down_Click_1);
+            // 
+            // J6Up
+            // 
+            this.J6Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.J6Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J6Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.J6Up.Location = new System.Drawing.Point(357, 201);
+            this.J6Up.Name = "J6Up";
+            this.J6Up.Size = new System.Drawing.Size(29, 23);
+            this.J6Up.TabIndex = 262;
+            this.J6Up.Text = "▲";
+            this.J6Up.Click += new System.EventHandler(this.J7Up_Click_1);
             // 
             // MP
             // 
@@ -6389,6 +6417,8 @@ namespace MP
         private System.Windows.Forms.Label label108;
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.Label label107;
+        private System.Windows.Forms.Button J6Up;
+        private System.Windows.Forms.Button J6Down;
     }
 }
 
