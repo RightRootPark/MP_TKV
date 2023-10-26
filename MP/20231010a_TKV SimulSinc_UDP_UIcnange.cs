@@ -3162,8 +3162,6 @@ namespace MP
 
         private void J7Up_Click_1(object sender, EventArgs e)
         {
-
-
             if (robotManager.arm2.mode == 5)
             {
                 inputCmd2[3] = Convert.ToSingle(JT7.Text);
@@ -3189,6 +3187,35 @@ namespace MP
                 worldPosCmd2[3] = Pos_Cmd_World;
                 robotManager.arm2.SetArmPosCmd(worldPosCmd2, jointPosCmd2[5], 0);
             }
+        }
+
+        //조인트 조그 제어 함수
+        private void JointUpOr_Click(byte JNo, bool Plus)
+        {
+            int a = 0; // + 인지 -인지 판단할 변수
+            if (Plus) a = 1;
+            else a = -1;
+            switch (JNo)
+            {
+                case 8://8번 조인트 명령 2-2
+                    if (robotManager.arm2.mode == 5)
+                    {
+                        inputCmd2[1] = Convert.ToSingle(JT8.Text);
+                        Pos_Cmd_Joint = inputCmd2[1];
+                        jointPosCmd2[1] = Pos_Cmd_Joint + a;
+
+                        JT8.Text = jointPosCmd2[1].ToString();
+
+                        Pos_Cmd_Joint = inputCmd2[1];
+                        jointPosCmd2[1] = Pos_Cmd_Joint;
+
+                        robotManager.arm.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
+                    }
+                    break;
+
+            }
+
+
         }
 
         private void PW_a_Click(object sender, EventArgs e)
@@ -3385,6 +3412,11 @@ namespace MP
         private void label39_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void J8Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(8, true);
         }
 
         private void hacIndex_SelectedIndexChanged(object sender, EventArgs e)
