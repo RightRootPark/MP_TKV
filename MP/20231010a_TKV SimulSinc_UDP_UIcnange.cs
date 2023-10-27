@@ -154,6 +154,10 @@ namespace MP
         private float[] forceCmd = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];
         private float[] inputCmd = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];
         private float[] inputCmd2 = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];
+        private float[] inputCmd3 = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];
+        private float[] inputCmd4 = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];
+        private float[] inputCmd5 = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];
+
         private float _toolPosCmd = 0;
         private float RMS = 0;
 
@@ -1120,7 +1124,19 @@ namespace MP
                     J5.Text = (robotManager.arm.monitoringData.fJointPos[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                     J6.Text = (robotManager.arm.monitoringData.fJointPos[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                     
-                    J7.Text = (robotManager.arm2.monitoringData.fJointPos[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    J7.Text = (robotManager.arm2.monitoringData.fJointPos[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    J8.Text = (robotManager.arm2.monitoringData.fJointPos[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    J9.Text = (robotManager.arm2.monitoringData.fJointPos[2] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    J10.Text = (robotManager.arm2.monitoringData.fJointPos[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    J11.Text = (robotManager.arm2.monitoringData.fJointPos[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    J12.Text = (robotManager.arm2.monitoringData.fJointPos[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    
+                    J13.Text = (robotManager.arm3.monitoringData.fJointPos[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    J14.Text = (robotManager.arm3.monitoringData.fJointPos[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    J15.Text = (robotManager.arm3.monitoringData.fJointPos[2] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    J16.Text = (robotManager.arm3.monitoringData.fJointPos[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    J17.Text = (robotManager.arm3.monitoringData.fJointPos[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    J18.Text = (robotManager.arm3.monitoringData.fJointPos[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
 
                     JC1.Text = (robotManager.arm.monitoringData.fJointPosCur[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                     JC2.Text = (robotManager.arm.monitoringData.fJointPosCur[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
@@ -1129,7 +1145,19 @@ namespace MP
                     JC5.Text = (robotManager.arm.monitoringData.fJointPosCur[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                     JC6.Text = (robotManager.arm.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                    
-                    JC7.Text = (robotManager.arm2.monitoringData.fJointPosCur[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    JC7.Text = (robotManager.arm2.monitoringData.fJointPosCur[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    JC8.Text = (robotManager.arm2.monitoringData.fJointPosCur[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    JC9.Text = (robotManager.arm2.monitoringData.fJointPosCur[2] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    JC10.Text = (robotManager.arm2.monitoringData.fJointPosCur[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    JC11.Text = (robotManager.arm2.monitoringData.fJointPosCur[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    JC12.Text = (robotManager.arm2.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    
+                    JC13.Text = (robotManager.arm3.monitoringData.fJointPosCur[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    JC14.Text = (robotManager.arm3.monitoringData.fJointPosCur[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    JC15.Text = (robotManager.arm3.monitoringData.fJointPosCur[2] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    JC16.Text = (robotManager.arm3.monitoringData.fJointPosCur[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    JC17.Text = (robotManager.arm3.monitoringData.fJointPosCur[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    JC18.Text = (robotManager.arm3.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
 
                     W1.Text = robotManager.arm.monitoringData.fWorldPos[0].ToString("f2");
                     W2.Text = robotManager.arm.monitoringData.fWorldPos[1].ToString("f2");
@@ -1771,6 +1799,14 @@ namespace MP
             int index = mode_List.SelectedIndex;
             robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
             robotManager.arm.SetArmVelCmd(jointVelocityCmd, 1);
+            robotManager.arm2.SetArmVelCmd(jointVelocityCmd, 0);
+            robotManager.arm2.SetArmVelCmd(jointVelocityCmd, 1);
+            robotManager.arm3.SetArmVelCmd(jointVelocityCmd, 0);
+            robotManager.arm3.SetArmVelCmd(jointVelocityCmd, 1);
+            robotManager.arm4.SetArmVelCmd(jointVelocityCmd, 0);
+            robotManager.arm4.SetArmVelCmd(jointVelocityCmd, 1);
+            robotManager.arm5.SetArmVelCmd(jointVelocityCmd, 0);
+            robotManager.arm5.SetArmVelCmd(jointVelocityCmd, 1);
 
             switch (index)
             {
@@ -1832,6 +1868,30 @@ namespace MP
                     C4.Text = JT4.Text = JC4.Text;
                     C5.Text = JT5.Text = JC5.Text;
                     C6.Text = JT6.Text = JC6.Text;
+                    JT7.Text = JC7.Text;
+                    JT8.Text = JC7.Text;
+                    JT9.Text = JC7.Text;
+                    JT10.Text = JC10.Text;
+                    JT11.Text = JC11.Text;
+                    JT12.Text = JC12.Text;
+                    JT13.Text = JC13.Text;
+                    JT14.Text = JC14.Text;
+                    JT15.Text = JC15.Text;
+                    JT16.Text = JC16.Text;
+                    JT17.Text = JC17.Text;
+                    JT18.Text = JC18.Text;
+                    JT19.Text = JC19.Text;
+                    JT20.Text = JC20.Text;
+                    JT21.Text = JC21.Text;
+                    JT22.Text = JC22.Text;
+                    JT23.Text = JC23.Text;
+                    JT24.Text = JC24.Text;
+                    JT25.Text = JC25.Text;
+                    JT26.Text = JC26.Text;
+                    JT27.Text = JC27.Text;
+                    JT28.Text = JC28.Text;
+                    JT29.Text = JC29.Text;
+                    JT30.Text = JC30.Text;
 
                     //cmd_send_Click(_sender, _e);
 
@@ -1987,10 +2047,10 @@ namespace MP
                 JT5.Text = jointPosCmd[4].ToString();
 
                 //inputCmd[5] = Convert.ToSingle(JT6.Text);
-                jointPosCmd2[3] = inputCmd2[3] = Convert.ToSingle(JT7.Text);
-                JT7.Text = jointPosCmd2[3].ToString();
-                jointPosCmd2[3] = inputCmd2[3] = Convert.ToSingle(JT7.Text);
-                JT7.Text = jointPosCmd2[3].ToString();
+                jointPosCmd2[0] = inputCmd2[0] = Convert.ToSingle(JT7.Text);
+                JT7.Text = jointPosCmd2[0].ToString();
+                jointPosCmd2[0] = inputCmd2[0] = Convert.ToSingle(JT7.Text);
+                JT7.Text = jointPosCmd2[0].ToString();
 
                 //for (int i = 0; i < 6; i++)
                 //{
@@ -3132,61 +3192,62 @@ namespace MP
 
         private void J7Down_Click_1(object sender, EventArgs e)
         {
+            JointUpOr_Click(7, false);
+            //if (robotManager.arm2.mode == 5)
+            //{
+            //    inputCmd2[3] = Convert.ToSingle(JT7.Text);
+            //    Pos_Cmd_Joint = inputCmd2[3];
+            //    jointPosCmd2[3] = Pos_Cmd_Joint - 1;
 
-            if (robotManager.arm2.mode == 5)
-            {
-                inputCmd2[3] = Convert.ToSingle(JT7.Text);
-                Pos_Cmd_Joint = inputCmd2[3];
-                jointPosCmd2[3] = Pos_Cmd_Joint - 1;
+            //    JT7.Text = jointPosCmd2[3].ToString();
 
-                JT7.Text = jointPosCmd2[3].ToString();
+            //    Pos_Cmd_Joint = inputCmd2[3];
+            //    jointPosCmd2[3] = Pos_Cmd_Joint;
 
-                Pos_Cmd_Joint = inputCmd2[3];
-                jointPosCmd2[3] = Pos_Cmd_Joint;
+            //    robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
+            //}
+            //else if (robotManager.arm2.mode == 8 || robotManager.arm2.mode == 9)
+            //{
+            //    inputCmd2[3] = Convert.ToSingle(WT7.Text);
+            //    Pos_Cmd_World = inputCmd2[3];
+            //    worldPosCmd2[3] = Pos_Cmd_World - 1;
 
-                robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
-            }
-            else if (robotManager.arm2.mode == 8 || robotManager.arm2.mode == 9)
-            {
-                inputCmd2[3] = Convert.ToSingle(WT7.Text);
-                Pos_Cmd_World = inputCmd2[3];
-                worldPosCmd2[3] = Pos_Cmd_World - 1;
+            //    WT7.Text = worldPosCmd2[3].ToString();
 
-                WT7.Text = worldPosCmd2[3].ToString();
-
-                Pos_Cmd_World = inputCmd2[3];
-                worldPosCmd2[3] = Pos_Cmd_World;
-                robotManager.arm2.SetArmPosCmd(worldPosCmd2, jointPosCmd2[5], 0);
-            }
+            //    Pos_Cmd_World = inputCmd2[3];
+            //    worldPosCmd2[3] = Pos_Cmd_World;
+            //    robotManager.arm2.SetArmPosCmd(worldPosCmd2, jointPosCmd2[5], 0);
+            //}
         }
 
         private void J7Up_Click_1(object sender, EventArgs e)
         {
-            if (robotManager.arm2.mode == 5)
-            {
-                inputCmd2[3] = Convert.ToSingle(JT7.Text);
-                Pos_Cmd_Joint = inputCmd2[3];
-                jointPosCmd2[3] = Pos_Cmd_Joint + 1;
+            JointUpOr_Click(7, true);
+            //if (robotManager.arm2.mode == 5)
+            //{
+            //    inputCmd2[3] = Convert.ToSingle(JT7.Text);
+            //    Pos_Cmd_Joint = inputCmd2[3];
+            //    jointPosCmd2[3] = Pos_Cmd_Joint + 1;
 
-                JT7.Text = jointPosCmd2[3].ToString();
+            //    JT7.Text = jointPosCmd2[3].ToString();
 
-                Pos_Cmd_Joint = inputCmd2[3];
-                jointPosCmd2[3] = Pos_Cmd_Joint;
+            //    Pos_Cmd_Joint = inputCmd2[3];
+            //    jointPosCmd2[3] = Pos_Cmd_Joint;
 
-                robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
-            }
-            else if (robotManager.arm2.mode == 8 || robotManager.arm2.mode == 9)
-            {
-                inputCmd2[3] = Convert.ToSingle(WT7.Text);
-                Pos_Cmd_World = inputCmd2[3];
-                worldPosCmd2[3] = Pos_Cmd_World - 1;
+            //    robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
+            //}
+            //else if (robotManager.arm2.mode == 8 || robotManager.arm2.mode == 9)
+            //{
+            //    inputCmd2[3] = Convert.ToSingle(WT7.Text);
+            //    Pos_Cmd_World = inputCmd2[3];
+            //    worldPosCmd2[3] = Pos_Cmd_World - 1;
 
-                WT7.Text = worldPosCmd2[3].ToString();
+            //    WT7.Text = worldPosCmd2[3].ToString();
 
-                Pos_Cmd_World = inputCmd2[3];
-                worldPosCmd2[3] = Pos_Cmd_World;
-                robotManager.arm2.SetArmPosCmd(worldPosCmd2, jointPosCmd2[5], 0);
-            }
+            //    Pos_Cmd_World = inputCmd2[3];
+            //    worldPosCmd2[3] = Pos_Cmd_World;
+            //    robotManager.arm2.SetArmPosCmd(worldPosCmd2, jointPosCmd2[5], 0);
+            //}
         }
 
         //조인트 조그 제어 함수
@@ -3197,7 +3258,37 @@ namespace MP
             else a = -1;
             switch (JNo)
             {
-                case 8://8번 조인트 명령 2-2
+                case 6://번 조인트 명령 LCU1-6
+                    if (robotManager.arm.mode == 5)
+                    {
+                        inputCmd[5] = Convert.ToSingle(JT6.Text);
+                        Pos_Cmd_Joint = inputCmd[5];
+                        jointPosCmd[5] = Pos_Cmd_Joint + a;
+
+                        JT6.Text = jointPosCmd[5].ToString();
+
+                        Pos_Cmd_Joint = inputCmd[5];
+                        jointPosCmd[5] = Pos_Cmd_Joint;
+
+                        robotManager.arm.SetArmPosCmd(jointPosCmd, jointPosCmd[5], 0);
+                    }
+                    break;
+                case 7://번 조인트 명령 2-2
+                    if (robotManager.arm2.mode == 5)
+                    {
+                        inputCmd2[0] = Convert.ToSingle(JT7.Text);
+                        Pos_Cmd_Joint = inputCmd2[0];
+                        jointPosCmd2[0] = Pos_Cmd_Joint + a;
+
+                        JT7.Text = jointPosCmd2[0].ToString();
+
+                        Pos_Cmd_Joint = inputCmd2[0];
+                        jointPosCmd2[0] = Pos_Cmd_Joint;
+
+                        robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
+                    }
+                    break;
+                case 8://번 조인트 명령 2-2
                     if (robotManager.arm2.mode == 5)
                     {
                         inputCmd2[1] = Convert.ToSingle(JT8.Text);
@@ -3209,10 +3300,339 @@ namespace MP
                         Pos_Cmd_Joint = inputCmd2[1];
                         jointPosCmd2[1] = Pos_Cmd_Joint;
 
-                        robotManager.arm.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
+                        robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
                     }
                     break;
+                case 9://번 조인트 명령 2-2
+                    if (robotManager.arm2.mode == 5)
+                    {
+                        inputCmd2[2] = Convert.ToSingle(JT9.Text);
+                        Pos_Cmd_Joint = inputCmd2[2];
+                        jointPosCmd2[2] = Pos_Cmd_Joint + a;
 
+                        JT9.Text = jointPosCmd2[2].ToString();
+
+                        Pos_Cmd_Joint = inputCmd2[2];
+                        jointPosCmd2[2] = Pos_Cmd_Joint;
+
+                        robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
+                    }
+                    break;
+                case 10://번 조인트 명령 2-2
+                    if (robotManager.arm2.mode == 5)
+                    {
+                        inputCmd2[3] = Convert.ToSingle(JT10.Text);
+                        Pos_Cmd_Joint = inputCmd2[3];
+                        jointPosCmd2[3] = Pos_Cmd_Joint + a;
+
+                        JT10.Text = jointPosCmd2[3].ToString();
+
+                        Pos_Cmd_Joint = inputCmd2[3];
+                        jointPosCmd2[3] = Pos_Cmd_Joint;
+
+                        robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
+                    }
+                    break;
+                case 11://번 조인트 명령 2-2
+                    if (robotManager.arm2.mode == 5)
+                    {
+                        inputCmd2[4] = Convert.ToSingle(JT11.Text);
+                        Pos_Cmd_Joint = inputCmd2[4];
+                        jointPosCmd2[4] = Pos_Cmd_Joint + a;
+
+                        JT11.Text = jointPosCmd2[4].ToString();
+
+                        Pos_Cmd_Joint = inputCmd2[4];
+                        jointPosCmd2[4] = Pos_Cmd_Joint;
+
+                        robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
+                    }
+                    break;
+                case 12://번 조인트 명령 2-2
+                    if (robotManager.arm2.mode == 5)
+                    {
+                        inputCmd2[5] = Convert.ToSingle(JT12.Text);
+                        Pos_Cmd_Joint = inputCmd2[5];
+                        jointPosCmd2[5] = Pos_Cmd_Joint + a;
+
+                        JT12.Text = jointPosCmd2[5].ToString();
+
+                        Pos_Cmd_Joint = inputCmd2[5];
+                        jointPosCmd2[5] = Pos_Cmd_Joint;
+
+                        robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
+                    }
+                    break;
+                case 13://번 조인트 명령 LCU3
+                    if (robotManager.arm3.mode == 5)
+                    {
+                        inputCmd3[0] = Convert.ToSingle(JT13.Text);
+                        Pos_Cmd_Joint = inputCmd3[0];
+                        jointPosCmd3[0] = Pos_Cmd_Joint + a;
+
+                        JT13.Text = jointPosCmd3[0].ToString();
+
+                        Pos_Cmd_Joint = inputCmd3[0];
+                        jointPosCmd3[0] = Pos_Cmd_Joint;
+
+                        robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
+                    }
+                    break;
+                case 14://번 조인트 명령 LCU3
+                    if (robotManager.arm3.mode == 5)
+                    {
+                        inputCmd3[1] = Convert.ToSingle(JT14.Text);
+                        Pos_Cmd_Joint = inputCmd3[1];
+                        jointPosCmd3[1] = Pos_Cmd_Joint + a;
+
+                        JT14.Text = jointPosCmd3[1].ToString();
+
+                        Pos_Cmd_Joint = inputCmd3[1];
+                        jointPosCmd3[1] = Pos_Cmd_Joint;
+
+                        robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
+                    }
+                    break;
+                case 15://번 조인트 명령 LCU3
+                    if (robotManager.arm3.mode == 5)
+                    {
+                        inputCmd3[2] = Convert.ToSingle(JT15.Text);
+                        Pos_Cmd_Joint = inputCmd3[2];
+                        jointPosCmd3[2] = Pos_Cmd_Joint + a;
+
+                        JT15.Text = jointPosCmd3[2].ToString();
+
+                        Pos_Cmd_Joint = inputCmd3[2];
+                        jointPosCmd3[2] = Pos_Cmd_Joint;
+
+                        robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
+                    }
+                    break;
+                case 16://번 조인트 명령 LCU3
+                    if (robotManager.arm3.mode == 5)
+                    {
+                        inputCmd3[3] = Convert.ToSingle(JT16.Text);
+                        Pos_Cmd_Joint = inputCmd3[3];
+                        jointPosCmd3[3] = Pos_Cmd_Joint + a;
+
+                        JT16.Text = jointPosCmd3[3].ToString();
+
+                        Pos_Cmd_Joint = inputCmd3[3];
+                        jointPosCmd3[3] = Pos_Cmd_Joint;
+
+                        robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
+                    }
+                    break;
+                case 17://번 조인트 명령 LCU3
+                    if (robotManager.arm3.mode == 5)
+                    {
+                        inputCmd3[4] = Convert.ToSingle(JT17.Text);
+                        Pos_Cmd_Joint = inputCmd3[4];
+                        jointPosCmd3[4] = Pos_Cmd_Joint + a;
+
+                        JT17.Text = jointPosCmd3[4].ToString();
+
+                        Pos_Cmd_Joint = inputCmd3[4];
+                        jointPosCmd3[4] = Pos_Cmd_Joint;
+
+                        robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
+                    }
+                    break;
+                case 18://번 조인트 명령 LCU3
+                    if (robotManager.arm3.mode == 5)
+                    {
+                        inputCmd3[5] = Convert.ToSingle(JT18.Text);
+                        Pos_Cmd_Joint = inputCmd3[5];
+                        jointPosCmd3[5] = Pos_Cmd_Joint + a;
+
+                        JT18.Text = jointPosCmd3[5].ToString();
+
+                        Pos_Cmd_Joint = inputCmd3[5];
+                        jointPosCmd3[5] = Pos_Cmd_Joint;
+
+                        robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
+                    }
+                    break;
+                case 19://번 조인트 명령 LCU4
+                    if (robotManager.arm4.mode == 5)
+                    {
+                        inputCmd4[0] = Convert.ToSingle(JT19.Text);
+                        Pos_Cmd_Joint = inputCmd4[0];
+                        jointPosCmd4[0] = Pos_Cmd_Joint + a;
+
+                        JT19.Text = jointPosCmd4[0].ToString();
+
+                        Pos_Cmd_Joint = inputCmd4[0];
+                        jointPosCmd4[0] = Pos_Cmd_Joint;
+
+                        robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
+                    }
+                    break;
+                case 20://번 조인트 명령 LCU4
+                    if (robotManager.arm4.mode == 5)
+                    {
+                        inputCmd4[1] = Convert.ToSingle(JT20.Text);
+                        Pos_Cmd_Joint = inputCmd4[1];
+                        jointPosCmd4[1] = Pos_Cmd_Joint + a;
+
+                        JT20.Text = jointPosCmd4[1].ToString();
+
+                        Pos_Cmd_Joint = inputCmd4[1];
+                        jointPosCmd4[1] = Pos_Cmd_Joint;
+
+                        robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
+                    }
+                    break;
+                case 21://번 조인트 명령 LCU4
+                    if (robotManager.arm4.mode == 5)
+                    {
+                        inputCmd4[2] = Convert.ToSingle(JT21.Text);
+                        Pos_Cmd_Joint = inputCmd4[2];
+                        jointPosCmd4[2] = Pos_Cmd_Joint + a;
+
+                        JT21.Text = jointPosCmd4[2].ToString();
+
+                        Pos_Cmd_Joint = inputCmd4[2];
+                        jointPosCmd4[2] = Pos_Cmd_Joint;
+
+                        robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
+                    }
+                    break;
+                case 22://번 조인트 명령 LCU4
+                    if (robotManager.arm4.mode == 5)
+                    {
+                        inputCmd4[3] = Convert.ToSingle(JT22.Text);
+                        Pos_Cmd_Joint = inputCmd4[3];
+                        jointPosCmd4[3] = Pos_Cmd_Joint + a;
+
+                        JT22.Text = jointPosCmd4[3].ToString();
+
+                        Pos_Cmd_Joint = inputCmd4[3];
+                        jointPosCmd4[3] = Pos_Cmd_Joint;
+
+                        robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
+                    }
+                    break;
+                case 23://번 조인트 명령 LCU4
+                    if (robotManager.arm4.mode == 5)
+                    {
+                        inputCmd4[4] = Convert.ToSingle(JT23.Text);
+                        Pos_Cmd_Joint = inputCmd4[4];
+                        jointPosCmd4[4] = Pos_Cmd_Joint + a;
+
+                        JT23.Text = jointPosCmd4[4].ToString();
+
+                        Pos_Cmd_Joint = inputCmd4[4];
+                        jointPosCmd4[4] = Pos_Cmd_Joint;
+
+                        robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
+                    }
+                    break;
+                case 24://번 조인트 명령 LCU4
+                    if (robotManager.arm4.mode == 5)
+                    {
+                        inputCmd4[5] = Convert.ToSingle(JT24.Text);
+                        Pos_Cmd_Joint = inputCmd4[5];
+                        jointPosCmd4[5] = Pos_Cmd_Joint + a;
+
+                        JT24.Text = jointPosCmd4[5].ToString();
+
+                        Pos_Cmd_Joint = inputCmd4[5];
+                        jointPosCmd4[5] = Pos_Cmd_Joint;
+
+                        robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
+                    }
+                    break;
+                case 25://번 조인트 명령 LCU5
+                    if (robotManager.arm5.mode == 5)
+                    {
+                        inputCmd5[0] = Convert.ToSingle(JT25.Text);
+                        Pos_Cmd_Joint = inputCmd5[0];
+                        jointPosCmd5[0] = Pos_Cmd_Joint + a;
+
+                        JT25.Text = jointPosCmd5[0].ToString();
+
+                        Pos_Cmd_Joint = inputCmd5[0];
+                        jointPosCmd5[0] = Pos_Cmd_Joint;
+
+                        robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
+                    }
+                    break;
+                case 26://번 조인트 명령 LCU5
+                    if (robotManager.arm5.mode == 5)
+                    {
+                        inputCmd5[1] = Convert.ToSingle(JT26.Text);
+                        Pos_Cmd_Joint = inputCmd5[1];
+                        jointPosCmd5[1] = Pos_Cmd_Joint + a;
+
+                        JT26.Text = jointPosCmd5[1].ToString();
+
+                        Pos_Cmd_Joint = inputCmd5[1];
+                        jointPosCmd5[1] = Pos_Cmd_Joint;
+
+                        robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
+                    }
+                    break;
+                case 27://번 조인트 명령 LCU5
+                    if (robotManager.arm5.mode == 5)
+                    {
+                        inputCmd5[2] = Convert.ToSingle(JT27.Text);
+                        Pos_Cmd_Joint = inputCmd5[2];
+                        jointPosCmd5[2] = Pos_Cmd_Joint + a;
+
+                        JT27.Text = jointPosCmd5[2].ToString();
+
+                        Pos_Cmd_Joint = inputCmd5[2];
+                        jointPosCmd5[2] = Pos_Cmd_Joint;
+
+                        robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
+                    }
+                    break;
+                case 28://번 조인트 명령 LCU5
+                    if (robotManager.arm5.mode == 5)
+                    {
+                        inputCmd5[3] = Convert.ToSingle(JT28.Text);
+                        Pos_Cmd_Joint = inputCmd5[3];
+                        jointPosCmd5[3] = Pos_Cmd_Joint + a;
+
+                        JT28.Text = jointPosCmd5[3].ToString();
+
+                        Pos_Cmd_Joint = inputCmd5[3];
+                        jointPosCmd5[3] = Pos_Cmd_Joint;
+
+                        robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
+                    }
+                    break;
+                case 29://번 조인트 명령 LCU5
+                    if (robotManager.arm5.mode == 5)
+                    {
+                        inputCmd5[4] = Convert.ToSingle(JT29.Text);
+                        Pos_Cmd_Joint = inputCmd5[4];
+                        jointPosCmd5[4] = Pos_Cmd_Joint + a;
+
+                        JT29.Text = jointPosCmd5[4].ToString();
+
+                        Pos_Cmd_Joint = inputCmd5[4];
+                        jointPosCmd5[4] = Pos_Cmd_Joint;
+
+                        robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
+                    }
+                    break;
+                case 30://번 조인트 명령 LCU5
+                    if (robotManager.arm5.mode == 5)
+                    {
+                        inputCmd5[5] = Convert.ToSingle(JT30.Text);
+                        Pos_Cmd_Joint = inputCmd5[5];
+                        jointPosCmd5[5] = Pos_Cmd_Joint + a;
+
+                        JT30.Text = jointPosCmd5[5].ToString();
+
+                        Pos_Cmd_Joint = inputCmd5[5];
+                        jointPosCmd5[5] = Pos_Cmd_Joint;
+
+                        robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
+                    }
+                    break;
             }
 
 
@@ -3417,6 +3837,241 @@ namespace MP
         private void J8Up_Click(object sender, EventArgs e)
         {
             JointUpOr_Click(8, true);
+        }
+
+        private void J8Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(8, false);
+        }
+
+        private void J9Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(9, true);
+        }
+
+        private void J9Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(9, false);
+        }
+
+        private void J10Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(10, true);
+        }
+
+        private void J10Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(10, false);
+        }
+
+        private void J11Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(11, true);
+        }
+
+        private void J11Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(11, false);
+        }
+
+        private void J12Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(12, true);
+        }
+
+        private void J12Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(12, false);
+        }
+
+        private void J13Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(13, true);
+        }
+
+        private void J13Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(13, true);
+        }
+
+        private void J6Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(6, true);
+        }
+
+        private void J6Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(6, false);
+        }
+
+        private void J14Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(14, true);
+        }
+
+        private void J14Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(14, false);
+        }
+
+        private void J15Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(15, true);
+        }
+
+        private void J15Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(16, false);
+        }
+
+        private void J16Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(16, true);
+        }
+
+        private void J16Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(16, false);
+        }
+
+        private void J17Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(17, true);
+        }
+
+        private void J17Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(17, false);
+        }
+
+        private void J18Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(18, true);
+        }
+
+        private void J18Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(18, false);
+        }
+
+        private void J19Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(19, true);
+        }
+
+        private void J19Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(19, false);
+        }
+
+        private void J20Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(20, true);
+        }
+
+        private void J20Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(20, false);
+        }
+
+        private void J21Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(21, true);
+        }
+
+        private void J21Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(21, false);
+        }
+
+        private void J22Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(22, true);
+        }
+
+        private void J22Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(22, false);
+        }
+
+        private void J23Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(23, true);
+        }
+
+        private void J23Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(23, false);
+        }
+
+        private void J24Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(24, true);
+        }
+
+        private void J24Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(24, false);
+        }
+
+        private void J25Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(25, true);
+        }
+
+        private void J25Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(25, false);
+        }
+
+        private void J26Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(26, true);
+        }
+
+        private void J26Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(26, false);
+        }
+
+        private void J27Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(27, true);
+        }
+
+        private void J27Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(27, false);
+        }
+
+        private void J28Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(28, true);
+        }
+
+        private void J28Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(28, false);
+        }
+
+        private void J29Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(29, true);
+        }
+
+        private void J29Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(29, false);
+        }
+
+        private void J30Up_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(30, true);
+        }
+
+        private void J30Down_Click(object sender, EventArgs e)
+        {
+            JointUpOr_Click(30, false);
         }
 
         private void hacIndex_SelectedIndexChanged(object sender, EventArgs e)

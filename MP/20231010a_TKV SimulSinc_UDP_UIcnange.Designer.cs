@@ -2891,6 +2891,7 @@ namespace MP
             this.J30Up.Size = new System.Drawing.Size(29, 23);
             this.J30Up.TabIndex = 262;
             this.J30Up.Text = "▲";
+            this.J30Up.Click += new System.EventHandler(this.J30Up_Click);
             // 
             // J24Up
             // 
@@ -2902,6 +2903,7 @@ namespace MP
             this.J24Up.Size = new System.Drawing.Size(29, 23);
             this.J24Up.TabIndex = 262;
             this.J24Up.Text = "▲";
+            this.J24Up.Click += new System.EventHandler(this.J24Up_Click);
             // 
             // J18Up
             // 
@@ -2913,6 +2915,7 @@ namespace MP
             this.J18Up.Size = new System.Drawing.Size(29, 23);
             this.J18Up.TabIndex = 262;
             this.J18Up.Text = "▲";
+            this.J18Up.Click += new System.EventHandler(this.J18Up_Click);
             // 
             // J30Down
             // 
@@ -2924,6 +2927,7 @@ namespace MP
             this.J30Down.Size = new System.Drawing.Size(29, 23);
             this.J30Down.TabIndex = 261;
             this.J30Down.Text = "▼";
+            this.J30Down.Click += new System.EventHandler(this.J30Down_Click);
             // 
             // J24Down
             // 
@@ -2935,6 +2939,7 @@ namespace MP
             this.J24Down.Size = new System.Drawing.Size(29, 23);
             this.J24Down.TabIndex = 261;
             this.J24Down.Text = "▼";
+            this.J24Down.Click += new System.EventHandler(this.J24Down_Click);
             // 
             // J12Up
             // 
@@ -2946,6 +2951,7 @@ namespace MP
             this.J12Up.Size = new System.Drawing.Size(29, 23);
             this.J12Up.TabIndex = 262;
             this.J12Up.Text = "▲";
+            this.J12Up.Click += new System.EventHandler(this.J12Up_Click);
             // 
             // J25Up
             // 
@@ -2957,6 +2963,7 @@ namespace MP
             this.J25Up.Size = new System.Drawing.Size(29, 23);
             this.J25Up.TabIndex = 262;
             this.J25Up.Text = "▲";
+            this.J25Up.Click += new System.EventHandler(this.J25Up_Click);
             // 
             // J18Down
             // 
@@ -2968,6 +2975,7 @@ namespace MP
             this.J18Down.Size = new System.Drawing.Size(29, 23);
             this.J18Down.TabIndex = 261;
             this.J18Down.Text = "▼";
+            this.J18Down.Click += new System.EventHandler(this.J18Down_Click);
             // 
             // J19Up
             // 
@@ -2979,6 +2987,7 @@ namespace MP
             this.J19Up.Size = new System.Drawing.Size(29, 23);
             this.J19Up.TabIndex = 262;
             this.J19Up.Text = "▲";
+            this.J19Up.Click += new System.EventHandler(this.J19Up_Click);
             // 
             // J6Up
             // 
@@ -2990,6 +2999,7 @@ namespace MP
             this.J6Up.Size = new System.Drawing.Size(29, 23);
             this.J6Up.TabIndex = 262;
             this.J6Up.Text = "▲";
+            this.J6Up.Click += new System.EventHandler(this.J6Up_Click);
             // 
             // J13Up
             // 
@@ -3001,6 +3011,7 @@ namespace MP
             this.J13Up.Size = new System.Drawing.Size(29, 23);
             this.J13Up.TabIndex = 262;
             this.J13Up.Text = "▲";
+            this.J13Up.Click += new System.EventHandler(this.J13Up_Click);
             // 
             // J12Down
             // 
@@ -3012,6 +3023,7 @@ namespace MP
             this.J12Down.Size = new System.Drawing.Size(29, 23);
             this.J12Down.TabIndex = 261;
             this.J12Down.Text = "▼";
+            this.J12Down.Click += new System.EventHandler(this.J12Down_Click);
             // 
             // J25Down
             // 
@@ -3023,6 +3035,7 @@ namespace MP
             this.J25Down.Size = new System.Drawing.Size(29, 23);
             this.J25Down.TabIndex = 261;
             this.J25Down.Text = "▼";
+            this.J25Down.Click += new System.EventHandler(this.J25Down_Click);
             // 
             // J7Up
             // 
@@ -3046,6 +3059,7 @@ namespace MP
             this.J19Down.Size = new System.Drawing.Size(29, 23);
             this.J19Down.TabIndex = 261;
             this.J19Down.Text = "▼";
+            this.J19Down.Click += new System.EventHandler(this.J19Down_Click);
             // 
             // J6Down
             // 
@@ -3057,6 +3071,7 @@ namespace MP
             this.J6Down.Size = new System.Drawing.Size(29, 23);
             this.J6Down.TabIndex = 261;
             this.J6Down.Text = "▼";
+            this.J6Down.Click += new System.EventHandler(this.J6Down_Click);
             // 
             // J13Down
             // 
@@ -3068,6 +3083,7 @@ namespace MP
             this.J13Down.Size = new System.Drawing.Size(29, 23);
             this.J13Down.TabIndex = 261;
             this.J13Down.Text = "▼";
+            this.J13Down.Click += new System.EventHandler(this.J13Down_Click);
             // 
             // velLevel_List
             // 
@@ -3152,7 +3168,7 @@ namespace MP
             this.J26Up.Size = new System.Drawing.Size(29, 23);
             this.J26Up.TabIndex = 42;
             this.J26Up.Text = "▲";
-
+            this.J26Up.Click += new System.EventHandler(this.J26Up_Click);
             // 
             // label133
             // 
@@ -3175,7 +3191,7 @@ namespace MP
             this.J20Up.Size = new System.Drawing.Size(29, 23);
             this.J20Up.TabIndex = 42;
             this.J20Up.Text = "▲";
-
+            this.J20Up.Click += new System.EventHandler(this.J20Up_Click);
             // 
             // label60
             // 
@@ -3198,7 +3214,7 @@ namespace MP
             this.J14Up.Size = new System.Drawing.Size(29, 23);
             this.J14Up.TabIndex = 42;
             this.J14Up.Text = "▲";
-
+            this.J14Up.Click += new System.EventHandler(this.J14Up_Click);
             // 
             // J1Up
             // 
@@ -3236,7 +3252,7 @@ namespace MP
             this.J27Up.Size = new System.Drawing.Size(29, 23);
             this.J27Up.TabIndex = 44;
             this.J27Up.Text = "▲";
-
+            this.J27Up.Click += new System.EventHandler(this.J27Up_Click);
             // 
             // JT13
             // 
@@ -3261,7 +3277,7 @@ namespace MP
             this.J21Up.Size = new System.Drawing.Size(29, 23);
             this.J21Up.TabIndex = 44;
             this.J21Up.Text = "▲";
-
+            this.J21Up.Click += new System.EventHandler(this.J21Up_Click);
             // 
             // J2Up
             // 
@@ -3287,7 +3303,7 @@ namespace MP
             this.J15Up.Size = new System.Drawing.Size(29, 23);
             this.J15Up.TabIndex = 44;
             this.J15Up.Text = "▲";
-
+            this.J15Up.Click += new System.EventHandler(this.J15Up_Click);
             // 
             // J1Down
             // 
@@ -3313,7 +3329,7 @@ namespace MP
             this.J26Down.Size = new System.Drawing.Size(29, 24);
             this.J26Down.TabIndex = 43;
             this.J26Down.Text = "▼";
-
+            this.J26Down.Click += new System.EventHandler(this.J26Down_Click);
             // 
             // J9Up
             // 
@@ -3325,7 +3341,7 @@ namespace MP
             this.J9Up.Size = new System.Drawing.Size(29, 23);
             this.J9Up.TabIndex = 44;
             this.J9Up.Text = "▲";
-
+            this.J9Up.Click += new System.EventHandler(this.J9Up_Click);
             // 
             // J20Down
             // 
@@ -3337,7 +3353,7 @@ namespace MP
             this.J20Down.Size = new System.Drawing.Size(29, 24);
             this.J20Down.TabIndex = 43;
             this.J20Down.Text = "▼";
-
+            this.J20Down.Click += new System.EventHandler(this.J20Down_Click);
             // 
             // JT25
             // 
@@ -3362,7 +3378,7 @@ namespace MP
             this.J14Down.Size = new System.Drawing.Size(29, 24);
             this.J14Down.TabIndex = 43;
             this.J14Down.Text = "▼";
-
+            this.J14Down.Click += new System.EventHandler(this.J14Down_Click);
             // 
             // J29Up
             // 
@@ -3374,7 +3390,7 @@ namespace MP
             this.J29Up.Size = new System.Drawing.Size(29, 23);
             this.J29Up.TabIndex = 48;
             this.J29Up.Text = "▲";
-
+            this.J29Up.Click += new System.EventHandler(this.J29Up_Click);
             // 
             // J8Down
             // 
@@ -3386,7 +3402,7 @@ namespace MP
             this.J8Down.Size = new System.Drawing.Size(29, 24);
             this.J8Down.TabIndex = 43;
             this.J8Down.Text = "▼";
-
+            this.J8Down.Click += new System.EventHandler(this.J8Down_Click);
             // 
             // J23Up
             // 
@@ -3398,7 +3414,7 @@ namespace MP
             this.J23Up.Size = new System.Drawing.Size(29, 23);
             this.J23Up.TabIndex = 48;
             this.J23Up.Text = "▲";
-
+            this.J23Up.Click += new System.EventHandler(this.J23Up_Click);
             // 
             // JT7
             // 
@@ -3423,7 +3439,7 @@ namespace MP
             this.J17Up.Size = new System.Drawing.Size(29, 23);
             this.J17Up.TabIndex = 48;
             this.J17Up.Text = "▲";
-
+            this.J17Up.Click += new System.EventHandler(this.J17Up_Click);
             // 
             // J2Down
             // 
@@ -3449,7 +3465,7 @@ namespace MP
             this.J11Up.Size = new System.Drawing.Size(29, 23);
             this.J11Up.TabIndex = 48;
             this.J11Up.Text = "▲";
-
+            this.J11Up.Click += new System.EventHandler(this.J11Up_Click);
             // 
             // J28Up
             // 
@@ -3461,7 +3477,7 @@ namespace MP
             this.J28Up.Size = new System.Drawing.Size(29, 23);
             this.J28Up.TabIndex = 46;
             this.J28Up.Text = "▲";
-
+            this.J28Up.Click += new System.EventHandler(this.J28Up_Click);
             // 
             // label105
             // 
@@ -3484,7 +3500,7 @@ namespace MP
             this.J22Up.Size = new System.Drawing.Size(29, 23);
             this.J22Up.TabIndex = 46;
             this.J22Up.Text = "▲";
-
+            this.J22Up.Click += new System.EventHandler(this.J22Up_Click);
             // 
             // J16Up
             // 
@@ -3496,7 +3512,7 @@ namespace MP
             this.J16Up.Size = new System.Drawing.Size(29, 23);
             this.J16Up.TabIndex = 46;
             this.J16Up.Text = "▲";
-
+            this.J16Up.Click += new System.EventHandler(this.J16Up_Click);
             // 
             // label132
             // 
@@ -3519,7 +3535,7 @@ namespace MP
             this.J10Up.Size = new System.Drawing.Size(29, 23);
             this.J10Up.TabIndex = 46;
             this.J10Up.Text = "▲";
-
+            this.J10Up.Click += new System.EventHandler(this.J10Up_Click);
             // 
             // J27Down
             // 
@@ -3531,7 +3547,7 @@ namespace MP
             this.J27Down.Size = new System.Drawing.Size(29, 23);
             this.J27Down.TabIndex = 45;
             this.J27Down.Text = "▼";
-
+            this.J27Down.Click += new System.EventHandler(this.J27Down_Click);
             // 
             // label23
             // 
@@ -3554,7 +3570,7 @@ namespace MP
             this.J21Down.Size = new System.Drawing.Size(29, 23);
             this.J21Down.TabIndex = 45;
             this.J21Down.Text = "▼";
-
+            this.J21Down.Click += new System.EventHandler(this.J21Down_Click);
             // 
             // J4Up
             // 
@@ -3580,7 +3596,7 @@ namespace MP
             this.J15Down.Size = new System.Drawing.Size(29, 23);
             this.J15Down.TabIndex = 45;
             this.J15Down.Text = "▼";
-
+            this.J15Down.Click += new System.EventHandler(this.J15Down_Click);
             // 
             // label104
             // 
@@ -3604,7 +3620,7 @@ namespace MP
             this.J9Down.Size = new System.Drawing.Size(29, 23);
             this.J9Down.TabIndex = 45;
             this.J9Down.Text = "▼";
-
+            this.J9Down.Click += new System.EventHandler(this.J9Down_Click);
             // 
             // J28Down
             // 
@@ -3616,7 +3632,7 @@ namespace MP
             this.J28Down.Size = new System.Drawing.Size(29, 23);
             this.J28Down.TabIndex = 47;
             this.J28Down.Text = "▼";
-
+            this.J28Down.Click += new System.EventHandler(this.J28Down_Click);
             // 
             // label131
             // 
@@ -3640,7 +3656,7 @@ namespace MP
             this.J22Down.Size = new System.Drawing.Size(29, 23);
             this.J22Down.TabIndex = 47;
             this.J22Down.Text = "▼";
-
+            this.J22Down.Click += new System.EventHandler(this.J22Down_Click);
             // 
             // J16Down
             // 
@@ -3652,7 +3668,7 @@ namespace MP
             this.J16Down.Size = new System.Drawing.Size(29, 23);
             this.J16Down.TabIndex = 47;
             this.J16Down.Text = "▼";
-
+            this.J16Down.Click += new System.EventHandler(this.J16Down_Click);
             // 
             // label54
             // 
@@ -3676,7 +3692,7 @@ namespace MP
             this.J10Down.Size = new System.Drawing.Size(29, 23);
             this.J10Down.TabIndex = 47;
             this.J10Down.Text = "▼";
-
+            this.J10Down.Click += new System.EventHandler(this.J10Down_Click);
             // 
             // J29Down
             // 
@@ -3688,7 +3704,7 @@ namespace MP
             this.J29Down.Size = new System.Drawing.Size(29, 23);
             this.J29Down.TabIndex = 49;
             this.J29Down.Text = "▼";
-
+            this.J29Down.Click += new System.EventHandler(this.J29Down_Click);
             // 
             // checkBoxSimulMod
             // 
@@ -3711,7 +3727,7 @@ namespace MP
             this.J23Down.Size = new System.Drawing.Size(29, 23);
             this.J23Down.TabIndex = 49;
             this.J23Down.Text = "▼";
-
+            this.J23Down.Click += new System.EventHandler(this.J23Down_Click);
             // 
             // J4Down
             // 
@@ -3737,7 +3753,7 @@ namespace MP
             this.J17Down.Size = new System.Drawing.Size(29, 23);
             this.J17Down.TabIndex = 49;
             this.J17Down.Text = "▼";
-
+            this.J17Down.Click += new System.EventHandler(this.J17Down_Click);
             // 
             // J14
             // 
@@ -3763,7 +3779,7 @@ namespace MP
             this.J11Down.Size = new System.Drawing.Size(29, 23);
             this.J11Down.TabIndex = 49;
             this.J11Down.Text = "▼";
-
+            this.J11Down.Click += new System.EventHandler(this.J11Down_Click);
             // 
             // J26
             // 
