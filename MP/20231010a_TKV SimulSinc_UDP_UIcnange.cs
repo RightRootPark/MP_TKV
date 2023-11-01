@@ -612,9 +612,9 @@ namespace MP
             clientMain = new UdpClient(); //PC
             CreateArm(); //LCU
             CreateArm2(); //LCU2
-            CreateArm3(); //LCU3
-            CreateArm4(); //LCU4
-            CreateArm5(); //LCU5
+            //CreateArm3(); //LCU3
+            //CreateArm4(); //LCU4
+            //CreateArm5(); //LCU5
 
 
             //CreateSetup();
@@ -724,9 +724,9 @@ namespace MP
             {
                 robotManager.arm.SendErrorReset();
                 robotManager.arm2.SendErrorReset();
-                robotManager.arm3.SendErrorReset();
-                robotManager.arm4.SendErrorReset();
-                robotManager.arm5.SendErrorReset();
+                //robotManager.arm3.SendErrorReset();
+                //robotManager.arm4.SendErrorReset();
+                //robotManager.arm5.SendErrorReset();
 
                 if (robotManager.arm.isConnect)
                 {
@@ -809,9 +809,9 @@ namespace MP
         {
             CreateArm(); //LCU
             CreateArm2();//LCU2
-            CreateArm3();//LCU3
-            CreateArm4();//LCU4
-            CreateArm5();//LCU5
+            //CreateArm3();//LCU3
+            //CreateArm4();//LCU4
+            //CreateArm5();//LCU5
             //Thread.Sleep(10);
             //CreateArm3();//LCU2
 
@@ -997,18 +997,18 @@ namespace MP
             {
                 robotManager.arm.SendSetSimulator_ON();
                 robotManager.arm2.SendSetSimulator_ON();
-                robotManager.arm3.SendSetSimulator_ON();
-                robotManager.arm4.SendSetSimulator_ON();
-                robotManager.arm5.SendSetSimulator_ON();
+                //robotManager.arm3.SendSetSimulator_ON();
+               // robotManager.arm4.SendSetSimulator_ON();
+               // robotManager.arm5.SendSetSimulator_ON();
                 //btn_Init_WorldPos.Visible = cmd_send2.Visible = true;
             }
             else
             {
                 robotManager.arm.SendSetSimulator_OFF();
                 robotManager.arm2.SendSetSimulator_OFF();
-                robotManager.arm3.SendSetSimulator_OFF();
-                robotManager.arm4.SendSetSimulator_OFF();
-                robotManager.arm5.SendSetSimulator_OFF();
+              //  robotManager.arm3.SendSetSimulator_OFF();
+             //   robotManager.arm4.SendSetSimulator_OFF();
+              //  robotManager.arm5.SendSetSimulator_OFF();
                 //btn_Init_WorldPos.Visible = cmd_send2.Visible = false;
             }
         }
@@ -1034,14 +1034,40 @@ namespace MP
                     if (checkBoxSimulMod.Checked)
                     {
                         labelSimulcomand.Text = "Simul Acitive! " + server.SimulAngle[23] + ", " + server.SimulAngle[24] + ", " + server.SimulAngle[25] + ", " + server.SimulAngle[4] + ", " + server.SimulAngle[5] + ", " + server.SimulAngle[6] + ", " + server.SimulAngle[21] + ", " + server.SimulAngle[22] + ", " + server.SimulAngle[23] + ", " + server.SimulAngle[24] + ", " + server.SimulAngle[25] + ", " + server.SimulAngle[26] + ", " + server.SimulAngle[27] + ", " + server.SimulAngle[28] + ", " + server.SimulAngle[14] + ", " + "-234fr-";
-                        JT1.Text = server.SimulAngle[20].ToString();
-                        JT2.Text = server.SimulAngle[21].ToString();
-                        JT3.Text = server.SimulAngle[22].ToString();
-                        JT4.Text = server.SimulAngle[21].ToString();
-                        JT5.Text = server.SimulAngle[23].ToString();
-                        JT6.Text = server.SimulAngle[25].ToString();
+                        JT1.Text = server.SimulAngle[0].ToString();
+                        JT2.Text = server.SimulAngle[1].ToString();
+                        JT3.Text = server.SimulAngle[2].ToString();
+                        JT4.Text = server.SimulAngle[17].ToString();
+                        JT5.Text = server.SimulAngle[19].ToString();
+                        JT6.Text = server.SimulAngle[18].ToString();
 
-                        JT7.Text = server.SimulAngle[23].ToString();
+                        JT7.Text = server.SimulAngle[10].ToString();
+                        JT8.Text = server.SimulAngle[12].ToString();
+                        JT9.Text = server.SimulAngle[11].ToString();
+                        JT10.Text = server.SimulAngle[14].ToString();
+                        JT11.Text = server.SimulAngle[13].ToString();
+                        JT12.Text = server.SimulAngle[15].ToString();
+                        
+                        JT13.Text = server.SimulAngle[16].ToString();
+                        JT14.Text = server.SimulAngle[10].ToString();
+                        JT15.Text = server.SimulAngle[10].ToString();
+                        JT16.Text = server.SimulAngle[10].ToString();
+                        JT17.Text = server.SimulAngle[10].ToString();
+                        JT18.Text = server.SimulAngle[10].ToString();
+                        
+                        JT19.Text = server.SimulAngle[10].ToString();
+                        JT20.Text = server.SimulAngle[10].ToString();
+                        JT21.Text = server.SimulAngle[10].ToString();
+                        JT22.Text = server.SimulAngle[10].ToString();
+                        JT23.Text = server.SimulAngle[10].ToString();
+                        JT24.Text = server.SimulAngle[10].ToString();
+                        
+                        JT25.Text = server.SimulAngle[10].ToString();
+                        JT26.Text = server.SimulAngle[10].ToString();
+                        JT27.Text = server.SimulAngle[10].ToString();
+                        JT28.Text = server.SimulAngle[10].ToString();
+                        JT29.Text = server.SimulAngle[10].ToString();
+                        JT30.Text = server.SimulAngle[10].ToString();
                         //JT1.Text = tcpserver.DataString();
                         //JT1.Text = TkvPlay.dataArray[23];
                         //JT2.Text = TkvPlay.dataArray[24];
@@ -1076,17 +1102,17 @@ namespace MP
                             jointPosCmd[5] = inputCmd[5] = Convert.ToSingle(JT6.Text);
                             JT6.Text = jointPosCmd[5].ToString();
 
-                            inputCmd2[3] = Convert.ToSingle(JT7.Text);
-                            JT7.Text = jointPosCmd2[3].ToString();
-                            if (inputCmd2[3] >= 120) jointPosCmd2[3] = 119.9f;
-                            else if (inputCmd2[3] <= -10) jointPosCmd2[3] = -9.9f;
-                            else jointPosCmd2[3] = inputCmd2[3];
+                            inputCmd2[0] = Convert.ToSingle(JT7.Text);
+                            JT7.Text = jointPosCmd2[0].ToString();
+                            if (inputCmd2[0] >= 120) jointPosCmd2[0] = 119.9f;
+                            else if (inputCmd2[0] <= -10) jointPosCmd2[0] = -9.9f;
+                            else jointPosCmd2[0] = inputCmd2[0];
 
-                            robotManager.arm.SetArmPosCmd(jointPosCmd, 0, 0); //LCU에 명령 송신
-                            robotManager.arm2.SetArmPosCmd(jointPosCmd2, 0, 0); //LCU에 명령 송신
-                            robotManager.arm3.SetArmPosCmd(jointPosCmd3, 0, 0); //LCU에 명령 송신
-                            robotManager.arm4.SetArmPosCmd(jointPosCmd4, 0, 0); //LCU에 명령 송신
-                            robotManager.arm5.SetArmPosCmd(jointPosCmd5, 0, 0); //LCU에 명령 송신
+                            robotManager.arm.SetArmPosCmd(jointPosCmd, jointPosCmd[5], 0); //LCU에 명령 송신
+                            robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
+                            //  robotManager.arm3.SetArmPosCmd(jointPosCmd3, 0, 0); //LCU에 명령 송신
+                            //robotManager.arm4.SetArmPosCmd(jointPosCmd4, 0, 0); //LCU에 명령 송신
+                            // robotManager.arm5.SetArmPosCmd(jointPosCmd5, 0, 0); //LCU에 명령 송신
                         }
                     }
                     else labelSimulcomand.Text = "Simul is not active" + server.SimulAngle[20] + ", " + server.SimulAngle[21] + ", " + server.SimulAngle[22] + ", " + server.SimulAngle[21] + ", " + server.SimulAngle[23] + ", " + server.SimulAngle[6] + ", " + server.SimulAngle[21] + ", " + server.SimulAngle[22] + ", " + server.SimulAngle[23] + ", " + "-244fr-";
@@ -1131,12 +1157,12 @@ namespace MP
                     J11.Text = (robotManager.arm2.monitoringData.fJointPos[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                     J12.Text = (robotManager.arm2.monitoringData.fJointPos[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                     
-                    J13.Text = (robotManager.arm3.monitoringData.fJointPos[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                    J14.Text = (robotManager.arm3.monitoringData.fJointPos[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                    J15.Text = (robotManager.arm3.monitoringData.fJointPos[2] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                    J16.Text = (robotManager.arm3.monitoringData.fJointPos[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                    J17.Text = (robotManager.arm3.monitoringData.fJointPos[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                    J18.Text = (robotManager.arm3.monitoringData.fJointPos[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    //J13.Text = (robotManager.arm3.monitoringData.fJointPos[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    //J14.Text = (robotManager.arm3.monitoringData.fJointPos[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    //J15.Text = (robotManager.arm3.monitoringData.fJointPos[2] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    //J16.Text = (robotManager.arm3.monitoringData.fJointPos[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    //J17.Text = (robotManager.arm3.monitoringData.fJointPos[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    //J18.Text = (robotManager.arm3.monitoringData.fJointPos[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
 
                     JC1.Text = (robotManager.arm.monitoringData.fJointPosCur[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                     JC2.Text = (robotManager.arm.monitoringData.fJointPosCur[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
@@ -1152,12 +1178,12 @@ namespace MP
                     JC11.Text = (robotManager.arm2.monitoringData.fJointPosCur[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                     JC12.Text = (robotManager.arm2.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                     
-                    JC13.Text = (robotManager.arm3.monitoringData.fJointPosCur[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                    JC14.Text = (robotManager.arm3.monitoringData.fJointPosCur[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                    JC15.Text = (robotManager.arm3.monitoringData.fJointPosCur[2] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                    JC16.Text = (robotManager.arm3.monitoringData.fJointPosCur[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                    JC17.Text = (robotManager.arm3.monitoringData.fJointPosCur[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                    JC18.Text = (robotManager.arm3.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    //JC13.Text = (robotManager.arm3.monitoringData.fJointPosCur[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    //JC14.Text = (robotManager.arm3.monitoringData.fJointPosCur[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    //JC15.Text = (robotManager.arm3.monitoringData.fJointPosCur[2] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    //JC16.Text = (robotManager.arm3.monitoringData.fJointPosCur[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    //JC17.Text = (robotManager.arm3.monitoringData.fJointPosCur[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    //JC18.Text = (robotManager.arm3.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
 
                     W1.Text = robotManager.arm.monitoringData.fWorldPos[0].ToString("f2");
                     W2.Text = robotManager.arm.monitoringData.fWorldPos[1].ToString("f2");
@@ -1719,9 +1745,9 @@ namespace MP
             }
             robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
             robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 0);
-            robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 0);
-            robotManager.arm4.SetArmVelCmd(jointVelocityCmd4, 0);
-            robotManager.arm5.SetArmVelCmd(jointVelocityCmd5, 0);
+            //robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 0);
+            //robotManager.arm4.SetArmVelCmd(jointVelocityCmd4, 0);
+            //robotManager.arm5.SetArmVelCmd(jointVelocityCmd5, 0);
 
 
             //if (_dstart.Checked)
@@ -1801,12 +1827,12 @@ namespace MP
             robotManager.arm.SetArmVelCmd(jointVelocityCmd, 1);
             robotManager.arm2.SetArmVelCmd(jointVelocityCmd, 0);
             robotManager.arm2.SetArmVelCmd(jointVelocityCmd, 1);
-            robotManager.arm3.SetArmVelCmd(jointVelocityCmd, 0);
-            robotManager.arm3.SetArmVelCmd(jointVelocityCmd, 1);
-            robotManager.arm4.SetArmVelCmd(jointVelocityCmd, 0);
-            robotManager.arm4.SetArmVelCmd(jointVelocityCmd, 1);
-            robotManager.arm5.SetArmVelCmd(jointVelocityCmd, 0);
-            robotManager.arm5.SetArmVelCmd(jointVelocityCmd, 1);
+            //robotManager.arm3.SetArmVelCmd(jointVelocityCmd, 0);
+            //robotManager.arm3.SetArmVelCmd(jointVelocityCmd, 1);
+            //robotManager.arm4.SetArmVelCmd(jointVelocityCmd, 0);
+            //robotManager.arm4.SetArmVelCmd(jointVelocityCmd, 1);
+            //robotManager.arm5.SetArmVelCmd(jointVelocityCmd, 0);
+            //robotManager.arm5.SetArmVelCmd(jointVelocityCmd, 1);
 
             switch (index)
             {
@@ -1816,15 +1842,15 @@ namespace MP
                     //FT.Enabled = forceTx.Enabled = forceRelease.Enabled = false;
                     robotManager.arm.LCU_MODECHECK_VEL = true;
                     robotManager.arm2.LCU_MODECHECK_VEL = true;
-                    robotManager.arm3.LCU_MODECHECK_VEL = true;
-                    robotManager.arm4.LCU_MODECHECK_VEL = true;
-                    robotManager.arm5.LCU_MODECHECK_VEL = true;
+                    //robotManager.arm3.LCU_MODECHECK_VEL = true;
+                    //robotManager.arm4.LCU_MODECHECK_VEL = true;
+                    //robotManager.arm5.LCU_MODECHECK_VEL = true;
                     for (int i = 0; i < 6; i++) jointVelocityCmd[i] = 0;
                     robotManager.arm.SetArmVelCmd(jointVelocityCmd, 1);
                     robotManager.arm2.SetArmVelCmd(jointVelocityCmd, 1);
-                    robotManager.arm3.SetArmVelCmd(jointVelocityCmd, 1);
-                    robotManager.arm4.SetArmVelCmd(jointVelocityCmd, 1);
-                    robotManager.arm5.SetArmVelCmd(jointVelocityCmd, 1);
+                    //robotManager.arm3.SetArmVelCmd(jointVelocityCmd, 1);
+                    //robotManager.arm4.SetArmVelCmd(jointVelocityCmd, 1);
+                    //robotManager.arm5.SetArmVelCmd(jointVelocityCmd, 1);
                     robotManager.ChangeControlMode(0);
 
                     C1.Text = JT1.Text = "0.00";
@@ -1857,9 +1883,9 @@ namespace MP
                 case 2: //Joint - Position control
                     robotManager.arm.LCU_MODECHECK_VEL = false;
                     robotManager.arm2.LCU_MODECHECK_VEL = false;
-                    robotManager.arm3.LCU_MODECHECK_VEL = false;
-                    robotManager.arm4.LCU_MODECHECK_VEL = false;
-                    robotManager.arm5.LCU_MODECHECK_VEL = false;
+                    //robotManager.arm3.LCU_MODECHECK_VEL = false;
+                    //robotManager.arm4.LCU_MODECHECK_VEL = false;
+                    //robotManager.arm5.LCU_MODECHECK_VEL = false;
                     robotManager.ChangeControlMode(2);
 
                     C1.Text = JT1.Text = JC1.Text;
@@ -1956,9 +1982,9 @@ namespace MP
             {
                 robotManager.arm.SetArmVelCmd(jointVelocityCmd, 1);
                 robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 1);
-                robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 1);
-                robotManager.arm4.SetArmVelCmd(jointVelocityCmd4, 1);
-                robotManager.arm5.SetArmVelCmd(jointVelocityCmd5, 1);
+                //robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 1);
+                //robotManager.arm4.SetArmVelCmd(jointVelocityCmd4, 1);
+                //robotManager.arm5.SetArmVelCmd(jointVelocityCmd5, 1);
 
 
                 C1.Text = JT1.Text = "0.00";
@@ -2059,9 +2085,9 @@ namespace MP
                 //}
                 robotManager.arm.SetArmPosCmd(jointPosCmd, 0, 0);
                 robotManager.arm2.SetArmPosCmd(jointPosCmd2, 0, 0);
-                robotManager.arm3.SetArmPosCmd(jointPosCmd3, 0, 0);
-                robotManager.arm4.SetArmPosCmd(jointPosCmd4, 0, 0);
-                robotManager.arm5.SetArmPosCmd(jointPosCmd5, 0, 0);
+                //robotManager.arm3.SetArmPosCmd(jointPosCmd3, 0, 0);
+                //robotManager.arm4.SetArmPosCmd(jointPosCmd4, 0, 0);
+                //robotManager.arm5.SetArmPosCmd(jointPosCmd5, 0, 0);
             }
             else if (robotManager.arm.mode == 8 || robotManager.arm.mode == 9)
             {
@@ -3767,9 +3793,9 @@ namespace MP
                 mode_List.SelectedIndex = 2;// Joint_pos Mode
                 robotManager.arm.mode = 5;
                 robotManager.arm2.mode = 5;
-                robotManager.arm3.mode = 5;
-                robotManager.arm4.mode = 5;
-                robotManager.arm5.mode = 5;
+                //robotManager.arm3.mode = 5;
+                //robotManager.arm4.mode = 5;
+                //robotManager.arm5.mode = 5;
                     break;
                 case false:
                     //mode_List.SelectedIndex = 0;// Joint_pos Mode

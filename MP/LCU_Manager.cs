@@ -132,14 +132,14 @@ public class LCU_Manager
         //targetDevice.SendInitStart();
         arm.SendInitStart();
         arm2.SendInitStart();
-        arm3.SendInitStart();
-        arm4.SendInitStart();
-        arm5.SendInitStart();
+        //arm3.SendInitStart();
+        //arm4.SendInitStart();
+        //arm5.SendInitStart();
         arm.SendErrorSumClear();
         arm2.SendErrorSumClear();
-        arm3.SendErrorSumClear();
-        arm4.SendErrorSumClear();
-        arm5.SendErrorSumClear();
+        //arm3.SendErrorSumClear();
+        //arm4.SendErrorSumClear();
+        //arm5.SendErrorSumClear();
         //arm.SendSetReplyTime(10);
         //arm.SendSetMode(LcuCommunication.LCU_VAL_MODE_JOINT_VEL);
         //arm.SendSetKeepTime(200);
@@ -185,9 +185,9 @@ public class LCU_Manager
                 //if (arm.mode != LcuCommunication.LCU_VAL_MODE_JOINT_VEL)
                 arm.SendSetMode(LcuCommunication.LCU_VAL_MODE_JOINT_VEL);
                 arm2.SendSetMode(LcuCommunication.LCU_VAL_MODE_JOINT_VEL);
-                arm3.SendSetMode(LcuCommunication.LCU_VAL_MODE_JOINT_VEL);
-                arm4.SendSetMode(LcuCommunication.LCU_VAL_MODE_JOINT_VEL);
-                arm5.SendSetMode(LcuCommunication.LCU_VAL_MODE_JOINT_VEL);
+                //arm3.SendSetMode(LcuCommunication.LCU_VAL_MODE_JOINT_VEL);
+                //arm4.SendSetMode(LcuCommunication.LCU_VAL_MODE_JOINT_VEL);
+                //arm5.SendSetMode(LcuCommunication.LCU_VAL_MODE_JOINT_VEL);
                 break;
             case (int)Mode.World:
                 //if (arm.mode != LcuCommunication.LCU_VAL_MODE_WORLD_VEL)
@@ -197,9 +197,9 @@ public class LCU_Manager
                 //if (arm.mode != LcuCommunication.LCU_VAL_MODE_JOINT_POS)
                 arm.SendSetMode(LcuCommunication.LCU_VAL_MODE_JOINT_POS);
                 arm2.SendSetMode(LcuCommunication.LCU_VAL_MODE_JOINT_POS);
-                arm3.SendSetMode(LcuCommunication.LCU_VAL_MODE_JOINT_POS);
-                arm4.SendSetMode(LcuCommunication.LCU_VAL_MODE_JOINT_POS);
-                arm5.SendSetMode(LcuCommunication.LCU_VAL_MODE_JOINT_POS);
+                //arm3.SendSetMode(LcuCommunication.LCU_VAL_MODE_JOINT_POS);
+                //arm4.SendSetMode(LcuCommunication.LCU_VAL_MODE_JOINT_POS);
+                //arm5.SendSetMode(LcuCommunication.LCU_VAL_MODE_JOINT_POS);
                 break;
             case (int)Mode.Position_World_M:
                 //if (arm.mode != LcuCommunication.LCU_VAL_MODE_JOINT_POS)
