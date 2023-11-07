@@ -145,16 +145,16 @@ namespace MP
         private float[] jointVelocityCmd5 = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];
         private float[] worldVelocityCmd = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];
         private float[] jointPosCmd = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];
-        private float[] jointPosCmd2 = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];
-        private float[] jointPosCmd3 = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];
-        private float[] jointPosCmd4 = new float[8];//[LcuCommon.ROBOT_AXIS_CNT_MAX];
+        private float[] jointPosCmd2 = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];// 태권브이는 LCU 별로 제어수가 다름 [7]개 하는거로 바꿀 예정
+        private float[] jointPosCmd3 = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];// 태권브이는 LCU 별로 제어수가 다름 [7]개 하는거로 바꿀 예정
+        private float[] jointPosCmd4 = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];// 태권브이는 LCU 별로 제어수가 다름 [8]개 하는거로 바꿀 예정
         private float[] jointPosCmd5 = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];
         private float[] worldPosCmd = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];
         private float[] worldPosCmd2 = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];
         private float[] forceCmd = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];
         private float[] inputCmd = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];
-        private float[] inputCmd2 = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];
-        private float[] inputCmd3 = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];
+        private float[] inputCmd2 = new float[7];//[LcuCommon.ROBOT_AXIS_CNT_MAX];
+        private float[] inputCmd3 = new float[7];//[LcuCommon.ROBOT_AXIS_CNT_MAX];
         private float[] inputCmd4 = new float[8];//[LcuCommon.ROBOT_AXIS_CNT_MAX];
         private float[] inputCmd5 = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];
 
@@ -1065,6 +1065,7 @@ namespace MP
                         JT26.Text = server.SimulAngle[25].ToString();
                         JT27.Text = server.SimulAngle[26].ToString();
                         JT28.Text = server.SimulAngle[2].ToString();
+
                         JT29.Text = server.SimulAngle[2].ToString();
                         JT30.Text = server.SimulAngle[2].ToString();
                         //JT1.Text = tcpserver.DataString();
@@ -1121,7 +1122,7 @@ namespace MP
                                 inputCmd2[3] = Convert.ToSingle(JT10.Text);
                                 inputCmd2[4] = Convert.ToSingle(JT11.Text);
                                 inputCmd2[5] = Convert.ToSingle(JT12.Text);
-                                for (byte i = 1; i < 6; i++)
+                                for (byte i = 1; i < jointPosCmd2.Length; i++)
                                 {
                                     if (jointPosCmd2[i] - Gab < inputCmd2[i] && inputCmd2[i] < jointPosCmd2[i] + Gab) //갑자기 튀는 현상 제거를 위한 안전기능 시험
                                     {
@@ -1147,10 +1148,9 @@ namespace MP
                                 inputCmd4[5] = Convert.ToSingle(JT26.Text);
                                 inputCmd4[6] = Convert.ToSingle(JT27.Text);
                                 inputCmd4[7] = Convert.ToSingle(JT28.Text);
-                                if (inputCmd4[1] > 10) inputCmd4[1] = 10;//하드웨어 보강이 아직 되지 않아서 임시
-                                if (inputCmd4[2] > 60) inputCmd4[1] = 60;//하드웨어 보강이 아직 되지 않아서 임시
+                                if (inputCmd4[2] > 60) inputCmd4[1] = 60;//하드웨어 보강이 아직 되지 않아서 임시 제한
 
-                                for (byte i = 0; i < 8; i++)
+                                for (byte i = 0; i < jointPosCmd4.Length; i++)
                                 {
                                     if (jointPosCmd4[i] - Gab < inputCmd4[i] && inputCmd4[i] < jointPosCmd4[i] + Gab) //갑자기 튀는 현상 제거를 위한 안전기능 시험
                                     {
@@ -3533,28 +3533,35 @@ labelSimulcomand.Text = "Simul is not active" + server.SimulAngle[20] + ", " + s
                     }
                     break;
                 case 13://번 조인트 명령 LCU3
-                    if (robotManager.arm3.mode == 5)
+                    if (robotManager.arm2.mode == 5)
                     {
-                        inputCmd3[0] = Convert.ToSingle(JT13.Text);
-                        Pos_Cmd_Joint = inputCmd3[0];
-                        jointPosCmd3[0] = Pos_Cmd_Joint + a;
+                        //inputCmd2[6] = Convert.ToSingle(JT13.Text);
+                        //jointPosCmd2[6] = inputCmd2[6] + a;
 
-                        JT13.Text = jointPosCmd3[0].ToString();
+                        //JT13.Text = jointPosCmd2[6].ToString();
 
-                        Pos_Cmd_Joint = inputCmd3[0];
-                        jointPosCmd3[0] = Pos_Cmd_Joint;
-
-                        robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
+                        //robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd3[5], 0); 2번 LCU 7번째 축 제어 구현이 아직 되어있지 않음
                     }
                     break;
                 case 14://번 조인트 명령 LCU3
                     if (robotManager.arm3.mode == 5)
                     {
-                        inputCmd3[1] = Convert.ToSingle(JT14.Text);
+                        inputCmd3[0] = Convert.ToSingle(JT14.Text);                        
+                        jointPosCmd3[0] = inputCmd3[0] + a;
+
+                        JT14.Text = jointPosCmd3[0].ToString();
+
+                        robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
+                    }
+                    break;
+                case 15://번 조인트 명령 LCU3 15
+                    if (robotManager.arm3.mode == 5)
+                    {
+                        inputCmd3[1] = Convert.ToSingle(JT15.Text);
                         Pos_Cmd_Joint = inputCmd3[1];
                         jointPosCmd3[1] = Pos_Cmd_Joint + a;
 
-                        JT14.Text = jointPosCmd3[1].ToString();
+                        JT15.Text = jointPosCmd3[1].ToString();
 
                         Pos_Cmd_Joint = inputCmd3[1];
                         jointPosCmd3[1] = Pos_Cmd_Joint;
@@ -3562,14 +3569,14 @@ labelSimulcomand.Text = "Simul is not active" + server.SimulAngle[20] + ", " + s
                         robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
                     }
                     break;
-                case 15://번 조인트 명령 LCU3
+                case 16://번 조인트 명령 LCU3
                     if (robotManager.arm3.mode == 5)
                     {
-                        inputCmd3[2] = Convert.ToSingle(JT15.Text);
+                        inputCmd3[2] = Convert.ToSingle(JT16.Text);
                         Pos_Cmd_Joint = inputCmd3[2];
                         jointPosCmd3[2] = Pos_Cmd_Joint + a;
 
-                        JT15.Text = jointPosCmd3[2].ToString();
+                        JT16.Text = jointPosCmd3[2].ToString();
 
                         Pos_Cmd_Joint = inputCmd3[2];
                         jointPosCmd3[2] = Pos_Cmd_Joint;
@@ -3577,14 +3584,14 @@ labelSimulcomand.Text = "Simul is not active" + server.SimulAngle[20] + ", " + s
                         robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
                     }
                     break;
-                case 16://번 조인트 명령 LCU3
+                case 17://번 조인트 명령 LCU3
                     if (robotManager.arm3.mode == 5)
                     {
-                        inputCmd3[3] = Convert.ToSingle(JT16.Text);
+                        inputCmd3[3] = Convert.ToSingle(JT17.Text);
                         Pos_Cmd_Joint = inputCmd3[3];
                         jointPosCmd3[3] = Pos_Cmd_Joint + a;
 
-                        JT16.Text = jointPosCmd3[3].ToString();
+                        JT17.Text = jointPosCmd3[3].ToString();
 
                         Pos_Cmd_Joint = inputCmd3[3];
                         jointPosCmd3[3] = Pos_Cmd_Joint;
@@ -3592,14 +3599,14 @@ labelSimulcomand.Text = "Simul is not active" + server.SimulAngle[20] + ", " + s
                         robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
                     }
                     break;
-                case 17://번 조인트 명령 LCU3
+                case 18://번 조인트 명령 LCU3
                     if (robotManager.arm3.mode == 5)
                     {
-                        inputCmd3[4] = Convert.ToSingle(JT17.Text);
+                        inputCmd3[4] = Convert.ToSingle(JT18.Text);
                         Pos_Cmd_Joint = inputCmd3[4];
                         jointPosCmd3[4] = Pos_Cmd_Joint + a;
 
-                        JT17.Text = jointPosCmd3[4].ToString();
+                        JT18.Text = jointPosCmd3[4].ToString();
 
                         Pos_Cmd_Joint = inputCmd3[4];
                         jointPosCmd3[4] = Pos_Cmd_Joint;
@@ -3607,14 +3614,14 @@ labelSimulcomand.Text = "Simul is not active" + server.SimulAngle[20] + ", " + s
                         robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
                     }
                     break;
-                case 18://번 조인트 명령 LCU3
+                case 19://번 조인트 명령 LCU3
                     if (robotManager.arm3.mode == 5)
                     {
-                        inputCmd3[5] = Convert.ToSingle(JT18.Text);
+                        inputCmd3[5] = Convert.ToSingle(JT19.Text);
                         Pos_Cmd_Joint = inputCmd3[5];
                         jointPosCmd3[5] = Pos_Cmd_Joint + a;
 
-                        JT18.Text = jointPosCmd3[5].ToString();
+                        JT19.Text = jointPosCmd3[5].ToString();
 
                         Pos_Cmd_Joint = inputCmd3[5];
                         jointPosCmd3[5] = Pos_Cmd_Joint;
@@ -3622,47 +3629,25 @@ labelSimulcomand.Text = "Simul is not active" + server.SimulAngle[20] + ", " + s
                         robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
                     }
                     break;
-                case 19://번 조인트 명령 LCU4
-                    if (robotManager.arm4.mode == 5)
+                case 20://번 조인트 명령 LCU3
+                    if (robotManager.arm3.mode == 5)
                     {
-                        inputCmd4[0] = Convert.ToSingle(JT19.Text);
-                        Pos_Cmd_Joint = inputCmd4[0];
-                        jointPosCmd4[0] = Pos_Cmd_Joint + a;
+                        //inputCmd3[6] = Convert.ToSingle(JT20.Text);
+                        //jointPosCmd3[6] = inputCmd3[6] + a;
 
-                        JT19.Text = jointPosCmd4[0].ToString();
+                        //JT20.Text = jointPosCmd3[6].ToString();
 
-                        Pos_Cmd_Joint = inputCmd4[0];
-                        jointPosCmd4[0] = Pos_Cmd_Joint;
-
-                        robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
-                    }
-                    break;
-                case 20://번 조인트 명령 LCU4
-                    if (robotManager.arm4.mode == 5)
-                    {
-                        inputCmd4[1] = Convert.ToSingle(JT20.Text);
-                        Pos_Cmd_Joint = inputCmd4[1];
-                        jointPosCmd4[1] = Pos_Cmd_Joint + a;
-
-                        JT20.Text = jointPosCmd4[1].ToString();
-
-                        Pos_Cmd_Joint = inputCmd4[1];
-                        jointPosCmd4[1] = Pos_Cmd_Joint;
-
-                        robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
+                        //robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0); 아직 LCUdp 7번째 축 제어가 구현되지 않음
                     }
                     break;
                 case 21://번 조인트 명령 LCU4
                     if (robotManager.arm4.mode == 5)
                     {
-                        inputCmd4[2] = Convert.ToSingle(JT21.Text);
-                        Pos_Cmd_Joint = inputCmd4[2];
-                        jointPosCmd4[2] = Pos_Cmd_Joint + a;
+                        inputCmd4[0] = Convert.ToSingle(JT21.Text);
+                        Pos_Cmd_Joint = inputCmd4[0];
+                        jointPosCmd4[0] = Pos_Cmd_Joint + a;
 
-                        JT21.Text = jointPosCmd4[2].ToString();
-
-                        Pos_Cmd_Joint = inputCmd4[2];
-                        jointPosCmd4[2] = Pos_Cmd_Joint;
+                        JT21.Text = jointPosCmd4[0].ToString();
 
                         robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
                     }
@@ -3670,14 +3655,11 @@ labelSimulcomand.Text = "Simul is not active" + server.SimulAngle[20] + ", " + s
                 case 22://번 조인트 명령 LCU4
                     if (robotManager.arm4.mode == 5)
                     {
-                        inputCmd4[3] = Convert.ToSingle(JT22.Text);
-                        Pos_Cmd_Joint = inputCmd4[3];
-                        jointPosCmd4[3] = Pos_Cmd_Joint + a;
+                        inputCmd4[1] = Convert.ToSingle(JT22.Text);
+                        Pos_Cmd_Joint = inputCmd4[1];
+                        jointPosCmd4[1] = Pos_Cmd_Joint + a;
 
-                        JT22.Text = jointPosCmd4[3].ToString();
-
-                        Pos_Cmd_Joint = inputCmd4[3];
-                        jointPosCmd4[3] = Pos_Cmd_Joint;
+                        JT22.Text = jointPosCmd4[1].ToString();
 
                         robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
                     }
@@ -3685,14 +3667,11 @@ labelSimulcomand.Text = "Simul is not active" + server.SimulAngle[20] + ", " + s
                 case 23://번 조인트 명령 LCU4
                     if (robotManager.arm4.mode == 5)
                     {
-                        inputCmd4[4] = Convert.ToSingle(JT23.Text);
-                        Pos_Cmd_Joint = inputCmd4[4];
-                        jointPosCmd4[4] = Pos_Cmd_Joint + a;
+                        inputCmd4[2] = Convert.ToSingle(JT23.Text);
+                        Pos_Cmd_Joint = inputCmd4[2];
+                        jointPosCmd4[2] = Pos_Cmd_Joint + a;
 
-                        JT23.Text = jointPosCmd4[4].ToString();
-
-                        Pos_Cmd_Joint = inputCmd4[4];
-                        jointPosCmd4[4] = Pos_Cmd_Joint;
+                        JT23.Text = jointPosCmd4[2].ToString();
 
                         robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
                     }
@@ -3700,26 +3679,50 @@ labelSimulcomand.Text = "Simul is not active" + server.SimulAngle[20] + ", " + s
                 case 24://번 조인트 명령 LCU4
                     if (robotManager.arm4.mode == 5)
                     {
-                        inputCmd4[5] = Convert.ToSingle(JT24.Text);
-                        Pos_Cmd_Joint = inputCmd4[5];
-                        jointPosCmd4[5] = Pos_Cmd_Joint + a;
+                        inputCmd4[3] = Convert.ToSingle(JT24.Text);
+                        Pos_Cmd_Joint = inputCmd4[3];
+                        jointPosCmd4[3] = Pos_Cmd_Joint + a;
 
-                        JT24.Text = jointPosCmd4[5].ToString();
-
-                        Pos_Cmd_Joint = inputCmd4[5];
-                        jointPosCmd4[5] = Pos_Cmd_Joint;
+                        JT24.Text = jointPosCmd4[3].ToString();
 
                         robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
                     }
                     break;
-                case 25://번 조인트 명령 LCU5
+                case 25://번 조인트 명령 LCU4
+                    if (robotManager.arm4.mode == 5)
+                    {
+                        inputCmd4[4] = Convert.ToSingle(JT25.Text);
+                        Pos_Cmd_Joint = inputCmd4[4];
+                        jointPosCmd4[4] = Pos_Cmd_Joint + a;
+
+                        JT25.Text = jointPosCmd4[4].ToString();
+
+                        Pos_Cmd_Joint = inputCmd4[4];
+                        jointPosCmd4[4] = Pos_Cmd_Joint;
+
+                        robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
+                    }
+                    break;
+                case 26://번 조인트 명령 LCU4
+                    if (robotManager.arm4.mode == 5)
+                    {
+                        inputCmd4[5] = Convert.ToSingle(JT26.Text);
+                        Pos_Cmd_Joint = inputCmd4[5];
+                        jointPosCmd4[5] = Pos_Cmd_Joint + a;
+
+                        JT26.Text = jointPosCmd4[5].ToString();
+
+                        robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
+                    }
+                    break;
+                case 27://번 조인트 명령 LCU5 사실 5번을 쓰지 않고 4번이 다 할 수 도 있음
                     if (robotManager.arm5.mode == 5)
                     {
-                        inputCmd5[0] = Convert.ToSingle(JT25.Text);
+                        inputCmd5[0] = Convert.ToSingle(JT27.Text);
                         Pos_Cmd_Joint = inputCmd5[0];
                         jointPosCmd5[0] = Pos_Cmd_Joint + a;
 
-                        JT25.Text = jointPosCmd5[0].ToString();
+                        JT27.Text = jointPosCmd5[0].ToString();
 
                         Pos_Cmd_Joint = inputCmd5[0];
                         jointPosCmd5[0] = Pos_Cmd_Joint;
@@ -3727,14 +3730,14 @@ labelSimulcomand.Text = "Simul is not active" + server.SimulAngle[20] + ", " + s
                         robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
                     }
                     break;
-                case 26://번 조인트 명령 LCU5
+                case 28://번 조인트 명령 LCU5
                     if (robotManager.arm5.mode == 5)
                     {
-                        inputCmd5[1] = Convert.ToSingle(JT26.Text);
+                        inputCmd5[1] = Convert.ToSingle(JT28.Text);
                         Pos_Cmd_Joint = inputCmd5[1];
                         jointPosCmd5[1] = Pos_Cmd_Joint + a;
 
-                        JT26.Text = jointPosCmd5[1].ToString();
+                        JT28.Text = jointPosCmd5[1].ToString();
 
                         Pos_Cmd_Joint = inputCmd5[1];
                         jointPosCmd5[1] = Pos_Cmd_Joint;
@@ -3742,14 +3745,14 @@ labelSimulcomand.Text = "Simul is not active" + server.SimulAngle[20] + ", " + s
                         robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
                     }
                     break;
-                case 27://번 조인트 명령 LCU5
+                case 29://번 조인트 명령 LCU5
                     if (robotManager.arm5.mode == 5)
                     {
-                        inputCmd5[2] = Convert.ToSingle(JT27.Text);
+                        inputCmd5[2] = Convert.ToSingle(JT29.Text);
                         Pos_Cmd_Joint = inputCmd5[2];
                         jointPosCmd5[2] = Pos_Cmd_Joint + a;
 
-                        JT27.Text = jointPosCmd5[2].ToString();
+                        JT29.Text = jointPosCmd5[2].ToString();
 
                         Pos_Cmd_Joint = inputCmd5[2];
                         jointPosCmd5[2] = Pos_Cmd_Joint;
@@ -3757,47 +3760,17 @@ labelSimulcomand.Text = "Simul is not active" + server.SimulAngle[20] + ", " + s
                         robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
                     }
                     break;
-                case 28://번 조인트 명령 LCU5
-                    if (robotManager.arm5.mode == 5)
-                    {
-                        inputCmd5[3] = Convert.ToSingle(JT28.Text);
-                        Pos_Cmd_Joint = inputCmd5[3];
-                        jointPosCmd5[3] = Pos_Cmd_Joint + a;
-
-                        JT28.Text = jointPosCmd5[3].ToString();
-
-                        Pos_Cmd_Joint = inputCmd5[3];
-                        jointPosCmd5[3] = Pos_Cmd_Joint;
-
-                        robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
-                    }
-                    break;
-                case 29://번 조인트 명령 LCU5
-                    if (robotManager.arm5.mode == 5)
-                    {
-                        inputCmd5[4] = Convert.ToSingle(JT29.Text);
-                        Pos_Cmd_Joint = inputCmd5[4];
-                        jointPosCmd5[4] = Pos_Cmd_Joint + a;
-
-                        JT29.Text = jointPosCmd5[4].ToString();
-
-                        Pos_Cmd_Joint = inputCmd5[4];
-                        jointPosCmd5[4] = Pos_Cmd_Joint;
-
-                        robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
-                    }
-                    break;
                 case 30://번 조인트 명령 LCU5
                     if (robotManager.arm5.mode == 5)
                     {
-                        inputCmd5[5] = Convert.ToSingle(JT30.Text);
-                        Pos_Cmd_Joint = inputCmd5[5];
-                        jointPosCmd5[5] = Pos_Cmd_Joint + a;
+                        inputCmd5[3] = Convert.ToSingle(JT30.Text);
+                        Pos_Cmd_Joint = inputCmd5[3];
+                        jointPosCmd5[3] = Pos_Cmd_Joint + a;
 
-                        JT30.Text = jointPosCmd5[5].ToString();
+                        JT30.Text = jointPosCmd5[3].ToString();
 
-                        Pos_Cmd_Joint = inputCmd5[5];
-                        jointPosCmd5[5] = Pos_Cmd_Joint;
+                        Pos_Cmd_Joint = inputCmd5[3];
+                        jointPosCmd5[3] = Pos_Cmd_Joint;
 
                         robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
                     }
@@ -3945,8 +3918,7 @@ labelSimulcomand.Text = "Simul is not active" + server.SimulAngle[20] + ", " + s
                     //mode_List.SelectedIndex = 0;// Joint_pos Mode
                     //robotManager.arm.mode = 2;
                     //robotManager.arm2.mode = 2;
-                    moveThread = false;
-
+                    moveThread = false;//움직임을 계속 날려주는 무브 쓰레트 정지ㅈ
                     break;
             }
 
