@@ -2851,6 +2851,135 @@ namespace TKV
             }
             robotManager.arm._sleepCount = 0;
         }
+        private void J8Down_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(8, false);
+        }
+
+        private void J8Up_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(8, true);
+        }
+
+        private void J9Down_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(9, false);
+        }
+
+        private void J9Up_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(9, true);
+        }
+
+        private void J10Down_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(10, false);
+        }
+
+        private void J10Up_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(10, true);
+        }
+
+        private void J11Down_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(11, false);
+        }
+
+        private void J11Up_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(11, true);
+        }
+
+        private void J12Down_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(12, false);
+        }
+
+        private void J12Up_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(12, true);
+        }
+
+        private void J13Down_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(13, false);
+        }
+
+        private void J13Up_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(13, true);
+        }
+
+        private void J14Down_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(14, false);
+        }
+
+        private void J14Up_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(14, true);
+        }
+
+        private void J15Down_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(15, false);
+        }
+
+        private void J15Up_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(15, true);
+        }
+
+        private void J16Down_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(16, false);
+        }
+
+        private void J16Up_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(16, true);
+        }
+
+        private void J17Down_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(17, false);
+        }
+
+        private void J17Up_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(17, true);
+        }
+
+        private void J18Down_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(18, false);
+        }
+
+        private void J18Up_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(18, true);
+        }
+
+        private void J19Down_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(19, false);
+        }
+
+        private void J19Up_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(19, true);
+        }
+
+        private void J20Down_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(20, false);
+        }
+
+        private void J20Up_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(20, true);
+        }
         private void J21Down_MouseDown(object sender, MouseEventArgs e)
         {
             JxUpOr_MouseDown(21, false);
@@ -2912,6 +3041,24 @@ namespace TKV
         {
             JxUpOr_MouseDown(26, true);
         }
+                private void J27Down_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(27, false);
+        }
+
+        private void J27Up_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(27, true);
+        }
+        private void J28Down_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(28, false);
+        }
+
+        private void J28Up_MouseDown(object sender, MouseEventArgs e)
+        {
+            JxUpOr_MouseDown(28, true);
+        }
         private void JxUpOr_MouseDown(int jointx, bool Up)
         {
             sbyte a = 0;
@@ -2922,18 +3069,146 @@ namespace TKV
 
             switch (jointx)
             {
-                case 6: //j21 = lcu2-1
+                case 1: //j1 = lcu1-1
+                    if (robotManager.arm.mode == 2)
+                    {
+                        jointVelocityCmd[0] = Velocity;
+                        robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
+                    }
+                    break;
+                case 2: //j2 = lcu1-2
+                    if (robotManager.arm.mode == 2)
+                    {
+                        jointVelocityCmd[1] = Velocity;
+                        robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
+                    }
+                    break;
+                case 3: //j3 = lcu1-3
+                    if (robotManager.arm.mode == 2)
+                    {
+                        jointVelocityCmd[2] = Velocity;
+                        robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
+                    }
+                    break;
+                case 4: //j4 = lcu1-4
+                    if (robotManager.arm.mode == 2)
+                    {
+                        jointVelocityCmd[3] = Velocity;
+                        robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
+                    }
+                    break;
+                case 5: //j5 = lcu1-5
+                    if (robotManager.arm.mode == 2)
+                    {
+                        jointVelocityCmd[4] = Velocity;
+                        robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
+                    }
+                    break;
+                case 6: //j6 = lcu1-6
                     if (robotManager.arm.mode == 2)
                     {
                         jointVelocityCmd[5] = Velocity;
                         robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
                     }
                     break;
-                case 7: //j21 = lcu2-1
+                case 7: //j7 = lcu2-1
                     if (robotManager.arm2.mode == 2)
                     {
                         jointVelocityCmd2[0] = Velocity;
                         robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 0);
+                    }
+                    break;
+                case 8: //j8 = lcu2-2
+                    if (robotManager.arm2.mode == 2)
+                    {
+                        jointVelocityCmd2[1] = Velocity;
+                        robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 0);
+                    }
+                    break;
+                case 9: //j9 = lcu2-3
+                    if (robotManager.arm2.mode == 2)
+                    {
+                        jointVelocityCmd2[2] = Velocity;
+                        robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 0);
+                    }
+                    break;
+                case 10: //j10 = lcu2-4
+                    if (robotManager.arm2.mode == 2)
+                    {
+                        jointVelocityCmd2[3] = Velocity;
+                        robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 0);
+                    }
+                    break;
+                case 11: //j11 = lcu2-5
+                    if (robotManager.arm2.mode == 2)
+                    {
+                        jointVelocityCmd2[4] = Velocity;
+                        robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 0);
+                    }
+                    break;
+                case 12: //j12 = lcu2-6
+                    if (robotManager.arm2.mode == 2)
+                    {
+                        jointVelocityCmd2[5] = Velocity;
+                        robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 0);
+                    }
+                    break;
+                case 13: //j13 = lcu2-7
+                    if (robotManager.arm2.mode == 2)
+                    {
+                        //jointVelocityCmd2[6] = Velocity;
+                        //robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 0);
+                        //아직 7번 제어 LCU에서 지원 않됨
+                    }
+                    break;
+                case 14: //j14 = lcu3-1
+                    if (robotManager.arm3.mode == 2)
+                    {
+                        jointVelocityCmd3[0] = Velocity;
+                        robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 0);
+                    }
+                    break;
+                case 15: //j15 = lcu3-2
+                    if (robotManager.arm3.mode == 2)
+                    {
+                        jointVelocityCmd3[1] = Velocity;
+                        robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 0);
+                    }
+                    break;
+                case 16: //j16 = lcu3-3
+                    if (robotManager.arm3.mode == 2)
+                    {
+                        jointVelocityCmd3[2] = Velocity;
+                        robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 0);
+                    }
+                    break;
+                case 17: //j17 = lcu3-4
+                    if (robotManager.arm3.mode == 2)
+                    {
+                        jointVelocityCmd3[3] = Velocity;
+                        robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 0);
+                    }
+                    break;
+                case 18: //j18 = lcu3-5
+                    if (robotManager.arm3.mode == 2)
+                    {
+                        jointVelocityCmd3[4] = Velocity;
+                        robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 0);
+                    }
+                    break;
+                case 19: //j19 = lcu3-6
+                    if (robotManager.arm3.mode == 2)
+                    {
+                        jointVelocityCmd3[5] = Velocity;
+                        robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 0);
+                    }
+                    break;
+                case 20: //j20 = lcu3-7
+                    if (robotManager.arm3.mode == 2)
+                    {
+                        //jointVelocityCmd3[6] = Velocity;
+                        //robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 0);
+                        //LCU에 7번축이 연동 되어있지 않음
                     }
                     break;
                 case 21: //j21 = lcu4-1
@@ -2978,9 +3253,25 @@ namespace TKV
                         robotManager.arm4.SetArmVelCmd(jointVelocityCmd4, 0);
                     }
                     break;
+                case 27: //j27 = lcu4-7
+                    if (robotManager.arm4.mode == 2)
+                    {
+                        //jointVelocityCmd4[6] = Velocity;
+                        //robotManager.arm4.SetArmVelCmd(jointVelocityCmd4, 0);
+                        //lcu 가 아직 7번축까지의 제어를 지원하지 않음
+                    }
+                    break;
+                case 28: //j28 = lcu4-8
+                    if (robotManager.arm4.mode == 2)
+                    {
+                        //jointVelocityCmd4[7] = Velocity;
+                        //robotManager.arm4.SetArmVelCmd(jointVelocityCmd4, 0);
+                        //lcu가 아직 8번축 까지의 제어를 지원하지 않음
+                    }
+                    break;
 
                 default: //조인트 명령 오버(에러)
-
+                    Debug.WriteLine("Joint order num is over");
                     break;
 
             }
@@ -4158,6 +4449,13 @@ namespace TKV
         {
             JointUpOr_Click(30, false);
         }
+
+
+
+
+
+
+
         // mouse clsick end
 
 
