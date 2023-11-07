@@ -261,6 +261,34 @@ public class LCU_Communication
                 break;
         }
     }
+    public void SetArmVelCmd2(float[] velCommand, ushort stopState)
+    {
+        switch (this.mode)
+        {
+            case LcuCommunication.LCU_VAL_MODE_JOINT_VEL:
+                _jointVelCmd.fJointCmd = velCommand;
+                _jointVelCmd.nEmergency = stopState;
+                break;
+            //case LcuCommunication.LCU_VAL_MODE_WORLD_VEL:
+            //    _worldVelCmd.fWorldCmd = velCommand;
+            //    //_worldVelCmd.th_7 = tool;
+            //    _worldVelCmd.nEmergency = stopState;
+            //    break;
+            //case LcuCommunication.LCU_VAL_MODE_TOOL_VEL:
+            //    _worldVelCmd.fWorldCmd = velCommand;
+            //    _worldVelCmd.nEmergency = stopState;
+            //    break;
+            //case LcuCommunication.LCU_VAL_MODE_JOINT_POS:
+            //    //_jointVelCmd.fJointCmd = velCommand;
+            //    //_jointVelCmd.nEmergency = stopState;
+            //    _jointPosCmd.fJointCmd = velCommand;                        
+            //    break;
+            default:
+                _jointVelCmd.fJointCmd = velCommand;
+                _jointVelCmd.nEmergency = stopState;
+                break;
+        }
+    }
 
     //설명: 로봇팔 위치 제어. 
     public void SetArmPosCmd(float[] posCommand, float ToolCmd, float RMS)
@@ -268,8 +296,6 @@ public class LCU_Communication
         switch (this.mode)
         {
             case LcuCommunication.LCU_VAL_MODE_JOINT_POS:
-                if (posCommand[0] == 0) posCommand[0] = +0.0001f;//LCU 1,2 조인트 0되면 통신에러로 생각하고 전부 끊어지는 안전기능 무력화
-                if (posCommand[1] == 0) posCommand[1] = +0.0001f;
                 _jointPosCmd.fJointCmd = posCommand;
                 SendCommandPosition(_jointPosCmd);
                 Debug.WriteLine(_jointPosCmd.fJointCmd[0] + " " + _jointPosCmd.fJointCmd[1] + " " + _jointPosCmd.fJointCmd[2]);// + " " + _jointPosCmd.fJointCmd[6] + " " + _jointPosCmd.fJointCmd[7]);

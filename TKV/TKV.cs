@@ -519,11 +519,45 @@ namespace TKV
                 robotManager.arm5.SendSetEmergency();
             }
             mode_List.SelectedIndex = 0;
+            //현재포즈(jointPosCmd) 업데이트 필요
+            jointPosCmd[0] = (robotManager.arm.monitoringData.fJointPosCur[0] * Convert.ToSingle(180 / Math.PI));
+            jointPosCmd[1] = (robotManager.arm.monitoringData.fJointPosCur[1] * Convert.ToSingle(180 / Math.PI));
+            jointPosCmd[2] = (robotManager.arm.monitoringData.fJointPosCur[2] * Convert.ToSingle(180 / Math.PI));
+            jointPosCmd[3] = (robotManager.arm.monitoringData.fJointPosCur[3] * Convert.ToSingle(180 / Math.PI));
+            jointPosCmd[4] = (robotManager.arm.monitoringData.fJointPosCur[4] * Convert.ToSingle(180 / Math.PI));
+            jointPosCmd[5] = (robotManager.arm.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI));
+
+            jointPosCmd2[0] = (robotManager.arm2.monitoringData.fJointPosCur[0] * Convert.ToSingle(180 / Math.PI));
+            jointPosCmd2[1] = (robotManager.arm2.monitoringData.fJointPosCur[1] * Convert.ToSingle(180 / Math.PI));
+            jointPosCmd2[2] = (robotManager.arm2.monitoringData.fJointPosCur[2] * Convert.ToSingle(180 / Math.PI));
+            jointPosCmd2[3] = (robotManager.arm2.monitoringData.fJointPosCur[3] * Convert.ToSingle(180 / Math.PI));
+            jointPosCmd2[4] = (robotManager.arm2.monitoringData.fJointPosCur[4] * Convert.ToSingle(180 / Math.PI));
+            jointPosCmd2[5] = (robotManager.arm2.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI));
+            //jointPosCmd2[5] = (robotManager.arm2.monitoringData.fJointPosCur[6] * Convert.ToSingle(180 / Math.PI));//아직 정보 없음
+
+            jointPosCmd3[0] = (robotManager.arm3.monitoringData.fJointPosCur[0] * Convert.ToSingle(180 / Math.PI));
+            jointPosCmd3[1] = (robotManager.arm3.monitoringData.fJointPosCur[1] * Convert.ToSingle(180 / Math.PI));
+            jointPosCmd3[2] = (robotManager.arm3.monitoringData.fJointPosCur[2] * Convert.ToSingle(180 / Math.PI));
+            jointPosCmd3[3] = (robotManager.arm3.monitoringData.fJointPosCur[3] * Convert.ToSingle(180 / Math.PI));
+            jointPosCmd3[4] = (robotManager.arm3.monitoringData.fJointPosCur[4] * Convert.ToSingle(180 / Math.PI));
+            jointPosCmd3[5] = (robotManager.arm3.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI));
+            //jointPosCmd3[6] = (robotManager.arm3.monitoringData.fJointPosCur[6] * Convert.ToSingle(180 / Math.PI));//아직 정보 없음
+
+            jointPosCmd4[0] = (robotManager.arm4.monitoringData.fJointPosCur[0] * Convert.ToSingle(180 / Math.PI));
+            jointPosCmd4[1] = (robotManager.arm4.monitoringData.fJointPosCur[1] * Convert.ToSingle(180 / Math.PI));
+            jointPosCmd4[2] = (robotManager.arm4.monitoringData.fJointPosCur[2] * Convert.ToSingle(180 / Math.PI));
+            jointPosCmd4[3] = (robotManager.arm4.monitoringData.fJointPosCur[3] * Convert.ToSingle(180 / Math.PI));
+            jointPosCmd4[4] = (robotManager.arm4.monitoringData.fJointPosCur[4] * Convert.ToSingle(180 / Math.PI));
+            jointPosCmd4[5] = (robotManager.arm4.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI));
+            //jointPosCmd4[6] = (robotManager.arm4.monitoringData.fJointPosCur[6] * Convert.ToSingle(180 / Math.PI));
+            //jointPosCmd4[7] = (robotManager.arm4.monitoringData.fJointPosCur[7] * Convert.ToSingle(180 / Math.PI));//아직 정보 없음
+
+
             robotManager.arm.SetArmPosCmd(jointPosCmd, 0, 0);
             robotManager.arm2.SetArmPosCmd(jointPosCmd2, 0, 0);
-            robotManager.arm3.SetArmPosCmd(jointPosCmd2, 0, 0);
-            robotManager.arm4.SetArmPosCmd(jointPosCmd2, 0, 0);
-            robotManager.arm5.SetArmPosCmd(jointPosCmd2, 0, 0);
+            robotManager.arm3.SetArmPosCmd(jointPosCmd3, 0, 0);
+            robotManager.arm4.SetArmPosCmd(jointPosCmd4, 0, 0);
+            robotManager.arm5.SetArmPosCmd(jointPosCmd5, 0, 0);
             robotManager.arm.SetArmVelCmd(jointVelocityCmd, 1);
             robotManager.arm2.SetArmVelCmd(jointVelocityCmd, 1);
             robotManager.arm3.SetArmVelCmd(jointVelocityCmd, 1);
@@ -595,12 +629,6 @@ namespace TKV
                 monitoring.Start();
             }
             btnReset.Enabled = true; //원래는 Access 버튼 눌러서 활성화 시켰지만 현재 시스템에서는 필요없음
-
-            //jointPosCmd[0~1] =0 일때 전체 오더가 0이 되는 현상이 있음 LCU 에 뭔가 있는듯 함  그거를 방지하는 코드
-            jointPosCmd[0] = 0.0001f;
-            jointPosCmd[1] = 0.0001f;
-            jointPosCmd2[0] = 0.0001f;
-            jointPosCmd2[1] = 0.0001f;
 
         }
 
@@ -804,8 +832,8 @@ namespace TKV
                         JT20.Text = server.SimulAngle[0].ToString();
 
                         JT21.Text = server.SimulAngle[28].ToString();
-                        JT22.Text = server.SimulAngle[25].ToString();
-                        JT23.Text = server.SimulAngle[27].ToString();
+                        JT22.Text = server.SimulAngle[27].ToString();
+                        JT23.Text = server.SimulAngle[22].ToString();
                         JT24.Text = server.SimulAngle[23].ToString();
                         JT25.Text = server.SimulAngle[24].ToString();
                         JT26.Text = server.SimulAngle[25].ToString();
@@ -876,8 +904,8 @@ namespace TKV
                                     }
                                     else//튀면은 천천히 그자리로 가게
                                     {
-                                        if (jointPosCmd2[i] > inputCmd2[i]) jointPosCmd2[i] = jointPosCmd2[i] - 0.1f;
-                                        if (jointPosCmd2[i] < inputCmd2[i]) jointPosCmd2[i] = jointPosCmd2[i] + 0.1f;
+                                        if (jointPosCmd2[i] > inputCmd2[i]) jointPosCmd2[i] = jointPosCmd2[i] - 0.01f;
+                                        if (jointPosCmd2[i] < inputCmd2[i]) jointPosCmd2[i] = jointPosCmd2[i] + 0.01f;
                                     }
                                 }
                                 //robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
@@ -900,8 +928,8 @@ namespace TKV
                                     }
                                     else//튀면은 천천히 그자리로 가게
                                     {
-                                        if (jointPosCmd3[i] > inputCmd3[i]) jointPosCmd3[i] = jointPosCmd3[i] - 0.1f;
-                                        if (jointPosCmd3[i] < inputCmd3[i]) jointPosCmd3[i] = jointPosCmd3[i] + 0.1f;
+                                        if (jointPosCmd3[i] > inputCmd3[i]) jointPosCmd3[i] = jointPosCmd3[i] - 0.01f;
+                                        if (jointPosCmd3[i] < inputCmd3[i]) jointPosCmd3[i] = jointPosCmd3[i] + 0.01f;
                                     }
                                 }
                                 //robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
@@ -929,8 +957,8 @@ namespace TKV
                                     }
                                     else//Gab 보다 크게 튀면 천천히 그자리로 가게
                                     {
-                                        if (jointPosCmd4[i] > inputCmd4[i]) jointPosCmd4[i] = jointPosCmd4[i] - 0.1f;
-                                        if (jointPosCmd4[i] < inputCmd4[i]) jointPosCmd4[i] = jointPosCmd4[i] + 0.1f;
+                                        if (jointPosCmd4[i] > inputCmd4[i]) jointPosCmd4[i] = jointPosCmd4[i] - 0.01f;
+                                        if (jointPosCmd4[i] < inputCmd4[i]) jointPosCmd4[i] = jointPosCmd4[i] + 0.01f;
                                         LCU4con.BackColor = Color.Yellow;
                                     }
                                 }
@@ -1137,7 +1165,7 @@ namespace TKV
                     }
 
 
-                    if (robotManager.arm.isConnect || robotManager.arm2.isCanConnect)
+                    if (robotManager.arm.isConnect || robotManager.arm2.isCanConnect || robotManager.arm3.isCanConnect || robotManager.arm4.isCanConnect)
                     {
                         if (robotManager.arm.isEmergencyStop)
                         {
@@ -1157,7 +1185,7 @@ namespace TKV
                     }
                     if (robotManager.arm._sleepFlag)
                     {
-                        pn_Monitoring.Enabled = btnReset.Enabled = setMaster.Enabled = mode_List.Enabled = false;
+                        //pn_Monitoring.Enabled = btnReset.Enabled = setMaster.Enabled = mode_List.Enabled = false;
                         pn_PW.Visible = true;
                         Debug.WriteLine("Sleep Mode");
                     }
@@ -2529,7 +2557,12 @@ namespace TKV
                 //C5.Text = "0.00";
                 //C6.Text = "0.00";
 
-                for (int i = 0; i < 6; i++) jointVelocityCmd[i] = 0;
+                for (int i = 0; i < 6; i++) { 
+                                jointVelocityCmd[i] = 0;
+                                jointVelocityCmd2[i] = 0;
+                                jointVelocityCmd3[i] = 0;
+                                jointVelocityCmd4[i] = 0;
+                }
                 robotManager.arm.SetArmVelCmd(jointVelocityCmd, 1);
                 robotManager.arm2.SetArmVelCmd(jointVelocityCmd, 1);
                 robotManager.arm3.SetArmVelCmd(jointVelocityCmd, 1);
@@ -2544,6 +2577,9 @@ namespace TKV
                 robotManager.arm4.SetArmVelCmd(worldVelocityCmd, 1);
             }
             robotManager.arm._sleepCount = 0;
+            robotManager.arm2._sleepCount = 0;
+            robotManager.arm3._sleepCount = 0;
+            robotManager.arm4._sleepCount = 0;
             Debug.WriteLine("MouseUP");
         }
         private void J1Up_MouseDown(object sender, MouseEventArgs e)
@@ -2700,101 +2736,105 @@ namespace TKV
         private void J4Up_MouseDown(object sender, MouseEventArgs e)
         {
             //J4Up.BackColor = Color.DarkSlateGray;
-            if (robotManager.arm.mode == 2) //Link 4_Not Used
-            {
-                velocityIndex = 3;
-
-                Velocity = jsonVelocity.joint[velocityIndex] * _velLevel * 1;
-                jointVelocityCmd[3] = Velocity;
-                C4.Text = jointVelocityCmd[3].ToString();
-
-                robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
-            }
-            else if (robotManager.arm.mode == 3)    //Roll
-            {
-                velocityIndex = 3;
-
-                Velocity = jsonVelocity.world[velocityIndex] * _velLevel * 1;
-                worldVelocityCmd[4] = Velocity;
-                C4.Text = worldVelocityCmd[4].ToString();
-
-                robotManager.arm.SetArmVelCmd(worldVelocityCmd, 0);
-            }
-        }
-        private void J4Down_MouseDown(object sender, MouseEventArgs e)
-        {
-            J4Down.BackColor = Color.DarkSlateGray;
-            if (robotManager.arm.mode == 2) //Link 4 _ Not used
-            {
-                velocityIndex = 3;
-
-                Velocity = jsonVelocity.joint[velocityIndex] * _velLevel * -1;
-                jointVelocityCmd[3] = Velocity;
-                //jointVelocityCmd[3] = 0;    // POSCO ICT
-                C4.Text = jointVelocityCmd[3].ToString();
-
-                robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
-            }
-            else if (robotManager.arm.mode == 3)    //Roll
-            {
-                velocityIndex = 3;
-
-                Velocity = jsonVelocity.world[velocityIndex] * _velLevel * -1;
-                worldVelocityCmd[4] = Velocity;
-                C4.Text = worldVelocityCmd[4].ToString();
-
-                robotManager.arm.SetArmVelCmd(worldVelocityCmd, 0);
-            }
-        }
-        private void J5Up_MouseDown(object sender, MouseEventArgs e)
-        {
-            J5Up.BackColor = Color.DarkSlateGray;
-            //if (robotManager.arm.mode == 2)
-            {
-                velocityIndex = 4;
-
-                Velocity = jsonVelocity.joint[velocityIndex] * 1;
-                jointVelocityCmd[4] = Velocity;
-                C5.Text = jointVelocityCmd[4].ToString();
-
-                robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
-            }
-            //else if (robotManager.arm.mode == 3)
+            //if (robotManager.arm.mode == 2) //Link 4_Not Used
             //{
-            //    velocityIndex = 4;
+            //    velocityIndex = 3;
+
+            //    Velocity = jsonVelocity.joint[velocityIndex] * _velLevel * 1;
+            //    jointVelocityCmd[3] = Velocity;
+            //    C4.Text = jointVelocityCmd[3].ToString();
+
+            //    robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
+            //}
+            //else if (robotManager.arm.mode == 3)    //Roll
+            //{
+            //    velocityIndex = 3;
 
             //    Velocity = jsonVelocity.world[velocityIndex] * _velLevel * 1;
             //    worldVelocityCmd[4] = Velocity;
-            //    C5.Text = worldVelocityCmd[4].ToString();
+            //    C4.Text = worldVelocityCmd[4].ToString();
 
             //    robotManager.arm.SetArmVelCmd(worldVelocityCmd, 0);
             //}
-            robotManager.arm._sleepCount = 0;
+            JxUpOr_MouseDown(4, true);
         }
-        private void J5Down_MouseDown(object sender, MouseEventArgs e)
+        private void J4Down_MouseDown(object sender, MouseEventArgs e)
         {
-            J5Down.BackColor = Color.DarkSlateGray;
-            //if (robotManager.arm.mode == 2)
-            {
-                velocityIndex = 4;
-
-                Velocity = jsonVelocity.joint[velocityIndex] * -1;
-                jointVelocityCmd[4] = Velocity;
-                C5.Text = jointVelocityCmd[4].ToString();
-
-                robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
-            }
-            //else if (robotManager.arm.mode == 3)
+            //J4Down.BackColor = Color.DarkSlateGray;
+            //if (robotManager.arm.mode == 2) //Link 4 _ Not used
             //{
-            //    velocityIndex = 4;
+            //    velocityIndex = 3;
+
+            //    Velocity = jsonVelocity.joint[velocityIndex] * _velLevel * -1;
+            //    jointVelocityCmd[3] = Velocity;
+            //    //jointVelocityCmd[3] = 0;    // POSCO ICT
+            //    C4.Text = jointVelocityCmd[3].ToString();
+
+            //    robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
+            //}
+            //else if (robotManager.arm.mode == 3)    //Roll
+            //{
+            //    velocityIndex = 3;
 
             //    Velocity = jsonVelocity.world[velocityIndex] * _velLevel * -1;
             //    worldVelocityCmd[4] = Velocity;
-            //    C5.Text = worldVelocityCmd[4].ToString();
+            //    C4.Text = worldVelocityCmd[4].ToString();
 
             //    robotManager.arm.SetArmVelCmd(worldVelocityCmd, 0);
             //}
-            robotManager.arm._sleepCount = 0;
+            JxUpOr_MouseDown(4, false);
+        }
+        private void J5Up_MouseDown(object sender, MouseEventArgs e)
+        {
+            //J5Up.BackColor = Color.DarkSlateGray;
+            ////if (robotManager.arm.mode == 2)
+            //{
+            //    velocityIndex = 4;
+
+            //    Velocity = jsonVelocity.joint[velocityIndex] * 1;
+            //    jointVelocityCmd[4] = Velocity;
+            //    C5.Text = jointVelocityCmd[4].ToString();
+
+            //    robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
+            //}
+            ////else if (robotManager.arm.mode == 3)
+            ////{
+            ////    velocityIndex = 4;
+
+            ////    Velocity = jsonVelocity.world[velocityIndex] * _velLevel * 1;
+            ////    worldVelocityCmd[4] = Velocity;
+            ////    C5.Text = worldVelocityCmd[4].ToString();
+
+            ////    robotManager.arm.SetArmVelCmd(worldVelocityCmd, 0);
+            ////}
+            //robotManager.arm._sleepCount = 0;
+            JxUpOr_MouseDown(5, true);
+        }
+        private void J5Down_MouseDown(object sender, MouseEventArgs e)
+        {
+            //J5Down.BackColor = Color.DarkSlateGray;
+            ////if (robotManager.arm.mode == 2)
+            //{
+            //    velocityIndex = 4;
+
+            //    Velocity = jsonVelocity.joint[velocityIndex] * -1;
+            //    jointVelocityCmd[4] = Velocity;
+            //    C5.Text = jointVelocityCmd[4].ToString();
+
+            //    robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
+            //}
+            ////else if (robotManager.arm.mode == 3)
+            ////{
+            ////    velocityIndex = 4;
+
+            ////    Velocity = jsonVelocity.world[velocityIndex] * _velLevel * -1;
+            ////    worldVelocityCmd[4] = Velocity;
+            ////    C5.Text = worldVelocityCmd[4].ToString();
+
+            ////    robotManager.arm.SetArmVelCmd(worldVelocityCmd, 0);
+            ////}
+            //robotManager.arm._sleepCount = 0;
+            JxUpOr_MouseDown(5, false);
         }
         private void J6Up_MouseDown(object sender, MouseEventArgs e)
         {
@@ -2849,7 +2889,7 @@ namespace TKV
 
                 robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 0);
             }
-            robotManager.arm._sleepCount = 0;
+            robotManager.arm2._sleepCount = 0;
         }
         private void J8Down_MouseDown(object sender, MouseEventArgs e)
         {
@@ -3275,10 +3315,10 @@ namespace TKV
                     break;
 
             }
-            if(jointx<=6) robotManager.arm._sleepCount = 0;
-            else if(jointx<=13) robotManager.arm2._sleepCount = 0;
-            else if(jointx<=20) robotManager.arm3._sleepCount = 0;
-            else if(jointx<=28) robotManager.arm4._sleepCount = 0;
+             robotManager.arm._sleepCount = 0;
+             robotManager.arm2._sleepCount = 0;
+             robotManager.arm3._sleepCount = 0;
+             robotManager.arm4._sleepCount = 0;
         }
 
         #endregion
@@ -3292,8 +3332,8 @@ namespace TKV
                 Pos_Cmd_Joint = inputCmd[0];
                 jointPosCmd[0] = Pos_Cmd_Joint + 1;
 
-                if (jointPosCmd[0] >= 120) jointPosCmd[0] = 119.9f;
-                else if (jointPosCmd[0] <= -10) jointPosCmd[0] = -9.9f;
+                if (jointPosCmd[0] >= 70) jointPosCmd[0] = 70f;
+                else if (jointPosCmd[0] <= -70) jointPosCmd[0] = -70f;
                 JT1.Text = jointPosCmd[0].ToString();
 
                 Pos_Cmd_Joint = inputCmd[0];
@@ -3323,8 +3363,8 @@ namespace TKV
                 Pos_Cmd_Joint = inputCmd[0];
                 jointPosCmd[0] = Pos_Cmd_Joint - 1;
 
-                if (jointPosCmd[0] >= 120.0) jointPosCmd[0] = 119.9f;
-                else if (jointPosCmd[0] <= -10) jointPosCmd[0] = -9.9f;
+                if (jointPosCmd[0] >= 70.0) jointPosCmd[0] = 69.9f;
+                else if (jointPosCmd[0] <= -70) jointPosCmd[0] = -69.9f;
                 JT1.Text = jointPosCmd[0].ToString();
 
                 Pos_Cmd_Joint = inputCmd[0];
@@ -3355,7 +3395,7 @@ namespace TKV
                 Pos_Cmd_Joint = inputCmd[1];
                 jointPosCmd[1] = Pos_Cmd_Joint + 1;
 
-                if (jointPosCmd[1] >= 144.9) jointPosCmd[1] = 145.0f;
+                if (jointPosCmd[1] >= 34.9) jointPosCmd[1] = 34.50f;
                 else if (jointPosCmd[1] <= -35) jointPosCmd[1] = -35f;
                 JT2.Text = jointPosCmd[1].ToString();
 
@@ -3386,7 +3426,7 @@ namespace TKV
                 Pos_Cmd_Joint = inputCmd[1];
                 jointPosCmd[1] = Pos_Cmd_Joint - 1;
 
-                if (jointPosCmd[1] >= 144.9) jointPosCmd[1] = 145.0f;
+                if (jointPosCmd[1] >= 35) jointPosCmd[1] = 35f;
                 else if (jointPosCmd[1] <= -35) jointPosCmd[1] = -35f;
                 JT2.Text = jointPosCmd[1].ToString();
 
@@ -3417,8 +3457,8 @@ namespace TKV
                 Pos_Cmd_Joint = inputCmd[2];
                 jointPosCmd[2] = Pos_Cmd_Joint + 1;
 
-                if (jointPosCmd[2] >= 29.9) jointPosCmd[2] = 30.0f;
-                else if (jointPosCmd[2] <= -44.9) jointPosCmd[2] = -45f;
+                if (jointPosCmd[2] >= 30) jointPosCmd[2] = 30.0f;
+                else if (jointPosCmd[2] <= -30) jointPosCmd[2] = -30f;
                 JT3.Text = jointPosCmd[2].ToString();
 
                 Pos_Cmd_Joint = inputCmd[2];
@@ -3448,8 +3488,8 @@ namespace TKV
                 Pos_Cmd_Joint = inputCmd[2];
                 jointPosCmd[2] = Pos_Cmd_Joint - 1;
 
-                if (jointPosCmd[2] >= 29.9) jointPosCmd[2] = 30.0f;
-                else if (jointPosCmd[2] <= -44.9) jointPosCmd[2] = -45f;
+                if (jointPosCmd[2] >= 30) jointPosCmd[2] = 30.0f;
+                else if (jointPosCmd[2] <= -30) jointPosCmd[2] = -30f;
                 JT3.Text = jointPosCmd[2].ToString();
 
                 Pos_Cmd_Joint = inputCmd[2];
@@ -3481,8 +3521,6 @@ namespace TKV
                 Pos_Cmd_Joint = inputCmd[3];
                 jointPosCmd[3] = Pos_Cmd_Joint + 1;
 
-                //if (jointPosCmd[3] >= 44.9) jointPosCmd[3] = 45.0f;
-                //else if (jointPosCmd[3] <= -29.9) jointPosCmd[3] = -30.0f;
                 JT4.Text = jointPosCmd[3].ToString();
 
                 Pos_Cmd_Joint = inputCmd[3];
@@ -3512,8 +3550,6 @@ namespace TKV
                 Pos_Cmd_Joint = inputCmd[3];
                 jointPosCmd[3] = Pos_Cmd_Joint - 1;
 
-                //if (jointPosCmd[3] >= 44.9) jointPosCmd[3] = 45.0f;
-                //else if (jointPosCmd[3] <= -29.9) jointPosCmd[3] = -30.0f;
                 JT4.Text = jointPosCmd[3].ToString();
 
                 Pos_Cmd_Joint = inputCmd[3];
@@ -4148,13 +4184,13 @@ namespace TKV
                     robotManager.arm3.mode = 5;
                     robotManager.arm4.mode = 5;
                     robotManager.arm5.mode = 5;
-                    if (moveThread == false) move_to_pos();//움직임을 계속 날려주는 무브 쓰레트 시작
+                    if (moveThread == false) move_to_pos();//움직임을 계속 날려주는 무브 쓰레드 시작
                     break;
                 case false:
                     //mode_List.SelectedIndex = 0;// Joint_pos Mode
                     //robotManager.arm.mode = 2;
                     //robotManager.arm2.mode = 2;
-                    moveThread = false;//움직임을 계속 날려주는 무브 쓰레트 정지ㅈ
+                    moveThread = false;//움직임을 계속 날려주는 무브 쓰레트 정지
                     break;
             }
 
