@@ -298,7 +298,7 @@ public class LCU_Communication
             case LcuCommunication.LCU_VAL_MODE_JOINT_POS:
                 _jointPosCmd.fJointCmd = posCommand;
                 SendCommandPosition(_jointPosCmd);
-                Debug.WriteLine(_jointPosCmd.fJointCmd[0] + " " + _jointPosCmd.fJointCmd[1] + " " + _jointPosCmd.fJointCmd[2]);// + " " + _jointPosCmd.fJointCmd[6] + " " + _jointPosCmd.fJointCmd[7]);
+                Debug.WriteLine(_jointPosCmd.fJointCmd[0] + " " + _jointPosCmd.fJointCmd[1] + " " + _jointPosCmd.fJointCmd[2]+ " " + _jointPosCmd.fJointCmd[3] + " " + _jointPosCmd.fJointCmd[4] + " " + _jointPosCmd.fJointCmd[5]);
                 break;
             case LcuCommunication.LCU_VAL_MODE_WORLD_POS_M:
                 _worldPosCmd_M.fWorldCmd = posCommand;

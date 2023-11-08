@@ -551,7 +551,7 @@ namespace TKV
             jointPosCmd4[5] = (robotManager.arm4.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI));
             //jointPosCmd4[6] = (robotManager.arm4.monitoringData.fJointPosCur[6] * Convert.ToSingle(180 / Math.PI));
             //jointPosCmd4[7] = (robotManager.arm4.monitoringData.fJointPosCur[7] * Convert.ToSingle(180 / Math.PI));//아직 정보 없음
-
+            for(int i=0;i>jointVelocityCmd.Length;i++) jointVelocityCmd[i] = 0;
 
             robotManager.arm.SetArmPosCmd(jointPosCmd, 0, 0);
             robotManager.arm2.SetArmPosCmd(jointPosCmd2, 0, 0);
@@ -957,8 +957,8 @@ namespace TKV
                                     }
                                     else//Gab 보다 크게 튀면 천천히 그자리로 가게
                                     {
-                                        if (jointPosCmd4[i] > inputCmd4[i]) jointPosCmd4[i] = jointPosCmd4[i] - 0.01f;
-                                        if (jointPosCmd4[i] < inputCmd4[i]) jointPosCmd4[i] = jointPosCmd4[i] + 0.01f;
+                                        if (jointPosCmd4[i] > inputCmd4[i]) jointPosCmd4[i] = jointPosCmd4[i] - 0.02f;
+                                        if (jointPosCmd4[i] < inputCmd4[i]) jointPosCmd4[i] = jointPosCmd4[i] + 0.02f;
                                         LCU4con.BackColor = Color.Yellow;
                                     }
                                 }
@@ -988,7 +988,7 @@ namespace TKV
                         udpclienttkv.JointAngleArray[i] = robotManager.arm.monitoringData.fJointPosCur[i] * Convert.ToSingle(180 / Math.PI);
                     }
 
-                    udpclienttkv.UDPwCurrentSend(udpclienttkv.JointAngleArray); //시뮬레이터에 데이터 보내기
+                    //udpclienttkv.UDPwCurrentSend(udpclienttkv.JointAngleArray); //시뮬레이터에 데이터 보내기
 
 
                     if (!(TkvPlay.State_num == 0)) TKVPlayBar.Value = TkvPlay.lineIndex;//TKV 진행바 업데이트
@@ -2564,17 +2564,14 @@ namespace TKV
                                 jointVelocityCmd4[i] = 0;
                 }
                 robotManager.arm.SetArmVelCmd(jointVelocityCmd, 1);
-                robotManager.arm2.SetArmVelCmd(jointVelocityCmd, 1);
-                robotManager.arm3.SetArmVelCmd(jointVelocityCmd, 1);
-                robotManager.arm4.SetArmVelCmd(jointVelocityCmd, 1);
+                robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 1);
+                robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 1);
+                robotManager.arm4.SetArmVelCmd(jointVelocityCmd4, 1);
             }
             else
             {
                 for (int i = 0; i < 6; i++) worldVelocityCmd[i] = 0;
                 robotManager.arm.SetArmVelCmd(worldVelocityCmd, 1);
-                robotManager.arm2.SetArmVelCmd(worldVelocityCmd, 1);
-                robotManager.arm3.SetArmVelCmd(worldVelocityCmd, 1);
-                robotManager.arm4.SetArmVelCmd(worldVelocityCmd, 1);
             }
             robotManager.arm._sleepCount = 0;
             robotManager.arm2._sleepCount = 0;
