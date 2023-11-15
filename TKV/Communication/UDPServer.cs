@@ -156,14 +156,14 @@ public class UDPServer
                     {
                         HeaderData[i] = receivedBytes[i];
                     }
-                    Console.WriteLine("Headerdata= " + HeaderData[0] + ", " + HeaderData[1] + ", " + HeaderData[2] + ", " + HeaderData[3] + ", " + HeaderData[4] + ", " + HeaderData[5] + ", " + HeaderData[6] + ", 1234fa");
+                  //  Console.WriteLine("Headerdata= " + HeaderData[0] + ", " + HeaderData[1] + ", " + HeaderData[2] + ", " + HeaderData[3] + ", " + HeaderData[4] + ", " + HeaderData[5] + ", " + HeaderData[6] + ", 1234fa");
 
 
                     for (int i = 0; i < floatData.Length; i++) //각도 데이터 다시 묶기 byte 4개 -> float 1개
                     {
                         floatData[i] = BitConverter.ToSingle(receivedBytes, HeaderData.Length + i * 4);
                     }
-                    Console.WriteLine("floatdata= " + floatData[0] + ", " + floatData[1] + ", " + floatData[2] + ", " + floatData[3] + ", " + floatData[4] + ", " + floatData[5] + ", " + floatData[floatData.Length - 1] + "<qff52");
+                    //Console.WriteLine("floatdata= " + floatData[0] + ", " + floatData[1] + ", " + floatData[2] + ", " + floatData[3] + ", " + floatData[4] + ", " + floatData[5] + ", " + floatData[floatData.Length - 1] + "<qff52");
                     if (SimulAngle.Length == floatData.Length) SimulAngle = floatData; //각도값 개수(29개)가 정확히 들어왔으면 각도값 업데이트
                     else Console.WriteLine("The number of angle values is not matching");
                 }
