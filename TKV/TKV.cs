@@ -253,6 +253,7 @@ namespace TKV
         #region CAN field
         private bool canON = false;
         private int canID = -2;
+        private int LCUno = -2;
         private int canIndex;
         private char canSubIndex;
         private float canValue;
@@ -645,9 +646,10 @@ namespace TKV
                 case Keys.Enter:
                     if (canON && (CAN_Serail.Text != "" && CAN_Serail.Text != " "))
                     {
-                        CAN_Serail.Text = _canSerialCmd + CAN_Serail.Text;
-                        //robotManager.arm.SendCanSerialData(canID, CAN_Serail.Text);
-                        robotManager.arm.SendCanSerialDataUDP(canID, CAN_Serail.Text);
+                        //CAN_Serail.Text = _canSerialCmd + CAN_Serail.Text;
+                        ////robotManager.arm.SendCanSerialData(canID, CAN_Serail.Text);
+                        //robotManager.arm.SendCanSerialDataUDP(canID, CAN_Serail.Text);
+                        CANtx_Click(_sender, _e);
                         CAN_Serail.Text = "";
                         CAN_Serail.Select();
                     }
@@ -2564,17 +2566,14 @@ namespace TKV
                                 jointVelocityCmd4[i] = 0;
                 }
                 robotManager.arm.SetArmVelCmd(jointVelocityCmd, 1);
-                robotManager.arm2.SetArmVelCmd(jointVelocityCmd, 1);
-                robotManager.arm3.SetArmVelCmd(jointVelocityCmd, 1);
-                robotManager.arm4.SetArmVelCmd(jointVelocityCmd, 1);
+                robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 1);
+                robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 1);
+                robotManager.arm4.SetArmVelCmd(jointVelocityCmd4, 1);
             }
             else
             {
-                for (int i = 0; i < 6; i++) worldVelocityCmd[i] = 0;
-                robotManager.arm.SetArmVelCmd(worldVelocityCmd, 1);
-                robotManager.arm2.SetArmVelCmd(worldVelocityCmd, 1);
-                robotManager.arm3.SetArmVelCmd(worldVelocityCmd, 1);
-                robotManager.arm4.SetArmVelCmd(worldVelocityCmd, 1);
+                //for (int i = 0; i < 6; i++) worldVelocityCmd[i] = 0;
+                //robotManager.arm.SetArmVelCmd(worldVelocityCmd, 1);
             }
             robotManager.arm._sleepCount = 0;
             robotManager.arm2._sleepCount = 0;
@@ -4109,69 +4108,6 @@ namespace TKV
         }
         #endregion
 
-        #region CAN Field
-        private void btnCAN_Click(object sender, EventArgs e)
-        {
-            canON = !canON;
-            if (canON)
-            {
-                //gr_CAN.Visible = true;
-                robotManager.arm.SendSetCanConnect(true);
-                btnCAN.BackColor = Color.DarkCyan;
-            }
-            else
-            {
-                //gr_CAN.Visible = false;
-                robotManager.arm.SendSetCanConnect(false);
-                btnCAN.BackColor = Color.FromArgb(50, 54, 58);
-            }
-        }
-        private void CANtx_Click(object sender, EventArgs e)
-        {
-            CAN_Serail.Text = _canSerialCmd + CAN_Serail.Text;
-            robotManager.arm.SendCanSerialDataUDP(canID, CAN_Serail.Text);
-            txtCanData.Text = robotManager.arm._canUDPRx.rxData.ToString();
-        }
-        private void CANrx_Click(object sender, EventArgs e)
-        {
-            txtCanData.Text = robotManager.arm._canUDPRx.rxData.ToString();
-        }
-        private void HAClist_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string val = HAClist.SelectedItem.ToString();
-
-            switch (val)
-            {
-                case "Device 1":
-                    canID = 1;
-                    robotManager.arm._canUDP.Id = 1;
-                    break;
-                case "Device 2":
-                    canID = 2;
-                    robotManager.arm._canUDP.Id = 2;
-                    break;
-                case "Device 3":
-                    canID = 3;
-                    robotManager.arm._canUDP.Id = 3;
-                    break;
-                case "Device 4":
-                    canID = 4;
-                    robotManager.arm._canUDP.Id = 4;
-                    break;
-                case "Device 5":
-                    canID = 5;
-                    robotManager.arm._canUDP.Id = 5;
-                    break;
-                case "Device 6":
-                    canID = 6;
-                    robotManager.arm._canUDP.Id = 6;
-                    break;
-                case "Device 7":
-                    canID = 7;
-                    robotManager.arm._canUDP.Id = 7;
-                    break;
-            }
-        }
 
         private void checkBoxSimulMod_CheckedChanged(object sender, EventArgs e)
         {
@@ -4486,15 +4422,146 @@ namespace TKV
             JointUpOr_Click(30, false);
         }
 
+        // mouse click end
 
+        #region CAN Field
+        private void btnCAN_Click(object sender, EventArgs e)
+        {
+            canON = !canON;
+            if (canON)
+            {
+                //gr_CAN.Visible = true;
+                robotManager.arm.SendSetCanConnect(true);
+                robotManager.arm2.SendSetCanConnect(true);
+                robotManager.arm3.SendSetCanConnect(true);
+                robotManager.arm4.SendSetCanConnect(true);
+                btnCAN.BackColor = Color.DarkCyan;
+            }
+            else
+            {
+                //gr_CAN.Visible = false;
+                robotManager.arm.SendSetCanConnect(false);
+                robotManager.arm2.SendSetCanConnect(false);
+                robotManager.arm3.SendSetCanConnect(false);
+                robotManager.arm4.SendSetCanConnect(false);
+                btnCAN.BackColor = Color.FromArgb(50, 54, 58);
+            }
+        }
+        private void CANtx_Click(object sender, EventArgs e)
+        {
+            CAN_Serail.Text = _canSerialCmd + CAN_Serail.Text;
+            if (LCUno == 1)
+            {                
+                robotManager.arm.SendCanSerialDataUDP(canID, CAN_Serail.Text);
+                txtCanData.Text = robotManager.arm._canUDPRx.rxData.ToString();
+                Debug.WriteLine(LCUno);
+            }
+            else if (LCUno == 2)
+            {                
+                robotManager.arm2.SendCanSerialDataUDP(canID, CAN_Serail.Text);
+                txtCanData.Text = robotManager.arm2._canUDPRx.rxData.ToString();
+                Debug.WriteLine(LCUno);
+            }
+            else if (LCUno == 3)
+            {                
+                robotManager.arm3.SendCanSerialDataUDP(canID, CAN_Serail.Text);
+                txtCanData.Text = robotManager.arm3._canUDPRx.rxData.ToString();
+                Debug.WriteLine(LCUno);
+            }
+            else if (LCUno == 4)
+            {                
+                robotManager.arm4.SendCanSerialDataUDP(canID, CAN_Serail.Text);
+                txtCanData.Text = robotManager.arm4._canUDPRx.rxData.ToString();
+                Debug.WriteLine(LCUno);
+            }
+        }
+        private void CANrx_Click(object sender, EventArgs e)
+        {
+            if (LCUno == 1)
+            {
+                txtCanData.Text = robotManager.arm._canUDPRx.rxData.ToString();
+            }
+            else if (LCUno == 2)
+            {
+                txtCanData.Text = robotManager.arm2._canUDPRx.rxData.ToString();
+            }
+            else if (LCUno == 3)
+            {
+                txtCanData.Text = robotManager.arm3._canUDPRx.rxData.ToString();
+            }
+            else if (LCUno == 4)
+            {
+                txtCanData.Text = robotManager.arm4._canUDPRx.rxData.ToString();
+            }            
+        }
 
+        private void LCUlist_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string val = LCUlist.SelectedItem.ToString();
 
+            switch (val)
+            {
+                case "LCU_1 (HDWT)":
+                    LCUno = 1;
+                    robotManager.arm.SetDeviceHeader(LcuCommon.HEADER_PC1, LcuCommon.HEADER_LCU1);
+                    break;
+                case "LCU_2 (AL)":
+                    LCUno = 2;
+                    robotManager.arm2.SetDeviceHeader(LcuCommon.HEADER_PC1, LcuCommon.HEADER_LCU2);
+                    break;
+                case "LCU_3 (AR)":
+                    LCUno = 3;
+                    robotManager.arm3.SetDeviceHeader(LcuCommon.HEADER_PC1, LcuCommon.HEADER_LCU3);
+                    break;
+                case "LCU_4 (LLLR)":
+                    LCUno = 4;
+                    robotManager.arm4.SetDeviceHeader(LcuCommon.HEADER_PC1, LcuCommon.HEADER_LCU4);
+                    break;
+                case "LCU_5 (Gimmick)":
+                    LCUno = 5;
+                    break;
+                default:
+                    robotManager.arm.SetDeviceHeader(LcuCommon.HEADER_PC1, LcuCommon.HEADER_LCU1);
+                    break;
+            }
+        }
 
+        private void HAClist_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string val = HAClist.SelectedItem.ToString();
 
-
-        // mouse clsick end
-
-
+            switch (val)
+            {
+                case "Device 1":
+                    canID = 1;
+                    robotManager.arm._canUDP.Id = 1;
+                    break;
+                case "Device 2":
+                    canID = 2;
+                    robotManager.arm._canUDP.Id = 2;
+                    break;
+                case "Device 3":
+                    canID = 3;
+                    robotManager.arm._canUDP.Id = 3;
+                    break;
+                case "Device 4":
+                    canID = 4;
+                    robotManager.arm._canUDP.Id = 4;
+                    break;
+                case "Device 5":
+                    canID = 5;
+                    robotManager.arm._canUDP.Id = 5;
+                    break;
+                case "Device 6":
+                    canID = 6;
+                    robotManager.arm._canUDP.Id = 6;
+                    break;
+                case "Device 7":
+                    canID = 7;
+                    robotManager.arm._canUDP.Id = 7;
+                    break;
+            }
+        }
 
         private void hacIndex_SelectedIndexChanged(object sender, EventArgs e)
         {
