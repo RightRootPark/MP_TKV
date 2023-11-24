@@ -60,6 +60,8 @@ namespace TKV
             this.move_to_target = new System.Windows.Forms.Button();
             this.movestop = new System.Windows.Forms.Button();
             this.gr_CAN = new System.Windows.Forms.GroupBox();
+            this.LCUlist = new System.Windows.Forms.ComboBox();
+            this.label31 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.subIndex = new System.Windows.Forms.ComboBox();
@@ -841,6 +843,8 @@ namespace TKV
             // gr_CAN
             // 
             this.gr_CAN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
+            this.gr_CAN.Controls.Add(this.LCUlist);
+            this.gr_CAN.Controls.Add(this.label31);
             this.gr_CAN.Controls.Add(this.label10);
             this.gr_CAN.Controls.Add(this.label9);
             this.gr_CAN.Controls.Add(this.subIndex);
@@ -854,18 +858,46 @@ namespace TKV
             this.gr_CAN.Controls.Add(this.CAN_Serail);
             this.gr_CAN.Controls.Add(this.label3);
             this.gr_CAN.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.gr_CAN.Location = new System.Drawing.Point(6, 81);
+            this.gr_CAN.Location = new System.Drawing.Point(6, 80);
             this.gr_CAN.Name = "gr_CAN";
-            this.gr_CAN.Size = new System.Drawing.Size(223, 174);
+            this.gr_CAN.Size = new System.Drawing.Size(223, 208);
             this.gr_CAN.TabIndex = 148;
             this.gr_CAN.TabStop = false;
             this.gr_CAN.Text = "CAN SDO";
+            // 
+            // LCUlist
+            // 
+            this.LCUlist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LCUlist.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LCUlist.FormattingEnabled = true;
+            this.LCUlist.Items.AddRange(new object[] {
+            "LCU_1 (HDWT)",
+            "LCU_2 (SH)",
+            "LCU_3 (AL)",
+            "LCU_4 (AR)",
+            "LCU_5 (LLLR)",
+            "LCU_6 (Gimmick)"});
+            this.LCUlist.Location = new System.Drawing.Point(100, 23);
+            this.LCUlist.Name = "LCUlist";
+            this.LCUlist.Size = new System.Drawing.Size(100, 23);
+            this.LCUlist.TabIndex = 192;
+            this.LCUlist.SelectedIndexChanged += new System.EventHandler(this.LCUlist_SelectedIndexChanged);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label31.Location = new System.Drawing.Point(3, 27);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(83, 15);
+            this.label31.TabIndex = 193;
+            this.label31.Text = "Select LCUpro";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label10.Location = new System.Drawing.Point(3, 82);
+            this.label10.Location = new System.Drawing.Point(3, 115);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(61, 15);
             this.label10.TabIndex = 191;
@@ -875,7 +907,7 @@ namespace TKV
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label9.Location = new System.Drawing.Point(3, 53);
+            this.label9.Location = new System.Drawing.Point(3, 86);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(36, 15);
             this.label9.TabIndex = 190;
@@ -887,7 +919,7 @@ namespace TKV
             this.subIndex.Enabled = false;
             this.subIndex.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.subIndex.FormattingEnabled = true;
-            this.subIndex.Location = new System.Drawing.Point(100, 79);
+            this.subIndex.Location = new System.Drawing.Point(100, 112);
             this.subIndex.Name = "subIndex";
             this.subIndex.Size = new System.Drawing.Size(100, 23);
             this.subIndex.TabIndex = 189;
@@ -916,7 +948,7 @@ namespace TKV
             "Target Velocity",
             "Actual Velocity",
             "Raw Joint Angle"});
-            this.hacIndex.Location = new System.Drawing.Point(100, 50);
+            this.hacIndex.Location = new System.Drawing.Point(100, 83);
             this.hacIndex.Name = "hacIndex";
             this.hacIndex.Size = new System.Drawing.Size(100, 23);
             this.hacIndex.TabIndex = 188;
@@ -926,7 +958,7 @@ namespace TKV
             // 
             this.CANrx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CANrx.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CANrx.Location = new System.Drawing.Point(160, 144);
+            this.CANrx.Location = new System.Drawing.Point(160, 177);
             this.CANrx.Name = "CANrx";
             this.CANrx.Size = new System.Drawing.Size(58, 24);
             this.CANrx.TabIndex = 187;
@@ -938,7 +970,7 @@ namespace TKV
             // 
             this.CANtx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CANtx.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CANtx.Location = new System.Drawing.Point(160, 111);
+            this.CANtx.Location = new System.Drawing.Point(160, 144);
             this.CANtx.Name = "CANtx";
             this.CANtx.Size = new System.Drawing.Size(58, 24);
             this.CANtx.TabIndex = 186;
@@ -951,7 +983,7 @@ namespace TKV
             this.txtCanData.BackColor = System.Drawing.SystemColors.Info;
             this.txtCanData.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtCanData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
-            this.txtCanData.Location = new System.Drawing.Point(100, 145);
+            this.txtCanData.Location = new System.Drawing.Point(100, 178);
             this.txtCanData.Name = "txtCanData";
             this.txtCanData.ReadOnly = true;
             this.txtCanData.Size = new System.Drawing.Size(54, 23);
@@ -962,7 +994,7 @@ namespace TKV
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(3, 149);
+            this.label5.Location = new System.Drawing.Point(3, 182);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 15);
             this.label5.TabIndex = 184;
@@ -981,7 +1013,7 @@ namespace TKV
             "Device 5",
             "Device 6",
             "Device 7"});
-            this.HAClist.Location = new System.Drawing.Point(100, 21);
+            this.HAClist.Location = new System.Drawing.Point(100, 54);
             this.HAClist.Name = "HAClist";
             this.HAClist.Size = new System.Drawing.Size(100, 23);
             this.HAClist.TabIndex = 182;
@@ -991,17 +1023,17 @@ namespace TKV
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(3, 25);
+            this.label4.Location = new System.Drawing.Point(3, 58);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 15);
+            this.label4.Size = new System.Drawing.Size(86, 15);
             this.label4.TabIndex = 183;
-            this.label4.Text = "Select device";
+            this.label4.Text = "Select HACpro";
             // 
             // CAN_Serail
             // 
             this.CAN_Serail.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.CAN_Serail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
-            this.CAN_Serail.Location = new System.Drawing.Point(100, 112);
+            this.CAN_Serail.Location = new System.Drawing.Point(100, 145);
             this.CAN_Serail.Name = "CAN_Serail";
             this.CAN_Serail.Size = new System.Drawing.Size(54, 23);
             this.CAN_Serail.TabIndex = 53;
@@ -1011,7 +1043,7 @@ namespace TKV
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(3, 116);
+            this.label3.Location = new System.Drawing.Point(3, 149);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 15);
             this.label3.TabIndex = 182;
@@ -1030,7 +1062,7 @@ namespace TKV
             // 
             this.btnCAN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCAN.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCAN.Location = new System.Drawing.Point(6, 43);
+            this.btnCAN.Location = new System.Drawing.Point(6, 41);
             this.btnCAN.Name = "btnCAN";
             this.btnCAN.Size = new System.Drawing.Size(90, 30);
             this.btnCAN.TabIndex = 147;
@@ -2030,14 +2062,12 @@ namespace TKV
             // PN_NotUse
             // 
             this.PN_NotUse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PN_NotUse.Controls.Add(this.panel1);
             this.PN_NotUse.Controls.Add(this.pn_Debug);
             this.PN_NotUse.Controls.Add(this.pnConveGain);
             this.PN_NotUse.Location = new System.Drawing.Point(189, 13);
             this.PN_NotUse.Name = "PN_NotUse";
             this.PN_NotUse.Size = new System.Drawing.Size(789, 319);
             this.PN_NotUse.TabIndex = 290;
-            this.PN_NotUse.Visible = false;
             // 
             // panel1
             // 
@@ -2046,7 +2076,7 @@ namespace TKV
             this.panel1.Controls.Add(this.gr_CAN);
             this.panel1.Controls.Add(this.btnCAN);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.panel1.Location = new System.Drawing.Point(544, 5);
+            this.panel1.Location = new System.Drawing.Point(1042, 126);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(237, 297);
             this.panel1.TabIndex = 305;
@@ -4186,6 +4216,7 @@ namespace TKV
             this.cmd_send2.TabIndex = 252;
             this.cmd_send2.Text = "Send to LCU";
             this.cmd_send2.UseVisualStyleBackColor = true;
+            this.cmd_send2.Visible = false;
             this.cmd_send2.Click += new System.EventHandler(this.cmd_send_Click);
             // 
             // JT18
@@ -6682,7 +6713,7 @@ namespace TKV
             this.Main.Controls.Add(this.pn_Monitoring);
             this.Main.Location = new System.Drawing.Point(4, 30);
             this.Main.Name = "Main";
-            this.Main.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Main.Padding = new System.Windows.Forms.Padding(3);
             this.Main.Size = new System.Drawing.Size(994, 584);
             this.Main.TabIndex = 0;
             this.Main.Text = "Main";
@@ -6694,7 +6725,7 @@ namespace TKV
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(994, 584);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Monitoring";
@@ -6776,7 +6807,8 @@ namespace TKV
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(1017, 728);
+            this.ClientSize = new System.Drawing.Size(1548, 787);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.labelSimulcomand);
@@ -7285,6 +7317,8 @@ namespace TKV
         private System.Windows.Forms.Button LCU3con;
         private System.Windows.Forms.Button LCU2con;
         private System.Windows.Forms.Button LCU1con;
+        private System.Windows.Forms.ComboBox LCUlist;
+        private System.Windows.Forms.Label label31;
     }
 }
 

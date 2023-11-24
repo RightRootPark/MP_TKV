@@ -156,7 +156,7 @@ namespace TKV
         private float[] inputCmd2 = new float[7];//[LcuCommon.ROBOT_AXIS_CNT_MAX];
         private float[] inputCmd3 = new float[7];//[LcuCommon.ROBOT_AXIS_CNT_MAX];
         private float[] inputCmd4 = new float[8];//[LcuCommon.ROBOT_AXIS_CNT_MAX];
-        private float[] inputCmd5 = new float[LcuCommon.ROBOT_AXIS_CNT_MAX];
+        private float[] inputCmd5 = new float[8];// LcuCommon.ROBOT_AXIS_CNT_MAX];
 
         private float _toolPosCmd = 0;
         private float RMS = 0;
@@ -253,6 +253,7 @@ namespace TKV
         #region CAN field
         private bool canON = false;
         private int canID = -2;
+        private int LCUno = -2;
         private int canIndex;
         private char canSubIndex;
         private float canValue;
@@ -474,7 +475,7 @@ namespace TKV
                 robotManager.arm4.SendErrorReset();
                 robotManager.arm5.SendErrorReset();
 
-                if (robotManager.arm.isConnect)
+                if (robotManager.arm.isConnect || robotManager.arm2.isConnect || robotManager.arm3.isConnect || robotManager.arm4.isConnect || robotManager.arm5.isConnect)
                 {
                     btn_LCUpro.BackColor = Color.DarkCyan;
                     btnReset.BackColor = Color.DarkCyan;
@@ -645,9 +646,10 @@ namespace TKV
                 case Keys.Enter:
                     if (canON && (CAN_Serail.Text != "" && CAN_Serail.Text != " "))
                     {
-                        CAN_Serail.Text = _canSerialCmd + CAN_Serail.Text;
-                        //robotManager.arm.SendCanSerialData(canID, CAN_Serail.Text);
-                        robotManager.arm.SendCanSerialDataUDP(canID, CAN_Serail.Text);
+                        //CAN_Serail.Text = _canSerialCmd + CAN_Serail.Text;
+                        ////robotManager.arm.SendCanSerialData(canID, CAN_Serail.Text);
+                        //robotManager.arm.SendCanSerialDataUDP(canID, CAN_Serail.Text);
+                        CANtx_Click(_sender, _e);
                         CAN_Serail.Text = "";
                         CAN_Serail.Select();
                     }
@@ -886,16 +888,16 @@ namespace TKV
                             if (robotManager.arm2.isConnect)
                             {
                                 inputCmd2[0] = Convert.ToSingle(JT7.Text);
-                                if (inputCmd2[0] >= 120) jointPosCmd2[0] = 119.9f;
-                                else if (inputCmd2[0] <= -10) jointPosCmd2[0] = -9.9f;
+                                if (inputCmd2[0] >= 20) jointPosCmd2[0] = 19.9f;
+                                else if (inputCmd2[0] <= -20) jointPosCmd2[0] = -19.9f;
                                 else jointPosCmd2[0] = inputCmd2[0];
                                 JT7.Text = jointPosCmd2[0].ToString();
 
                                 inputCmd2[1] = Convert.ToSingle(JT8.Text);
                                 inputCmd2[2] = Convert.ToSingle(JT9.Text);
-                                inputCmd2[3] = Convert.ToSingle(JT10.Text);
-                                inputCmd2[4] = Convert.ToSingle(JT11.Text);
-                                inputCmd2[5] = Convert.ToSingle(JT12.Text);
+                                inputCmd2[3] = Convert.ToSingle(JT14.Text);
+                                inputCmd2[4] = Convert.ToSingle(JT15.Text);
+                                inputCmd2[5] = Convert.ToSingle(JT16.Text);
                                 for (byte i = 1; i < jointPosCmd2.Length; i++)
                                 {
                                     if (jointPosCmd2[i] - Gab < inputCmd2[i] && inputCmd2[i] < jointPosCmd2[i] + Gab) //갑자기 튀는 현상 제거를 위한 안전기능 시험
@@ -913,16 +915,13 @@ namespace TKV
                             if (robotManager.arm3.isConnect)
                             {
 
-                                inputCmd3[0] = Convert.ToSingle(JT14.Text);
-                                inputCmd3[1] = Convert.ToSingle(JT15.Text);
-                                inputCmd3[2] = Convert.ToSingle(JT16.Text);
-                                inputCmd3[3] = Convert.ToSingle(JT17.Text);
-                                inputCmd3[4] = Convert.ToSingle(JT18.Text);
-                                inputCmd3[5] = Convert.ToSingle(JT19.Text);
-                                inputCmd3[6] = Convert.ToSingle(JT20.Text);
-                                for (byte i = 1; i < jointPosCmd3.Length; i++)
+                                inputCmd3[0] = Convert.ToSingle(JT10.Text);
+                                inputCmd3[1] = Convert.ToSingle(JT11.Text);
+                                inputCmd3[2] = Convert.ToSingle(JT12.Text);
+                                inputCmd3[3] = Convert.ToSingle(JT13.Text);
+                                for (byte i = 0; i < jointPosCmd3.Length; i++)
                                 {
-                                    if (jointPosCmd3[i] - Gab < inputCmd3[i] && inputCmd2[i] < jointPosCmd3[i] + Gab) //갑자기 튀는 현상 제거를 위한 안전기능 시험
+                                    if (jointPosCmd3[i] - Gab < inputCmd3[i] && inputCmd3[i] < jointPosCmd3[i] + Gab) //갑자기 튀는 현상 제거를 위한 안전기능 시험
                                     {
                                         jointPosCmd3[i] = inputCmd3[i];
                                     }
@@ -934,32 +933,52 @@ namespace TKV
                                 }
                                 //robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
                             }
-
-
                             if (robotManager.arm4.isConnect)
                             {
-                                inputCmd4[0] = Convert.ToSingle(JT21.Text);
-                                inputCmd4[1] = Convert.ToSingle(JT22.Text);
-                                inputCmd4[2] = Convert.ToSingle(JT23.Text);
-                                inputCmd4[3] = Convert.ToSingle(JT24.Text);
-                                inputCmd4[4] = Convert.ToSingle(JT25.Text);
-                                inputCmd4[5] = Convert.ToSingle(JT26.Text);
-                                inputCmd4[6] = Convert.ToSingle(JT27.Text);
-                                inputCmd4[7] = Convert.ToSingle(JT28.Text);
-                                if (inputCmd4[2] > 60) inputCmd4[1] = 60;//하드웨어 보강이 아직 되지 않아서 임시 제한
 
+                                inputCmd4[0] = Convert.ToSingle(JT17.Text);
+                                inputCmd4[1] = Convert.ToSingle(JT18.Text);
+                                inputCmd4[2] = Convert.ToSingle(JT19.Text);
+                                inputCmd4[3] = Convert.ToSingle(JT20.Text);
                                 for (byte i = 0; i < jointPosCmd4.Length; i++)
                                 {
                                     if (jointPosCmd4[i] - Gab < inputCmd4[i] && inputCmd4[i] < jointPosCmd4[i] + Gab) //갑자기 튀는 현상 제거를 위한 안전기능 시험
                                     {
                                         jointPosCmd4[i] = inputCmd4[i];
-                                        LCU4con.BackColor = Color.Green;
                                     }
-                                    else//Gab 보다 크게 튀면 천천히 그자리로 가게
+                                    else//튀면은 천천히 그자리로 가게
                                     {
                                         if (jointPosCmd4[i] > inputCmd4[i]) jointPosCmd4[i] = jointPosCmd4[i] - 0.01f;
                                         if (jointPosCmd4[i] < inputCmd4[i]) jointPosCmd4[i] = jointPosCmd4[i] + 0.01f;
-                                        LCU4con.BackColor = Color.Yellow;
+                                    }
+                                }
+                            }
+
+
+                            if (robotManager.arm5.isConnect)
+                            {
+                                inputCmd5[0] = Convert.ToSingle(JT21.Text);
+                                inputCmd5[1] = Convert.ToSingle(JT22.Text);
+                                inputCmd5[2] = Convert.ToSingle(JT23.Text);
+                                inputCmd5[3] = Convert.ToSingle(JT24.Text);
+                                inputCmd5[4] = Convert.ToSingle(JT25.Text);
+                                inputCmd5[5] = Convert.ToSingle(JT26.Text);
+                                //inputCmd5[6] = Convert.ToSingle(JT27.Text);
+                                //inputCmd5[7] = Convert.ToSingle(JT28.Text);
+                                //if (inputCmd5[2] > 60) inputCmd5[1] = 60;//하드웨어 보강이 아직 되지 않아서 임시 제한
+
+                                for (byte i = 0; i < jointPosCmd5.Length; i++)
+                                {
+                                    if (jointPosCmd5[i] - Gab < inputCmd5[i] && inputCmd5[i] < jointPosCmd5[i] + Gab) //갑자기 튀는 현상 제거를 위한 안전기능 시험
+                                    {
+                                        jointPosCmd5[i] = inputCmd5[i];
+                                        LCU5con.BackColor = Color.Green;
+                                    }
+                                    else//Gab 보다 크게 튀면 천천히 그자리로 가게
+                                    {
+                                        if (jointPosCmd5[i] > inputCmd5[i]) jointPosCmd5[i] = jointPosCmd5[i] - 0.02f;
+                                        if (jointPosCmd5[i] < inputCmd5[i]) jointPosCmd5[i] = jointPosCmd5[i] + 0.02f;
+                                        LCU5con.BackColor = Color.Yellow;
                                     }
                                 }
                                 //robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0); //LCU에 명령 송신
@@ -999,8 +1018,6 @@ namespace TKV
 
                     #region Monitoring data from LCU
 
-
-
                     //for (int i = 0; i < LcuCommon.ROBOT_AXIS_CNT_MAX; i++) currentPos_Joint[i] = robotManager.arm.monitoringData.fJointPosCur[i];
                     //for (int i = 0; i < LcuCommon.ROBOT_AXIS_CNT_MAX; i++) currentPos_World[i] = robotManager.arm.monitoringData.fWorldPosCur[i];
 
@@ -1029,68 +1046,76 @@ namespace TKV
                         J7.Text = (robotManager.arm2.monitoringData.fJointPos[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                         J8.Text = (robotManager.arm2.monitoringData.fJointPos[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                         J9.Text = (robotManager.arm2.monitoringData.fJointPos[2] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        J10.Text = (robotManager.arm2.monitoringData.fJointPos[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        J11.Text = (robotManager.arm2.monitoringData.fJointPos[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        J12.Text = (robotManager.arm2.monitoringData.fJointPos[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        //J13.Text = (robotManager.arm2.monitoringData.fJointPos[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        J14.Text = (robotManager.arm2.monitoringData.fJointPos[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        J15.Text = (robotManager.arm2.monitoringData.fJointPos[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        J16.Text = (robotManager.arm2.monitoringData.fJointPos[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
 
                         JC7.Text = (robotManager.arm2.monitoringData.fJointPosCur[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                         JC8.Text = (robotManager.arm2.monitoringData.fJointPosCur[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                         JC9.Text = (robotManager.arm2.monitoringData.fJointPosCur[2] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        JC10.Text = (robotManager.arm2.monitoringData.fJointPosCur[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        JC11.Text = (robotManager.arm2.monitoringData.fJointPosCur[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        JC12.Text = (robotManager.arm2.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        //JC13.Text = (robotManager.arm2.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        JC14.Text = (robotManager.arm2.monitoringData.fJointPosCur[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        JC15.Text = (robotManager.arm2.monitoringData.fJointPosCur[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        JC16.Text = (robotManager.arm2.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                     }
                     else LCU2con.BackColor = Color.Red;
 
                     if (robotManager.arm3.isConnect)
                     {
                         LCU3con.BackColor = Color.Green;
-                        J14.Text = (robotManager.arm3.monitoringData.fJointPos[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        J15.Text = (robotManager.arm3.monitoringData.fJointPos[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        J16.Text = (robotManager.arm3.monitoringData.fJointPos[2] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        J17.Text = (robotManager.arm3.monitoringData.fJointPos[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        J18.Text = (robotManager.arm3.monitoringData.fJointPos[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        J19.Text = (robotManager.arm3.monitoringData.fJointPos[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        //J20.Text = (robotManager.arm3.monitoringData.fJointPos[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        J10.Text = (robotManager.arm3.monitoringData.fJointPos[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        J11.Text = (robotManager.arm3.monitoringData.fJointPos[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        J12.Text = (robotManager.arm3.monitoringData.fJointPos[2] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        //J13.Text = (robotManager.arm3.monitoringData.fJointPos[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
 
-                        JC14.Text = (robotManager.arm3.monitoringData.fJointPosCur[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        JC15.Text = (robotManager.arm3.monitoringData.fJointPosCur[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        JC16.Text = (robotManager.arm3.monitoringData.fJointPosCur[2] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        JC17.Text = (robotManager.arm3.monitoringData.fJointPosCur[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        JC18.Text = (robotManager.arm3.monitoringData.fJointPosCur[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        JC19.Text = (robotManager.arm3.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        //JC20.Text = (robotManager.arm3.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        JC10.Text = (robotManager.arm3.monitoringData.fJointPosCur[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        JC11.Text = (robotManager.arm3.monitoringData.fJointPosCur[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        JC12.Text = (robotManager.arm3.monitoringData.fJointPosCur[2] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        //JC13.Text = (robotManager.arm2.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                     }
                     else LCU3con.BackColor = Color.Red;
 
                     if (robotManager.arm4.isConnect)
                     {
                         LCU4con.BackColor = Color.Green;
-                        J21.Text = (robotManager.arm4.monitoringData.fJointPos[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        J22.Text = (robotManager.arm4.monitoringData.fJointPos[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        J23.Text = (robotManager.arm4.monitoringData.fJointPos[2] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        J24.Text = (robotManager.arm4.monitoringData.fJointPos[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        J25.Text = (robotManager.arm4.monitoringData.fJointPos[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        J26.Text = (robotManager.arm4.monitoringData.fJointPos[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        J17.Text = (robotManager.arm4.monitoringData.fJointPos[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        J18.Text = (robotManager.arm4.monitoringData.fJointPos[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        J19.Text = (robotManager.arm4.monitoringData.fJointPos[2] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        //J20.Text = (robotManager.arm4.monitoringData.fJointPos[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+
+                        JC17.Text = (robotManager.arm4.monitoringData.fJointPosCur[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        JC18.Text = (robotManager.arm4.monitoringData.fJointPosCur[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        JC19.Text = (robotManager.arm4.monitoringData.fJointPosCur[2] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        //JC20.Text = (robotManager.arm4.monitoringData.fJointPosCur[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                    }
+                    else LCU4con.BackColor = Color.Red;
+
+                    if (robotManager.arm5.isConnect)
+                    {
+                        LCU5con.BackColor = Color.Green;
+                        J21.Text = (robotManager.arm5.monitoringData.fJointPos[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        J22.Text = (robotManager.arm5.monitoringData.fJointPos[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        J23.Text = (robotManager.arm5.monitoringData.fJointPos[2] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        J24.Text = (robotManager.arm5.monitoringData.fJointPos[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        J25.Text = (robotManager.arm5.monitoringData.fJointPos[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        J26.Text = (robotManager.arm5.monitoringData.fJointPos[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                         //현재 LCU 통신 규격상 짤린 부분 나중에 LCU소스 코드 바꾸면 업데이트 예정
                         //J27.Text = (robotManager.arm4.monitoringData.fJointPos[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                         //J28.Text = (robotManager.arm4.monitoringData.fJointPos[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
 
-                        JC21.Text = (robotManager.arm4.monitoringData.fJointPosCur[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        JC22.Text = (robotManager.arm4.monitoringData.fJointPosCur[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        JC23.Text = (robotManager.arm4.monitoringData.fJointPosCur[2] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        JC24.Text = (robotManager.arm4.monitoringData.fJointPosCur[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        JC25.Text = (robotManager.arm4.monitoringData.fJointPosCur[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
-                        JC26.Text = (robotManager.arm4.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        JC21.Text = (robotManager.arm5.monitoringData.fJointPosCur[0] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        JC22.Text = (robotManager.arm5.monitoringData.fJointPosCur[1] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        JC23.Text = (robotManager.arm5.monitoringData.fJointPosCur[2] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        JC24.Text = (robotManager.arm5.monitoringData.fJointPosCur[3] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        JC25.Text = (robotManager.arm5.monitoringData.fJointPosCur[4] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
+                        JC26.Text = (robotManager.arm5.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                         //JC27.Text = (robotManager.arm4.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                         //JC28.Text = (robotManager.arm4.monitoringData.fJointPosCur[5] * Convert.ToSingle(180 / Math.PI)).ToString("f2");
                     }
-                    else LCU4con.BackColor = Color.Red;
-
-                    if (robotManager.arm5.isConnect) LCU5con.BackColor = Color.Green;
                     else LCU5con.BackColor = Color.Red;
+
+                    //LCU 6번 생성 필요 _ HMSHIN _ 20231120
+                    //if (robotManager.arm6.isConnect) LCU6con.BackColor = Color.Green;
+                    //else LCU6con.BackColor = Color.Red;
 
                     //W1.Text = robotManager.arm.monitoringData.fWorldPos[0].ToString("f2");
                     //W2.Text = robotManager.arm.monitoringData.fWorldPos[1].ToString("f2");
@@ -1165,9 +1190,49 @@ namespace TKV
                     }
 
 
-                    if (robotManager.arm.isConnect || robotManager.arm2.isCanConnect || robotManager.arm3.isCanConnect || robotManager.arm4.isCanConnect)
+                    if (robotManager.arm.isConnect || robotManager.arm2.isConnect || robotManager.arm3.isConnect || robotManager.arm4.isConnect || robotManager.arm5.isConnect)
                     {
                         if (robotManager.arm.isEmergencyStop)
+                        {
+                            btn_LCUpro.BackColor = btnEmg.BackColor = Color.DarkRed;
+                            btnEmg_Click(_sender, _e);
+                            pn_Monitoring.Enabled = btnReset.Enabled = setMaster.Enabled = mode_List.Enabled = false;
+                            Debug.WriteLine("EmergencyStop");
+
+                        }
+                        else btn_LCUpro.BackColor = Color.DarkCyan;
+
+                        if (robotManager.arm2.isEmergencyStop)
+                        {
+                            btn_LCUpro.BackColor = btnEmg.BackColor = Color.DarkRed;
+                            btnEmg_Click(_sender, _e);
+                            pn_Monitoring.Enabled = btnReset.Enabled = setMaster.Enabled = mode_List.Enabled = false;
+                            Debug.WriteLine("EmergencyStop");
+
+                        }
+                        else btn_LCUpro.BackColor = Color.DarkCyan;
+
+                        if (robotManager.arm3.isEmergencyStop)
+                        {
+                            btn_LCUpro.BackColor = btnEmg.BackColor = Color.DarkRed;
+                            btnEmg_Click(_sender, _e);
+                            pn_Monitoring.Enabled = btnReset.Enabled = setMaster.Enabled = mode_List.Enabled = false;
+                            Debug.WriteLine("EmergencyStop");
+
+                        }
+                        else btn_LCUpro.BackColor = Color.DarkCyan;
+
+                        if (robotManager.arm4.isEmergencyStop)
+                        {
+                            btn_LCUpro.BackColor = btnEmg.BackColor = Color.DarkRed;
+                            btnEmg_Click(_sender, _e);
+                            pn_Monitoring.Enabled = btnReset.Enabled = setMaster.Enabled = mode_List.Enabled = false;
+                            Debug.WriteLine("EmergencyStop");
+
+                        }
+                        else btn_LCUpro.BackColor = Color.DarkCyan;
+
+                        if (robotManager.arm5.isEmergencyStop)
                         {
                             btn_LCUpro.BackColor = btnEmg.BackColor = Color.DarkRed;
                             btnEmg_Click(_sender, _e);
@@ -1628,7 +1693,7 @@ namespace TKV
                     movestop_Click(_sender, _e);
                 }
             }
-            else if (robotManager.arm.mode == 5 && robotManager.arm2.mode == 5 && robotManager.arm3.mode == 5 && robotManager.arm4.mode == 5)
+            else if (robotManager.arm.mode == 5 && robotManager.arm2.mode == 5 && robotManager.arm3.mode == 5 && robotManager.arm4.mode == 5 && robotManager.arm5.mode == 5)
             {
                 if (robotManager.arm.isConnect) robotManager.arm.SetArmPosCmd(jointPosCmd, jointPosCmd[5], 0); //연결되었으면 LCU에 명령 송신=연결않되었을때 송신하면 렉걸림
                 if (robotManager.arm2.isConnect) robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0); //연결되었으면 LCU에 명령 송신=연결않되었을때 송신하면 렉걸림
@@ -1741,14 +1806,14 @@ namespace TKV
             int index = mode_List.SelectedIndex;
             robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
             robotManager.arm.SetArmVelCmd(jointVelocityCmd, 1);
-            robotManager.arm2.SetArmVelCmd(jointVelocityCmd, 0);
-            robotManager.arm2.SetArmVelCmd(jointVelocityCmd, 1);
-            robotManager.arm3.SetArmVelCmd(jointVelocityCmd, 0);
-            robotManager.arm3.SetArmVelCmd(jointVelocityCmd, 1);
-            robotManager.arm4.SetArmVelCmd(jointVelocityCmd, 0);
-            robotManager.arm4.SetArmVelCmd(jointVelocityCmd, 1);
-            robotManager.arm5.SetArmVelCmd(jointVelocityCmd, 0);
-            robotManager.arm5.SetArmVelCmd(jointVelocityCmd, 1);
+            robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 0);
+            robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 1);
+            robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 0);
+            robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 1);
+            robotManager.arm4.SetArmVelCmd(jointVelocityCmd4, 0);
+            robotManager.arm4.SetArmVelCmd(jointVelocityCmd4, 1);
+            robotManager.arm5.SetArmVelCmd(jointVelocityCmd5, 0);
+            robotManager.arm5.SetArmVelCmd(jointVelocityCmd5, 1);
 
             switch (index)
             {
@@ -1991,6 +2056,7 @@ namespace TKV
                 inputCmd[5] = Convert.ToSingle(JT6.Text);
                 jointPosCmd2[0] = inputCmd2[0] = Convert.ToSingle(JT7.Text);
                 JT7.Text = jointPosCmd2[0].ToString();
+
                 jointPosCmd2[0] = inputCmd2[0] = Convert.ToSingle(JT7.Text);
                 JT7.Text = jointPosCmd2[0].ToString();
 
@@ -2562,24 +2628,24 @@ namespace TKV
                                 jointVelocityCmd2[i] = 0;
                                 jointVelocityCmd3[i] = 0;
                                 jointVelocityCmd4[i] = 0;
+                    jointVelocityCmd5[i] = 0;
                 }
                 robotManager.arm.SetArmVelCmd(jointVelocityCmd, 1);
-                robotManager.arm2.SetArmVelCmd(jointVelocityCmd, 1);
-                robotManager.arm3.SetArmVelCmd(jointVelocityCmd, 1);
-                robotManager.arm4.SetArmVelCmd(jointVelocityCmd, 1);
+                robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 1);
+                robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 1);
+                robotManager.arm4.SetArmVelCmd(jointVelocityCmd4, 1);
+                robotManager.arm5.SetArmVelCmd(jointVelocityCmd5, 1);
             }
             else
             {
-                for (int i = 0; i < 6; i++) worldVelocityCmd[i] = 0;
-                robotManager.arm.SetArmVelCmd(worldVelocityCmd, 1);
-                robotManager.arm2.SetArmVelCmd(worldVelocityCmd, 1);
-                robotManager.arm3.SetArmVelCmd(worldVelocityCmd, 1);
-                robotManager.arm4.SetArmVelCmd(worldVelocityCmd, 1);
+                //for (int i = 0; i < 6; i++) worldVelocityCmd[i] = 0;
+                //robotManager.arm.SetArmVelCmd(worldVelocityCmd, 1);
             }
             robotManager.arm._sleepCount = 0;
             robotManager.arm2._sleepCount = 0;
             robotManager.arm3._sleepCount = 0;
             robotManager.arm4._sleepCount = 0;
+            robotManager.arm5._sleepCount = 0;
             Debug.WriteLine("MouseUP");
         }
         private void J1Up_MouseDown(object sender, MouseEventArgs e)
@@ -2876,7 +2942,7 @@ namespace TKV
 
                 robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 0);
             }
-            robotManager.arm._sleepCount = 0;
+            robotManager.arm2._sleepCount = 0;
         }
         private void J7Down_MouseDown(object sender, MouseEventArgs e)
         {
@@ -3081,7 +3147,8 @@ namespace TKV
         {
             JxUpOr_MouseDown(26, true);
         }
-                private void J27Down_MouseDown(object sender, MouseEventArgs e)
+        
+        private void J27Down_MouseDown(object sender, MouseEventArgs e)
         {
             JxUpOr_MouseDown(27, false);
         }
@@ -3172,140 +3239,140 @@ namespace TKV
                         robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 0);
                     }
                     break;
-                case 10: //j10 = lcu2-4
-                    if (robotManager.arm2.mode == 2)
-                    {
-                        jointVelocityCmd2[3] = Velocity;
-                        robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 0);
-                    }
-                    break;
-                case 11: //j11 = lcu2-5
-                    if (robotManager.arm2.mode == 2)
-                    {
-                        jointVelocityCmd2[4] = Velocity;
-                        robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 0);
-                    }
-                    break;
-                case 12: //j12 = lcu2-6
-                    if (robotManager.arm2.mode == 2)
-                    {
-                        jointVelocityCmd2[5] = Velocity;
-                        robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 0);
-                    }
-                    break;
-                case 13: //j13 = lcu2-7
-                    if (robotManager.arm2.mode == 2)
-                    {
-                        //jointVelocityCmd2[6] = Velocity;
-                        //robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 0);
-                        //아직 7번 제어 LCU에서 지원 않됨
-                    }
-                    break;
-                case 14: //j14 = lcu3-1
+                case 10: //Edited by Hmshin _ 20231120 _ j10 = lcu3-1 //j10 = lcu2-4
                     if (robotManager.arm3.mode == 2)
                     {
                         jointVelocityCmd3[0] = Velocity;
                         robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 0);
                     }
                     break;
-                case 15: //j15 = lcu3-2
+                case 11: //Edited by Hmshin _ 20231120 _ j11 = lcu3-2 //j11 = lcu2-5
                     if (robotManager.arm3.mode == 2)
                     {
                         jointVelocityCmd3[1] = Velocity;
                         robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 0);
                     }
                     break;
-                case 16: //j16 = lcu3-3
+                case 12: //Edited by Hmshin _ 20231120 _ j12 = lcu3-3 //j12 = lcu2-6
                     if (robotManager.arm3.mode == 2)
                     {
                         jointVelocityCmd3[2] = Velocity;
                         robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 0);
                     }
                     break;
-                case 17: //j17 = lcu3-4
+                case 13: //Edited by Hmshin _ 20231120 _ j13 = lcu3-4 //j13 = lcu2-7
                     if (robotManager.arm3.mode == 2)
                     {
-                        jointVelocityCmd3[3] = Velocity;
-                        robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 0);
-                    }
-                    break;
-                case 18: //j18 = lcu3-5
-                    if (robotManager.arm3.mode == 2)
-                    {
-                        jointVelocityCmd3[4] = Velocity;
-                        robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 0);
-                    }
-                    break;
-                case 19: //j19 = lcu3-6
-                    if (robotManager.arm3.mode == 2)
-                    {
-                        jointVelocityCmd3[5] = Velocity;
-                        robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 0);
-                    }
-                    break;
-                case 20: //j20 = lcu3-7
-                    if (robotManager.arm3.mode == 2)
-                    {
-                        //jointVelocityCmd3[6] = Velocity;
+                        //jointVelocityCmd3[3] = Velocity;
                         //robotManager.arm3.SetArmVelCmd(jointVelocityCmd3, 0);
-                        //LCU에 7번축이 연동 되어있지 않음
+                        //아직 7번 제어 LCU에서 지원 않됨
                     }
                     break;
-                case 21: //j21 = lcu4-1
+                case 14: //Edited by Hmshin _ 20231120 _ j14 = lcu2-3 //j14 = lcu3-1
+                    if (robotManager.arm2.mode == 2)
+                    {
+                        jointVelocityCmd2[3] = Velocity;
+                        robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 0);
+                    }
+                    break;
+                case 15: //Edited by Hmshin _ 20231120 _ j15 = lcu2-4 //j15 = lcu3-2
+                    if (robotManager.arm2.mode == 2)
+                    {
+                        jointVelocityCmd2[4] = Velocity;
+                        robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 0);
+                    }
+                    break;
+                case 16: //Edited by Hmshin _ 20231120 _ j16 = lcu2-5 //j16 = lcu3-3
+                    if (robotManager.arm2.mode == 2)
+                    {
+                        jointVelocityCmd2[5] = Velocity;
+                        robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 0);
+                    }
+                    break;
+                case 17: //Edited by Hmshin _ 20231120 _ j17 = lcu4-1 //j17 = lcu3-4
                     if (robotManager.arm4.mode == 2)
                     {
                         jointVelocityCmd4[0] = Velocity;
                         robotManager.arm4.SetArmVelCmd(jointVelocityCmd4, 0);
                     }
                     break;
-                case 22: //j22 = lcu4-2
+                case 18: //Edited by Hmshin _ 20231120 _ j18 = lcu4-2 //j18 = lcu3-5
                     if (robotManager.arm4.mode == 2)
                     {
                         jointVelocityCmd4[1] = Velocity;
                         robotManager.arm4.SetArmVelCmd(jointVelocityCmd4, 0);
                     }
                     break;
-                case 23: //j23 = lcu4-3
+                case 19: //Edited by Hmshin _ 20231120 _ j19 = lcu4-3 //j19 = lcu3-6
                     if (robotManager.arm4.mode == 2)
                     {
                         jointVelocityCmd4[2] = Velocity;
                         robotManager.arm4.SetArmVelCmd(jointVelocityCmd4, 0);
                     }
                     break;
-                case 24: //j24 = lcu4-4
+                case 20://Edited by Hmshin _ 20231120 _ j20 = lcu4-4  //j20 = lcu3-7
                     if (robotManager.arm4.mode == 2)
                     {
-                        jointVelocityCmd4[3] = Velocity;
-                        robotManager.arm4.SetArmVelCmd(jointVelocityCmd4, 0);
-                    }
-                    break;
-                case 25: //j25 = lcu4-5
-                    if (robotManager.arm4.mode == 2)
-                    {
-                        jointVelocityCmd4[4] = Velocity;
-                        robotManager.arm4.SetArmVelCmd(jointVelocityCmd4, 0);
-                    }
-                    break;
-                case 26: //j26 = lcu4-6
-                    if (robotManager.arm4.mode == 2)
-                    {
-                        jointVelocityCmd4[5] = Velocity;
-                        robotManager.arm4.SetArmVelCmd(jointVelocityCmd4, 0);
-                    }
-                    break;
-                case 27: //j27 = lcu4-7
-                    if (robotManager.arm4.mode == 2)
-                    {
-                        //jointVelocityCmd4[6] = Velocity;
+                        //jointVelocityCmd4[3] = Velocity;
                         //robotManager.arm4.SetArmVelCmd(jointVelocityCmd4, 0);
+                        //LCU에 7번축이 연동 되어있지 않음
+                    }
+                    break;
+                case 21: //j21 = lcu5-1
+                    if (robotManager.arm5.mode == 2)
+                    {
+                        jointVelocityCmd5[0] = Velocity;
+                        robotManager.arm5.SetArmVelCmd(jointVelocityCmd5, 0);
+                    }
+                    break;
+                case 22: //j22 = lcu5-2
+                    if (robotManager.arm5.mode == 2)
+                    {
+                        jointVelocityCmd5[1] = Velocity;
+                        robotManager.arm5.SetArmVelCmd(jointVelocityCmd5, 0);
+                    }
+                    break;
+                case 23: //j23 = lcu5-3
+                    if (robotManager.arm5.mode == 2)
+                    {
+                        jointVelocityCmd5[2] = Velocity;
+                        robotManager.arm5.SetArmVelCmd(jointVelocityCmd5, 0);
+                    }
+                    break;
+                case 24: //j24 = lcu5-4
+                    if (robotManager.arm5.mode == 2)
+                    {
+                        jointVelocityCmd5[3] = Velocity;
+                        robotManager.arm5.SetArmVelCmd(jointVelocityCmd5, 0);
+                    }
+                    break;
+                case 25: //j25 = lcu5-5
+                    if (robotManager.arm5.mode == 2)
+                    {
+                        jointVelocityCmd5[4] = Velocity;
+                        robotManager.arm5.SetArmVelCmd(jointVelocityCmd5, 0);
+                    }
+                    break;
+                case 26: //j26 = lcu5-6
+                    if (robotManager.arm5.mode == 2)
+                    {
+                        jointVelocityCmd5[5] = Velocity;
+                        robotManager.arm5.SetArmVelCmd(jointVelocityCmd5, 0);
+                    }
+                    break;
+                case 27: //j27 = lcu5-7
+                    if (robotManager.arm5.mode == 2)
+                    {
+                        //jointVelocityCmd5[6] = Velocity;
+                        //robotManager.arm5.SetArmVelCmd(jointVelocityCmd5, 0);
                         //lcu 가 아직 7번축까지의 제어를 지원하지 않음
                     }
                     break;
-                case 28: //j28 = lcu4-8
-                    if (robotManager.arm4.mode == 2)
+                case 28: //j28 = lcu5-8
+                    if (robotManager.arm5.mode == 2)
                     {
-                        //jointVelocityCmd4[7] = Velocity;
-                        //robotManager.arm4.SetArmVelCmd(jointVelocityCmd4, 0);
+                        //jointVelocityCmd5[7] = Velocity;
+                        //robotManager.arm5.SetArmVelCmd(jointVelocityCmd5, 0);
                         //lcu가 아직 8번축 까지의 제어를 지원하지 않음
                     }
                     break;
@@ -3319,6 +3386,7 @@ namespace TKV
              robotManager.arm2._sleepCount = 0;
              robotManager.arm3._sleepCount = 0;
              robotManager.arm4._sleepCount = 0;
+            robotManager.arm5._sleepCount = 0;
         }
 
         #endregion
@@ -3395,8 +3463,8 @@ namespace TKV
                 Pos_Cmd_Joint = inputCmd[1];
                 jointPosCmd[1] = Pos_Cmd_Joint + 1;
 
-                if (jointPosCmd[1] >= 34.9) jointPosCmd[1] = 34.50f;
-                else if (jointPosCmd[1] <= -35) jointPosCmd[1] = -35f;
+                if (jointPosCmd[1] >= 19.9) jointPosCmd[1] = 19.9f;
+                else if (jointPosCmd[1] <= -20) jointPosCmd[1] = -20f;
                 JT2.Text = jointPosCmd[1].ToString();
 
                 Pos_Cmd_Joint = inputCmd[1];
@@ -3426,8 +3494,8 @@ namespace TKV
                 Pos_Cmd_Joint = inputCmd[1];
                 jointPosCmd[1] = Pos_Cmd_Joint - 1;
 
-                if (jointPosCmd[1] >= 35) jointPosCmd[1] = 35f;
-                else if (jointPosCmd[1] <= -35) jointPosCmd[1] = -35f;
+                if (jointPosCmd[1] >= 20) jointPosCmd[1] = 20f;
+                else if (jointPosCmd[1] <= -20) jointPosCmd[1] = -20f;
                 JT2.Text = jointPosCmd[1].ToString();
 
                 Pos_Cmd_Joint = inputCmd[1];
@@ -3457,8 +3525,8 @@ namespace TKV
                 Pos_Cmd_Joint = inputCmd[2];
                 jointPosCmd[2] = Pos_Cmd_Joint + 1;
 
-                if (jointPosCmd[2] >= 30) jointPosCmd[2] = 30.0f;
-                else if (jointPosCmd[2] <= -30) jointPosCmd[2] = -30f;
+                if (jointPosCmd[2] >= 15) jointPosCmd[2] = 15.0f;
+                else if (jointPosCmd[2] <= -15) jointPosCmd[2] = -15f;
                 JT3.Text = jointPosCmd[2].ToString();
 
                 Pos_Cmd_Joint = inputCmd[2];
@@ -3488,8 +3556,8 @@ namespace TKV
                 Pos_Cmd_Joint = inputCmd[2];
                 jointPosCmd[2] = Pos_Cmd_Joint - 1;
 
-                if (jointPosCmd[2] >= 30) jointPosCmd[2] = 30.0f;
-                else if (jointPosCmd[2] <= -30) jointPosCmd[2] = -30f;
+                if (jointPosCmd[2] >= 15) jointPosCmd[2] = 15.0f;
+                else if (jointPosCmd[2] <= -15) jointPosCmd[2] = -15f;
                 JT3.Text = jointPosCmd[2].ToString();
 
                 Pos_Cmd_Joint = inputCmd[2];
@@ -3714,7 +3782,7 @@ namespace TKV
                         robotManager.arm.SetArmPosCmd(jointPosCmd, jointPosCmd[5], 0);
                     }
                     break;
-                case 7://번 조인트 명령 2-2
+                case 7://Edit by hmshin _ LCU 2번 Device id 1 ( 2-1 )로 변경//번 조인트 명령 2-2
                     if (robotManager.arm2.mode == 5)
                     {
                         inputCmd2[0] = Convert.ToSingle(JT7.Text);
@@ -3729,7 +3797,7 @@ namespace TKV
                         robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
                     }
                     break;
-                case 8://번 조인트 명령 2-2
+                case 8://Edit by hmshin _ LCU 2번 Device id 2 ( 2-2 )로 변경//번 조인트 명령 2-2
                     if (robotManager.arm2.mode == 5)
                     {
                         inputCmd2[1] = Convert.ToSingle(JT8.Text);
@@ -3744,7 +3812,7 @@ namespace TKV
                         robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
                     }
                     break;
-                case 9://번 조인트 명령 2-2
+                case 9://Edit by hmshin _ LCU 2번 Device id 3 ( 2-3 )로 변경//번 조인트 명령 2-2
                     if (robotManager.arm2.mode == 5)
                     {
                         inputCmd2[2] = Convert.ToSingle(JT9.Text);
@@ -3759,49 +3827,49 @@ namespace TKV
                         robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
                     }
                     break;
-                case 10://번 조인트 명령 2-2
-                    if (robotManager.arm2.mode == 5)
+                case 10://Edit by hmshin _ LCU 3번 Device id 1 ( 3-1 )로 변경 
+                    if (robotManager.arm3.mode == 5)
                     {
-                        inputCmd2[3] = Convert.ToSingle(JT10.Text);
-                        Pos_Cmd_Joint = inputCmd2[3];
-                        jointPosCmd2[3] = Pos_Cmd_Joint + a;
+                        inputCmd3[0] = Convert.ToSingle(JT10.Text);
+                        Pos_Cmd_Joint = inputCmd3[0];
+                        jointPosCmd3[0] = Pos_Cmd_Joint + a;
 
-                        JT10.Text = jointPosCmd2[3].ToString();
+                        JT10.Text = jointPosCmd3[0].ToString();
 
-                        Pos_Cmd_Joint = inputCmd2[3];
-                        jointPosCmd2[3] = Pos_Cmd_Joint;
+                        Pos_Cmd_Joint = inputCmd3[0];
+                        jointPosCmd3[0] = Pos_Cmd_Joint;
 
-                        robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
+                        robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
                     }
                     break;
-                case 11://번 조인트 명령 2-2
-                    if (robotManager.arm2.mode == 5)
+                case 11://Edit by hmshin _ LCU 3번 Device id 1 ( 3-2 )로 변경 
+                    if (robotManager.arm3.mode == 5)
                     {
-                        inputCmd2[4] = Convert.ToSingle(JT11.Text);
-                        Pos_Cmd_Joint = inputCmd2[4];
-                        jointPosCmd2[4] = Pos_Cmd_Joint + a;
+                        inputCmd3[1] = Convert.ToSingle(JT11.Text);
+                        Pos_Cmd_Joint = inputCmd3[1];
+                        jointPosCmd3[1] = Pos_Cmd_Joint + a;
 
-                        JT11.Text = jointPosCmd2[4].ToString();
+                        JT11.Text = jointPosCmd3[1].ToString();
 
-                        Pos_Cmd_Joint = inputCmd2[4];
-                        jointPosCmd2[4] = Pos_Cmd_Joint;
+                        Pos_Cmd_Joint = inputCmd3[1];
+                        jointPosCmd3[1] = Pos_Cmd_Joint;
 
-                        robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
+                        robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
                     }
                     break;
-                case 12://번 조인트 명령 2-2
-                    if (robotManager.arm2.mode == 5)
+                case 12://Edit by hmshin _ LCU 3번 Device id 1 ( 3-3 )로 변경 
+                    if (robotManager.arm3.mode == 5)
                     {
-                        inputCmd2[5] = Convert.ToSingle(JT12.Text);
-                        Pos_Cmd_Joint = inputCmd2[5];
-                        jointPosCmd2[5] = Pos_Cmd_Joint + a;
+                        inputCmd3[2] = Convert.ToSingle(JT12.Text);
+                        Pos_Cmd_Joint = inputCmd3[2];
+                        jointPosCmd3[2] = Pos_Cmd_Joint + a;
 
-                        JT12.Text = jointPosCmd2[5].ToString();
+                        JT12.Text = jointPosCmd3[2].ToString();
 
-                        Pos_Cmd_Joint = inputCmd2[5];
-                        jointPosCmd2[5] = Pos_Cmd_Joint;
+                        Pos_Cmd_Joint = inputCmd3[2];
+                        jointPosCmd3[2] = Pos_Cmd_Joint;
 
-                        robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
+                        robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
                     }
                     break;
                 case 13://번 조인트 명령 LCU3
@@ -3815,94 +3883,94 @@ namespace TKV
                         //robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd3[5], 0); 2번 LCU 7번째 축 제어 구현이 아직 되어있지 않음
                     }
                     break;
-                case 14://번 조인트 명령 LCU3
-                    if (robotManager.arm3.mode == 5)
+                case 14://Edit by hmshin _ LCU 2번 Device id 1 ( 2-3 )로 변경 
+                    if (robotManager.arm2.mode == 5)
                     {
-                        inputCmd3[0] = Convert.ToSingle(JT14.Text);
-                        jointPosCmd3[0] = inputCmd3[0] + a;
+                        inputCmd2[3] = Convert.ToSingle(JT14.Text);
+                        jointPosCmd2[3] = inputCmd2[3] + a;
 
-                        JT14.Text = jointPosCmd3[0].ToString();
+                        JT14.Text = jointPosCmd2[3].ToString();
 
-                        robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
+                        robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
                     }
                     break;
-                case 15://번 조인트 명령 LCU3 15
-                    if (robotManager.arm3.mode == 5)
+                case 15://Edit by hmshin _ LCU 2번 Device id 1 ( 2-4 )로 변경 
+                    if (robotManager.arm2.mode == 5)
                     {
-                        inputCmd3[1] = Convert.ToSingle(JT15.Text);
-                        Pos_Cmd_Joint = inputCmd3[1];
-                        jointPosCmd3[1] = Pos_Cmd_Joint + a;
+                        inputCmd2[4] = Convert.ToSingle(JT15.Text);
+                        Pos_Cmd_Joint = inputCmd2[4];
+                        jointPosCmd2[4] = Pos_Cmd_Joint + a;
 
-                        JT15.Text = jointPosCmd3[1].ToString();
+                        JT15.Text = jointPosCmd2[4].ToString();
 
-                        Pos_Cmd_Joint = inputCmd3[1];
-                        jointPosCmd3[1] = Pos_Cmd_Joint;
+                        Pos_Cmd_Joint = inputCmd2[4];
+                        jointPosCmd2[4] = Pos_Cmd_Joint;
 
-                        robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
+                        robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
                     }
                     break;
-                case 16://번 조인트 명령 LCU3
-                    if (robotManager.arm3.mode == 5)
+                case 16://Edit by hmshin _ LCU 2번 Device id 1 ( 2-5 )로 변경 
+                    if (robotManager.arm2.mode == 5)
                     {
-                        inputCmd3[2] = Convert.ToSingle(JT16.Text);
-                        Pos_Cmd_Joint = inputCmd3[2];
-                        jointPosCmd3[2] = Pos_Cmd_Joint + a;
+                        inputCmd2[5] = Convert.ToSingle(JT16.Text);
+                        Pos_Cmd_Joint = inputCmd2[5];
+                        jointPosCmd2[5] = Pos_Cmd_Joint + a;
 
-                        JT16.Text = jointPosCmd3[2].ToString();
+                        JT16.Text = jointPosCmd2[5].ToString();
 
-                        Pos_Cmd_Joint = inputCmd3[2];
-                        jointPosCmd3[2] = Pos_Cmd_Joint;
+                        Pos_Cmd_Joint = inputCmd2[5];
+                        jointPosCmd2[5] = Pos_Cmd_Joint;
 
-                        robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
+                        robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
                     }
                     break;
-                case 17://번 조인트 명령 LCU3
-                    if (robotManager.arm3.mode == 5)
+                case 17://Edit by hmshin _ LCU 4번 Device id 1 ( 4-1 )로 변경 
+                    if (robotManager.arm4.mode == 5)
                     {
-                        inputCmd3[3] = Convert.ToSingle(JT17.Text);
-                        Pos_Cmd_Joint = inputCmd3[3];
-                        jointPosCmd3[3] = Pos_Cmd_Joint + a;
+                        inputCmd4[0] = Convert.ToSingle(JT17.Text);
+                        Pos_Cmd_Joint = inputCmd4[0];
+                        jointPosCmd4[0] = Pos_Cmd_Joint + a;
 
-                        JT17.Text = jointPosCmd3[3].ToString();
+                        JT17.Text = jointPosCmd4[0].ToString();
 
-                        Pos_Cmd_Joint = inputCmd3[3];
-                        jointPosCmd3[3] = Pos_Cmd_Joint;
+                        Pos_Cmd_Joint = inputCmd4[0];
+                        jointPosCmd4[0] = Pos_Cmd_Joint;
 
-                        robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
+                        robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
                     }
                     break;
-                case 18://번 조인트 명령 LCU3
-                    if (robotManager.arm3.mode == 5)
+                case 18://Edit by hmshin _ LCU 4번 Device id 2 ( 4-2 )로 변경 
+                    if (robotManager.arm4.mode == 5)
                     {
-                        inputCmd3[4] = Convert.ToSingle(JT18.Text);
-                        Pos_Cmd_Joint = inputCmd3[4];
-                        jointPosCmd3[4] = Pos_Cmd_Joint + a;
+                        inputCmd4[1] = Convert.ToSingle(JT18.Text);
+                        Pos_Cmd_Joint = inputCmd4[1];
+                        jointPosCmd4[1] = Pos_Cmd_Joint + a;
 
-                        JT18.Text = jointPosCmd3[4].ToString();
+                        JT18.Text = jointPosCmd4[1].ToString();
 
-                        Pos_Cmd_Joint = inputCmd3[4];
-                        jointPosCmd3[4] = Pos_Cmd_Joint;
+                        Pos_Cmd_Joint = inputCmd4[1];
+                        jointPosCmd4[1] = Pos_Cmd_Joint;
 
-                        robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
+                        robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
                     }
                     break;
-                case 19://번 조인트 명령 LCU3
-                    if (robotManager.arm3.mode == 5)
+                case 19://번 조인트 명령 LCU4
+                    if (robotManager.arm4.mode == 5)
                     {
-                        inputCmd3[5] = Convert.ToSingle(JT19.Text);
-                        Pos_Cmd_Joint = inputCmd3[5];
-                        jointPosCmd3[5] = Pos_Cmd_Joint + a;
+                        inputCmd4[2] = Convert.ToSingle(JT19.Text);
+                        Pos_Cmd_Joint = inputCmd4[2];
+                        jointPosCmd4[2] = Pos_Cmd_Joint + a;
 
-                        JT19.Text = jointPosCmd3[5].ToString();
+                        JT19.Text = jointPosCmd4[2].ToString();
 
-                        Pos_Cmd_Joint = inputCmd3[5];
-                        jointPosCmd3[5] = Pos_Cmd_Joint;
+                        Pos_Cmd_Joint = inputCmd4[2];
+                        jointPosCmd4[2] = Pos_Cmd_Joint;
 
-                        robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0);
+                        robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
                     }
                     break;
-                case 20://번 조인트 명령 LCU3
-                    if (robotManager.arm3.mode == 5)
+                case 20://번 조인트 명령 LCU4
+                    if (robotManager.arm4.mode == 5)
                     {
                         //inputCmd3[6] = Convert.ToSingle(JT20.Text);
                         //jointPosCmd3[6] = inputCmd3[6] + a;
@@ -3912,140 +3980,140 @@ namespace TKV
                         //robotManager.arm3.SetArmPosCmd(jointPosCmd3, jointPosCmd3[5], 0); 아직 LCUdp 7번째 축 제어가 구현되지 않음
                     }
                     break;
-                case 21://번 조인트 명령 LCU4
-                    if (robotManager.arm4.mode == 5)
-                    {
-                        inputCmd4[0] = Convert.ToSingle(JT21.Text);
-                        Pos_Cmd_Joint = inputCmd4[0];
-                        jointPosCmd4[0] = Pos_Cmd_Joint + a;
-
-                        JT21.Text = jointPosCmd4[0].ToString();
-
-                        robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
-                    }
-                    break;
-                case 22://번 조인트 명령 LCU4
-                    if (robotManager.arm4.mode == 5)
-                    {
-                        inputCmd4[1] = Convert.ToSingle(JT22.Text);
-                        Pos_Cmd_Joint = inputCmd4[1];
-                        jointPosCmd4[1] = Pos_Cmd_Joint + a;
-
-                        JT22.Text = jointPosCmd4[1].ToString();
-
-                        robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
-                    }
-                    break;
-                case 23://번 조인트 명령 LCU4
-                    if (robotManager.arm4.mode == 5)
-                    {
-                        inputCmd4[2] = Convert.ToSingle(JT23.Text);
-                        Pos_Cmd_Joint = inputCmd4[2];
-                        jointPosCmd4[2] = Pos_Cmd_Joint + a;
-
-                        JT23.Text = jointPosCmd4[2].ToString();
-
-                        robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
-                    }
-                    break;
-                case 24://번 조인트 명령 LCU4
-                    if (robotManager.arm4.mode == 5)
-                    {
-                        inputCmd4[3] = Convert.ToSingle(JT24.Text);
-                        Pos_Cmd_Joint = inputCmd4[3];
-                        jointPosCmd4[3] = Pos_Cmd_Joint + a;
-
-                        JT24.Text = jointPosCmd4[3].ToString();
-
-                        robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
-                    }
-                    break;
-                case 25://번 조인트 명령 LCU4
-                    if (robotManager.arm4.mode == 5)
-                    {
-                        inputCmd4[4] = Convert.ToSingle(JT25.Text);
-                        Pos_Cmd_Joint = inputCmd4[4];
-                        jointPosCmd4[4] = Pos_Cmd_Joint + a;
-
-                        JT25.Text = jointPosCmd4[4].ToString();
-
-                        Pos_Cmd_Joint = inputCmd4[4];
-                        jointPosCmd4[4] = Pos_Cmd_Joint;
-
-                        robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
-                    }
-                    break;
-                case 26://번 조인트 명령 LCU4
-                    if (robotManager.arm4.mode == 5)
-                    {
-                        inputCmd4[5] = Convert.ToSingle(JT26.Text);
-                        Pos_Cmd_Joint = inputCmd4[5];
-                        jointPosCmd4[5] = Pos_Cmd_Joint + a;
-
-                        JT26.Text = jointPosCmd4[5].ToString();
-
-                        robotManager.arm4.SetArmPosCmd(jointPosCmd4, jointPosCmd4[5], 0);
-                    }
-                    break;
-                case 27://번 조인트 명령 LCU5 사실 5번을 쓰지 않고 4번이 다 할 수 도 있음
+                case 21://번 조인트 명령 LCU5
                     if (robotManager.arm5.mode == 5)
                     {
-                        inputCmd5[0] = Convert.ToSingle(JT27.Text);
+                        inputCmd5[0] = Convert.ToSingle(JT21.Text);
                         Pos_Cmd_Joint = inputCmd5[0];
                         jointPosCmd5[0] = Pos_Cmd_Joint + a;
 
-                        JT27.Text = jointPosCmd5[0].ToString();
-
-                        Pos_Cmd_Joint = inputCmd5[0];
-                        jointPosCmd5[0] = Pos_Cmd_Joint;
+                        JT21.Text = jointPosCmd5[0].ToString();
 
                         robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
                     }
                     break;
-                case 28://번 조인트 명령 LCU5
+                case 22://번 조인트 명령 LCU5
                     if (robotManager.arm5.mode == 5)
                     {
-                        inputCmd5[1] = Convert.ToSingle(JT28.Text);
+                        inputCmd5[1] = Convert.ToSingle(JT22.Text);
                         Pos_Cmd_Joint = inputCmd5[1];
                         jointPosCmd5[1] = Pos_Cmd_Joint + a;
 
-                        JT28.Text = jointPosCmd5[1].ToString();
-
-                        Pos_Cmd_Joint = inputCmd5[1];
-                        jointPosCmd5[1] = Pos_Cmd_Joint;
+                        JT22.Text = jointPosCmd5[1].ToString();
 
                         robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
                     }
                     break;
-                case 29://번 조인트 명령 LCU5
+                case 23://번 조인트 명령 LCU5
                     if (robotManager.arm5.mode == 5)
                     {
-                        inputCmd5[2] = Convert.ToSingle(JT29.Text);
+                        inputCmd5[2] = Convert.ToSingle(JT23.Text);
                         Pos_Cmd_Joint = inputCmd5[2];
                         jointPosCmd5[2] = Pos_Cmd_Joint + a;
 
-                        JT29.Text = jointPosCmd5[2].ToString();
-
-                        Pos_Cmd_Joint = inputCmd5[2];
-                        jointPosCmd5[2] = Pos_Cmd_Joint;
+                        JT23.Text = jointPosCmd5[2].ToString();
 
                         robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
                     }
                     break;
-                case 30://번 조인트 명령 LCU5
+                case 24://번 조인트 명령 LCU5
                     if (robotManager.arm5.mode == 5)
                     {
-                        inputCmd5[3] = Convert.ToSingle(JT30.Text);
+                        inputCmd5[3] = Convert.ToSingle(JT24.Text);
                         Pos_Cmd_Joint = inputCmd5[3];
                         jointPosCmd5[3] = Pos_Cmd_Joint + a;
 
-                        JT30.Text = jointPosCmd5[3].ToString();
-
-                        Pos_Cmd_Joint = inputCmd5[3];
-                        jointPosCmd5[3] = Pos_Cmd_Joint;
+                        JT24.Text = jointPosCmd5[3].ToString();
 
                         robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
                     }
+                    break;
+                case 25://번 조인트 명령 LCU5
+                    if (robotManager.arm5.mode == 5)
+                    {
+                        inputCmd5[4] = Convert.ToSingle(JT25.Text);
+                        Pos_Cmd_Joint = inputCmd5[4];
+                        jointPosCmd5[4] = Pos_Cmd_Joint + a;
+
+                        JT25.Text = jointPosCmd5[4].ToString();
+
+                        Pos_Cmd_Joint = inputCmd5[4];
+                        jointPosCmd5[4] = Pos_Cmd_Joint;
+
+                        robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
+                    }
+                    break;
+                case 26://번 조인트 명령 LCU5
+                    if (robotManager.arm5.mode == 5)
+                    {
+                        inputCmd5[5] = Convert.ToSingle(JT26.Text);
+                        Pos_Cmd_Joint = inputCmd5[5];
+                        jointPosCmd5[5] = Pos_Cmd_Joint + a;
+
+                        JT26.Text = jointPosCmd5[5].ToString();
+
+                        robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
+                    }
+                    break;
+                case 27://번 조인트 명령 LCU5 사실 5번을 쓰지 않고 4번이 다 할 수 도 있음 _ Remarked by Hmshin _ LCU6번으로 변경 필요
+                    //if (robotManager.arm5.mode == 5)
+                    //{
+                    //    inputCmd5[0] = Convert.ToSingle(JT27.Text);
+                    //    Pos_Cmd_Joint = inputCmd5[0];
+                    //    jointPosCmd5[0] = Pos_Cmd_Joint + a;
+
+                    //    JT27.Text = jointPosCmd5[0].ToString();
+
+                    //    Pos_Cmd_Joint = inputCmd5[0];
+                    //    jointPosCmd5[0] = Pos_Cmd_Joint;
+
+                    //    robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
+                    //}
+                    break;
+                case 28://번 조인트 명령 LCU5 _ Remarked by Hmshin _ LCU6번으로 변경 필요
+                    //if (robotManager.arm5.mode == 5)
+                    //{
+                    //    inputCmd5[1] = Convert.ToSingle(JT28.Text);
+                    //    Pos_Cmd_Joint = inputCmd5[1];
+                    //    jointPosCmd5[1] = Pos_Cmd_Joint + a;
+
+                    //    JT28.Text = jointPosCmd5[1].ToString();
+
+                    //    Pos_Cmd_Joint = inputCmd5[1];
+                    //    jointPosCmd5[1] = Pos_Cmd_Joint;
+
+                    //    robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
+                    //}
+                    break;
+                case 29://번 조인트 명령 LCU5_ Remarked by Hmshin _ LCU6번으로 변경 필요
+                    //if (robotManager.arm5.mode == 5)
+                    //{
+                    //    inputCmd5[2] = Convert.ToSingle(JT29.Text);
+                    //    Pos_Cmd_Joint = inputCmd5[2];
+                    //    jointPosCmd5[2] = Pos_Cmd_Joint + a;
+
+                    //    JT29.Text = jointPosCmd5[2].ToString();
+
+                    //    Pos_Cmd_Joint = inputCmd5[2];
+                    //    jointPosCmd5[2] = Pos_Cmd_Joint;
+
+                    //    robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
+                    //}
+                    break;
+                case 30://번 조인트 명령 LCU5 _ Remarked by Hmshin _ LCU6번으로 변경 필요
+                    //if (robotManager.arm5.mode == 5)
+                    //{
+                    //    inputCmd5[3] = Convert.ToSingle(JT30.Text);
+                    //    Pos_Cmd_Joint = inputCmd5[3];
+                    //    jointPosCmd5[3] = Pos_Cmd_Joint + a;
+
+                    //    JT30.Text = jointPosCmd5[3].ToString();
+
+                    //    Pos_Cmd_Joint = inputCmd5[3];
+                    //    jointPosCmd5[3] = Pos_Cmd_Joint;
+
+                    //    robotManager.arm5.SetArmPosCmd(jointPosCmd5, jointPosCmd5[5], 0);
+                    //}
                     break;
             }
 
@@ -4109,69 +4177,6 @@ namespace TKV
         }
         #endregion
 
-        #region CAN Field
-        private void btnCAN_Click(object sender, EventArgs e)
-        {
-            canON = !canON;
-            if (canON)
-            {
-                //gr_CAN.Visible = true;
-                robotManager.arm.SendSetCanConnect(true);
-                btnCAN.BackColor = Color.DarkCyan;
-            }
-            else
-            {
-                //gr_CAN.Visible = false;
-                robotManager.arm.SendSetCanConnect(false);
-                btnCAN.BackColor = Color.FromArgb(50, 54, 58);
-            }
-        }
-        private void CANtx_Click(object sender, EventArgs e)
-        {
-            CAN_Serail.Text = _canSerialCmd + CAN_Serail.Text;
-            robotManager.arm.SendCanSerialDataUDP(canID, CAN_Serail.Text);
-            txtCanData.Text = robotManager.arm._canUDPRx.rxData.ToString();
-        }
-        private void CANrx_Click(object sender, EventArgs e)
-        {
-            txtCanData.Text = robotManager.arm._canUDPRx.rxData.ToString();
-        }
-        private void HAClist_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string val = HAClist.SelectedItem.ToString();
-
-            switch (val)
-            {
-                case "Device 1":
-                    canID = 1;
-                    robotManager.arm._canUDP.Id = 1;
-                    break;
-                case "Device 2":
-                    canID = 2;
-                    robotManager.arm._canUDP.Id = 2;
-                    break;
-                case "Device 3":
-                    canID = 3;
-                    robotManager.arm._canUDP.Id = 3;
-                    break;
-                case "Device 4":
-                    canID = 4;
-                    robotManager.arm._canUDP.Id = 4;
-                    break;
-                case "Device 5":
-                    canID = 5;
-                    robotManager.arm._canUDP.Id = 5;
-                    break;
-                case "Device 6":
-                    canID = 6;
-                    robotManager.arm._canUDP.Id = 6;
-                    break;
-                case "Device 7":
-                    canID = 7;
-                    robotManager.arm._canUDP.Id = 7;
-                    break;
-            }
-        }
 
         private void checkBoxSimulMod_CheckedChanged(object sender, EventArgs e)
         {
@@ -4193,8 +4198,6 @@ namespace TKV
                     moveThread = false;//움직임을 계속 날려주는 무브 쓰레트 정지
                     break;
             }
-
-
         }
 
         private void BtnTKVopen_Click(object sender, EventArgs e) //TKV File loading
@@ -4333,7 +4336,7 @@ namespace TKV
 
         private void J15Down_Click(object sender, EventArgs e)
         {
-            JointUpOr_Click(16, false);
+            JointUpOr_Click(15, false);
         }
 
         private void J16Up_Click(object sender, EventArgs e)
@@ -4486,15 +4489,162 @@ namespace TKV
             JointUpOr_Click(30, false);
         }
 
+        // mouse click end
 
+        #region CAN Field
+        private void btnCAN_Click(object sender, EventArgs e)
+        {
+            canON = !canON;
+            if (canON)
+            {
+                //gr_CAN.Visible = true;
+                robotManager.arm.SendSetCanConnect(true);
+                robotManager.arm2.SendSetCanConnect(true);
+                robotManager.arm3.SendSetCanConnect(true);
+                robotManager.arm4.SendSetCanConnect(true);
+                robotManager.arm5.SendSetCanConnect(true);
+                btnCAN.BackColor = Color.DarkCyan;
+            }
+            else
+            {
+                //gr_CAN.Visible = false;
+                robotManager.arm.SendSetCanConnect(false);
+                robotManager.arm2.SendSetCanConnect(false);
+                robotManager.arm3.SendSetCanConnect(false);
+                robotManager.arm4.SendSetCanConnect(false);
+                robotManager.arm5.SendSetCanConnect(false);
+                btnCAN.BackColor = Color.FromArgb(50, 54, 58);
+            }
+        }
+        private void CANtx_Click(object sender, EventArgs e)
+        {
+            CAN_Serail.Text = _canSerialCmd + CAN_Serail.Text;
+            if (LCUno == 1)
+            {                
+                robotManager.arm.SendCanSerialDataUDP(canID, CAN_Serail.Text);
+                txtCanData.Text = robotManager.arm._canUDPRx.rxData.ToString();
+                Debug.WriteLine(LCUno);
+            }
+            else if (LCUno == 2)
+            {                
+                robotManager.arm2.SendCanSerialDataUDP(canID, CAN_Serail.Text);
+                txtCanData.Text = robotManager.arm2._canUDPRx.rxData.ToString();
+                Debug.WriteLine(LCUno);
+            }
+            else if (LCUno == 3)
+            {                
+                robotManager.arm3.SendCanSerialDataUDP(canID, CAN_Serail.Text);
+                txtCanData.Text = robotManager.arm3._canUDPRx.rxData.ToString();
+                Debug.WriteLine(LCUno);
+            }
+            else if (LCUno == 4)
+            {                
+                robotManager.arm4.SendCanSerialDataUDP(canID, CAN_Serail.Text);
+                txtCanData.Text = robotManager.arm4._canUDPRx.rxData.ToString();
+                Debug.WriteLine(LCUno);
+            }
+            else if (LCUno == 5)
+            {
+                robotManager.arm5.SendCanSerialDataUDP(canID, CAN_Serail.Text);
+                txtCanData.Text = robotManager.arm5._canUDPRx.rxData.ToString();
+                Debug.WriteLine(LCUno);
+            }
+        }
+        private void CANrx_Click(object sender, EventArgs e)
+        {
+            if (LCUno == 1)
+            {
+                txtCanData.Text = robotManager.arm._canUDPRx.rxData.ToString();
+            }
+            else if (LCUno == 2)
+            {
+                txtCanData.Text = robotManager.arm2._canUDPRx.rxData.ToString();
+            }
+            else if (LCUno == 3)
+            {
+                txtCanData.Text = robotManager.arm3._canUDPRx.rxData.ToString();
+            }
+            else if (LCUno == 4)
+            {
+                txtCanData.Text = robotManager.arm4._canUDPRx.rxData.ToString();
+            }
+            else if (LCUno == 5)
+            {
+                txtCanData.Text = robotManager.arm5._canUDPRx.rxData.ToString();
+            }
+        }
 
+        private void LCUlist_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string val = LCUlist.SelectedItem.ToString();
 
+            switch (val)
+            {
+                case "LCU_1 (HDWT)":
+                    LCUno = 1;
+                    robotManager.arm.SetDeviceHeader(LcuCommon.HEADER_PC1, LcuCommon.HEADER_LCU1);
+                    break;
+                case "LCU_2 (SH)":
+                    LCUno = 2;
+                    robotManager.arm2.SetDeviceHeader(LcuCommon.HEADER_PC1, LcuCommon.HEADER_LCU2);
+                    break;
+                case "LCU_3 (AL)":
+                    LCUno = 3;
+                    robotManager.arm3.SetDeviceHeader(LcuCommon.HEADER_PC1, LcuCommon.HEADER_LCU3);
+                    break;
+                case "LCU_4 (AR)":
+                    LCUno = 4;
+                    robotManager.arm4.SetDeviceHeader(LcuCommon.HEADER_PC1, LcuCommon.HEADER_LCU4);
+                    break;
+                case "LCU_5 (LLLR)":
+                    LCUno = 5;
+                    robotManager.arm5.SetDeviceHeader(LcuCommon.HEADER_PC1, LcuCommon.HEADER_LCU5);
+                    break;
+                case "LCU_6 (Gimmick)":
+                    LCUno = 5;
+                    break;
+                default:
+                    robotManager.arm.SetDeviceHeader(LcuCommon.HEADER_PC1, LcuCommon.HEADER_LCU1);
+                    break;
+            }
+        }
 
+        private void HAClist_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string val = HAClist.SelectedItem.ToString();
 
-
-        // mouse clsick end
-
-
+            switch (val)
+            {
+                case "Device 1":
+                    canID = 1;
+                    robotManager.arm._canUDP.Id = 1;
+                    break;
+                case "Device 2":
+                    canID = 2;
+                    robotManager.arm._canUDP.Id = 2;
+                    break;
+                case "Device 3":
+                    canID = 3;
+                    robotManager.arm._canUDP.Id = 3;
+                    break;
+                case "Device 4":
+                    canID = 4;
+                    robotManager.arm._canUDP.Id = 4;
+                    break;
+                case "Device 5":
+                    canID = 5;
+                    robotManager.arm._canUDP.Id = 5;
+                    break;
+                case "Device 6":
+                    canID = 6;
+                    robotManager.arm._canUDP.Id = 6;
+                    break;
+                case "Device 7":
+                    canID = 7;
+                    robotManager.arm._canUDP.Id = 7;
+                    break;
+            }
+        }
 
         private void hacIndex_SelectedIndexChanged(object sender, EventArgs e)
         {
