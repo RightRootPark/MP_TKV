@@ -60,6 +60,8 @@ namespace TKV
             this.move_to_target = new System.Windows.Forms.Button();
             this.movestop = new System.Windows.Forms.Button();
             this.gr_CAN = new System.Windows.Forms.GroupBox();
+            this.LCUlist = new System.Windows.Forms.ComboBox();
+            this.label31 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.subIndex = new System.Windows.Forms.ComboBox();
@@ -149,8 +151,6 @@ namespace TKV
             this.Tar_E2 = new System.Windows.Forms.TextBox();
             this.Tar_E1 = new System.Windows.Forms.TextBox();
             this.PN_NotUse = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label86 = new System.Windows.Forms.Label();
             this.pnConveGain = new System.Windows.Forms.Panel();
             this.btnSend = new System.Windows.Forms.Button();
             this.aLimit_1 = new System.Windows.Forms.TextBox();
@@ -184,6 +184,8 @@ namespace TKV
             this.label72 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label86 = new System.Windows.Forms.Label();
             this.cGain = new System.Windows.Forms.TextBox();
             this.label = new System.Windows.Forms.Label();
             this.pnError = new System.Windows.Forms.Panel();
@@ -202,6 +204,7 @@ namespace TKV
             this.btnSim = new System.Windows.Forms.CheckBox();
             this.pn_Monitoring = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.SafetyMove_checkBox = new System.Windows.Forms.CheckBox();
             this.JT14 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.J30Up = new System.Windows.Forms.Button();
@@ -493,8 +496,8 @@ namespace TKV
             this.gr_CAN.SuspendLayout();
             this.pn_Debug.SuspendLayout();
             this.PN_NotUse.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.pnConveGain.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.pnError.SuspendLayout();
             this.panel5.SuspendLayout();
             this.pn_Monitoring.SuspendLayout();
@@ -653,7 +656,7 @@ namespace TKV
             // J5Down
             // 
             this.J5Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J5Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J5Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J5Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J5Down.Location = new System.Drawing.Point(316, 181);
             this.J5Down.Name = "J5Down";
@@ -667,7 +670,7 @@ namespace TKV
             // J5Up
             // 
             this.J5Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J5Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J5Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J5Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J5Up.Location = new System.Drawing.Point(351, 181);
             this.J5Up.Name = "J5Up";
@@ -681,7 +684,7 @@ namespace TKV
             // J3Down
             // 
             this.J3Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J3Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J3Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J3Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J3Down.Location = new System.Drawing.Point(316, 126);
             this.J3Down.Name = "J3Down";
@@ -695,7 +698,7 @@ namespace TKV
             // J3Up
             // 
             this.J3Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J3Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J3Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J3Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J3Up.Location = new System.Drawing.Point(351, 126);
             this.J3Up.Name = "J3Up";
@@ -746,7 +749,7 @@ namespace TKV
             // pos_update
             // 
             this.pos_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pos_update.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.pos_update.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.pos_update.Location = new System.Drawing.Point(132, 105);
             this.pos_update.Name = "pos_update";
             this.pos_update.Size = new System.Drawing.Size(100, 25);
@@ -761,7 +764,7 @@ namespace TKV
             this.btn_LCUpro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_LCUpro.Cursor = System.Windows.Forms.Cursors.Default;
             this.btn_LCUpro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_LCUpro.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_LCUpro.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_LCUpro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.btn_LCUpro.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_LCUpro.Location = new System.Drawing.Point(5, 13);
@@ -776,7 +779,7 @@ namespace TKV
             // 
             this.btnEmg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.btnEmg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmg.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnEmg.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnEmg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.btnEmg.Location = new System.Drawing.Point(332, 13);
             this.btnEmg.Name = "btnEmg";
@@ -791,7 +794,7 @@ namespace TKV
             this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.btnReset.Enabled = false;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnReset.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.btnReset.Location = new System.Drawing.Point(166, 13);
             this.btnReset.Name = "btnReset";
@@ -815,7 +818,7 @@ namespace TKV
             // move_to_target
             // 
             this.move_to_target.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.move_to_target.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.move_to_target.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.move_to_target.Location = new System.Drawing.Point(132, 225);
             this.move_to_target.Name = "move_to_target";
             this.move_to_target.Size = new System.Drawing.Size(100, 25);
@@ -828,7 +831,7 @@ namespace TKV
             // movestop
             // 
             this.movestop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.movestop.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.movestop.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.movestop.Location = new System.Drawing.Point(132, 258);
             this.movestop.Name = "movestop";
             this.movestop.Size = new System.Drawing.Size(100, 25);
@@ -841,6 +844,8 @@ namespace TKV
             // gr_CAN
             // 
             this.gr_CAN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
+            this.gr_CAN.Controls.Add(this.LCUlist);
+            this.gr_CAN.Controls.Add(this.label31);
             this.gr_CAN.Controls.Add(this.label10);
             this.gr_CAN.Controls.Add(this.label9);
             this.gr_CAN.Controls.Add(this.subIndex);
@@ -853,19 +858,47 @@ namespace TKV
             this.gr_CAN.Controls.Add(this.label4);
             this.gr_CAN.Controls.Add(this.CAN_Serail);
             this.gr_CAN.Controls.Add(this.label3);
-            this.gr_CAN.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.gr_CAN.Location = new System.Drawing.Point(6, 81);
+            this.gr_CAN.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.gr_CAN.Location = new System.Drawing.Point(6, 80);
             this.gr_CAN.Name = "gr_CAN";
-            this.gr_CAN.Size = new System.Drawing.Size(223, 174);
+            this.gr_CAN.Size = new System.Drawing.Size(223, 208);
             this.gr_CAN.TabIndex = 148;
             this.gr_CAN.TabStop = false;
             this.gr_CAN.Text = "CAN SDO";
             // 
+            // LCUlist
+            // 
+            this.LCUlist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LCUlist.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LCUlist.FormattingEnabled = true;
+            this.LCUlist.Items.AddRange(new object[] {
+            "LCU_1 (HDWT)",
+            "LCU_2 (SH)",
+            "LCU_3 (AL)",
+            "LCU_4 (AR)",
+            "LCU_5 (LLLR)",
+            "LCU_6 (Gimmick)"});
+            this.LCUlist.Location = new System.Drawing.Point(100, 23);
+            this.LCUlist.Name = "LCUlist";
+            this.LCUlist.Size = new System.Drawing.Size(100, 23);
+            this.LCUlist.TabIndex = 192;
+            this.LCUlist.SelectedIndexChanged += new System.EventHandler(this.LCUlist_SelectedIndexChanged);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label31.Location = new System.Drawing.Point(3, 27);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(83, 15);
+            this.label31.TabIndex = 193;
+            this.label31.Text = "Select LCUpro";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label10.Location = new System.Drawing.Point(3, 82);
+            this.label10.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label10.Location = new System.Drawing.Point(3, 115);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(61, 15);
             this.label10.TabIndex = 191;
@@ -874,8 +907,8 @@ namespace TKV
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label9.Location = new System.Drawing.Point(3, 53);
+            this.label9.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label9.Location = new System.Drawing.Point(3, 86);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(36, 15);
             this.label9.TabIndex = 190;
@@ -885,9 +918,9 @@ namespace TKV
             // 
             this.subIndex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.subIndex.Enabled = false;
-            this.subIndex.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.subIndex.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.subIndex.FormattingEnabled = true;
-            this.subIndex.Location = new System.Drawing.Point(100, 79);
+            this.subIndex.Location = new System.Drawing.Point(100, 112);
             this.subIndex.Name = "subIndex";
             this.subIndex.Size = new System.Drawing.Size(100, 23);
             this.subIndex.TabIndex = 189;
@@ -896,7 +929,7 @@ namespace TKV
             // hacIndex
             // 
             this.hacIndex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.hacIndex.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.hacIndex.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.hacIndex.FormattingEnabled = true;
             this.hacIndex.Items.AddRange(new object[] {
             " ",
@@ -916,7 +949,7 @@ namespace TKV
             "Target Velocity",
             "Actual Velocity",
             "Raw Joint Angle"});
-            this.hacIndex.Location = new System.Drawing.Point(100, 50);
+            this.hacIndex.Location = new System.Drawing.Point(100, 83);
             this.hacIndex.Name = "hacIndex";
             this.hacIndex.Size = new System.Drawing.Size(100, 23);
             this.hacIndex.TabIndex = 188;
@@ -925,8 +958,8 @@ namespace TKV
             // CANrx
             // 
             this.CANrx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CANrx.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CANrx.Location = new System.Drawing.Point(160, 144);
+            this.CANrx.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CANrx.Location = new System.Drawing.Point(160, 177);
             this.CANrx.Name = "CANrx";
             this.CANrx.Size = new System.Drawing.Size(58, 24);
             this.CANrx.TabIndex = 187;
@@ -937,8 +970,8 @@ namespace TKV
             // CANtx
             // 
             this.CANtx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CANtx.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CANtx.Location = new System.Drawing.Point(160, 111);
+            this.CANtx.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CANtx.Location = new System.Drawing.Point(160, 144);
             this.CANtx.Name = "CANtx";
             this.CANtx.Size = new System.Drawing.Size(58, 24);
             this.CANtx.TabIndex = 186;
@@ -949,9 +982,9 @@ namespace TKV
             // txtCanData
             // 
             this.txtCanData.BackColor = System.Drawing.SystemColors.Info;
-            this.txtCanData.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtCanData.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtCanData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
-            this.txtCanData.Location = new System.Drawing.Point(100, 145);
+            this.txtCanData.Location = new System.Drawing.Point(100, 178);
             this.txtCanData.Name = "txtCanData";
             this.txtCanData.ReadOnly = true;
             this.txtCanData.Size = new System.Drawing.Size(54, 23);
@@ -961,8 +994,8 @@ namespace TKV
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(3, 149);
+            this.label5.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(3, 182);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 15);
             this.label5.TabIndex = 184;
@@ -971,7 +1004,7 @@ namespace TKV
             // HAClist
             // 
             this.HAClist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.HAClist.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.HAClist.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.HAClist.FormattingEnabled = true;
             this.HAClist.Items.AddRange(new object[] {
             "Device 1",
@@ -981,7 +1014,7 @@ namespace TKV
             "Device 5",
             "Device 6",
             "Device 7"});
-            this.HAClist.Location = new System.Drawing.Point(100, 21);
+            this.HAClist.Location = new System.Drawing.Point(100, 54);
             this.HAClist.Name = "HAClist";
             this.HAClist.Size = new System.Drawing.Size(100, 23);
             this.HAClist.TabIndex = 182;
@@ -990,18 +1023,18 @@ namespace TKV
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(3, 25);
+            this.label4.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(3, 58);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 15);
+            this.label4.Size = new System.Drawing.Size(86, 15);
             this.label4.TabIndex = 183;
-            this.label4.Text = "Select device";
+            this.label4.Text = "Select HACpro";
             // 
             // CAN_Serail
             // 
-            this.CAN_Serail.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CAN_Serail.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.CAN_Serail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
-            this.CAN_Serail.Location = new System.Drawing.Point(100, 112);
+            this.CAN_Serail.Location = new System.Drawing.Point(100, 145);
             this.CAN_Serail.Name = "CAN_Serail";
             this.CAN_Serail.Size = new System.Drawing.Size(54, 23);
             this.CAN_Serail.TabIndex = 53;
@@ -1010,8 +1043,8 @@ namespace TKV
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(3, 116);
+            this.label3.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(3, 149);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 15);
             this.label3.TabIndex = 182;
@@ -1029,8 +1062,8 @@ namespace TKV
             // btnCAN
             // 
             this.btnCAN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCAN.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCAN.Location = new System.Drawing.Point(6, 43);
+            this.btnCAN.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCAN.Location = new System.Drawing.Point(6, 41);
             this.btnCAN.Name = "btnCAN";
             this.btnCAN.Size = new System.Drawing.Size(90, 30);
             this.btnCAN.TabIndex = 147;
@@ -1075,7 +1108,7 @@ namespace TKV
             // readTXT
             // 
             this.readTXT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.readTXT.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.readTXT.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.readTXT.Location = new System.Drawing.Point(132, 193);
             this.readTXT.Name = "readTXT";
             this.readTXT.Size = new System.Drawing.Size(100, 25);
@@ -1089,7 +1122,7 @@ namespace TKV
             // 
             this.setMaster.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.setMaster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.setMaster.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.setMaster.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.setMaster.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.setMaster.Location = new System.Drawing.Point(107, 502);
             this.setMaster.Name = "setMaster";
@@ -1102,7 +1135,7 @@ namespace TKV
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label36.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label36.Location = new System.Drawing.Point(769, 0);
             this.label36.Name = "label36";
@@ -1116,7 +1149,7 @@ namespace TKV
             this.mode_List.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.mode_List.DropDownWidth = 80;
             this.mode_List.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mode_List.Font = new System.Drawing.Font("맑은 고딕", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.mode_List.Font = new System.Drawing.Font("Malgun Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.mode_List.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.mode_List.FormattingEnabled = true;
             this.mode_List.IntegralHeight = false;
@@ -1149,7 +1182,7 @@ namespace TKV
             // btnDebug
             // 
             this.btnDebug.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDebug.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnDebug.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnDebug.ForeColor = System.Drawing.Color.Silver;
             this.btnDebug.Location = new System.Drawing.Point(9, 13);
             this.btnDebug.Name = "btnDebug";
@@ -1196,9 +1229,9 @@ namespace TKV
             this.pn_Debug.Controls.Add(this.pos_update);
             this.pn_Debug.Controls.Add(this.C2);
             this.pn_Debug.Controls.Add(this.lbCmdJ4);
-            this.pn_Debug.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.pn_Debug.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.pn_Debug.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.pn_Debug.Location = new System.Drawing.Point(303, 4);
+            this.pn_Debug.Location = new System.Drawing.Point(1042, 441);
             this.pn_Debug.Name = "pn_Debug";
             this.pn_Debug.Size = new System.Drawing.Size(238, 298);
             this.pn_Debug.TabIndex = 222;
@@ -1206,7 +1239,7 @@ namespace TKV
             // label85
             // 
             this.label85.AutoSize = true;
-            this.label85.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label85.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label85.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label85.Location = new System.Drawing.Point(5, 8);
             this.label85.Name = "label85";
@@ -1273,7 +1306,7 @@ namespace TKV
             // cmd_send
             // 
             this.cmd_send.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmd_send.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cmd_send.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cmd_send.Location = new System.Drawing.Point(132, 138);
             this.cmd_send.Name = "cmd_send";
             this.cmd_send.Size = new System.Drawing.Size(100, 25);
@@ -1284,7 +1317,7 @@ namespace TKV
             // 
             // vLimit_6
             // 
-            this.vLimit_6.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.vLimit_6.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.vLimit_6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.vLimit_6.Location = new System.Drawing.Point(46, 196);
             this.vLimit_6.Name = "vLimit_6";
@@ -1295,7 +1328,7 @@ namespace TKV
             // 
             // vLimit_5
             // 
-            this.vLimit_5.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.vLimit_5.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.vLimit_5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.vLimit_5.Location = new System.Drawing.Point(46, 165);
             this.vLimit_5.Name = "vLimit_5";
@@ -1306,7 +1339,7 @@ namespace TKV
             // 
             // vLimit_4
             // 
-            this.vLimit_4.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.vLimit_4.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.vLimit_4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.vLimit_4.Location = new System.Drawing.Point(46, 134);
             this.vLimit_4.Name = "vLimit_4";
@@ -1318,7 +1351,7 @@ namespace TKV
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label49.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label49.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label49.Location = new System.Drawing.Point(14, 139);
             this.label49.Name = "label49";
@@ -1329,7 +1362,7 @@ namespace TKV
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label50.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label50.Location = new System.Drawing.Point(14, 170);
             this.label50.Name = "label50";
@@ -1340,7 +1373,7 @@ namespace TKV
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label51.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label51.Location = new System.Drawing.Point(14, 201);
             this.label51.Name = "label51";
@@ -1352,7 +1385,7 @@ namespace TKV
             // 
             this.JT3.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT3.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT3.Location = new System.Drawing.Point(103, 126);
             this.JT3.Name = "JT3";
@@ -1365,7 +1398,7 @@ namespace TKV
             // 
             this.JT5.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT5.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT5.Location = new System.Drawing.Point(103, 181);
             this.JT5.Name = "JT5";
@@ -1378,7 +1411,7 @@ namespace TKV
             // 
             this.JT6.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT6.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT6.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT6.Location = new System.Drawing.Point(103, 206);
             this.JT6.Name = "JT6";
@@ -1391,7 +1424,7 @@ namespace TKV
             // 
             this.W4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.W4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.W4.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.W4.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.W4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.W4.Location = new System.Drawing.Point(123, 160);
             this.W4.Name = "W4";
@@ -1406,7 +1439,7 @@ namespace TKV
             // 
             this.W5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.W5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.W5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.W5.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.W5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.W5.Location = new System.Drawing.Point(123, 193);
             this.W5.Name = "W5";
@@ -1421,7 +1454,7 @@ namespace TKV
             // 
             this.W6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.W6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.W6.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.W6.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.W6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.W6.Location = new System.Drawing.Point(123, 220);
             this.W6.Name = "W6";
@@ -1436,7 +1469,7 @@ namespace TKV
             // 
             this.JC3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC3.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC3.Location = new System.Drawing.Point(234, 126);
             this.JC3.Name = "JC3";
@@ -1450,7 +1483,7 @@ namespace TKV
             // 
             this.JC6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC6.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC6.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC6.Location = new System.Drawing.Point(234, 206);
             this.JC6.Name = "JC6";
@@ -1463,7 +1496,7 @@ namespace TKV
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label13.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label13.Location = new System.Drawing.Point(2, 129);
             this.label13.Name = "label13";
@@ -1475,7 +1508,7 @@ namespace TKV
             // 
             this.JC5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC5.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC5.Location = new System.Drawing.Point(234, 181);
             this.JC5.Name = "JC5";
@@ -1488,7 +1521,7 @@ namespace TKV
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label20.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label20.Location = new System.Drawing.Point(2, 182);
             this.label20.Name = "label20";
@@ -1500,7 +1533,7 @@ namespace TKV
             // 
             this.J3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J3.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J3.Location = new System.Drawing.Point(166, 126);
             this.J3.Name = "J3";
@@ -1513,7 +1546,7 @@ namespace TKV
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label32.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label32.Location = new System.Drawing.Point(2, 209);
             this.label32.Name = "label32";
@@ -1525,7 +1558,7 @@ namespace TKV
             // 
             this.J5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J5.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J5.Location = new System.Drawing.Point(166, 181);
             this.J5.Name = "J5";
@@ -1539,7 +1572,7 @@ namespace TKV
             // 
             this.J6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J6.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J6.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J6.Location = new System.Drawing.Point(166, 206);
             this.J6.Name = "J6";
@@ -1553,7 +1586,7 @@ namespace TKV
             // 
             this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox9.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.textBox9.Location = new System.Drawing.Point(98, 23);
             this.textBox9.Name = "textBox9";
@@ -1566,7 +1599,7 @@ namespace TKV
             // 
             this.E6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.E6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.E6.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.E6.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.E6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.E6.Location = new System.Drawing.Point(105, 188);
             this.E6.Name = "E6";
@@ -1580,7 +1613,7 @@ namespace TKV
             // 
             this.E5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.E5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.E5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.E5.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.E5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.E5.Location = new System.Drawing.Point(105, 161);
             this.E5.Name = "E5";
@@ -1594,7 +1627,7 @@ namespace TKV
             // 
             this.WC6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.WC6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.WC6.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.WC6.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.WC6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.WC6.Location = new System.Drawing.Point(191, 220);
             this.WC6.Name = "WC6";
@@ -1609,7 +1642,7 @@ namespace TKV
             // 
             this.E4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.E4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.E4.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.E4.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.E4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.E4.Location = new System.Drawing.Point(105, 133);
             this.E4.Name = "E4";
@@ -1623,7 +1656,7 @@ namespace TKV
             // 
             this.WC5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.WC5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.WC5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.WC5.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.WC5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.WC5.Location = new System.Drawing.Point(191, 193);
             this.WC5.Name = "WC5";
@@ -1638,7 +1671,7 @@ namespace TKV
             // 
             this.E3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.E3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.E3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.E3.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.E3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.E3.Location = new System.Drawing.Point(105, 107);
             this.E3.Name = "E3";
@@ -1652,7 +1685,7 @@ namespace TKV
             // 
             this.E2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.E2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.E2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.E2.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.E2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.E2.Location = new System.Drawing.Point(105, 79);
             this.E2.Name = "E2";
@@ -1666,7 +1699,7 @@ namespace TKV
             // 
             this.WC4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.WC4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.WC4.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.WC4.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.WC4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.WC4.Location = new System.Drawing.Point(191, 160);
             this.WC4.Name = "WC4";
@@ -1681,7 +1714,7 @@ namespace TKV
             // 
             this.E1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.E1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.E1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.E1.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.E1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.E1.Location = new System.Drawing.Point(105, 50);
             this.E1.Name = "E1";
@@ -1694,7 +1727,7 @@ namespace TKV
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label61.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label61.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label61.Location = new System.Drawing.Point(168, 196);
             this.label61.Name = "label61";
@@ -1706,7 +1739,7 @@ namespace TKV
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label62.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label62.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label62.Location = new System.Drawing.Point(168, 169);
             this.label62.Name = "label62";
@@ -1718,7 +1751,7 @@ namespace TKV
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label63.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label63.Location = new System.Drawing.Point(168, 141);
             this.label63.Name = "label63";
@@ -1730,7 +1763,7 @@ namespace TKV
             // lb_E3_cur
             // 
             this.lb_E3_cur.AutoSize = true;
-            this.lb_E3_cur.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lb_E3_cur.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lb_E3_cur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.lb_E3_cur.Location = new System.Drawing.Point(168, 115);
             this.lb_E3_cur.Name = "lb_E3_cur";
@@ -1742,7 +1775,7 @@ namespace TKV
             // lb_E1_cur
             // 
             this.lb_E1_cur.AutoSize = true;
-            this.lb_E1_cur.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lb_E1_cur.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lb_E1_cur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.lb_E1_cur.Location = new System.Drawing.Point(168, 58);
             this.lb_E1_cur.Name = "lb_E1_cur";
@@ -1754,7 +1787,7 @@ namespace TKV
             // lb_E2_cur
             // 
             this.lb_E2_cur.AutoSize = true;
-            this.lb_E2_cur.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lb_E2_cur.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lb_E2_cur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.lb_E2_cur.Location = new System.Drawing.Point(168, 87);
             this.lb_E2_cur.Name = "lb_E2_cur";
@@ -1767,7 +1800,7 @@ namespace TKV
             // 
             this.WT4.BackColor = System.Drawing.Color.AntiqueWhite;
             this.WT4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.WT4.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.WT4.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.WT4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.WT4.Location = new System.Drawing.Point(55, 160);
             this.WT4.Name = "WT4";
@@ -1781,7 +1814,7 @@ namespace TKV
             // 
             this.WT5.BackColor = System.Drawing.Color.AntiqueWhite;
             this.WT5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.WT5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.WT5.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.WT5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.WT5.Location = new System.Drawing.Point(55, 193);
             this.WT5.Name = "WT5";
@@ -1795,7 +1828,7 @@ namespace TKV
             // 
             this.WT6.BackColor = System.Drawing.Color.AntiqueWhite;
             this.WT6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.WT6.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.WT6.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.WT6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.WT6.Location = new System.Drawing.Point(55, 220);
             this.WT6.Name = "WT6";
@@ -1808,7 +1841,7 @@ namespace TKV
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label1.Location = new System.Drawing.Point(294, 214);
             this.label1.Name = "label1";
@@ -1819,7 +1852,7 @@ namespace TKV
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label11.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label11.Location = new System.Drawing.Point(292, 189);
             this.label11.Name = "label11";
@@ -1830,7 +1863,7 @@ namespace TKV
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label14.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label14.Location = new System.Drawing.Point(292, 162);
             this.label14.Name = "label14";
@@ -1841,7 +1874,7 @@ namespace TKV
             // lb_Roll_target
             // 
             this.lb_Roll_target.AutoSize = true;
-            this.lb_Roll_target.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lb_Roll_target.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lb_Roll_target.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.lb_Roll_target.Location = new System.Drawing.Point(19, 164);
             this.lb_Roll_target.Name = "lb_Roll_target";
@@ -1853,7 +1886,7 @@ namespace TKV
             // lb_Pitch_target
             // 
             this.lb_Pitch_target.AutoSize = true;
-            this.lb_Pitch_target.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lb_Pitch_target.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lb_Pitch_target.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.lb_Pitch_target.Location = new System.Drawing.Point(19, 197);
             this.lb_Pitch_target.Name = "lb_Pitch_target";
@@ -1865,7 +1898,7 @@ namespace TKV
             // lb_Yaw_target
             // 
             this.lb_Yaw_target.AutoSize = true;
-            this.lb_Yaw_target.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lb_Yaw_target.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lb_Yaw_target.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.lb_Yaw_target.Location = new System.Drawing.Point(19, 224);
             this.lb_Yaw_target.Name = "lb_Yaw_target";
@@ -1877,7 +1910,7 @@ namespace TKV
             // label73
             // 
             this.label73.AutoSize = true;
-            this.label73.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label73.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label73.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label73.Location = new System.Drawing.Point(250, 228);
             this.label73.Name = "label73";
@@ -1889,7 +1922,7 @@ namespace TKV
             // label74
             // 
             this.label74.AutoSize = true;
-            this.label74.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label74.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label74.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label74.Location = new System.Drawing.Point(250, 201);
             this.label74.Name = "label74";
@@ -1901,7 +1934,7 @@ namespace TKV
             // label75
             // 
             this.label75.AutoSize = true;
-            this.label75.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label75.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label75.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label75.Location = new System.Drawing.Point(250, 168);
             this.label75.Name = "label75";
@@ -1913,7 +1946,7 @@ namespace TKV
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label38.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label38.Location = new System.Drawing.Point(85, 205);
             this.label38.Name = "label38";
@@ -1924,7 +1957,7 @@ namespace TKV
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label42.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label42.Location = new System.Drawing.Point(85, 174);
             this.label42.Name = "label42";
@@ -1935,7 +1968,7 @@ namespace TKV
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label43.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label43.Location = new System.Drawing.Point(85, 143);
             this.label43.Name = "label43";
@@ -1947,7 +1980,7 @@ namespace TKV
             // 
             this.Tar_E5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.Tar_E5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Tar_E5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Tar_E5.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Tar_E5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.Tar_E5.Location = new System.Drawing.Point(12, 161);
             this.Tar_E5.Name = "Tar_E5";
@@ -1961,7 +1994,7 @@ namespace TKV
             // 
             this.Tar_E4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.Tar_E4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Tar_E4.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Tar_E4.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Tar_E4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.Tar_E4.Location = new System.Drawing.Point(12, 133);
             this.Tar_E4.Name = "Tar_E4";
@@ -1975,7 +2008,7 @@ namespace TKV
             // 
             this.Tar_E6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.Tar_E6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Tar_E6.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Tar_E6.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Tar_E6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.Tar_E6.Location = new System.Drawing.Point(12, 188);
             this.Tar_E6.Name = "Tar_E6";
@@ -1989,7 +2022,7 @@ namespace TKV
             // 
             this.Tar_E3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.Tar_E3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Tar_E3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Tar_E3.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Tar_E3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.Tar_E3.Location = new System.Drawing.Point(12, 107);
             this.Tar_E3.Name = "Tar_E3";
@@ -2003,7 +2036,7 @@ namespace TKV
             // 
             this.Tar_E2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.Tar_E2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Tar_E2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Tar_E2.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Tar_E2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.Tar_E2.Location = new System.Drawing.Point(12, 79);
             this.Tar_E2.Name = "Tar_E2";
@@ -2017,7 +2050,7 @@ namespace TKV
             // 
             this.Tar_E1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.Tar_E1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Tar_E1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Tar_E1.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Tar_E1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.Tar_E1.Location = new System.Drawing.Point(12, 50);
             this.Tar_E1.Name = "Tar_E1";
@@ -2030,37 +2063,11 @@ namespace TKV
             // PN_NotUse
             // 
             this.PN_NotUse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PN_NotUse.Controls.Add(this.panel1);
-            this.PN_NotUse.Controls.Add(this.pn_Debug);
             this.PN_NotUse.Controls.Add(this.pnConveGain);
             this.PN_NotUse.Location = new System.Drawing.Point(189, 13);
             this.PN_NotUse.Name = "PN_NotUse";
             this.PN_NotUse.Size = new System.Drawing.Size(789, 319);
             this.PN_NotUse.TabIndex = 290;
-            this.PN_NotUse.Visible = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label86);
-            this.panel1.Controls.Add(this.gr_CAN);
-            this.panel1.Controls.Add(this.btnCAN);
-            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.panel1.Location = new System.Drawing.Point(544, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(237, 297);
-            this.panel1.TabIndex = 305;
-            // 
-            // label86
-            // 
-            this.label86.AutoSize = true;
-            this.label86.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label86.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
-            this.label86.Location = new System.Drawing.Point(5, 8);
-            this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(59, 19);
-            this.label86.TabIndex = 305;
-            this.label86.Text = "[ CAN ]";
             // 
             // pnConveGain
             // 
@@ -2114,7 +2121,7 @@ namespace TKV
             // btnSend
             // 
             this.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSend.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSend.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSend.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.btnSend.Location = new System.Drawing.Point(159, 248);
             this.btnSend.Name = "btnSend";
@@ -2126,7 +2133,7 @@ namespace TKV
             // 
             // aLimit_1
             // 
-            this.aLimit_1.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.aLimit_1.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.aLimit_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.aLimit_1.Location = new System.Drawing.Point(187, 42);
             this.aLimit_1.Name = "aLimit_1";
@@ -2137,7 +2144,7 @@ namespace TKV
             // 
             // vLimit_1
             // 
-            this.vLimit_1.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.vLimit_1.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.vLimit_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.vLimit_1.Location = new System.Drawing.Point(46, 41);
             this.vLimit_1.Name = "vLimit_1";
@@ -2148,7 +2155,7 @@ namespace TKV
             // 
             // vTool
             // 
-            this.vTool.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.vTool.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.vTool.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.vTool.Location = new System.Drawing.Point(46, 227);
             this.vTool.Name = "vTool";
@@ -2160,7 +2167,7 @@ namespace TKV
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label37.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label37.Location = new System.Drawing.Point(5, 8);
             this.label37.Name = "label37";
@@ -2170,7 +2177,7 @@ namespace TKV
             // 
             // aLimit_2
             // 
-            this.aLimit_2.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.aLimit_2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.aLimit_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.aLimit_2.Location = new System.Drawing.Point(187, 74);
             this.aLimit_2.Name = "aLimit_2";
@@ -2181,7 +2188,7 @@ namespace TKV
             // 
             // vLimit_2
             // 
-            this.vLimit_2.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.vLimit_2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.vLimit_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.vLimit_2.Location = new System.Drawing.Point(46, 72);
             this.vLimit_2.Name = "vLimit_2";
@@ -2192,7 +2199,7 @@ namespace TKV
             // 
             // aLimit_3
             // 
-            this.aLimit_3.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.aLimit_3.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.aLimit_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.aLimit_3.Location = new System.Drawing.Point(187, 105);
             this.aLimit_3.Name = "aLimit_3";
@@ -2203,7 +2210,7 @@ namespace TKV
             // 
             // vLimit_3
             // 
-            this.vLimit_3.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.vLimit_3.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.vLimit_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.vLimit_3.Location = new System.Drawing.Point(46, 103);
             this.vLimit_3.Name = "vLimit_3";
@@ -2215,7 +2222,7 @@ namespace TKV
             // label84
             // 
             this.label84.AutoSize = true;
-            this.label84.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label84.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label84.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label84.Location = new System.Drawing.Point(148, 110);
             this.label84.Name = "label84";
@@ -2226,7 +2233,7 @@ namespace TKV
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label47.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label47.Location = new System.Drawing.Point(28, 108);
             this.label47.Name = "label47";
@@ -2237,7 +2244,7 @@ namespace TKV
             // label83
             // 
             this.label83.AutoSize = true;
-            this.label83.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label83.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label83.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label83.Location = new System.Drawing.Point(146, 48);
             this.label83.Name = "label83";
@@ -2248,7 +2255,7 @@ namespace TKV
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label52.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label52.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label52.Location = new System.Drawing.Point(28, 46);
             this.label52.Name = "label52";
@@ -2259,7 +2266,7 @@ namespace TKV
             // label82
             // 
             this.label82.AutoSize = true;
-            this.label82.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label82.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label82.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label82.Location = new System.Drawing.Point(227, 51);
             this.label82.Name = "label82";
@@ -2270,7 +2277,7 @@ namespace TKV
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label46.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label46.Location = new System.Drawing.Point(86, 50);
             this.label46.Name = "label46";
@@ -2280,7 +2287,7 @@ namespace TKV
             // 
             // jLimit_3
             // 
-            this.jLimit_3.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jLimit_3.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.jLimit_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.jLimit_3.Location = new System.Drawing.Point(187, 198);
             this.jLimit_3.Name = "jLimit_3";
@@ -2292,7 +2299,7 @@ namespace TKV
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label21.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label21.Location = new System.Drawing.Point(86, 236);
             this.label21.Name = "label21";
@@ -2303,7 +2310,7 @@ namespace TKV
             // label81
             // 
             this.label81.AutoSize = true;
-            this.label81.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label81.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label81.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label81.Location = new System.Drawing.Point(227, 82);
             this.label81.Name = "label81";
@@ -2314,7 +2321,7 @@ namespace TKV
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label45.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label45.Location = new System.Drawing.Point(86, 81);
             this.label45.Name = "label45";
@@ -2325,7 +2332,7 @@ namespace TKV
             // label80
             // 
             this.label80.AutoSize = true;
-            this.label80.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label80.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label80.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label80.Location = new System.Drawing.Point(227, 114);
             this.label80.Name = "label80";
@@ -2336,7 +2343,7 @@ namespace TKV
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label44.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label44.Location = new System.Drawing.Point(86, 112);
             this.label44.Name = "label44";
@@ -2346,7 +2353,7 @@ namespace TKV
             // 
             // jLimit_2
             // 
-            this.jLimit_2.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jLimit_2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.jLimit_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.jLimit_2.Location = new System.Drawing.Point(187, 166);
             this.jLimit_2.Name = "jLimit_2";
@@ -2358,7 +2365,7 @@ namespace TKV
             // label79
             // 
             this.label79.AutoSize = true;
-            this.label79.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label79.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label79.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label79.Location = new System.Drawing.Point(147, 78);
             this.label79.Name = "label79";
@@ -2369,7 +2376,7 @@ namespace TKV
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label48.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label48.Location = new System.Drawing.Point(28, 77);
             this.label48.Name = "label48";
@@ -2379,7 +2386,7 @@ namespace TKV
             // 
             // jLimit_1
             // 
-            this.jLimit_1.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.jLimit_1.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.jLimit_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.jLimit_1.Location = new System.Drawing.Point(187, 136);
             this.jLimit_1.Name = "jLimit_1";
@@ -2391,7 +2398,7 @@ namespace TKV
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label33.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label33.Location = new System.Drawing.Point(5, 232);
             this.label33.Name = "label33";
@@ -2402,7 +2409,7 @@ namespace TKV
             // label78
             // 
             this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label78.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label78.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label78.Location = new System.Drawing.Point(155, 171);
             this.label78.Name = "label78";
@@ -2413,7 +2420,7 @@ namespace TKV
             // label77
             // 
             this.label77.AutoSize = true;
-            this.label77.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label77.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label77.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label77.Location = new System.Drawing.Point(155, 202);
             this.label77.Name = "label77";
@@ -2424,7 +2431,7 @@ namespace TKV
             // label76
             // 
             this.label76.AutoSize = true;
-            this.label76.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label76.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label76.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label76.Location = new System.Drawing.Point(226, 206);
             this.label76.Name = "label76";
@@ -2435,7 +2442,7 @@ namespace TKV
             // label72
             // 
             this.label72.AutoSize = true;
-            this.label72.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label72.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label72.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label72.Location = new System.Drawing.Point(155, 141);
             this.label72.Name = "label72";
@@ -2446,7 +2453,7 @@ namespace TKV
             // label71
             // 
             this.label71.AutoSize = true;
-            this.label71.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label71.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label71.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label71.Location = new System.Drawing.Point(226, 176);
             this.label71.Name = "label71";
@@ -2457,7 +2464,7 @@ namespace TKV
             // label69
             // 
             this.label69.AutoSize = true;
-            this.label69.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label69.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label69.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label69.Location = new System.Drawing.Point(226, 145);
             this.label69.Name = "label69";
@@ -2465,9 +2472,32 @@ namespace TKV
             this.label69.TabIndex = 281;
             this.label69.Text = "mm/s^3";
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label86);
+            this.panel1.Controls.Add(this.gr_CAN);
+            this.panel1.Controls.Add(this.btnCAN);
+            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.panel1.Location = new System.Drawing.Point(1042, 126);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(237, 297);
+            this.panel1.TabIndex = 305;
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label86.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
+            this.label86.Location = new System.Drawing.Point(5, 8);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(59, 19);
+            this.label86.TabIndex = 305;
+            this.label86.Text = "[ CAN ]";
+            // 
             // cGain
             // 
-            this.cGain.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cGain.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cGain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.cGain.Location = new System.Drawing.Point(107, 470);
             this.cGain.Name = "cGain";
@@ -2480,7 +2510,7 @@ namespace TKV
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label.Location = new System.Drawing.Point(27, 475);
             this.label.Name = "label";
@@ -2526,7 +2556,7 @@ namespace TKV
             // 
             this.Tar_E7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.Tar_E7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Tar_E7.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Tar_E7.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Tar_E7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.Tar_E7.Location = new System.Drawing.Point(12, 217);
             this.Tar_E7.Name = "Tar_E7";
@@ -2539,7 +2569,7 @@ namespace TKV
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label55.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label55.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label55.Location = new System.Drawing.Point(168, 225);
             this.label55.Name = "label55";
@@ -2552,7 +2582,7 @@ namespace TKV
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.textBox2.Location = new System.Drawing.Point(-12, 25);
             this.textBox2.Name = "textBox2";
@@ -2565,7 +2595,7 @@ namespace TKV
             // 
             this.E7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.E7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.E7.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.E7.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.E7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.E7.Location = new System.Drawing.Point(105, 217);
             this.E7.Name = "E7";
@@ -2606,7 +2636,7 @@ namespace TKV
             // LCU5con
             // 
             this.LCU5con.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LCU5con.Font = new System.Drawing.Font("맑은 고딕", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LCU5con.Font = new System.Drawing.Font("Malgun Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LCU5con.ForeColor = System.Drawing.Color.White;
             this.LCU5con.Location = new System.Drawing.Point(96, 48);
             this.LCU5con.Margin = new System.Windows.Forms.Padding(2);
@@ -2619,7 +2649,7 @@ namespace TKV
             // LCU4con
             // 
             this.LCU4con.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LCU4con.Font = new System.Drawing.Font("맑은 고딕", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LCU4con.Font = new System.Drawing.Font("Malgun Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LCU4con.ForeColor = System.Drawing.Color.White;
             this.LCU4con.Location = new System.Drawing.Point(74, 48);
             this.LCU4con.Margin = new System.Windows.Forms.Padding(2);
@@ -2632,7 +2662,7 @@ namespace TKV
             // LCU3con
             // 
             this.LCU3con.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LCU3con.Font = new System.Drawing.Font("맑은 고딕", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LCU3con.Font = new System.Drawing.Font("Malgun Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LCU3con.ForeColor = System.Drawing.Color.White;
             this.LCU3con.Location = new System.Drawing.Point(51, 48);
             this.LCU3con.Margin = new System.Windows.Forms.Padding(2);
@@ -2645,7 +2675,7 @@ namespace TKV
             // LCU2con
             // 
             this.LCU2con.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LCU2con.Font = new System.Drawing.Font("맑은 고딕", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LCU2con.Font = new System.Drawing.Font("Malgun Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LCU2con.ForeColor = System.Drawing.Color.White;
             this.LCU2con.Location = new System.Drawing.Point(29, 48);
             this.LCU2con.Margin = new System.Windows.Forms.Padding(2);
@@ -2658,7 +2688,7 @@ namespace TKV
             // LCU1con
             // 
             this.LCU1con.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LCU1con.Font = new System.Drawing.Font("맑은 고딕", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LCU1con.Font = new System.Drawing.Font("Malgun Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LCU1con.ForeColor = System.Drawing.Color.White;
             this.LCU1con.Location = new System.Drawing.Point(6, 48);
             this.LCU1con.Margin = new System.Windows.Forms.Padding(2);
@@ -2671,7 +2701,7 @@ namespace TKV
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label35.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label35.Location = new System.Drawing.Point(631, 24);
             this.label35.Name = "label35";
@@ -2682,7 +2712,7 @@ namespace TKV
             // btnSim
             // 
             this.btnSim.AutoSize = true;
-            this.btnSim.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSim.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSim.Location = new System.Drawing.Point(740, 26);
             this.btnSim.Name = "btnSim";
             this.btnSim.Size = new System.Drawing.Size(15, 14);
@@ -2702,6 +2732,7 @@ namespace TKV
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.SafetyMove_checkBox);
             this.panel3.Controls.Add(this.JT14);
             this.panel3.Controls.Add(this.label24);
             this.panel3.Controls.Add(this.J30Up);
@@ -2931,12 +2962,24 @@ namespace TKV
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(979, 572);
             this.panel3.TabIndex = 223;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // SafetyMove_checkBox
+            // 
+            this.SafetyMove_checkBox.AutoSize = true;
+            this.SafetyMove_checkBox.Location = new System.Drawing.Point(702, 35);
+            this.SafetyMove_checkBox.Name = "SafetyMove_checkBox";
+            this.SafetyMove_checkBox.Size = new System.Drawing.Size(116, 25);
+            this.SafetyMove_checkBox.TabIndex = 340;
+            this.SafetyMove_checkBox.Text = "SafetyMove";
+            this.SafetyMove_checkBox.UseVisualStyleBackColor = true;
+            this.SafetyMove_checkBox.CheckedChanged += new System.EventHandler(this.SafetyMove_checkBox_CheckedChanged);
             // 
             // JT14
             // 
             this.JT14.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT14.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT14.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT14.Location = new System.Drawing.Point(506, 88);
             this.JT14.Name = "JT14";
@@ -2948,7 +2991,7 @@ namespace TKV
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label24.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label24.Location = new System.Drawing.Point(458, 9);
             this.label24.Name = "label24";
@@ -2959,7 +3002,7 @@ namespace TKV
             // J30Up
             // 
             this.J30Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J30Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J30Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J30Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J30Up.Location = new System.Drawing.Point(758, 530);
             this.J30Up.Name = "J30Up";
@@ -2972,7 +3015,7 @@ namespace TKV
             // J24Up
             // 
             this.J24Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J24Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J24Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J24Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J24Up.Location = new System.Drawing.Point(758, 370);
             this.J24Up.Name = "J24Up";
@@ -2986,7 +3029,7 @@ namespace TKV
             // J18Up
             // 
             this.J18Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J18Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J18Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J18Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J18Up.Location = new System.Drawing.Point(758, 195);
             this.J18Up.Name = "J18Up";
@@ -3000,7 +3043,7 @@ namespace TKV
             // J30Down
             // 
             this.J30Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J30Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J30Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J30Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J30Down.Location = new System.Drawing.Point(722, 530);
             this.J30Down.Name = "J30Down";
@@ -3013,7 +3056,7 @@ namespace TKV
             // J24Down
             // 
             this.J24Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J24Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J24Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J24Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J24Down.Location = new System.Drawing.Point(722, 370);
             this.J24Down.Name = "J24Down";
@@ -3027,7 +3070,7 @@ namespace TKV
             // J12Up
             // 
             this.J12Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J12Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J12Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J12Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J12Up.Location = new System.Drawing.Point(351, 374);
             this.J12Up.Name = "J12Up";
@@ -3041,7 +3084,7 @@ namespace TKV
             // J25Up
             // 
             this.J25Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J25Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J25Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J25Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J25Up.Location = new System.Drawing.Point(758, 398);
             this.J25Up.Name = "J25Up";
@@ -3055,7 +3098,7 @@ namespace TKV
             // J18Down
             // 
             this.J18Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J18Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J18Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J18Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J18Down.Location = new System.Drawing.Point(722, 195);
             this.J18Down.Name = "J18Down";
@@ -3069,7 +3112,7 @@ namespace TKV
             // J19Up
             // 
             this.J19Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J19Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J19Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J19Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J19Up.Location = new System.Drawing.Point(758, 223);
             this.J19Up.Name = "J19Up";
@@ -3083,7 +3126,7 @@ namespace TKV
             // J6Up
             // 
             this.J6Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J6Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J6Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J6Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J6Up.Location = new System.Drawing.Point(351, 206);
             this.J6Up.Name = "J6Up";
@@ -3097,7 +3140,7 @@ namespace TKV
             // J13Up
             // 
             this.J13Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J13Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J13Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J13Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J13Up.Location = new System.Drawing.Point(351, 403);
             this.J13Up.Name = "J13Up";
@@ -3111,7 +3154,7 @@ namespace TKV
             // J12Down
             // 
             this.J12Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J12Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J12Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J12Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J12Down.Location = new System.Drawing.Point(316, 374);
             this.J12Down.Name = "J12Down";
@@ -3125,7 +3168,7 @@ namespace TKV
             // J25Down
             // 
             this.J25Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J25Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J25Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J25Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J25Down.Location = new System.Drawing.Point(722, 398);
             this.J25Down.Name = "J25Down";
@@ -3139,7 +3182,7 @@ namespace TKV
             // J7Up
             // 
             this.J7Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J7Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J7Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J7Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J7Up.Location = new System.Drawing.Point(351, 242);
             this.J7Up.Name = "J7Up";
@@ -3153,7 +3196,7 @@ namespace TKV
             // J19Down
             // 
             this.J19Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J19Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J19Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J19Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J19Down.Location = new System.Drawing.Point(722, 223);
             this.J19Down.Name = "J19Down";
@@ -3167,7 +3210,7 @@ namespace TKV
             // J6Down
             // 
             this.J6Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J6Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J6Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J6Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J6Down.Location = new System.Drawing.Point(316, 206);
             this.J6Down.Name = "J6Down";
@@ -3181,7 +3224,7 @@ namespace TKV
             // J13Down
             // 
             this.J13Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J13Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J13Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J13Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J13Down.Location = new System.Drawing.Point(316, 403);
             this.J13Down.Name = "J13Down";
@@ -3199,7 +3242,7 @@ namespace TKV
             this.velLevel_List.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.velLevel_List.DropDownWidth = 80;
             this.velLevel_List.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.velLevel_List.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.velLevel_List.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.velLevel_List.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.velLevel_List.FormattingEnabled = true;
             this.velLevel_List.IntegralHeight = false;
@@ -3219,7 +3262,7 @@ namespace TKV
             // J7Down
             // 
             this.J7Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J7Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J7Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J7Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J7Down.Location = new System.Drawing.Point(316, 242);
             this.J7Down.Name = "J7Down";
@@ -3234,7 +3277,7 @@ namespace TKV
             // 
             this.JT26.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT26.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT26.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT26.Location = new System.Drawing.Point(505, 423);
             this.JT26.Name = "JT26";
@@ -3247,7 +3290,7 @@ namespace TKV
             // 
             this.JT8.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT8.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT8.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT8.Location = new System.Drawing.Point(105, 266);
             this.JT8.Name = "JT8";
@@ -3259,7 +3302,7 @@ namespace TKV
             // label106
             // 
             this.label106.AutoSize = true;
-            this.label106.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label106.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label106.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label106.Location = new System.Drawing.Point(696, 96);
             this.label106.Name = "label106";
@@ -3270,7 +3313,7 @@ namespace TKV
             // J26Up
             // 
             this.J26Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J26Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J26Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J26Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J26Up.Location = new System.Drawing.Point(758, 426);
             this.J26Up.Name = "J26Up";
@@ -3284,7 +3327,7 @@ namespace TKV
             // label133
             // 
             this.label133.AutoSize = true;
-            this.label133.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label133.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label133.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label133.Location = new System.Drawing.Point(695, 431);
             this.label133.Name = "label133";
@@ -3295,7 +3338,7 @@ namespace TKV
             // J20Up
             // 
             this.J20Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J20Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J20Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J20Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J20Up.Location = new System.Drawing.Point(758, 250);
             this.J20Up.Name = "J20Up";
@@ -3309,7 +3352,7 @@ namespace TKV
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label60.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label60.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label60.Location = new System.Drawing.Point(294, 274);
             this.label60.Name = "label60";
@@ -3320,7 +3363,7 @@ namespace TKV
             // J14Up
             // 
             this.J14Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J14Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J14Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J14Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J14Up.Location = new System.Drawing.Point(758, 88);
             this.J14Up.Name = "J14Up";
@@ -3334,7 +3377,7 @@ namespace TKV
             // J1Up
             // 
             this.J1Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J1Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J1Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J1Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J1Up.Location = new System.Drawing.Point(351, 74);
             this.J1Up.Name = "J1Up";
@@ -3348,7 +3391,7 @@ namespace TKV
             // J8Up
             // 
             this.J8Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J8Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J8Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J8Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J8Up.Location = new System.Drawing.Point(351, 269);
             this.J8Up.Name = "J8Up";
@@ -3362,7 +3405,7 @@ namespace TKV
             // J27Up
             // 
             this.J27Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J27Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J27Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J27Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J27Up.Location = new System.Drawing.Point(758, 450);
             this.J27Up.Name = "J27Up";
@@ -3377,7 +3420,7 @@ namespace TKV
             // 
             this.JT13.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT13.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT13.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT13.Location = new System.Drawing.Point(103, 403);
             this.JT13.Name = "JT13";
@@ -3389,7 +3432,7 @@ namespace TKV
             // J21Up
             // 
             this.J21Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J21Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J21Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J21Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J21Up.Location = new System.Drawing.Point(758, 290);
             this.J21Up.Name = "J21Up";
@@ -3403,7 +3446,7 @@ namespace TKV
             // J2Up
             // 
             this.J2Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J2Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J2Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J2Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J2Up.Location = new System.Drawing.Point(351, 102);
             this.J2Up.Name = "J2Up";
@@ -3417,7 +3460,7 @@ namespace TKV
             // J15Up
             // 
             this.J15Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J15Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J15Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J15Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J15Up.Location = new System.Drawing.Point(758, 115);
             this.J15Up.Name = "J15Up";
@@ -3431,7 +3474,7 @@ namespace TKV
             // J1Down
             // 
             this.J1Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J1Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J1Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J1Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J1Down.Location = new System.Drawing.Point(316, 74);
             this.J1Down.Name = "J1Down";
@@ -3445,7 +3488,7 @@ namespace TKV
             // J26Down
             // 
             this.J26Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J26Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J26Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J26Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J26Down.Location = new System.Drawing.Point(722, 424);
             this.J26Down.Name = "J26Down";
@@ -3459,7 +3502,7 @@ namespace TKV
             // J9Up
             // 
             this.J9Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J9Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J9Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J9Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J9Up.Location = new System.Drawing.Point(351, 294);
             this.J9Up.Name = "J9Up";
@@ -3473,7 +3516,7 @@ namespace TKV
             // J20Down
             // 
             this.J20Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J20Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J20Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J20Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J20Down.Location = new System.Drawing.Point(722, 250);
             this.J20Down.Name = "J20Down";
@@ -3488,7 +3531,7 @@ namespace TKV
             // 
             this.JT25.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT25.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT25.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT25.Location = new System.Drawing.Point(505, 398);
             this.JT25.Name = "JT25";
@@ -3500,7 +3543,7 @@ namespace TKV
             // J14Down
             // 
             this.J14Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J14Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J14Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J14Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J14Down.Location = new System.Drawing.Point(722, 89);
             this.J14Down.Name = "J14Down";
@@ -3514,7 +3557,7 @@ namespace TKV
             // J29Up
             // 
             this.J29Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J29Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J29Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J29Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J29Up.Location = new System.Drawing.Point(758, 504);
             this.J29Up.Name = "J29Up";
@@ -3527,7 +3570,7 @@ namespace TKV
             // J8Down
             // 
             this.J8Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J8Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J8Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J8Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J8Down.Location = new System.Drawing.Point(316, 268);
             this.J8Down.Name = "J8Down";
@@ -3541,7 +3584,7 @@ namespace TKV
             // J23Up
             // 
             this.J23Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J23Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J23Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J23Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J23Up.Location = new System.Drawing.Point(758, 345);
             this.J23Up.Name = "J23Up";
@@ -3556,7 +3599,7 @@ namespace TKV
             // 
             this.JT7.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT7.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT7.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT7.Location = new System.Drawing.Point(105, 242);
             this.JT7.Name = "JT7";
@@ -3568,7 +3611,7 @@ namespace TKV
             // J17Up
             // 
             this.J17Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J17Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J17Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J17Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J17Up.Location = new System.Drawing.Point(758, 169);
             this.J17Up.Name = "J17Up";
@@ -3582,7 +3625,7 @@ namespace TKV
             // J2Down
             // 
             this.J2Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J2Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J2Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J2Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J2Down.Location = new System.Drawing.Point(316, 101);
             this.J2Down.Name = "J2Down";
@@ -3596,7 +3639,7 @@ namespace TKV
             // J11Up
             // 
             this.J11Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J11Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J11Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J11Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J11Up.Location = new System.Drawing.Point(351, 348);
             this.J11Up.Name = "J11Up";
@@ -3610,7 +3653,7 @@ namespace TKV
             // J28Up
             // 
             this.J28Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J28Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J28Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J28Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J28Up.Location = new System.Drawing.Point(758, 477);
             this.J28Up.Name = "J28Up";
@@ -3624,7 +3667,7 @@ namespace TKV
             // label105
             // 
             this.label105.AutoSize = true;
-            this.label105.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label105.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label105.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label105.Location = new System.Drawing.Point(294, 411);
             this.label105.Name = "label105";
@@ -3635,7 +3678,7 @@ namespace TKV
             // J22Up
             // 
             this.J22Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J22Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J22Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J22Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J22Up.Location = new System.Drawing.Point(758, 318);
             this.J22Up.Name = "J22Up";
@@ -3649,7 +3692,7 @@ namespace TKV
             // J16Up
             // 
             this.J16Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J16Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J16Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J16Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J16Up.Location = new System.Drawing.Point(758, 142);
             this.J16Up.Name = "J16Up";
@@ -3663,7 +3706,7 @@ namespace TKV
             // label132
             // 
             this.label132.AutoSize = true;
-            this.label132.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label132.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label132.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label132.Location = new System.Drawing.Point(695, 406);
             this.label132.Name = "label132";
@@ -3674,7 +3717,7 @@ namespace TKV
             // J10Up
             // 
             this.J10Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J10Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J10Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J10Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J10Up.Location = new System.Drawing.Point(351, 321);
             this.J10Up.Name = "J10Up";
@@ -3688,7 +3731,7 @@ namespace TKV
             // J27Down
             // 
             this.J27Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J27Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J27Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J27Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J27Down.Location = new System.Drawing.Point(722, 450);
             this.J27Down.Name = "J27Down";
@@ -3702,7 +3745,7 @@ namespace TKV
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label23.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label23.Location = new System.Drawing.Point(294, 250);
             this.label23.Name = "label23";
@@ -3713,7 +3756,7 @@ namespace TKV
             // J21Down
             // 
             this.J21Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J21Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J21Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J21Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J21Down.Location = new System.Drawing.Point(722, 290);
             this.J21Down.Name = "J21Down";
@@ -3727,7 +3770,7 @@ namespace TKV
             // J4Up
             // 
             this.J4Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J4Up.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J4Up.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J4Up.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J4Up.Location = new System.Drawing.Point(351, 154);
             this.J4Up.Name = "J4Up";
@@ -3741,7 +3784,7 @@ namespace TKV
             // J15Down
             // 
             this.J15Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J15Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J15Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J15Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J15Down.Location = new System.Drawing.Point(722, 115);
             this.J15Down.Name = "J15Down";
@@ -3755,19 +3798,18 @@ namespace TKV
             // label104
             // 
             this.label104.AutoSize = true;
-            this.label104.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label104.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label104.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label104.Location = new System.Drawing.Point(404, 96);
             this.label104.Name = "label104";
             this.label104.Size = new System.Drawing.Size(90, 15);
             this.label104.TabIndex = 312;
             this.label104.Text = "14.R_Sh_ProRet";
-            this.label104.Click += new System.EventHandler(this.label39_Click);
             // 
             // J9Down
             // 
             this.J9Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J9Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J9Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J9Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J9Down.Location = new System.Drawing.Point(316, 294);
             this.J9Down.Name = "J9Down";
@@ -3781,7 +3823,7 @@ namespace TKV
             // J28Down
             // 
             this.J28Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J28Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J28Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J28Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J28Down.Location = new System.Drawing.Point(722, 477);
             this.J28Down.Name = "J28Down";
@@ -3795,19 +3837,18 @@ namespace TKV
             // label131
             // 
             this.label131.AutoSize = true;
-            this.label131.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label131.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label131.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label131.Location = new System.Drawing.Point(402, 426);
             this.label131.Name = "label131";
             this.label131.Size = new System.Drawing.Size(98, 15);
             this.label131.TabIndex = 312;
             this.label131.Text = "26.R_Knee_FleExt";
-            this.label131.Click += new System.EventHandler(this.label39_Click);
             // 
             // J22Down
             // 
             this.J22Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J22Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J22Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J22Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J22Down.Location = new System.Drawing.Point(722, 318);
             this.J22Down.Name = "J22Down";
@@ -3821,7 +3862,7 @@ namespace TKV
             // J16Down
             // 
             this.J16Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J16Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J16Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J16Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J16Down.Location = new System.Drawing.Point(722, 142);
             this.J16Down.Name = "J16Down";
@@ -3835,19 +3876,18 @@ namespace TKV
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label54.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label54.Location = new System.Drawing.Point(2, 269);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(89, 15);
             this.label54.TabIndex = 312;
             this.label54.Text = "8. L_Sho_FleExt";
-            this.label54.Click += new System.EventHandler(this.label39_Click);
             // 
             // J10Down
             // 
             this.J10Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J10Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J10Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J10Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J10Down.Location = new System.Drawing.Point(316, 321);
             this.J10Down.Name = "J10Down";
@@ -3861,7 +3901,7 @@ namespace TKV
             // J29Down
             // 
             this.J29Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J29Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J29Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J29Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J29Down.Location = new System.Drawing.Point(722, 504);
             this.J29Down.Name = "J29Down";
@@ -3874,7 +3914,7 @@ namespace TKV
             // checkBoxSimulMod
             // 
             this.checkBoxSimulMod.AutoSize = true;
-            this.checkBoxSimulMod.Location = new System.Drawing.Point(702, 9);
+            this.checkBoxSimulMod.Location = new System.Drawing.Point(701, 9);
             this.checkBoxSimulMod.Name = "checkBoxSimulMod";
             this.checkBoxSimulMod.Size = new System.Drawing.Size(146, 25);
             this.checkBoxSimulMod.TabIndex = 339;
@@ -3885,7 +3925,7 @@ namespace TKV
             // J23Down
             // 
             this.J23Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J23Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J23Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J23Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J23Down.Location = new System.Drawing.Point(722, 345);
             this.J23Down.Name = "J23Down";
@@ -3899,7 +3939,7 @@ namespace TKV
             // J4Down
             // 
             this.J4Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J4Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J4Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J4Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J4Down.Location = new System.Drawing.Point(316, 154);
             this.J4Down.Name = "J4Down";
@@ -3913,7 +3953,7 @@ namespace TKV
             // J17Down
             // 
             this.J17Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J17Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J17Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J17Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J17Down.Location = new System.Drawing.Point(722, 169);
             this.J17Down.Name = "J17Down";
@@ -3928,7 +3968,7 @@ namespace TKV
             // 
             this.J14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J14.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J14.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J14.Location = new System.Drawing.Point(569, 88);
             this.J14.Name = "J14";
@@ -3941,7 +3981,7 @@ namespace TKV
             // J11Down
             // 
             this.J11Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.J11Down.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J11Down.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J11Down.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J11Down.Location = new System.Drawing.Point(316, 348);
             this.J11Down.Name = "J11Down";
@@ -3956,7 +3996,7 @@ namespace TKV
             // 
             this.J26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J26.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J26.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J26.Location = new System.Drawing.Point(568, 423);
             this.J26.Name = "J26";
@@ -3970,7 +4010,7 @@ namespace TKV
             // 
             this.J8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J8.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J8.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J8.Location = new System.Drawing.Point(167, 266);
             this.J8.Name = "J8";
@@ -3983,44 +4023,41 @@ namespace TKV
             // label103
             // 
             this.label103.AutoSize = true;
-            this.label103.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label103.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label103.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label103.Location = new System.Drawing.Point(2, 410);
             this.label103.Name = "label103";
             this.label103.Size = new System.Drawing.Size(98, 15);
             this.label103.TabIndex = 312;
             this.label103.Text = "13.L_Wrist_FleExt";
-            this.label103.Click += new System.EventHandler(this.label39_Click);
             // 
             // label130
             // 
             this.label130.AutoSize = true;
-            this.label130.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label130.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label130.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label130.Location = new System.Drawing.Point(402, 400);
             this.label130.Name = "label130";
             this.label130.Size = new System.Drawing.Size(78, 15);
             this.label130.TabIndex = 312;
             this.label130.Text = "25.R_Hip_Rot";
-            this.label130.Click += new System.EventHandler(this.label39_Click);
             // 
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label39.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label39.Location = new System.Drawing.Point(2, 244);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(93, 15);
             this.label39.TabIndex = 312;
-            this.label39.Text = "7. L_Sho_ProRet";
-            this.label39.Click += new System.EventHandler(this.label39_Click);
+            this.label39.Text = "7. L_Sho_ProRet";            
             // 
             // JC14
             // 
             this.JC14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC14.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC14.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC14.Location = new System.Drawing.Point(636, 88);
             this.JC14.Name = "JC14";
@@ -4034,7 +4071,7 @@ namespace TKV
             // 
             this.JC26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC26.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC26.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC26.Location = new System.Drawing.Point(634, 423);
             this.JC26.Name = "JC26";
@@ -4048,7 +4085,7 @@ namespace TKV
             // 
             this.JC8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC8.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC8.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC8.Location = new System.Drawing.Point(234, 266);
             this.JC8.Name = "JC8";
@@ -4062,7 +4099,7 @@ namespace TKV
             // 
             this.J13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J13.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J13.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J13.Location = new System.Drawing.Point(166, 403);
             this.J13.Name = "J13";
@@ -4076,7 +4113,7 @@ namespace TKV
             // 
             this.J25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J25.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J25.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J25.Location = new System.Drawing.Point(568, 398);
             this.J25.Name = "J25";
@@ -4090,7 +4127,7 @@ namespace TKV
             // 
             this.J7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J7.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J7.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J7.Location = new System.Drawing.Point(167, 242);
             this.J7.Name = "J7";
@@ -4104,7 +4141,7 @@ namespace TKV
             // 
             this.JC13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC13.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC13.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC13.Location = new System.Drawing.Point(234, 403);
             this.JC13.Name = "JC13";
@@ -4118,7 +4155,7 @@ namespace TKV
             // 
             this.JC25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC25.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC25.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC25.Location = new System.Drawing.Point(634, 398);
             this.JC25.Name = "JC25";
@@ -4132,7 +4169,7 @@ namespace TKV
             // 
             this.JC7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC7.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC7.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC7.Location = new System.Drawing.Point(234, 242);
             this.JC7.Name = "JC7";
@@ -4145,7 +4182,7 @@ namespace TKV
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label53.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label53.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label53.Location = new System.Drawing.Point(3, 5);
             this.label53.Name = "label53";
@@ -4156,7 +4193,7 @@ namespace TKV
             // label129
             // 
             this.label129.AutoSize = true;
-            this.label129.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label129.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label129.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label129.Location = new System.Drawing.Point(632, 66);
             this.label129.Name = "label129";
@@ -4167,7 +4204,7 @@ namespace TKV
             // label70
             // 
             this.label70.AutoSize = true;
-            this.label70.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label70.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label70.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label70.Location = new System.Drawing.Point(238, 56);
             this.label70.Name = "label70";
@@ -4178,7 +4215,7 @@ namespace TKV
             // cmd_send2
             // 
             this.cmd_send2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmd_send2.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cmd_send2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cmd_send2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.cmd_send2.Location = new System.Drawing.Point(854, 5);
             this.cmd_send2.Name = "cmd_send2";
@@ -4186,13 +4223,14 @@ namespace TKV
             this.cmd_send2.TabIndex = 252;
             this.cmd_send2.Text = "Send to LCU";
             this.cmd_send2.UseVisualStyleBackColor = true;
+            this.cmd_send2.Visible = false;
             this.cmd_send2.Click += new System.EventHandler(this.cmd_send_Click);
             // 
             // JT18
             // 
             this.JT18.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT18.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT18.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT18.Location = new System.Drawing.Point(505, 195);
             this.JT18.Name = "JT18";
@@ -4205,7 +4243,7 @@ namespace TKV
             // 
             this.JT30.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT30.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT30.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT30.Location = new System.Drawing.Point(504, 530);
             this.JT30.Name = "JT30";
@@ -4218,7 +4256,7 @@ namespace TKV
             // 
             this.JT12.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT12.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT12.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT12.Location = new System.Drawing.Point(103, 374);
             this.JT12.Name = "JT12";
@@ -4231,7 +4269,7 @@ namespace TKV
             // 
             this.JT17.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT17.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT17.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT17.Location = new System.Drawing.Point(506, 167);
             this.JT17.Name = "JT17";
@@ -4244,7 +4282,7 @@ namespace TKV
             // 
             this.JT29.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT29.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT29.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT29.Location = new System.Drawing.Point(505, 502);
             this.JT29.Name = "JT29";
@@ -4257,7 +4295,7 @@ namespace TKV
             // 
             this.JT11.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT11.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT11.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT11.Location = new System.Drawing.Point(105, 346);
             this.JT11.Name = "JT11";
@@ -4270,7 +4308,7 @@ namespace TKV
             // 
             this.JT24.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT24.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT24.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT24.Location = new System.Drawing.Point(504, 370);
             this.JT24.Name = "JT24";
@@ -4283,7 +4321,7 @@ namespace TKV
             // 
             this.JC15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC15.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC15.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC15.Location = new System.Drawing.Point(636, 114);
             this.JC15.Name = "JC15";
@@ -4297,7 +4335,7 @@ namespace TKV
             // 
             this.JC27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC27.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC27.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC27.Location = new System.Drawing.Point(634, 450);
             this.JC27.Name = "JC27";
@@ -4311,7 +4349,7 @@ namespace TKV
             // 
             this.JC9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC9.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC9.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC9.Location = new System.Drawing.Point(234, 293);
             this.JC9.Name = "JC9";
@@ -4325,7 +4363,7 @@ namespace TKV
             // 
             this.JC22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC22.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC22.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC22.Location = new System.Drawing.Point(634, 318);
             this.JC22.Name = "JC22";
@@ -4339,7 +4377,7 @@ namespace TKV
             // 
             this.JC4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC4.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC4.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC4.Location = new System.Drawing.Point(234, 154);
             this.JC4.Name = "JC4";
@@ -4352,7 +4390,7 @@ namespace TKV
             // label102
             // 
             this.label102.AutoSize = true;
-            this.label102.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label102.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label102.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label102.Location = new System.Drawing.Point(694, 122);
             this.label102.Name = "label102";
@@ -4363,7 +4401,7 @@ namespace TKV
             // label128
             // 
             this.label128.AutoSize = true;
-            this.label128.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label128.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label128.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label128.Location = new System.Drawing.Point(694, 458);
             this.label128.Name = "label128";
@@ -4374,7 +4412,7 @@ namespace TKV
             // label92
             // 
             this.label92.AutoSize = true;
-            this.label92.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label92.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label92.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label92.Location = new System.Drawing.Point(294, 301);
             this.label92.Name = "label92";
@@ -4385,7 +4423,7 @@ namespace TKV
             // label127
             // 
             this.label127.AutoSize = true;
-            this.label127.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label127.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label127.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label127.Location = new System.Drawing.Point(693, 326);
             this.label127.Name = "label127";
@@ -4396,7 +4434,7 @@ namespace TKV
             // label101
             // 
             this.label101.AutoSize = true;
-            this.label101.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label101.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label101.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label101.Location = new System.Drawing.Point(694, 203);
             this.label101.Name = "label101";
@@ -4407,7 +4445,7 @@ namespace TKV
             // label126
             // 
             this.label126.AutoSize = true;
-            this.label126.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label126.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label126.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label126.Location = new System.Drawing.Point(694, 538);
             this.label126.Name = "label126";
@@ -4418,7 +4456,7 @@ namespace TKV
             // label94
             // 
             this.label94.AutoSize = true;
-            this.label94.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label94.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label94.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label94.Location = new System.Drawing.Point(294, 382);
             this.label94.Name = "label94";
@@ -4429,7 +4467,7 @@ namespace TKV
             // label100
             // 
             this.label100.AutoSize = true;
-            this.label100.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label100.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label100.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label100.Location = new System.Drawing.Point(696, 175);
             this.label100.Name = "label100";
@@ -4440,7 +4478,7 @@ namespace TKV
             // label125
             // 
             this.label125.AutoSize = true;
-            this.label125.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label125.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label125.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label125.Location = new System.Drawing.Point(695, 510);
             this.label125.Name = "label125";
@@ -4451,7 +4489,7 @@ namespace TKV
             // label91
             // 
             this.label91.AutoSize = true;
-            this.label91.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label91.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label91.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label91.Location = new System.Drawing.Point(294, 354);
             this.label91.Name = "label91";
@@ -4462,7 +4500,7 @@ namespace TKV
             // label124
             // 
             this.label124.AutoSize = true;
-            this.label124.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label124.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label124.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label124.Location = new System.Drawing.Point(694, 378);
             this.label124.Name = "label124";
@@ -4473,7 +4511,7 @@ namespace TKV
             // label99
             // 
             this.label99.AutoSize = true;
-            this.label99.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label99.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label99.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label99.Location = new System.Drawing.Point(404, 122);
             this.label99.Name = "label99";
@@ -4484,7 +4522,7 @@ namespace TKV
             // label123
             // 
             this.label123.AutoSize = true;
-            this.label123.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label123.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label123.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label123.Location = new System.Drawing.Point(402, 451);
             this.label123.Name = "label123";
@@ -4495,7 +4533,7 @@ namespace TKV
             // label90
             // 
             this.label90.AutoSize = true;
-            this.label90.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label90.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label90.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label90.Location = new System.Drawing.Point(2, 294);
             this.label90.Name = "label90";
@@ -4506,7 +4544,7 @@ namespace TKV
             // label122
             // 
             this.label122.AutoSize = true;
-            this.label122.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label122.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label122.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label122.Location = new System.Drawing.Point(402, 319);
             this.label122.Name = "label122";
@@ -4517,7 +4555,7 @@ namespace TKV
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label17.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label17.Location = new System.Drawing.Point(2, 156);
             this.label17.Name = "label17";
@@ -4529,7 +4567,7 @@ namespace TKV
             // 
             this.JT15.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT15.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT15.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT15.Location = new System.Drawing.Point(506, 114);
             this.JT15.Name = "JT15";
@@ -4542,7 +4580,7 @@ namespace TKV
             // 
             this.JT27.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT27.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT27.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT27.Location = new System.Drawing.Point(505, 450);
             this.JT27.Name = "JT27";
@@ -4555,7 +4593,7 @@ namespace TKV
             // 
             this.JT9.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT9.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT9.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT9.Location = new System.Drawing.Point(105, 293);
             this.JT9.Name = "JT9";
@@ -4568,7 +4606,7 @@ namespace TKV
             // 
             this.JT22.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT22.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT22.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT22.Location = new System.Drawing.Point(504, 318);
             this.JT22.Name = "JT22";
@@ -4581,7 +4619,7 @@ namespace TKV
             // 
             this.JT4.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT4.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT4.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT4.Location = new System.Drawing.Point(103, 154);
             this.JT4.Name = "JT4";
@@ -4594,7 +4632,7 @@ namespace TKV
             // 
             this.J15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J15.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J15.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J15.Location = new System.Drawing.Point(569, 114);
             this.J15.Name = "J15";
@@ -4608,7 +4646,7 @@ namespace TKV
             // 
             this.J27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J27.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J27.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J27.Location = new System.Drawing.Point(568, 450);
             this.J27.Name = "J27";
@@ -4622,7 +4660,7 @@ namespace TKV
             // 
             this.J9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J9.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J9.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J9.Location = new System.Drawing.Point(167, 293);
             this.J9.Name = "J9";
@@ -4636,7 +4674,7 @@ namespace TKV
             // 
             this.J22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J22.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J22.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J22.Location = new System.Drawing.Point(567, 318);
             this.J22.Name = "J22";
@@ -4650,7 +4688,7 @@ namespace TKV
             // 
             this.J4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J4.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J4.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J4.Location = new System.Drawing.Point(166, 154);
             this.J4.Name = "J4";
@@ -4663,7 +4701,7 @@ namespace TKV
             // label98
             // 
             this.label98.AutoSize = true;
-            this.label98.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label98.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label98.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label98.Location = new System.Drawing.Point(405, 199);
             this.label98.Name = "label98";
@@ -4674,7 +4712,7 @@ namespace TKV
             // label121
             // 
             this.label121.AutoSize = true;
-            this.label121.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label121.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label121.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label121.Location = new System.Drawing.Point(402, 538);
             this.label121.Name = "label121";
@@ -4685,7 +4723,7 @@ namespace TKV
             // label93
             // 
             this.label93.AutoSize = true;
-            this.label93.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label93.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label93.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label93.Location = new System.Drawing.Point(2, 375);
             this.label93.Name = "label93";
@@ -4696,7 +4734,7 @@ namespace TKV
             // label97
             // 
             this.label97.AutoSize = true;
-            this.label97.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label97.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label97.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label97.Location = new System.Drawing.Point(404, 172);
             this.label97.Name = "label97";
@@ -4708,7 +4746,7 @@ namespace TKV
             // label120
             // 
             this.label120.AutoSize = true;
-            this.label120.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label120.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label120.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label120.Location = new System.Drawing.Point(402, 516);
             this.label120.Name = "label120";
@@ -4719,7 +4757,7 @@ namespace TKV
             // label89
             // 
             this.label89.AutoSize = true;
-            this.label89.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label89.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label89.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label89.Location = new System.Drawing.Point(2, 354);
             this.label89.Name = "label89";
@@ -4730,7 +4768,7 @@ namespace TKV
             // label119
             // 
             this.label119.AutoSize = true;
-            this.label119.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label119.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label119.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label119.Location = new System.Drawing.Point(402, 372);
             this.label119.Name = "label119";
@@ -4742,7 +4780,7 @@ namespace TKV
             // 
             this.J18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J18.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J18.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J18.Location = new System.Drawing.Point(568, 195);
             this.J18.Name = "J18";
@@ -4756,7 +4794,7 @@ namespace TKV
             // 
             this.J30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J30.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J30.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J30.Location = new System.Drawing.Point(567, 530);
             this.J30.Name = "J30";
@@ -4770,7 +4808,7 @@ namespace TKV
             // 
             this.J12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J12.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J12.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J12.Location = new System.Drawing.Point(166, 374);
             this.J12.Name = "J12";
@@ -4784,7 +4822,7 @@ namespace TKV
             // 
             this.J17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J17.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J17.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J17.Location = new System.Drawing.Point(569, 167);
             this.J17.Name = "J17";
@@ -4798,7 +4836,7 @@ namespace TKV
             // 
             this.J29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J29.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J29.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J29.Location = new System.Drawing.Point(568, 502);
             this.J29.Name = "J29";
@@ -4812,7 +4850,7 @@ namespace TKV
             // 
             this.J11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J11.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J11.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J11.Location = new System.Drawing.Point(167, 346);
             this.J11.Name = "J11";
@@ -4826,7 +4864,7 @@ namespace TKV
             // 
             this.J24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J24.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J24.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J24.Location = new System.Drawing.Point(567, 370);
             this.J24.Name = "J24";
@@ -4840,7 +4878,7 @@ namespace TKV
             // 
             this.JC18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC18.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC18.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC18.Location = new System.Drawing.Point(635, 195);
             this.JC18.Name = "JC18";
@@ -4854,7 +4892,7 @@ namespace TKV
             // 
             this.JC30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC30.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC30.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC30.Location = new System.Drawing.Point(634, 530);
             this.JC30.Name = "JC30";
@@ -4868,7 +4906,7 @@ namespace TKV
             // 
             this.JC12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC12.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC12.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC12.Location = new System.Drawing.Point(234, 374);
             this.JC12.Name = "JC12";
@@ -4882,7 +4920,7 @@ namespace TKV
             // 
             this.JC17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC17.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC17.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC17.Location = new System.Drawing.Point(636, 167);
             this.JC17.Name = "JC17";
@@ -4896,7 +4934,7 @@ namespace TKV
             // 
             this.JC29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC29.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC29.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC29.Location = new System.Drawing.Point(634, 502);
             this.JC29.Name = "JC29";
@@ -4910,7 +4948,7 @@ namespace TKV
             // 
             this.JC11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC11.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC11.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC11.Location = new System.Drawing.Point(234, 346);
             this.JC11.Name = "JC11";
@@ -4924,7 +4962,7 @@ namespace TKV
             // 
             this.JC24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC24.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC24.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC24.Location = new System.Drawing.Point(634, 370);
             this.JC24.Name = "JC24";
@@ -4938,7 +4976,7 @@ namespace TKV
             // 
             this.JC20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC20.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC20.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC20.Location = new System.Drawing.Point(634, 250);
             this.JC20.Name = "JC20";
@@ -4952,7 +4990,7 @@ namespace TKV
             // 
             this.JC19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC19.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC19.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC19.Location = new System.Drawing.Point(634, 223);
             this.JC19.Name = "JC19";
@@ -4966,7 +5004,7 @@ namespace TKV
             // 
             this.JC2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC2.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC2.Location = new System.Drawing.Point(234, 102);
             this.JC2.Name = "JC2";
@@ -4980,7 +5018,7 @@ namespace TKV
             // 
             this.textBox39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.textBox39.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox39.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox39.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.textBox39.Location = new System.Drawing.Point(629, 44);
             this.textBox39.Name = "textBox39";
@@ -4993,7 +5031,7 @@ namespace TKV
             // 
             this.JC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC1.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC1.Location = new System.Drawing.Point(234, 74);
             this.JC1.Name = "JC1";
@@ -5007,7 +5045,7 @@ namespace TKV
             // 
             this.J19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J19.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J19.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J19.Location = new System.Drawing.Point(567, 223);
             this.J19.Name = "J19";
@@ -5021,7 +5059,7 @@ namespace TKV
             // 
             this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox14.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox14.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.textBox14.Location = new System.Drawing.Point(235, 35);
             this.textBox14.Name = "textBox14";
@@ -5033,7 +5071,7 @@ namespace TKV
             // label118
             // 
             this.label118.AutoSize = true;
-            this.label118.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label118.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label118.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label118.Location = new System.Drawing.Point(402, 226);
             this.label118.Name = "label118";
@@ -5045,7 +5083,7 @@ namespace TKV
             // 
             this.J1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J1.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J1.Location = new System.Drawing.Point(166, 74);
             this.J1.Name = "J1";
@@ -5059,7 +5097,7 @@ namespace TKV
             // 
             this.J20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J20.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J20.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J20.Location = new System.Drawing.Point(567, 250);
             this.J20.Name = "J20";
@@ -5072,7 +5110,7 @@ namespace TKV
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label34.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label34.Location = new System.Drawing.Point(2, 77);
             this.label34.Name = "label34";
@@ -5083,7 +5121,7 @@ namespace TKV
             // label117
             // 
             this.label117.AutoSize = true;
-            this.label117.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label117.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label117.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label117.Location = new System.Drawing.Point(402, 252);
             this.label117.Name = "label117";
@@ -5095,7 +5133,7 @@ namespace TKV
             // 
             this.J2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J2.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J2.Location = new System.Drawing.Point(166, 102);
             this.J2.Name = "J2";
@@ -5109,7 +5147,7 @@ namespace TKV
             // 
             this.JT20.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT20.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT20.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT20.Location = new System.Drawing.Point(504, 250);
             this.JT20.Name = "JT20";
@@ -5121,7 +5159,7 @@ namespace TKV
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label15.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label15.Location = new System.Drawing.Point(2, 103);
             this.label15.Name = "label15";
@@ -5133,7 +5171,7 @@ namespace TKV
             // 
             this.JT19.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT19.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT19.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT19.Location = new System.Drawing.Point(504, 223);
             this.JT19.Name = "JT19";
@@ -5146,7 +5184,7 @@ namespace TKV
             // 
             this.JT2.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT2.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT2.Location = new System.Drawing.Point(103, 102);
             this.JT2.Name = "JT2";
@@ -5158,7 +5196,7 @@ namespace TKV
             // label116
             // 
             this.label116.AutoSize = true;
-            this.label116.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label116.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label116.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label116.Location = new System.Drawing.Point(564, 66);
             this.label116.Name = "label116";
@@ -5170,7 +5208,7 @@ namespace TKV
             // 
             this.JT1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT1.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT1.Location = new System.Drawing.Point(103, 74);
             this.JT1.Name = "JT1";
@@ -5182,7 +5220,7 @@ namespace TKV
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label41.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label41.Location = new System.Drawing.Point(170, 56);
             this.label41.Name = "label41";
@@ -5194,7 +5232,7 @@ namespace TKV
             // 
             this.textBox34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.textBox34.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox34.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox34.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.textBox34.Location = new System.Drawing.Point(534, 44);
             this.textBox34.Name = "textBox34";
@@ -5207,7 +5245,7 @@ namespace TKV
             // 
             this.J16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J16.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J16.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J16.Location = new System.Drawing.Point(569, 141);
             this.J16.Name = "J16";
@@ -5221,7 +5259,7 @@ namespace TKV
             // 
             this.J28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J28.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J28.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J28.Location = new System.Drawing.Point(568, 476);
             this.J28.Name = "J28";
@@ -5235,7 +5273,7 @@ namespace TKV
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox1.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.textBox1.Location = new System.Drawing.Point(140, 35);
             this.textBox1.Name = "textBox1";
@@ -5248,7 +5286,7 @@ namespace TKV
             // 
             this.J10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J10.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J10.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J10.Location = new System.Drawing.Point(167, 319);
             this.J10.Name = "J10";
@@ -5261,7 +5299,7 @@ namespace TKV
             // label115
             // 
             this.label115.AutoSize = true;
-            this.label115.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label115.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label115.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label115.Location = new System.Drawing.Point(500, 66);
             this.label115.Name = "label115";
@@ -5273,7 +5311,7 @@ namespace TKV
             // 
             this.JC16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC16.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC16.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC16.Location = new System.Drawing.Point(636, 141);
             this.JC16.Name = "JC16";
@@ -5287,7 +5325,7 @@ namespace TKV
             // 
             this.JC28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC28.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC28.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC28.Location = new System.Drawing.Point(634, 476);
             this.JC28.Name = "JC28";
@@ -5300,7 +5338,7 @@ namespace TKV
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label40.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label40.Location = new System.Drawing.Point(106, 56);
             this.label40.Name = "label40";
@@ -5312,7 +5350,7 @@ namespace TKV
             // 
             this.JC10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC10.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC10.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC10.Location = new System.Drawing.Point(234, 319);
             this.JC10.Name = "JC10";
@@ -5326,7 +5364,7 @@ namespace TKV
             // 
             this.J23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J23.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J23.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J23.Location = new System.Drawing.Point(567, 345);
             this.J23.Name = "J23";
@@ -5339,7 +5377,7 @@ namespace TKV
             // label96
             // 
             this.label96.AutoSize = true;
-            this.label96.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label96.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label96.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label96.Location = new System.Drawing.Point(405, 145);
             this.label96.Name = "label96";
@@ -5350,7 +5388,7 @@ namespace TKV
             // label114
             // 
             this.label114.AutoSize = true;
-            this.label114.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label114.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label114.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label114.Location = new System.Drawing.Point(402, 478);
             this.label114.Name = "label114";
@@ -5362,7 +5400,7 @@ namespace TKV
             // 
             this.JC23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC23.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC23.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC23.Location = new System.Drawing.Point(634, 345);
             this.JC23.Name = "JC23";
@@ -5375,7 +5413,7 @@ namespace TKV
             // label88
             // 
             this.label88.AutoSize = true;
-            this.label88.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label88.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label88.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label88.Location = new System.Drawing.Point(2, 322);
             this.label88.Name = "label88";
@@ -5386,7 +5424,7 @@ namespace TKV
             // label113
             // 
             this.label113.AutoSize = true;
-            this.label113.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label113.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label113.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label113.Location = new System.Drawing.Point(402, 346);
             this.label113.Name = "label113";
@@ -5397,7 +5435,7 @@ namespace TKV
             // label112
             // 
             this.label112.AutoSize = true;
-            this.label112.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label112.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label112.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label112.Location = new System.Drawing.Point(402, 292);
             this.label112.Name = "label112";
@@ -5409,7 +5447,7 @@ namespace TKV
             // 
             this.JC21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.JC21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JC21.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JC21.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JC21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.JC21.Location = new System.Drawing.Point(634, 290);
             this.JC21.Name = "JC21";
@@ -5423,7 +5461,7 @@ namespace TKV
             // 
             this.JT16.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT16.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT16.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT16.Location = new System.Drawing.Point(506, 141);
             this.JT16.Name = "JT16";
@@ -5436,7 +5474,7 @@ namespace TKV
             // 
             this.JT28.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT28.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT28.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT28.Location = new System.Drawing.Point(505, 476);
             this.JT28.Name = "JT28";
@@ -5449,7 +5487,7 @@ namespace TKV
             // 
             this.J21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.J21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.J21.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.J21.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.J21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.J21.Location = new System.Drawing.Point(567, 290);
             this.J21.Name = "J21";
@@ -5463,7 +5501,7 @@ namespace TKV
             // 
             this.JT10.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT10.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT10.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT10.Location = new System.Drawing.Point(105, 319);
             this.JT10.Name = "JT10";
@@ -5476,7 +5514,7 @@ namespace TKV
             // 
             this.JT23.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT23.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT23.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT23.Location = new System.Drawing.Point(504, 345);
             this.JT23.Name = "JT23";
@@ -5489,7 +5527,7 @@ namespace TKV
             // 
             this.JT21.BackColor = System.Drawing.Color.AntiqueWhite;
             this.JT21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.JT21.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JT21.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JT21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.JT21.Location = new System.Drawing.Point(504, 290);
             this.JT21.Name = "JT21";
@@ -5501,7 +5539,7 @@ namespace TKV
             // label111
             // 
             this.label111.AutoSize = true;
-            this.label111.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label111.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label111.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label111.Location = new System.Drawing.Point(693, 298);
             this.label111.Name = "label111";
@@ -5512,7 +5550,7 @@ namespace TKV
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label12.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label12.Location = new System.Drawing.Point(292, 134);
             this.label12.Name = "label12";
@@ -5523,7 +5561,7 @@ namespace TKV
             // label110
             // 
             this.label110.AutoSize = true;
-            this.label110.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label110.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label110.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label110.Location = new System.Drawing.Point(693, 231);
             this.label110.Name = "label110";
@@ -5534,7 +5572,7 @@ namespace TKV
             // label95
             // 
             this.label95.AutoSize = true;
-            this.label95.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label95.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label95.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label95.Location = new System.Drawing.Point(694, 149);
             this.label95.Name = "label95";
@@ -5545,7 +5583,7 @@ namespace TKV
             // label109
             // 
             this.label109.AutoSize = true;
-            this.label109.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label109.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label109.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label109.Location = new System.Drawing.Point(694, 484);
             this.label109.Name = "label109";
@@ -5556,7 +5594,7 @@ namespace TKV
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label19.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label19.Location = new System.Drawing.Point(292, 82);
             this.label19.Name = "label19";
@@ -5567,7 +5605,7 @@ namespace TKV
             // label108
             // 
             this.label108.AutoSize = true;
-            this.label108.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label108.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label108.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label108.Location = new System.Drawing.Point(693, 258);
             this.label108.Name = "label108";
@@ -5578,7 +5616,7 @@ namespace TKV
             // label67
             // 
             this.label67.AutoSize = true;
-            this.label67.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label67.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label67.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label67.Location = new System.Drawing.Point(294, 327);
             this.label67.Name = "label67";
@@ -5589,7 +5627,7 @@ namespace TKV
             // label107
             // 
             this.label107.AutoSize = true;
-            this.label107.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label107.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label107.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label107.Location = new System.Drawing.Point(693, 353);
             this.label107.Name = "label107";
@@ -5600,7 +5638,7 @@ namespace TKV
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label18.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label18.Location = new System.Drawing.Point(292, 110);
             this.label18.Name = "label18";
@@ -5641,7 +5679,7 @@ namespace TKV
             // 
             this.forceTx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.forceTx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.forceTx.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.forceTx.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.forceTx.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.forceTx.Location = new System.Drawing.Point(171, 396);
             this.forceTx.Name = "forceTx";
@@ -5655,7 +5693,7 @@ namespace TKV
             // 
             this.forceRelease.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.forceRelease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.forceRelease.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.forceRelease.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.forceRelease.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.forceRelease.Location = new System.Drawing.Point(110, 434);
             this.forceRelease.Name = "forceRelease";
@@ -5669,7 +5707,7 @@ namespace TKV
             // 
             this.ACCESS_Check.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.ACCESS_Check.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ACCESS_Check.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ACCESS_Check.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.ACCESS_Check.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.ACCESS_Check.Location = new System.Drawing.Point(123, 363);
             this.ACCESS_Check.Name = "ACCESS_Check";
@@ -5682,7 +5720,7 @@ namespace TKV
             // label87
             // 
             this.label87.AutoSize = true;
-            this.label87.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label87.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label87.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label87.Location = new System.Drawing.Point(30, 367);
             this.label87.Name = "label87";
@@ -5694,7 +5732,7 @@ namespace TKV
             // 
             this.RMS_Check.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.RMS_Check.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RMS_Check.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.RMS_Check.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.RMS_Check.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.RMS_Check.Location = new System.Drawing.Point(123, 334);
             this.RMS_Check.Name = "RMS_Check";
@@ -5707,7 +5745,7 @@ namespace TKV
             // label68
             // 
             this.label68.AutoSize = true;
-            this.label68.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label68.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label68.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label68.Location = new System.Drawing.Point(55, 338);
             this.label68.Name = "label68";
@@ -5719,7 +5757,7 @@ namespace TKV
             // 
             this.WT8.BackColor = System.Drawing.Color.AntiqueWhite;
             this.WT8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.WT8.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.WT8.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.WT8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.WT8.Location = new System.Drawing.Point(55, 305);
             this.WT8.Name = "WT8";
@@ -5731,7 +5769,7 @@ namespace TKV
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label57.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label57.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label57.Location = new System.Drawing.Point(6, 309);
             this.label57.Name = "label57";
@@ -5742,7 +5780,7 @@ namespace TKV
             // label66
             // 
             this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label66.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label66.Location = new System.Drawing.Point(250, 313);
             this.label66.Name = "label66";
@@ -5754,7 +5792,7 @@ namespace TKV
             // 
             this.W8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.W8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.W8.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.W8.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.W8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.W8.Location = new System.Drawing.Point(123, 305);
             this.W8.Name = "W8";
@@ -5769,7 +5807,7 @@ namespace TKV
             // 
             this.WC7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.WC7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.WC7.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.WC7.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.WC7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.WC7.Location = new System.Drawing.Point(191, 247);
             this.WC7.Name = "WC7";
@@ -5783,7 +5821,7 @@ namespace TKV
             // 
             this.RMS_Error.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.RMS_Error.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RMS_Error.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.RMS_Error.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.RMS_Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.RMS_Error.Location = new System.Drawing.Point(191, 305);
             this.RMS_Error.Name = "RMS_Error";
@@ -5797,7 +5835,7 @@ namespace TKV
             // 
             this.WT7.BackColor = System.Drawing.Color.AntiqueWhite;
             this.WT7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.WT7.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.WT7.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.WT7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.WT7.Location = new System.Drawing.Point(55, 247);
             this.WT7.Name = "WT7";
@@ -5809,7 +5847,7 @@ namespace TKV
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label8.Location = new System.Drawing.Point(19, 251);
             this.label8.Name = "label8";
@@ -5820,7 +5858,7 @@ namespace TKV
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label16.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label16.Location = new System.Drawing.Point(250, 255);
             this.label16.Name = "label16";
@@ -5832,7 +5870,7 @@ namespace TKV
             // 
             this.W7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.W7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.W7.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.W7.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.W7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.W7.Location = new System.Drawing.Point(123, 247);
             this.W7.Name = "W7";
@@ -5846,7 +5884,7 @@ namespace TKV
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox3.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.textBox3.Location = new System.Drawing.Point(191, 52);
             this.textBox3.Name = "textBox3";
@@ -5858,7 +5896,7 @@ namespace TKV
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label58.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label58.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label58.Location = new System.Drawing.Point(120, 65);
             this.label58.Name = "label58";
@@ -5870,7 +5908,7 @@ namespace TKV
             // 
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox4.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.textBox4.Location = new System.Drawing.Point(88, 44);
             this.textBox4.Name = "textBox4";
@@ -5882,7 +5920,7 @@ namespace TKV
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label59.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label59.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label59.Location = new System.Drawing.Point(56, 65);
             this.label59.Name = "label59";
@@ -5894,7 +5932,7 @@ namespace TKV
             // 
             this.WC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.WC1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.WC1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.WC1.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.WC1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.WC1.Location = new System.Drawing.Point(191, 78);
             this.WC1.Name = "WC1";
@@ -5908,7 +5946,7 @@ namespace TKV
             // 
             this.WC2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.WC2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.WC2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.WC2.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.WC2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.WC2.Location = new System.Drawing.Point(191, 107);
             this.WC2.Name = "WC2";
@@ -5922,7 +5960,7 @@ namespace TKV
             // 
             this.WC3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.WC3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.WC3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.WC3.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.WC3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.WC3.Location = new System.Drawing.Point(191, 133);
             this.WC3.Name = "WC3";
@@ -5936,7 +5974,7 @@ namespace TKV
             // 
             this.W2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.W2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.W2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.W2.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.W2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.W2.Location = new System.Drawing.Point(123, 107);
             this.W2.Name = "W2";
@@ -5950,7 +5988,7 @@ namespace TKV
             // 
             this.WT3.BackColor = System.Drawing.Color.AntiqueWhite;
             this.WT3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.WT3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.WT3.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.WT3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.WT3.Location = new System.Drawing.Point(55, 133);
             this.WT3.Name = "WT3";
@@ -5963,7 +6001,7 @@ namespace TKV
             // 
             this.WT2.BackColor = System.Drawing.Color.AntiqueWhite;
             this.WT2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.WT2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.WT2.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.WT2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.WT2.Location = new System.Drawing.Point(55, 107);
             this.WT2.Name = "WT2";
@@ -5976,7 +6014,7 @@ namespace TKV
             // 
             this.WT1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.WT1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.WT1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.WT1.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.WT1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.WT1.Location = new System.Drawing.Point(55, 78);
             this.WT1.Name = "WT1";
@@ -5989,7 +6027,7 @@ namespace TKV
             // 
             this.W3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.W3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.W3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.W3.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.W3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.W3.Location = new System.Drawing.Point(123, 133);
             this.W3.Name = "W3";
@@ -6003,7 +6041,7 @@ namespace TKV
             // 
             this.W1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.W1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.W1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.W1.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.W1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.W1.Location = new System.Drawing.Point(123, 78);
             this.W1.Name = "W1";
@@ -6016,7 +6054,7 @@ namespace TKV
             // lb_X_Cur_unit
             // 
             this.lb_X_Cur_unit.AutoSize = true;
-            this.lb_X_Cur_unit.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lb_X_Cur_unit.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lb_X_Cur_unit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.lb_X_Cur_unit.Location = new System.Drawing.Point(250, 86);
             this.lb_X_Cur_unit.Name = "lb_X_Cur_unit";
@@ -6027,7 +6065,7 @@ namespace TKV
             // lb_Y_Cur_unit
             // 
             this.lb_Y_Cur_unit.AutoSize = true;
-            this.lb_Y_Cur_unit.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lb_Y_Cur_unit.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lb_Y_Cur_unit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.lb_Y_Cur_unit.Location = new System.Drawing.Point(250, 115);
             this.lb_Y_Cur_unit.Name = "lb_Y_Cur_unit";
@@ -6038,7 +6076,7 @@ namespace TKV
             // lb_Z_Cur_unit
             // 
             this.lb_Z_Cur_unit.AutoSize = true;
-            this.lb_Z_Cur_unit.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lb_Z_Cur_unit.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lb_Z_Cur_unit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.lb_Z_Cur_unit.Location = new System.Drawing.Point(250, 141);
             this.lb_Z_Cur_unit.Name = "lb_Z_Cur_unit";
@@ -6049,7 +6087,7 @@ namespace TKV
             // lb_Z_target
             // 
             this.lb_Z_target.AutoSize = true;
-            this.lb_Z_target.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lb_Z_target.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lb_Z_target.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.lb_Z_target.Location = new System.Drawing.Point(19, 137);
             this.lb_Z_target.Name = "lb_Z_target";
@@ -6060,7 +6098,7 @@ namespace TKV
             // lb_Y_target
             // 
             this.lb_Y_target.AutoSize = true;
-            this.lb_Y_target.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lb_Y_target.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lb_Y_target.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.lb_Y_target.Location = new System.Drawing.Point(19, 111);
             this.lb_Y_target.Name = "lb_Y_target";
@@ -6071,7 +6109,7 @@ namespace TKV
             // lb_X_target
             // 
             this.lb_X_target.AutoSize = true;
-            this.lb_X_target.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lb_X_target.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lb_X_target.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.lb_X_target.Location = new System.Drawing.Point(19, 82);
             this.lb_X_target.Name = "lb_X_target";
@@ -6118,7 +6156,7 @@ namespace TKV
             // 
             this.button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Font = new System.Drawing.Font("맑은 고딕", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button20.Font = new System.Drawing.Font("Malgun Gothic", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.button20.Location = new System.Drawing.Point(138, 322);
             this.button20.Name = "button20";
@@ -6132,7 +6170,7 @@ namespace TKV
             // 
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button7.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.button7.Location = new System.Drawing.Point(74, 322);
             this.button7.Name = "button7";
@@ -6146,7 +6184,7 @@ namespace TKV
             // 
             this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("맑은 고딕", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button19.Font = new System.Drawing.Font("Malgun Gothic", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.button19.Location = new System.Drawing.Point(138, 284);
             this.button19.Name = "button19";
@@ -6160,7 +6198,7 @@ namespace TKV
             // 
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button8.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.button8.Location = new System.Drawing.Point(74, 284);
             this.button8.Name = "button8";
@@ -6174,7 +6212,7 @@ namespace TKV
             // 
             this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button18.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.button18.Location = new System.Drawing.Point(138, 246);
             this.button18.Name = "button18";
@@ -6189,7 +6227,7 @@ namespace TKV
             // 
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button9.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.button9.Location = new System.Drawing.Point(74, 246);
             this.button9.Name = "button9";
@@ -6203,7 +6241,7 @@ namespace TKV
             // 
             this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Font = new System.Drawing.Font("맑은 고딕", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button17.Font = new System.Drawing.Font("Malgun Gothic", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.button17.Location = new System.Drawing.Point(138, 360);
             this.button17.Name = "button17";
@@ -6217,7 +6255,7 @@ namespace TKV
             // 
             this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button16.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.button16.Location = new System.Drawing.Point(138, 170);
             this.button16.Name = "button16";
@@ -6231,7 +6269,7 @@ namespace TKV
             // 
             this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button10.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.button10.Location = new System.Drawing.Point(74, 360);
             this.button10.Name = "button10";
@@ -6245,7 +6283,7 @@ namespace TKV
             // 
             this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button15.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.button15.Location = new System.Drawing.Point(138, 132);
             this.button15.Name = "button15";
@@ -6259,7 +6297,7 @@ namespace TKV
             // 
             this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button11.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.button11.Location = new System.Drawing.Point(74, 170);
             this.button11.Name = "button11";
@@ -6273,7 +6311,7 @@ namespace TKV
             // 
             this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button14.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.button14.Location = new System.Drawing.Point(138, 208);
             this.button14.Name = "button14";
@@ -6287,7 +6325,7 @@ namespace TKV
             // 
             this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button12.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.button12.Location = new System.Drawing.Point(74, 132);
             this.button12.Name = "button12";
@@ -6301,7 +6339,7 @@ namespace TKV
             // 
             this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button13.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.button13.Location = new System.Drawing.Point(74, 208);
             this.button13.Name = "button13";
@@ -6315,7 +6353,7 @@ namespace TKV
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.button1.Location = new System.Drawing.Point(9, 322);
             this.button1.Name = "button1";
@@ -6329,7 +6367,7 @@ namespace TKV
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button2.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.button2.Location = new System.Drawing.Point(9, 284);
             this.button2.Name = "button2";
@@ -6343,7 +6381,7 @@ namespace TKV
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button3.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.button3.Location = new System.Drawing.Point(9, 246);
             this.button3.Name = "button3";
@@ -6357,7 +6395,7 @@ namespace TKV
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button4.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.button4.Location = new System.Drawing.Point(9, 360);
             this.button4.Name = "button4";
@@ -6371,7 +6409,7 @@ namespace TKV
             // 
             this.btnTar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.btnTar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTar2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnTar2.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnTar2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.btnTar2.Location = new System.Drawing.Point(9, 170);
             this.btnTar2.Name = "btnTar2";
@@ -6385,7 +6423,7 @@ namespace TKV
             // 
             this.btnSTOP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.btnSTOP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSTOP.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSTOP.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSTOP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.btnSTOP.Location = new System.Drawing.Point(9, 398);
             this.btnSTOP.Name = "btnSTOP";
@@ -6398,7 +6436,7 @@ namespace TKV
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label22.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label22.Location = new System.Drawing.Point(44, 18);
             this.label22.Name = "label22";
@@ -6410,7 +6448,7 @@ namespace TKV
             // 
             this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnHome.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.btnHome.Location = new System.Drawing.Point(9, 56);
             this.btnHome.Name = "btnHome";
@@ -6424,7 +6462,7 @@ namespace TKV
             // 
             this.btnTar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.btnTar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTar1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnTar1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnTar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.btnTar1.Location = new System.Drawing.Point(9, 132);
             this.btnTar1.Name = "btnTar1";
@@ -6438,7 +6476,7 @@ namespace TKV
             // 
             this.btnParking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.btnParking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnParking.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnParking.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnParking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.btnParking.Location = new System.Drawing.Point(9, 94);
             this.btnParking.Name = "btnParking";
@@ -6452,7 +6490,7 @@ namespace TKV
             // 
             this.btnTar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.btnTar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTar3.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnTar3.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnTar3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.btnTar3.Location = new System.Drawing.Point(9, 208);
             this.btnTar3.Name = "btnTar3";
@@ -6466,7 +6504,7 @@ namespace TKV
             // 
             this.WC8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.WC8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.WC8.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.WC8.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.WC8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.WC8.Location = new System.Drawing.Point(191, 276);
             this.WC8.Name = "WC8";
@@ -6480,7 +6518,7 @@ namespace TKV
             // btn_Init_WorldPos
             // 
             this.btn_Init_WorldPos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Init_WorldPos.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_Init_WorldPos.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_Init_WorldPos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.btn_Init_WorldPos.Location = new System.Drawing.Point(157, 468);
             this.btn_Init_WorldPos.Name = "btn_Init_WorldPos";
@@ -6494,7 +6532,7 @@ namespace TKV
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label56.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label56.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.label56.Location = new System.Drawing.Point(248, 284);
             this.label56.Name = "label56";
@@ -6524,7 +6562,7 @@ namespace TKV
             // 
             this.PW_Check.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
             this.PW_Check.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PW_Check.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PW_Check.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.PW_Check.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(195)))), ((int)(((byte)(203)))));
             this.PW_Check.Location = new System.Drawing.Point(70, 90);
             this.PW_Check.Name = "PW_Check";
@@ -6682,7 +6720,7 @@ namespace TKV
             this.Main.Controls.Add(this.pn_Monitoring);
             this.Main.Location = new System.Drawing.Point(4, 30);
             this.Main.Name = "Main";
-            this.Main.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Main.Padding = new System.Windows.Forms.Padding(3);
             this.Main.Size = new System.Drawing.Size(994, 584);
             this.Main.TabIndex = 0;
             this.Main.Text = "Main";
@@ -6694,7 +6732,7 @@ namespace TKV
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(994, 584);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Monitoring";
@@ -6776,18 +6814,19 @@ namespace TKV
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(1017, 728);
+            this.ClientSize = new System.Drawing.Size(1548, 787);
+            this.Controls.Add(this.pn_Debug);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.labelSimulcomand);
-            this.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TKV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MANIPULATOR";
-            this.Load += new System.EventHandler(this.MP_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MP_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MP_KeyUp);
             this.gr_CAN.ResumeLayout(false);
@@ -6795,10 +6834,10 @@ namespace TKV
             this.pn_Debug.ResumeLayout(false);
             this.pn_Debug.PerformLayout();
             this.PN_NotUse.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.pnConveGain.ResumeLayout(false);
             this.pnConveGain.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.pnError.ResumeLayout(false);
             this.pnError.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -7285,6 +7324,9 @@ namespace TKV
         private System.Windows.Forms.Button LCU3con;
         private System.Windows.Forms.Button LCU2con;
         private System.Windows.Forms.Button LCU1con;
+        private System.Windows.Forms.ComboBox LCUlist;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.CheckBox SafetyMove_checkBox;
     }
 }
 

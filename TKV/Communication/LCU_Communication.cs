@@ -123,7 +123,7 @@ public class LCU_Communication
     //설명: LCU 생성자. 기본 설정 및 변수 초기화.
     public LCU_Communication(UdpClient client, IPEndPoint ipEndPoint, byte deviceNumber)
     {
-        //SetDeviceHeader(LcuCommon.HEADER_RM, LcuCommon.HEADER_LCU1);
+        //SetDeviceHeader(LcuCommon.HEADER_RM, LcuCommon.HEADER_LCU4);
         switch (deviceNumber)
         {
             case 1:
@@ -142,8 +142,7 @@ public class LCU_Communication
                 SetDeviceHeader(LcuCommon.HEADER_PC1, LcuCommon.HEADER_LCU5);
                 break;
         }
-        //SetDeviceHeader(LcuCommon.HEADER_PC1, LcuCommon.HEADER_LCU1);
-
+        
         this._udpClient = client;
         this._ipEndPoint = ipEndPoint;
 
@@ -291,7 +290,7 @@ public class LCU_Communication
     }
 
     //설명: 로봇팔 위치 제어. 
-    public void SetArmPosCmd(float[] posCommand, float ToolCmd, float RMS)
+    public void SetArmPosCmd(float[] posCommand)//, float ToolCmd, float RMS)
     {
         switch (this.mode)
         {
@@ -302,15 +301,15 @@ public class LCU_Communication
                 break;
             case LcuCommunication.LCU_VAL_MODE_WORLD_POS_M:
                 _worldPosCmd_M.fWorldCmd = posCommand;
-                _worldPosCmd_M.toolCmd = ToolCmd;
-                _worldPosCmd_M.RMS = RMS;
+                //_worldPosCmd_M.toolCmd = ToolCmd;
+                //_worldPosCmd_M.RMS = RMS;
                 SendCommandPosition_World(_worldPosCmd_M);
                 Debug.WriteLine(_worldPosCmd_M.fWorldCmd[0] + " " + _worldPosCmd_M.fWorldCmd[1] + " " + _worldPosCmd_M.fWorldCmd[2] + " " + _worldPosCmd_M.toolCmd + " " + _worldPosCmd_M.RMS);
                 break;
             case LcuCommunication.LCU_VAL_MODE_WORLD_POS_D:
                 _worldPosCmd_D.fWorldCmd = posCommand;
-                _worldPosCmd_D.toolCmd = ToolCmd;
-                _worldPosCmd_D.RMS = RMS;
+                //_worldPosCmd_D.toolCmd = ToolCmd;
+                //_worldPosCmd_D.RMS = RMS;
                 SendCommandPosition_World(_worldPosCmd_D);
                 Debug.WriteLine(_worldPosCmd_D.fWorldCmd[0] + " " + _worldPosCmd_D.fWorldCmd[1] + " " + _worldPosCmd_D.fWorldCmd[2] + " " + _worldPosCmd_D.toolCmd + " " + _worldPosCmd_D.RMS);
                 break;
@@ -877,9 +876,53 @@ public class LCU_Communication
         if (isOn) packet.uValue = LcuCommunication.LCU_VAL_CAN_CONNECT;
         else packet.uValue = LcuCommunication.LCU_VAL_CAN_DISCONNECT;
         packet.nDataSize = 0;
-
         SendToLCU(packet);
     }
+
+    ////설명: LCU의 CAN 데이터를 상위(조이스틱)까지 전송하게 함. 또는 끔.
+    //public void SendSetCanConnect_2(bool isOn)
+    //{
+    //    LcuCommunication.t_lcu_packet_const_size packet = new LcuCommunication.t_lcu_packet_const_size();
+    //    _receiver = 2;
+    //    packet.uSender = _sender;
+    //    packet.uReceiver = _receiver;
+    //    packet.uAcknowledge = LcuCommon.ACK;
+    //    packet.uCode = LcuCommunication.LCU_SVC_CAN_CONNECT;
+    //    if (isOn) packet.uValue = LcuCommunication.LCU_VAL_CAN_CONNECT;
+    //    else packet.uValue = LcuCommunication.LCU_VAL_CAN_DISCONNECT;
+    //    packet.nDataSize = 0;
+    //    SendToLCU(packet);
+    //}
+
+    ////설명: LCU의 CAN 데이터를 상위(조이스틱)까지 전송하게 함. 또는 끔.
+    //public void SendSetCanConnect_3(bool isOn)
+    //{
+    //    LcuCommunication.t_lcu_packet_const_size packet = new LcuCommunication.t_lcu_packet_const_size();
+    //    _receiver = 4;
+    //    packet.uSender = _sender;
+    //    packet.uReceiver = _receiver;
+    //    packet.uAcknowledge = LcuCommon.ACK;
+    //    packet.uCode = LcuCommunication.LCU_SVC_CAN_CONNECT;
+    //    if (isOn) packet.uValue = LcuCommunication.LCU_VAL_CAN_CONNECT;
+    //    else packet.uValue = LcuCommunication.LCU_VAL_CAN_DISCONNECT;
+    //    packet.nDataSize = 0;
+    //    SendToLCU(packet);
+    //}
+
+    ////설명: LCU의 CAN 데이터를 상위(조이스틱)까지 전송하게 함. 또는 끔.
+    //public void SendSetCanConnect_4(bool isOn)
+    //{
+    //    LcuCommunication.t_lcu_packet_const_size packet = new LcuCommunication.t_lcu_packet_const_size();
+    //    _receiver = 8;
+    //    packet.uSender = _sender;
+    //    packet.uReceiver = _receiver;
+    //    packet.uAcknowledge = LcuCommon.ACK;
+    //    packet.uCode = LcuCommunication.LCU_SVC_CAN_CONNECT;
+    //    if (isOn) packet.uValue = LcuCommunication.LCU_VAL_CAN_CONNECT;
+    //    else packet.uValue = LcuCommunication.LCU_VAL_CAN_DISCONNECT;
+    //    packet.nDataSize = 0;
+    //    SendToLCU(packet);
+    //}
 
     //설명: canData를 LCU로 전송.
     //@override
