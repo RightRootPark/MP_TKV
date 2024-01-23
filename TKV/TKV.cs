@@ -216,6 +216,8 @@ namespace TKV
         private string inputPW = null; // 입력 패스워드
         private int pwCount = 0;
 
+        //모드
+
 
         #endregion
 
@@ -630,6 +632,7 @@ namespace TKV
                 monitoring.IsBackground = true;
                 monitoring.Start();
             }
+            checkBoxSimulMod.Checked = false;
             btnReset.Enabled = true; //원래는 Access 버튼 눌러서 활성화 시켰지만 현재 시스템에서는 필요없음
 
         }
@@ -818,6 +821,8 @@ namespace TKV
                         JT5.Text = server.SimulAngle[19].ToString();
                         JT6.Text = server.SimulAngle[20].ToString();
 
+                        if (!checkB_LeftArmLock.Checked)
+                        {
                         JT7.Text = server.SimulAngle[10].ToString();
                         JT8.Text = server.SimulAngle[12].ToString();
                         JT9.Text = server.SimulAngle[11].ToString();
@@ -825,15 +830,20 @@ namespace TKV
                         JT11.Text = server.SimulAngle[13].ToString();
                         JT12.Text = server.SimulAngle[15].ToString();
                         JT13.Text = server.SimulAngle[1].ToString();
+                        }
 
-                        JT14.Text = server.SimulAngle[4].ToString();
+                        if (!checkB_RightArmLock.Checked) 
+                        {
+                         JT14.Text = server.SimulAngle[4].ToString();
                         JT15.Text = server.SimulAngle[6].ToString();
                         JT16.Text = server.SimulAngle[5].ToString();
                         JT17.Text = server.SimulAngle[8].ToString();
                         JT18.Text = server.SimulAngle[7].ToString();
                         JT19.Text = server.SimulAngle[9].ToString();
                         JT20.Text = server.SimulAngle[0].ToString();
+                        }
 
+                        if(!checkB_LegLock.Checked) { 
                         JT21.Text = server.SimulAngle[28].ToString();
                         JT22.Text = server.SimulAngle[27].ToString();
                         JT23.Text = server.SimulAngle[22].ToString();
@@ -845,6 +855,9 @@ namespace TKV
 
                         JT29.Text = server.SimulAngle[2].ToString();
                         JT30.Text = server.SimulAngle[2].ToString();
+                        }
+
+
                         //JT1.Text = tcpserver.DataString();
                         //JT1.Text = TkvPlay.dataArray[23];
                         //JT2.Text = TkvPlay.dataArray[24];
@@ -1317,9 +1330,24 @@ namespace TKV
                 }
                 ));
             }
-            else
+            else//UI 업데이트 말고 상시 업데이트 할거
             {
-
+                if (server.SafeModeRequest)
+                {
+                    SafetyMove_checkBox.Checked = true;
+                }
+                else
+                {
+                    SafetyMove_checkBox.Checked = false; 
+                }
+                if (server.SimulsyncRequest)
+                {
+                    checkBoxSimulMod.Checked = true;
+                }
+                else 
+                {
+                    checkBoxSimulMod.Checked = false; 
+                }
             }
         }
         #endregion
@@ -1691,51 +1719,51 @@ namespace TKV
         {
             if (robotManager.arm.mode == 2) //Joint - Velocity
             {
-                for (int i = 0; i < 6; i++)
-                {
-                    deltaPos[i] = Math.Abs(currentPos_Joint[i] - targetPos[i]);
+                //for (int i = 0; i < 6; i++)
+                //{
+                //    deltaPos[i] = Math.Abs(currentPos_Joint[i] - targetPos[i]);
 
-                    if (deltaPos[i] > 0.05)
-                    {
-                        if (currentPos_Joint[i] > targetPos[i]) Velocity = deltaPos[i] * jsonVelocity.joint[i] * _pi / 180 * -1;
-                        else if (currentPos_Joint[i] < targetPos[i]) Velocity = deltaPos[i] * jsonVelocity.joint[i] * _pi / 180;
-                    }
-                    else
-                    {
-                        Velocity = 0;
-                    }
+                //    if (deltaPos[i] > 0.05)
+                //    {
+                //        if (currentPos_Joint[i] > targetPos[i]) Velocity = deltaPos[i] * jsonVelocity.joint[i] * _pi / 180 * -1;
+                //        else if (currentPos_Joint[i] < targetPos[i]) Velocity = deltaPos[i] * jsonVelocity.joint[i] * _pi / 180;
+                //    }
+                //    else
+                //    {
+                //        Velocity = 0;
+                //    }
 
-                    jointVelocityCmd[i] = Velocity;
-                }
-                robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
+                //    jointVelocityCmd[i] = Velocity;
+                //}
+                //robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
 
-                //Debug.WriteLine(deltaPos[0] + " " + deltaPos[1] + " " + deltaPos[2]);
-                if (deltaPos[0] < 0.5 && deltaPos[1] < 0.5 && deltaPos[2] < 0.5 && deltaPos[3] < 0.5 && deltaPos[4] < 0.5 && deltaPos[5] < 0.5)
-                {
-                    movestop_Click(_sender, _e);
-                }
+                ////Debug.WriteLine(deltaPos[0] + " " + deltaPos[1] + " " + deltaPos[2]);
+                //if (deltaPos[0] < 0.5 && deltaPos[1] < 0.5 && deltaPos[2] < 0.5 && deltaPos[3] < 0.5 && deltaPos[4] < 0.5 && deltaPos[5] < 0.5)
+                //{
+                //    movestop_Click(_sender, _e);
+                //}
             }
             else if (robotManager.arm.mode == 3) //World - Velocity
             {
-                for (int i = 0; i < 6; i++)
-                {
-                    deltaPos[i] = Math.Abs(currentPos_World[i] - targetPos[i]);
+                //for (int i = 0; i < 6; i++)
+                //{
+                //    deltaPos[i] = Math.Abs(currentPos_World[i] - targetPos[i]);
 
-                    if (deltaPos[i] > 0.05)
-                    {
-                        if (currentPos_World[i] > targetPos[i]) Velocity = targetPos[i] * jsonVelocity.world[i] * _pi / 180 * -1;
-                        else if (currentPos_World[i] < targetPos[i]) Velocity = targetPos[i] * jsonVelocity.world[i] * _pi / 180;
-                    }
-                    else Velocity = 0;
+                //    if (deltaPos[i] > 0.05)
+                //    {
+                //        if (currentPos_World[i] > targetPos[i]) Velocity = targetPos[i] * jsonVelocity.world[i] * _pi / 180 * -1;
+                //        else if (currentPos_World[i] < targetPos[i]) Velocity = targetPos[i] * jsonVelocity.world[i] * _pi / 180;
+                //    }
+                //    else Velocity = 0;
 
-                    jointVelocityCmd[i] = Velocity;
-                }
-                robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
+                //    jointVelocityCmd[i] = Velocity;
+                //}
+                //robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
 
-                if (deltaPos[0] < 1 && deltaPos[1] < 1 && deltaPos[2] < 1 && deltaPos[3] < 0.5 && deltaPos[4] < 0.5 && deltaPos[5] < 0.5)
-                {
-                    movestop_Click(_sender, _e);
-                }
+                //if (deltaPos[0] < 1 && deltaPos[1] < 1 && deltaPos[2] < 1 && deltaPos[3] < 0.5 && deltaPos[4] < 0.5 && deltaPos[5] < 0.5)
+                //{
+                //    movestop_Click(_sender, _e);
+                //}
             }
             else if (robotManager.arm.mode == 5 && robotManager.arm2.mode == 5 && robotManager.arm3.mode == 5 && robotManager.arm4.mode == 5 && robotManager.arm5.mode == 5)
             {
@@ -4477,6 +4505,8 @@ namespace TKV
             {
                 case true:
                     mode_List.SelectedIndex = 2;// Joint_pos Mode
+                    mode_List.Enabled= false; //시뮬레이션 싱크때는 Joint_pos 에서 변경하면 않됨
+
                     robotManager.arm.mode = 5;
                     robotManager.arm2.mode = 5;
                     robotManager.arm3.mode = 5;
@@ -4487,7 +4517,6 @@ namespace TKV
 
                     if (moveThread == false) move_to_pos();//움직임을 계속 날려주는 무브 쓰레드 시작
                     SafetyMove_checkBox.Checked = true; //시뮬레이션과 처음 연동할때 준비자세까지 천천히 움직이게 하는 모드 UI 업뎃
-
                     safetyMove = true;//시뮬레이션과 처음 연동할때 준비자세까지 천천히 움직이게 하는 모드 플래그 업뎃
                     break;
                 case false:
@@ -4495,6 +4524,7 @@ namespace TKV
                     //robotManager.arm.mode = 2;
                     //robotManager.arm2.mode = 2;
                     moveThread = false;//움직임을 계속 날려주는 무브 쓰레트 정지
+                    mode_List.Enabled = true;//시뮬레이션 싱크때는 Joint_pos 에서 변경못하게 하던거 풀기
                     break;
             }
         }
@@ -4710,6 +4740,11 @@ namespace TKV
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
         }

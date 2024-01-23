@@ -1,4 +1,5 @@
-﻿using System;
+﻿//시뮬레이터에서 자세 제어 통신 받는 udp 서버
+using System;
 using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
@@ -14,6 +15,9 @@ public class UDPServer
 
     int mPort = 0;
     int mSleep = 1;
+
+    public bool SimulsyncRequest = false;
+    public bool SafeModeRequest = false;
 
     //private static Timer UDPTimer;
     Action<string, byte[]> actWork;
@@ -150,15 +154,32 @@ public class UDPServer
                 if (receivedBytes[0] == CalcChecksum(receivedBytes)) //데이터가 정상적일때
                 {
                     // 수신 데이터 처리
+                    //헤더 데이터
                     byte[] HeaderData = new byte[7];
-                    float[] floatData = new float[(receivedBytes.Length - 7) / 4];
                     for (int i = 0; i < 6; i++)//0~6 헤더데이터( Check_sum;  Sender;  Receiver;  Ack;  Code;  Value;  Data_size;)
                     {
                         HeaderData[i] = receivedBytes[i];
                     }
-                  //  Console.WriteLine("Headerdata= " + HeaderData[0] + ", " + HeaderData[1] + ", " + HeaderData[2] + ", " + HeaderData[3] + ", " + HeaderData[4] + ", " + HeaderData[5] + ", " + HeaderData[6] + ", 1234fa");
+                    //  Console.WriteLine("Headerdata= " + HeaderData[0] + ", " + HeaderData[1] + ", " + HeaderData[2] + ", " + HeaderData[3] + ", " + HeaderData[4] + ", " + HeaderData[5] + ", " + HeaderData[6] + ", 1234fa");
+                    switch (HeaderData[4])
+                    {
+                        case 0:
+                            //싱크 각도 보내옴
+                            break;
+                        case 9://시뮬레이션 싱크 요청 수신(valu 1=sync, 00=break)
+                            if (HeaderData[5] == 0) SimulsyncRequest = false;
+                            else SimulsyncRequest = true;
+                            break;
+                        case 10: //안전모드해제 요청 (01= enable,00=disable)
+                            if (HeaderData[5] == 0) SafeModeRequest = false;
+                            else SafeModeRequest = true;
+                            break;
+                        default:
 
-
+                            break;
+                    }
+                    //각도 데이터
+                    float[] floatData = new float[(receivedBytes.Length - 7) / 4];
                     for (int i = 0; i < floatData.Length; i++) //각도 데이터 다시 묶기 byte 4개 -> float 1개
                     {
                         floatData[i] = BitConverter.ToSingle(receivedBytes, HeaderData.Length + i * 4);
