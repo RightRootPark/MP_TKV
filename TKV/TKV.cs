@@ -513,6 +513,7 @@ namespace TKV
         {
             pos_update_Click(_sender, _e);
             movestop_Click(_sender, _e);
+            checkBoxSimulMod.Checked = false; //시뮬레이션 싱크 자동으로 풀기
 
             if (robotManager.arm.isEmergencyStop == false)
             {
@@ -576,6 +577,7 @@ namespace TKV
             //btnReset.Text = "SOL ON";
 
             //btnReset.Enabled = false;
+            pn_Monitoring.Enabled = mode_List.Enabled = pn_Automove.Enabled = false;
             //pn_Command.Enabled = pn_Automove.Enabled = pn_Profile.Enabled = false;
             //for (int i = 0; i < 10; i++) robotManager.arm.SendSetEmergency();
         }
@@ -632,7 +634,7 @@ namespace TKV
                 monitoring.IsBackground = true;
                 monitoring.Start();
             }
-            checkBoxSimulMod.Checked = false;
+            checkBoxSimulMod.Checked = false; //시뮬레이션 싱크 자동으로 풀기ㅋ
             btnReset.Enabled = true; //원래는 Access 버튼 눌러서 활성화 시켰지만 현재 시스템에서는 필요없음
 
         }
@@ -867,6 +869,7 @@ namespace TKV
                         //JT6.Text = TkvPlay.dataArray[27];
 
                         byte Gab = 1;
+                        float safetyLimitVel = 0.05f;
                         if (robotManager.arm.mode == 5) //Joint_pos Mode 가 잘 되었을때
                         {
                             jointPosCmd[0] = inputCmd[0] = Convert.ToSingle(JT1.Text);
@@ -892,7 +895,6 @@ namespace TKV
 
                             jointPosCmd[5] = inputCmd[5] = Convert.ToSingle(JT6.Text);
                             JT6.Text = jointPosCmd[5].ToString();
-
 
                             //jointPosCmd2[2] = inputCmd2[2] = Convert.ToSingle(JT9.Text);
                             //jointPosCmd2[3] = inputCmd2[3] = Convert.ToSingle(JT10.Text);
@@ -923,8 +925,8 @@ namespace TKV
                                         }
                                         else//튀면은 천천히 그자리로 가게
                                         {
-                                            if (jointPosCmd2[i] > inputCmd2[i]) jointPosCmd2[i] = jointPosCmd2[i] - 0.03f;
-                                            if (jointPosCmd2[i] < inputCmd2[i]) jointPosCmd2[i] = jointPosCmd2[i] + 0.03f;
+                                            if (jointPosCmd2[i] > inputCmd2[i]) jointPosCmd2[i] = jointPosCmd2[i] - safetyLimitVel;
+                                            if (jointPosCmd2[i] < inputCmd2[i]) jointPosCmd2[i] = jointPosCmd2[i] + safetyLimitVel;
                                         }
                                     }
                                     else
@@ -955,8 +957,8 @@ namespace TKV
                                         }
                                         else//튀면은 천천히 그자리로 가게
                                         {
-                                            if (jointPosCmd3[i] > inputCmd3[i]) jointPosCmd3[i] = jointPosCmd3[i] - 0.03f;
-                                            if (jointPosCmd3[i] < inputCmd3[i]) jointPosCmd3[i] = jointPosCmd3[i] + 0.03f;
+                                            if (jointPosCmd3[i] > inputCmd3[i]) jointPosCmd3[i] = jointPosCmd3[i] - safetyLimitVel;
+                                            if (jointPosCmd3[i] < inputCmd3[i]) jointPosCmd3[i] = jointPosCmd3[i] + safetyLimitVel;
                                         }
                                     }
                                     else
@@ -984,11 +986,13 @@ namespace TKV
                                         if (jointPosCmd4[i] - Gab < inputCmd4[i] && inputCmd4[i] < jointPosCmd4[i] + Gab) //갑자기 튀는 현상 제거를 위한 안전기능 시험
                                         {
                                             jointPosCmd4[i] = inputCmd4[i];
+                                            LCU4con.BackColor = Color.Green;
                                         }
                                         else//튀면은 천천히 그자리로 가게
                                         {
-                                            if (jointPosCmd4[i] > inputCmd4[i]) jointPosCmd4[i] = jointPosCmd4[i] - 0.03f;
-                                            if (jointPosCmd4[i] < inputCmd4[i]) jointPosCmd4[i] = jointPosCmd4[i] + 0.03f;
+                                            if (jointPosCmd4[i] > inputCmd4[i]) jointPosCmd4[i] = jointPosCmd4[i] - safetyLimitVel;
+                                            if (jointPosCmd4[i] < inputCmd4[i]) jointPosCmd4[i] = jointPosCmd4[i] + safetyLimitVel;
+                                            LCU4con.BackColor = Color.Yellow;
                                         }
                                     }
                                     else
@@ -1025,8 +1029,8 @@ namespace TKV
                                         }
                                         else//Gab 보다 크게 튀면 천천히 그자리로 가게
                                         {
-                                            if (jointPosCmd5[i] > inputCmd5[i]) jointPosCmd5[i] = jointPosCmd5[i] - 0.02f;
-                                            if (jointPosCmd5[i] < inputCmd5[i]) jointPosCmd5[i] = jointPosCmd5[i] + 0.02f;
+                                            if (jointPosCmd5[i] > inputCmd5[i]) jointPosCmd5[i] = jointPosCmd5[i] - safetyLimitVel;
+                                            if (jointPosCmd5[i] < inputCmd5[i]) jointPosCmd5[i] = jointPosCmd5[i] + safetyLimitVel;
                                             LCU5con.BackColor = Color.Yellow;
                                         }
                                     }
@@ -1034,7 +1038,6 @@ namespace TKV
                                     {
                                         jointPosCmd5[i] = inputCmd5[i];
                                     }
-
                                     }
                                 
 
@@ -1348,6 +1351,10 @@ namespace TKV
                 {
                     checkBoxSimulMod.Checked = false; 
                 }
+            }
+            if (checkBoxSimulMod.Checked)
+            {
+                LogWrite(J1.Text + " " + J2.Text + " " + J3.Text + " " + J4.Text + " " + J5.Text + " " + J6.Text + " " + J7.Text + " " + J8.Text + " " + J9.Text + " " + J10.Text + " " + J11.Text + " " + J12.Text + " " + J13.Text + " " + J14.Text + " " + J15.Text + " " + J16.Text + " " + J17.Text + " " + J18.Text + " " + J19.Text + " " + J20.Text + " " + J21.Text + " " + J22.Text + " " + J23.Text + " " + J24.Text + " " + J25.Text + " " + J26.Text + " " + J27.Text + " " + J28.Text + " " + JC1.Text + " " + JC2.Text + " " + JC3.Text + " " + JC4.Text + " " + JC5.Text + " " + JC6.Text + " " + JC7.Text + " " + JC8.Text + " " + JC9.Text + " " + JC10.Text + " " + JC11.Text + " " + JC12.Text + " " + JC13.Text + " " + JC14.Text + " " + JC15.Text + " " + JC16.Text + " " + JC17.Text + " " + JC18.Text + " " + JC19.Text + " " + JC20.Text + " " + JC21.Text + " " + JC22.Text + " " + JC23.Text + " " + JC24.Text + " " + JC25.Text + " " + JC26.Text + " " + JC27.Text + " " + JC28.Text) ;
             }
         }
         #endregion
@@ -1876,6 +1883,7 @@ namespace TKV
         private void mode_List_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = mode_List.SelectedIndex;
+            
             ////robotManager.arm.SetArmVelCmd(jointVelocityCmd, 0);
             //robotManager.arm.SetArmVelCmd(jointVelocityCmd, 1);
             ////robotManager.arm2.SetArmVelCmd(jointVelocityCmd2, 0);
@@ -1915,23 +1923,23 @@ namespace TKV
 
                     monitoringLB_update(0);
                     break;
-                case 1: //World - Velocity control
-                    //pn_Automove.Enabled = false;
-                    velLevel_List.Enabled = true;
-                    //FT.Enabled = forceTx.Enabled = forceRelease.Enabled = false;
-                    robotManager.arm.LCU_MODECHECK_VEL = true;
-                    for (int i = 0; i < 6; i++) worldVelocityCmd[i] = 0;
-                    robotManager.arm.SetArmVelCmd(worldVelocityCmd, 1);
-                    robotManager.ChangeControlMode(1);
+                case 1: //World - Velocity control 사용하지 않아 주석처리
+                    ////pn_Automove.Enabled = false;
+                    //velLevel_List.Enabled = true;
+                    ////FT.Enabled = forceTx.Enabled = forceRelease.Enabled = false;
+                    //robotManager.arm.LCU_MODECHECK_VEL = true;
+                    //for (int i = 0; i < 6; i++) worldVelocityCmd[i] = 0;
+                    //robotManager.arm.SetArmVelCmd(worldVelocityCmd, 1);
+                    //robotManager.ChangeControlMode(1);
 
-                    //C1.Text = WT1.Text = "0.00";
-                    //C2.Text = WT2.Text = "0.00";
-                    //C3.Text = WT3.Text = "0.00";
-                    //C4.Text = WT4.Text = "0.00";
-                    //C5.Text = WT5.Text = "0.00";
-                    //C6.Text = WT6.Text = "0.00";
+                    ////C1.Text = WT1.Text = "0.00";
+                    ////C2.Text = WT2.Text = "0.00";
+                    ////C3.Text = WT3.Text = "0.00";
+                    ////C4.Text = WT4.Text = "0.00";
+                    ////C5.Text = WT5.Text = "0.00";
+                    ////C6.Text = WT6.Text = "0.00";
 
-                    monitoringLB_update(1);
+                    //monitoringLB_update(1);
                     break;
                 case 2: //Joint - Position control
                     robotManager.arm.LCU_MODECHECK_VEL = false;
@@ -1982,53 +1990,57 @@ namespace TKV
 
                     monitoringLB_update(2);
                     break;
-                case 3: //World - Position control - Move from Measured to Target position 
-                    //robotManager.arm.LCU_MODECHECK_VEL = false;
-                    //robotManager.ChangeControlMode(3);
+                    // 아래 케이스 사용하지 않아 주석처리
+                //case 3: //World - Position control - Move from Measured to Target position 
+                //    //robotManager.arm.LCU_MODECHECK_VEL = false;
+                //    //robotManager.ChangeControlMode(3);
 
-                    //C1.Text = WT1.Text = WC1.Text;
-                    //C2.Text = WT2.Text = WC2.Text;
-                    //C3.Text = WT3.Text = WC3.Text;
-                    //C4.Text = WT4.Text = WC4.Text;
-                    //C5.Text = WT5.Text = WC5.Text;
-                    //C6.Text = WT6.Text = WC6.Text;
-                    //C7.Text = WT7.Text = WC7.Text;
-                    //C8.Text = WT8.Text = WC8.Text;
+                //    //C1.Text = WT1.Text = WC1.Text;
+                //    //C2.Text = WT2.Text = WC2.Text;
+                //    //C3.Text = WT3.Text = WC3.Text;
+                //    //C4.Text = WT4.Text = WC4.Text;
+                //    //C5.Text = WT5.Text = WC5.Text;
+                //    //C6.Text = WT6.Text = WC6.Text;
+                //    //C7.Text = WT7.Text = WC7.Text;
+                //    //C8.Text = WT8.Text = WC8.Text;
 
-                    ////cmd_send_Click(_sender, _e);
+                //    ////cmd_send_Click(_sender, _e);
 
-                    //monitoringLB_update(3);
-                    break;
-                case 4: //World - Position control - Move from Previous Desired to Target position
-                    pn_Automove.Enabled = true;
-                    velLevel_List.Enabled = true;
-                    //FT.Enabled = forceTx.Enabled = forceRelease.Enabled = false;
-                    robotManager.arm.LCU_MODECHECK_VEL = false;
-                    robotManager.ChangeControlMode(4);
+                //    //monitoringLB_update(3);
+                //    break;
+                //case 4: //World - Position control - Move from Previous Desired to Target position
+                //    pn_Automove.Enabled = true;
+                //    velLevel_List.Enabled = true;
+                //    //FT.Enabled = forceTx.Enabled = forceRelease.Enabled = false;
+                //    robotManager.arm.LCU_MODECHECK_VEL = false;
+                //    robotManager.ChangeControlMode(4);
 
-                    C1.Text = WT1.Text = WC1.Text;
-                    C2.Text = WT2.Text = WC2.Text;
-                    C3.Text = WT3.Text = WC3.Text;
-                    C4.Text = WT4.Text = WC4.Text;
-                    C5.Text = WT5.Text = WC5.Text;
-                    C6.Text = WT6.Text = WC6.Text;
-                    C7.Text = WT7.Text = WC7.Text;
-                    C8.Text = WT8.Text = WC8.Text;
+                //    C1.Text = WT1.Text = WC1.Text;
+                //    C2.Text = WT2.Text = WC2.Text;
+                //    C3.Text = WT3.Text = WC3.Text;
+                //    C4.Text = WT4.Text = WC4.Text;
+                //    C5.Text = WT5.Text = WC5.Text;
+                //    C6.Text = WT6.Text = WC6.Text;
+                //    C7.Text = WT7.Text = WC7.Text;
+                //    C8.Text = WT8.Text = WC8.Text;
 
-                    //cmd_send_Click(_sender, _e);
+                //    //cmd_send_Click(_sender, _e);
 
-                    monitoringLB_update(4);
-                    break;
-                case 5: //Force control
-                    //pn_Automove.Enabled = false;
-                    velLevel_List.Enabled = false;
-                    FT.Enabled = forceTx.Enabled = forceRelease.Enabled = true;
-                    robotManager.arm.LCU_MODECHECK_VEL = false;
-                    robotManager.ChangeControlMode(5);
+                //    monitoringLB_update(4);
+                //    break;
+                //case 5: //Force control
+                //    //pn_Automove.Enabled = false;
+                //    velLevel_List.Enabled = false;
+                //    FT.Enabled = forceTx.Enabled = forceRelease.Enabled = true;
+                //    robotManager.arm.LCU_MODECHECK_VEL = false;
+                //    robotManager.ChangeControlMode(5);
 
-                    ////pos_update_Click(_sender, _e);
-                    //monitoringLB_update(5);
-                    //Debug.WriteLine("Force control");
+                //    ////pos_update_Click(_sender, _e);
+                //    //monitoringLB_update(5);
+                //    //Debug.WriteLine("Force control");
+                //    break;
+                default: 
+
                     break;
             }
             //cmd_send_Click(_sender, _e);
@@ -4518,6 +4530,9 @@ namespace TKV
                     if (moveThread == false) move_to_pos();//움직임을 계속 날려주는 무브 쓰레드 시작
                     SafetyMove_checkBox.Checked = true; //시뮬레이션과 처음 연동할때 준비자세까지 천천히 움직이게 하는 모드 UI 업뎃
                     safetyMove = true;//시뮬레이션과 처음 연동할때 준비자세까지 천천히 움직이게 하는 모드 플래그 업뎃
+                    CreateLogFile("Create Log File!"); //로그파일 생성
+                    LogWrite("J1 J2 J3 J4 J5 J6 J7 J8 J9 J10 J11 J12 J13 J14 J15 J16 J17 J18 J19 J20 J21 J22 J23 J24 J25 J26 J27 J28 JC1 JC2 JC3 JC4 JC5 JC6 JC7 JC8 JC9 JC10 JC11 JC12 JC13 JC14 JC15 JC16 JC17 JC18 JC19 JC20 JC21 JC22 JC23 JC24 JC25 JC26 JC27 JC28");//로그파일 첫줄 작성
+
                     break;
                 case false:
                     //mode_List.SelectedIndex = 0;// Joint_pos Mode
@@ -4568,6 +4583,80 @@ namespace TKV
         }
 
         // mouse click end
+
+        #region _-_Log set _-_Log set _-_Log set _-_Log set _-_Log set_-_Log set _-_Log set _-_Log set _-_Log set _-_Log set
+        string strNowTime;
+        string DirPath = Environment.CurrentDirectory + @"\Log";
+        string FilePath;
+        private void CreateLogFile(string str)
+        {
+            strNowTime = DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");
+            FilePath = DirPath + "\\Log_" + strNowTime + ".log";
+            string temp;
+            DirectoryInfo di = new DirectoryInfo(DirPath);
+            FileInfo fi = new FileInfo(FilePath);
+
+            try
+            {
+                if (!di.Exists) Directory.CreateDirectory(DirPath);
+                if (!fi.Exists)
+                {
+                    using (StreamWriter sw = new StreamWriter(FilePath))
+                    {
+                        temp = string.Format("[{0}] {1}", DateTime.Now, str);
+                        sw.WriteLine(temp);
+                        sw.Close();
+                    }
+                }
+                else
+                {
+                    using (StreamWriter sw = File.AppendText(FilePath))
+                    {
+                        temp = string.Format("[{0}] {1}", DateTime.Now, str);
+                        sw.WriteLine(temp);
+                        sw.Close();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+            }
+        }
+        private void LogWrite(string str)
+        {
+            string temp;
+
+            DirectoryInfo di = new DirectoryInfo(DirPath);
+            FileInfo fi = new FileInfo(FilePath);
+
+            try
+            {
+                if (!di.Exists) Directory.CreateDirectory(DirPath);
+                if (!fi.Exists)
+                {
+                    using (StreamWriter sw = new StreamWriter(FilePath))
+                    {
+                        temp = string.Format("[{0}] {1}", DateTime.Now, str);
+                        sw.WriteLine(temp);
+                        sw.Close();
+                    }
+                }
+                else
+                {
+                    using (StreamWriter sw = File.AppendText(FilePath))
+                    {
+                        temp = string.Format("[{0}] {1}", DateTime.Now, str);
+                        sw.WriteLine(temp);
+                        sw.Close();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+            }
+        }
+        #endregion _-_Log set _-_Log set _-_Log set _-_Log set_-_Log set _-_Log set _-_Log set _-_Log set _-_Log set
+
 
         #region CAN Field
         private void btnCAN_Click(object sender, EventArgs e)
