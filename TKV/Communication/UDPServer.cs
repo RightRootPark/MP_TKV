@@ -169,10 +169,12 @@ public class UDPServer
                         case 9://시뮬레이션 싱크 요청 수신(valu 1=sync, 00=break)
                             if (HeaderData[5] == 0) SimulsyncRequest = false;
                             else SimulsyncRequest = true;
+                            Console.WriteLine("SimulsyncRequest="+ SimulsyncRequest);
                             break;
                         case 10: //안전모드해제 요청 (01= enable,00=disable)
                             if (HeaderData[5] == 0) SafeModeRequest = false;
                             else SafeModeRequest = true;
+                            Console.WriteLine("SafeModeRequest=" + SafeModeRequest);
                             break;
                         default:
 

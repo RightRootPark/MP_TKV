@@ -807,11 +807,30 @@ namespace TKV
 
         private void Monitoring_Update()
         {
+
+            //UI 업데이트
             if (this.InvokeRequired)
             {
                 this.BeginInvoke(new Action(() =>
                 {
                     #region Simulation TKV file sinc test-- Simulation sinc test-- Simulation sinc test-- Simulation sinc test-- 
+                    //통신 수신값 업데이트
+                    if (server.SafeModeRequest)
+                    {
+                        SafetyMove_checkBox.Checked = true;
+                    }
+                    else
+                    {
+                        SafetyMove_checkBox.Checked = false;
+                    }
+                    if (server.SimulsyncRequest)
+                    {
+                        checkBoxSimulMod.Checked = true;
+                    }
+                    else
+                    {
+                        checkBoxSimulMod.Checked = false;
+                    }
                     if (checkBoxSimulMod.Checked)
                     {
 
@@ -1335,24 +1354,9 @@ namespace TKV
             }
             else//UI 업데이트 말고 상시 업데이트 할거
             {
-                if (server.SafeModeRequest)
-                {
-                    SafetyMove_checkBox.Checked = true;
-                }
-                else
-                {
-                    SafetyMove_checkBox.Checked = false; 
-                }
-                if (server.SimulsyncRequest)
-                {
-                    checkBoxSimulMod.Checked = true;
-                }
-                else 
-                {
-                    checkBoxSimulMod.Checked = false; 
-                }
+
             }
-            if (checkBoxSimulMod.Checked)
+            if (checkBoxLoging.Checked)
             {
                 LogWrite(J1.Text + " " + J2.Text + " " + J3.Text + " " + J4.Text + " " + J5.Text + " " + J6.Text + " " + J7.Text + " " + J8.Text + " " + J9.Text + " " + J10.Text + " " + J11.Text + " " + J12.Text + " " + J13.Text + " " + J14.Text + " " + J15.Text + " " + J16.Text + " " + J17.Text + " " + J18.Text + " " + J19.Text + " " + J20.Text + " " + J21.Text + " " + J22.Text + " " + J23.Text + " " + J24.Text + " " + J25.Text + " " + J26.Text + " " + J27.Text + " " + J28.Text + " " + JC1.Text + " " + JC2.Text + " " + JC3.Text + " " + JC4.Text + " " + JC5.Text + " " + JC6.Text + " " + JC7.Text + " " + JC8.Text + " " + JC9.Text + " " + JC10.Text + " " + JC11.Text + " " + JC12.Text + " " + JC13.Text + " " + JC14.Text + " " + JC15.Text + " " + JC16.Text + " " + JC17.Text + " " + JC18.Text + " " + JC19.Text + " " + JC20.Text + " " + JC21.Text + " " + JC22.Text + " " + JC23.Text + " " + JC24.Text + " " + JC25.Text + " " + JC26.Text + " " + JC27.Text + " " + JC28.Text) ;
             }
@@ -3791,61 +3795,11 @@ namespace TKV
         private void J7Down_Click_1(object sender, EventArgs e)
         {
             JointUpOr_Click(7, false);
-            //if (robotManager.arm2.mode == 5)
-            //{
-            //    inputCmd2[3] = Convert.ToSingle(JT7.Text);
-            //    Pos_Cmd_Joint = inputCmd2[3];
-            //    jointPosCmd2[3] = Pos_Cmd_Joint - 1;
-
-            //    JT7.Text = jointPosCmd2[3].ToString();
-
-            //    Pos_Cmd_Joint = inputCmd2[3];
-            //    jointPosCmd2[3] = Pos_Cmd_Joint;
-
-            //    robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
-            //}
-            //else if (robotManager.arm2.mode == 8 || robotManager.arm2.mode == 9)
-            //{
-            //    inputCmd2[3] = Convert.ToSingle(WT7.Text);
-            //    Pos_Cmd_World = inputCmd2[3];
-            //    worldPosCmd2[3] = Pos_Cmd_World - 1;
-
-            //    WT7.Text = worldPosCmd2[3].ToString();
-
-            //    Pos_Cmd_World = inputCmd2[3];
-            //    worldPosCmd2[3] = Pos_Cmd_World;
-            //    robotManager.arm2.SetArmPosCmd(worldPosCmd2, jointPosCmd2[5], 0);
-            //}
         }
 
         private void J7Up_Click_1(object sender, EventArgs e)
         {
             JointUpOr_Click(7, true);
-            //if (robotManager.arm2.mode == 5)
-            //{
-            //    inputCmd2[3] = Convert.ToSingle(JT7.Text);
-            //    Pos_Cmd_Joint = inputCmd2[3];
-            //    jointPosCmd2[3] = Pos_Cmd_Joint + 1;
-
-            //    JT7.Text = jointPosCmd2[3].ToString();
-
-            //    Pos_Cmd_Joint = inputCmd2[3];
-            //    jointPosCmd2[3] = Pos_Cmd_Joint;
-
-            //    robotManager.arm2.SetArmPosCmd(jointPosCmd2, jointPosCmd2[5], 0);
-            //}
-            //else if (robotManager.arm2.mode == 8 || robotManager.arm2.mode == 9)
-            //{
-            //    inputCmd2[3] = Convert.ToSingle(WT7.Text);
-            //    Pos_Cmd_World = inputCmd2[3];
-            //    worldPosCmd2[3] = Pos_Cmd_World - 1;
-
-            //    WT7.Text = worldPosCmd2[3].ToString();
-
-            //    Pos_Cmd_World = inputCmd2[3];
-            //    worldPosCmd2[3] = Pos_Cmd_World;
-            //    robotManager.arm2.SetArmPosCmd(worldPosCmd2, jointPosCmd2[5], 0);
-            //}
         }
 
         private void J8Up_Click(object sender, EventArgs e)
@@ -4530,8 +4484,8 @@ namespace TKV
                     if (moveThread == false) move_to_pos();//움직임을 계속 날려주는 무브 쓰레드 시작
                     SafetyMove_checkBox.Checked = true; //시뮬레이션과 처음 연동할때 준비자세까지 천천히 움직이게 하는 모드 UI 업뎃
                     safetyMove = true;//시뮬레이션과 처음 연동할때 준비자세까지 천천히 움직이게 하는 모드 플래그 업뎃
-                    CreateLogFile("Create Log File!"); //로그파일 생성
-                    LogWrite("J1 J2 J3 J4 J5 J6 J7 J8 J9 J10 J11 J12 J13 J14 J15 J16 J17 J18 J19 J20 J21 J22 J23 J24 J25 J26 J27 J28 JC1 JC2 JC3 JC4 JC5 JC6 JC7 JC8 JC9 JC10 JC11 JC12 JC13 JC14 JC15 JC16 JC17 JC18 JC19 JC20 JC21 JC22 JC23 JC24 JC25 JC26 JC27 JC28");//로그파일 첫줄 작성
+                    //CreateLogFile("Create Log File!"); //로그파일 생성
+                    //LogWrite("J1 J2 J3 J4 J5 J6 J7 J8 J9 J10 J11 J12 J13 J14 J15 J16 J17 J18 J19 J20 J21 J22 J23 J24 J25 J26 J27 J28 JC1 JC2 JC3 JC4 JC5 JC6 JC7 JC8 JC9 JC10 JC11 JC12 JC13 JC14 JC15 JC16 JC17 JC18 JC19 JC20 JC21 JC22 JC23 JC24 JC25 JC26 JC27 JC28");//로그파일 첫줄 작성
 
                     break;
                 case false:
@@ -4836,6 +4790,20 @@ namespace TKV
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBoxLoging_CheckedChanged(object sender, EventArgs e)
+        {
+            switch (checkBoxLoging.Checked)
+            {
+                case true:
+                    CreateLogFile("Create Log File!"); //로그파일 생성
+                    LogWrite("J1 J2 J3 J4 J5 J6 J7 J8 J9 J10 J11 J12 J13 J14 J15 J16 J17 J18 J19 J20 J21 J22 J23 J24 J25 J26 J27 J28 JC1 JC2 JC3 JC4 JC5 JC6 JC7 JC8 JC9 JC10 JC11 JC12 JC13 JC14 JC15 JC16 JC17 JC18 JC19 JC20 JC21 JC22 JC23 JC24 JC25 JC26 JC27 JC28");//로그파일 첫줄 작성
+                    break;
+                case false:
+                    
+                    break;
+            }
         }
 
         private void hacIndex_SelectedIndexChanged(object sender, EventArgs e)
